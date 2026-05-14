@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RÉSEAUX SOCIAUX — Lancer ton compte et créer des vidéos qui cartonnent</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;background:#0a0a0a;color:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:720px;margin:0 auto;padding:0 20px}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#e67e22 0%,#d35400 50%,#a04000 100%);padding:60px 0 50px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 50%,rgba(255,255,255,.08) 0%,transparent 60%);pointer-events:none}
+.hero-creator{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:24px}
+.hero-avatar{width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;border:2px solid rgba(255,255,255,.4)}
+.hero-creator span{font-size:15px;font-weight:500;opacity:.9}
+.hero h1{font-size:clamp(26px,5vw,42px);font-weight:900;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px}
+.hero .tagline{font-size:clamp(15px,2.5vw,18px);opacity:.9;max-width:540px;margin:0 auto 28px;font-weight:400}
+.hero-proof{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;font-size:14px;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);padding:10px 24px;border-radius:50px;width:fit-content;margin:0 auto 24px;border:1px solid rgba(255,255,255,.15)}
+.hero-proof .stars{color:#ffd700;letter-spacing:2px}
+
+/* Badge */
+.badge{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);border-radius:50px;padding:6px 18px;font-size:13px;font-weight:600;margin-bottom:20px;letter-spacing:.3px}
+
+/* Sections */
+section{padding:56px 0}
+.section-label{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#e67e22;margin-bottom:8px}
+h2{font-size:clamp(22px,4vw,34px);font-weight:800;margin-bottom:16px;letter-spacing:-.3px}
+h2 .highlight{color:#e67e22}
+p{font-size:15px;color:#aaa;margin-bottom:16px}
+
+/* Problem */
+.problem{background:#0d0d0d}
+.problem-cards{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.problem-card{background:linear-gradient(135deg,rgba(230,126,34,.08),rgba(230,126,34,.03));border:1px solid rgba(230,126,34,.15);border-radius:12px;padding:16px 20px;display:flex;align-items:center;gap:14px;transition:.2s}
+.problem-card:hover{border-color:rgba(230,126,34,.35)}
+.problem-card .icon{font-size:28px;flex-shrink:0}
+.problem-card .text{font-size:15px;font-weight:600;color:#eee}
+
+/* Solution */
+.solution{background:#0a0a0a}
+.solution-box{background:linear-gradient(135deg,rgba(230,126,34,.06),transparent);border:1px solid rgba(230,126,34,.12);border-radius:16px;padding:28px;margin-top:20px}
+.solution-box p{font-size:14.5px;line-height:1.7;color:#bbb}
+
+/* What's Inside */
+.inside{background:#0d0d0d}
+.inside-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
+@media(max-width:480px){.inside-grid{grid-template-columns:1fr}}
+.inside-module{background:linear-gradient(135deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:16px;text-align:center;transition:.2s}
+.inside-module:hover{border-color:rgba(230,126,34,.3);background:linear-gradient(135deg,rgba(230,126,34,.06),rgba(255,255,255,.02))}
+.inside-module .emoji{font-size:28px;margin-bottom:8px;display:block}
+.inside-module h4{font-size:13px;font-weight:700;color:#fff;line-height:1.3}
+
+/* Benefits */
+.benefits{background:#0a0a0a}
+.benefits-grid{display:flex;flex-direction:column;gap:10px;margin-top:24px}
+.benefit-item{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:14px 18px;transition:.2s}
+.benefit-item:hover{border-color:rgba(230,126,34,.25);background:rgba(230,126,34,.04)}
+.benefit-item .emoji{font-size:24px;flex-shrink:0}
+.benefit-item .text{font-size:14px;font-weight:500;color:#ddd}
+
+/* Free Access */
+.pricing{background:linear-gradient(180deg,rgba(230,126,34,.08) 0%,transparent 100%);text-align:center}
+.pricing-card{background:linear-gradient(135deg,rgba(230,126,34,.1),rgba(230,126,34,.03));border:1px solid rgba(230,126,34,.2);border-radius:20px;padding:28px;max-width:100%;margin:0;position:relative;text-align:left}
+.bonuses{text-align:left;margin:0 0 16px;padding:16px;background:rgba(255,255,255,.03);border-radius:12px;border:1px solid rgba(255,255,255,.06)}
+.bonuses h4{font-size:13px;font-weight:700;color:#e67e22;margin-bottom:12px;text-align:center;text-transform:uppercase;letter-spacing:1px}
+.bonus-item{display:flex;align-items:center;gap:10px;font-size:13px;color:#ccc;padding:6px 0}
+.bonus-item .emoji{font-size:18px;flex-shrink:0}
+
+/* CTA Button */
+.btn{display:inline-block;background:linear-gradient(135deg,#e67e22,#d35400);color:#fff;font-weight:700;font-size:16px;padding:16px 40px;border-radius:50px;text-decoration:none;transition:.2s;border:none;cursor:pointer;letter-spacing:.3px}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(230,126,34,.35)}
+.btn-small{padding:12px 28px;font-size:14px}
+
+/* Testimonials */
+.testimonials{background:#0d0d0d}
+.testimonials-grid{display:flex;flex-direction:column;gap:14px;margin-top:24px}
+.testimonial{background:linear-gradient(135deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:20px}
+.testimonial-header{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.testimonial-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+.testimonial-name{font-weight:600;font-size:14px;color:#fff}
+.testimonial-age{font-size:12px;color:#888}
+.testimonial-stars{color:#ffd700;font-size:14px;letter-spacing:1px;margin-bottom:6px}
+.testimonial-text{font-size:13.5px;color:#bbb;line-height:1.6;font-style:italic}
+
+/* FAQ */
+.faq{background:#0a0a0a}
+.faq-list{display:flex;flex-direction:column;gap:2px;margin-top:24px}
+.faq-item{border:1px solid rgba(255,255,255,.06);border-radius:10px;overflow:hidden;transition:.2s}
+.faq-item:hover{border-color:rgba(230,126,34,.15)}
+.faq-q{width:100%;background:rgba(255,255,255,.03);border:none;color:#fff;font-family:inherit;font-size:14px;font-weight:600;padding:16px 18px;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:.2s}
+.faq-q:hover{background:rgba(230,126,34,.06)}
+.faq-q .arrow{font-size:12px;transition:transform .3s;color:#e67e22}
+.faq-q.active .arrow{transform:rotate(180deg)}
+.faq-a{padding:0 18px;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;font-size:13.5px;color:#999;line-height:1.7}
+.faq-a.open{max-height:300px;padding:0 18px 16px}
+
+/* Final CTA */
+.final-cta{background:linear-gradient(135deg,#e67e22 0%,#d35400 50%,#a04000 100%);text-align:center;padding:60px 0}
+.final-cta h2{font-size:clamp(24px,5vw,38px)}
+.final-cta p{color:rgba(255,255,255,.85);font-size:16px;max-width:480px;margin:0 auto 24px}
+
+/* Footer */
+footer{background:#050505;text-align:center;padding:32px 0;font-size:13px;color:#555}
+footer a{color:#777;text-decoration:none}
+footer a:hover{color:#e67e22}
+
+hr{border:none;border-top:1px solid rgba(255,255,255,.04);margin:0}
+
+.follow-overlay{max-width:460px;margin:0 auto;padding:24px 16px}
+.follow-header{text-align:center;margin-bottom:22px}
+.follow-header .lock-icon{font-size:42px;margin-bottom:6px}
+.follow-header h3{font-size:clamp(17px,3.5vw,22px);font-weight:800;color:#fff;margin:0 0 6px}
+.follow-header p{font-size:13px;color:#999;margin:0;line-height:1.4}
+.follow-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.follow-link{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:600;transition:all .2s;color:#ddd}
+.follow-link.ig{background:rgba(225,48,108,0.1);border:1px solid rgba(225,48,108,0.2)}
+.follow-link.ig:hover{background:rgba(225,48,108,0.2);border-color:rgba(225,48,108,0.35)}
+.follow-link.tt{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08)}
+.follow-link.tt:hover{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.15)}
+.follow-link.yt{background:rgba(255,0,0,0.08);border:1px solid rgba(255,0,0,0.2)}
+.follow-link.yt:hover{background:rgba(255,0,0,0.15);border-color:rgba(255,0,0,0.35)}
+
+#pseudoInput:focus{border-color:#e67e22!important}
+#pseudoInput::placeholder{color:#555}
+.unlock-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px 24px;border-radius:12px;border:none;background:#e67e22;color:#fff;font-size:15px;font-weight:700;cursor:pointer;transition:all .3s;font-family:inherit}
+.unlock-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px #e67e2240}
+.unlock-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+.gate-content{display:none}
+.gate-content.unlocked{display:block}
+.follow-note{font-size:12px;color:#555;text-align:center;margin-top:14px}
+#verifyError{color:#e67e22;font-size:13px;display:none;text-align:center;margin:10px 0}
+
+/* FOLLOW ROW */
+/* FOLLOW GATE */
+</style>
+</head>
+<body>
+
+<section class="hero">
+<div class="container">
+<div class="hero-creator">
+<div class="hero-avatar">✪</div>
+<span>Simon — @aurabusinessfr</span>
+</div>
+<h1>RÉSEAUX SOCIAUX<br>Lancer ton compte et créer des vidéos qui cartonnent</h1>
+<p class="tagline">100% gratuit · Accès immédiat · Sans inscription</p>
+<div class="hero-proof">
+<span>📚 Formation suivie par <strong>1 500+</strong> créateurs</span>
+<span class="stars">★★★★★</span>
+<span><strong>4.7</strong>/5</span>
+</div>
+<a href="#free-access" class="btn">Télécharger gratuitement →</a>
+</div>
+</section>
+
+<section class="problem" id="problem">
+<div class="container">
+<div class="section-label">⛔ Le constat</div>
+<h2>Tu postes des vidéos…<br><span class="highlight">personne ne les regarde ?</span></h2>
+<div class="problem-cards">
+<div class="problem-card">
+<span class="icon">😞</span>
+<span class="text">Tes vidéos font 50 vues alors que tu passes des heures à les créer</span>
+</div>
+<div class="problem-card">
+<span class="icon">🤷</span>
+<span class="text">Tu ne sais pas quoi créer — tu ouvres l'app et tu n'as aucune idée de contenu</span>
+</div>
+<div class="problem-card">
+<span class="icon">⏳</span>
+<span class="text">Tu passes des heures à monter pour un résultat qui ne décollera jamais</span>
+</div>
+</div>
+</div>
+</section>
+
+<hr>
+
+<section class="solution" id="solution">
+<div class="container">
+<div class="section-label">💡 La réalité</div>
+<h2>Créer du contenu qui cartonne, <span class="highlight">ça s'apprend</span></h2>
+<p>Tu crois que les gros créateurs ont un "talent inné" ? La vérité : ils appliquent des <strong>principes précis</strong> de storytelling, de formatage et de compréhension des algorithmes.</p>
+<div class="solution-box">
+<p><strong>Réseaux Sociaux — Lancer ton compte et créer des vidéos qui cartonnent</strong> est le guide pas-à-pas qui te donne le système complet : du choix de ta plateforme jusqu'à la monétisation, en passant par la production vidéo, les hooks qui claquent et les stratégies de croissance validées par <strong>1 500+ créateurs</strong>.</p>
+<p style="margin-top:12px">Ni bullshit ni théorie. Que du concret, directement applicable dès ta prochaine vidéo.</p>
+</div>
+</div>
+</section>
+
+<hr>
+
+<section class="inside" id="inside">
+<div class="container">
+<div class="section-label">📖 Au programme</div>
+<h2>Ce que tu vas <span class="highlight">apprendre</span></h2>
+<p>8 modules complets pour passer de 0 à créateur rentable.</p>
+<div class="inside-grid">
+<div class="inside-module"><span class="emoji">🎯</span><h4>Choix de la plateforme</h4></div>
+<div class="inside-module"><span class="emoji">🧬</span><h4>Identité & niche</h4></div>
+<div class="inside-module"><span class="emoji">🎬</span><h4>Storytelling vidéo</h4></div>
+<div class="inside-module"><span class="emoji">🤖</span><h4>Algorithmes décryptés</h4></div>
+<div class="inside-module"><span class="emoji">📈</span><h4>Stratégie de croissance</h4></div>
+<div class="inside-module"><span class="emoji">💰</span><h4>Monétisation</h4></div>
+<div class="inside-module"><span class="emoji">⚡</span><h4>Routines créateur</h4></div>
+<div class="inside-module"><span class="emoji">📊</span><h4>Analytics & KPIs</h4></div>
+</div>
+</div>
+</section>
+
+<hr>
+
+<section class="benefits" id="benefits">
+<div class="container">
+<div class="section-label">🔥 Les bénéfices</div>
+<h2>Ce qui change <span class="highlight">après</span> l'ebook</h2>
+<div class="benefits-grid">
+<div class="benefit-item"><span class="emoji">📱</span><span class="text">Maîtriser TikTok, Instagram & YouTube — chaque plateforme a ses codes, tu les auras</span></div>
+<div class="benefit-item"><span class="emoji">🎬</span><span class="text">Tourner des vidéos pro (même sans budget) — smartphone + lumière naturelle suffisent</span></div>
+<div class="benefit-item"><span class="emoji">📈</span><span class="text">Comprendre les algorithmes — et les utiliser à ton avantage pour exploser ta portée</span></div>
+<div class="benefit-item"><span class="emoji">🔥</span><span class="text">Passer de 0 à 10 000 abonnés — stratégie de croissance accélérée validée</span></div>
+<div class="benefit-item"><span class="emoji">💰</span><span class="text">Monétiser sans attendre 100K — sponsoring, affilié, produit digital dès 1 000 abonnés</span></div>
+<div class="benefit-item"><span class="emoji">⏱️</span><span class="text">Produire en 1h ce qui te prenait 1 jour — templates et workflows qui déchirent</span></div>
+</div>
+</div>
+</section>
+
+<hr>
+
+<section class="pricing" id="free-access">
+<div class="free-access-inner" style="max-width:600px;margin:0 auto">
+  <!-- FOLLOW GATE -->
+                          <div id="followGate" class="follow-overlay">
+    <div class="follow-header">
+      <div class="lock-icon">🔒</div>
+      <h3>Suis @aurabusinessfr pour débloquer ton guide</h3>
+      <p>Suis sur ces réseaux puis entre ton pseudo :</p>
+    </div>
+    <div class="follow-links">
+      <a href="https://instagram.com/aurabusinessfr" target="_blank" rel="noopener" class="follow-link ig">📸 Instagram</a>
+      <a href="https://tiktok.com/@aurabusinessfr" target="_blank" rel="noopener" class="follow-link tt">🎵 TikTok</a>
+      <a href="https://youtube.com/@aurabusinessfr" target="_blank" rel="noopener" class="follow-link yt">▶️ YouTube</a>
+    </div>
+    <div style="margin:14px 0 2px;width:100%">
+      <input type="text" id="pseudoInput" placeholder="Ton pseudo (ex: tonpseudo)" style="width:100%;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.03);color:#fff;font-size:14px;outline:none;font-family:inherit;transition:border-color .2s;box-sizing:border-box">
+    </div>
+    <div id="verifyError">Entre ton pseudo (3 caractères min).</div>
+    <button id="unlockBtn" class="unlock-btn">🔓 Vérifier et débloquer mon guide</button>
+    <p class="follow-note">J'utilise les pseudos pour vérifier manuellement. Pas de spam.</p>
+  </div>
+  <!-- GATED CONTENT -->
+  <div id="gateContent" class="gate-content">
+    <div style="text-align:center;margin-bottom:20px">
+      <span style="font-size:14px;display:inline-block;background:#e67e2215;color:#e67e22;border:1px solid #e67e2230;border-radius:50px;padding:4px 14px;font-weight:600;font-size:12px">✅ ACCÈS DÉBLOQUÉ</span>
+    </div>
+<div class="container">
+<div class="section-label">🎁 Accès gratuit</div>
+<h2>Comment obtenir ton guide <span class="highlight">gratuitement</span></h2>
+<p>Choisis l'option qui te convient le mieux.</p>
+<div style="display:flex;flex-direction:column;gap:20px;margin-top:24px">
+
+<div class="pricing-card">
+<h3 style="font-size:18px;font-weight:700;margin-bottom:12px;color:#e67e22">📧 Option 1 — Newsletter</h3>
+<p style="font-size:14px;color:#bbb;margin-bottom:16px">Reçois le guide gratuitement dans ta boîte mail, plus des conseils exclusifs chaque semaine.</p>
+<form style="display:flex;flex-direction:column;gap:10px" data-netlify="true">
+        <input type="hidden" name="form-name" value="email-capture" />
+<input type="text" placeholder="Ton prénom" style="padding:12px 16px;border-radius:8px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:#fff;font-family:inherit;font-size:14px;outline:none">
+<input type="email" placeholder="Ton adresse email" style="padding:12px 16px;border-radius:8px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:#fff;font-family:inherit;font-size:14px;outline:none">
+<button type="submit" class="btn" style="width:100%">👉 Télécharger mon guide gratuit</button>
+</form>
+<p style="font-size:12px;color:#777;margin-top:10px">🔒 Tes données sont protégées. Pas de spam, désinscription à tout moment.</p>
+</div>
+
+<div class="pricing-card">
+<h3 style="font-size:18px;font-weight:700;margin-bottom:12px;color:#e67e22">📢 Option 2 — Partage social</h3>
+<p style="font-size:14px;color:#bbb;margin-bottom:16px">Partage ce guide avec ta communauté et obtiens ton accès immédiat.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+<a href="#" style="display:flex;align-items:center;justify-content:center;gap:6px;padding:12px;border-radius:8px;background:rgba(29,161,242,.12);border:1px solid rgba(29,161,242,.25);color:#1da1f2;text-decoration:none;font-size:13px;font-weight:600">🐦 Twitter</a>
+<a href="#" style="display:flex;align-items:center;justify-content:center;gap:6px;padding:12px;border-radius:8px;background:rgba(228,64,95,.12);border:1px solid rgba(228,64,95,.25);color:#e4405f;text-decoration:none;font-size:13px;font-weight:600">📸 Instagram</a>
+<a href="#" style="display:flex;align-items:center;justify-content:center;gap:6px;padding:12px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.15);color:#fff;text-decoration:none;font-size:13px;font-weight:600">🎵 TikTok</a>
+<a href="#" style="display:flex;align-items:center;justify-content:center;gap:6px;padding:12px;border-radius:8px;background:rgba(37,211,102,.12);border:1px solid rgba(37,211,102,.25);color:#25d366;text-decoration:none;font-size:13px;font-weight:600">💬 WhatsApp</a>
+</div>
+</div>
+
+<div class="pricing-card">
+<h3 style="font-size:18px;font-weight:700;margin-bottom:12px;color:#e67e22">⭐ Option 3 — Avis</h3>
+<p style="font-size:14px;color:#bbb;margin-bottom:16px">Laisse un avis sur le guide et télécharge le pack bonus exclusif.</p>
+<div class="bonuses">
+<h4>🎁 BONUS OFFERTS</h4>
+<div class="bonus-item"><span class="emoji">📋</span> 30 idées de contenu prêtes à filmer</div>
+<div class="bonus-item"><span class="emoji">📄</span> Template de script vidéo (hook + corps + CTA)</div>
+<div class="bonus-item"><span class="emoji">📊</span> Checklist optimisation de profil (bio, link-in-bio, bannière)</div>
+</div>
+<a href="#" class="btn btn-small">✍️ Laisser un avis et télécharger</a>
+</div>
+
+</div>
+</div>
+  </div>
+</div>
+</section>
+
+<hr>
+
+<section class="testimonials" id="testimonials">
+<div class="container">
+<div class="section-label">💬 Ils l'ont fait</div>
+<h2>Des créateurs comme toi <span class="highlight">ont percé</span></h2>
+<div class="testimonials-grid">
+<div class="testimonial">
+<div class="testimonial-header">
+<div class="testimonial-avatar" style="background:rgba(230,126,34,.2);color:#e67e22">MC</div>
+<div><div class="testimonial-name">Marie-Charlotte</div><div class="testimonial-age">24 ans</div></div>
+</div>
+<div class="testimonial-stars">★★★★★</div>
+<div class="testimonial-text">"J'avais 200 abonnés sur Insta depuis 2 ans. J'ai appliqué la méthode storytelling et en 3 semaines j'étais à 3 500. Ce guide est une pépite."</div>
+</div>
+<div class="testimonial">
+<div class="testimonial-header">
+<div class="testimonial-avatar" style="background:rgba(230,126,34,.2);color:#e67e22">TK</div>
+<div><div class="testimonial-name">Thomas K.</div><div class="testimonial-age">29 ans</div></div>
+</div>
+<div class="testimonial-stars">★★★★★</div>
+<div class="testimonial-text">"Je passais 3h par vidéo pour 200 vues. Avec les routines créateur du module 7, je sors une vidéo en 45 min et je fais 15K vues. Game changer."</div>
+</div>
+<div class="testimonial">
+<div class="testimonial-header">
+<div class="testimonial-avatar" style="background:rgba(230,126,34,.2);color:#e67e22">AL</div>
+<div><div class="testimonial-name">Ambre L.</div><div class="testimonial-age">21 ans</div></div>
+</div>
+<div class="testimonial-stars">★★★★★</div>
+<div class="testimonial-text">"J'ai tout appris : l'algo, le montage rapide, la monétisation. Premier mois : 180€ avec l'affiliation. Pour 9€, c'est un non-brainer."</div>
+</div>
+</div>
+</div>
+</section>
+
+<hr>
+
+<section class="faq" id="faq">
+<div class="container">
+<div class="section-label">❓ Questions</div>
+<h2>Foire aux <span class="highlight">questions</span></h2>
+<div class="faq-list">
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">Est-ce pour les débutants ?<span class="arrow">▼</span></button>
+<div class="faq-a">Oui. Le guide commence par les absolues bases (choix de la plateforme, configuration du compte) et monte progressivement jusqu'aux stratégies avancées.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">De quoi ai-je besoin pour commencer ?<span class="arrow">▼</span></button>
+<div class="faq-a">Un smartphone et une connexion internet. Pas de caméra pro, pas de logiciel payant. Tout se fait avec des outils gratuits.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">C'est vraiment gratuit ?<span class="arrow">▼</span></button>
+<div class="faq-a">Oui. Aucune carte bancaire demandée, aucun paiement caché. Tu choisis simplement comment tu veux obtenir ton accès : newsletter, partage ou avis. Chaque option te donne le guide intégralement gratuitement.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">Combien de temps faut-il pour voir des résultats ?<span class="arrow">▼</span></button>
+<div class="faq-a">Certains élèves voient une différence dès la première vidéo. En général, les premiers résultats arrivent sous 2 à 4 semaines si tu appliques le système.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">Que faites-vous de mon email ?<span class="arrow">▼</span></button>
+<div class="faq-a">Rien de mal ! Ton email est uniquement utilisé pour t'envoyer le guide et ma newsletter hebdomadaire (conseils créateurs). Tu peux te désinscrire à tout moment en un clic. Je ne revends jamais tes données.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">Quels réseaux sociaux sont couverts ?<span class="arrow">▼</span></button>
+<div class="faq-a">TikTok, Instagram (Reels & stories), YouTube (long format & Shorts) et LinkedIn pour le personal branding. Les principes s'appliquent à toute plateforme vidéo.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">Puis-je partager ?<span class="arrow">▼</span></button>
+<div class="faq-a">Bien sûr ! Si tu trouves le guide utile, partage-le avec tes amis créateurs. Plus on est de fous, plus on rit — et plus la communauté grandit, meilleur est le contenu pour tout le monde.</div>
+</div>
+</div>
+</div>
+</section>
+
+<section style="background:#0d0d0d;padding:56px 0" id="community">
+<div class="container">
+<div class="section-label">🌐 Communauté</div>
+<h2>Rejoins la <span class="highlight">communauté</span></h2>
+<p>Suis-moi sur les réseaux pour du contenu exclusif chaque jour.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px">
+<a href="#" style="display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,rgba(228,64,95,.1),rgba(228,64,95,.03));border:1px solid rgba(228,64,95,.2);border-radius:12px;padding:16px;text-decoration:none;transition:.2s">
+<span style="font-size:24px">📸</span>
+<div><div style="font-size:14px;font-weight:600;color:#fff">Instagram</div><div style="font-size:12px;color:#999">@aurabusinessfr</div></div>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px;text-decoration:none;transition:.2s">
+<span style="font-size:24px">🎵</span>
+<div><div style="font-size:14px;font-weight:600;color:#fff">TikTok</div><div style="font-size:12px;color:#999">@aurabusinessfr</div></div>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,rgba(29,161,242,.1),rgba(29,161,242,.03));border:1px solid rgba(29,161,242,.2);border-radius:12px;padding:16px;text-decoration:none;transition:.2s">
+<span style="font-size:24px">🐦</span>
+<div><div style="font-size:14px;font-weight:600;color:#fff">Twitter / X</div><div style="font-size:12px;color:#999">@aurabusinessfr</div></div>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,rgba(255,0,0,.1),rgba(255,0,0,.03));border:1px solid rgba(255,0,0,.2);border-radius:12px;padding:16px;text-decoration:none;transition:.2s">
+<span style="font-size:24px">▶️</span>
+<div><div style="font-size:14px;font-weight:600;color:#fff">YouTube</div><div style="font-size:12px;color:#999">@aurabusinessfr</div></div>
+</a>
+</div>
+<div style="background:linear-gradient(135deg,rgba(230,126,34,.08),rgba(230,126,34,.03));border:1px solid rgba(230,126,34,.15);border-radius:16px;padding:24px;text-align:center;margin-top:20px">
+<h4 style="font-size:15px;font-weight:700;color:#fff;margin-bottom:4px">💌 La newsletter créateur</h4>
+<p style="font-size:13px;color:#999;margin-bottom:14px">Conseils, templates et stratégies chaque semaine dans ta boîte mail.</p>
+<form style="display:flex;gap:10px;max-width:400px;margin:0 auto" data-netlify="true">
+        <input type="hidden" name="form-name" value="email-capture" />
+<input type="email" placeholder="Ton email" style="flex:1;padding:12px 16px;border-radius:8px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:#fff;font-family:inherit;font-size:14px;outline:none">
+<button type="submit" class="btn btn-small" style="white-space:nowrap">Je m'inscris</button>
+</form>
+</div>
+</div>
+</section>
+
+<section class="final-cta">
+<div class="container">
+<h2>Rejoins les 1 500+ créateurs</h2>
+<p style="color:rgba(255,255,255,.85)">Ton guide gratuit t'attend. Rejoins la communauté et lance-toi dès maintenant.</p>
+<a href="#free-access" class="btn">👉 Télécharger gratuitement</a>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<p>© 2026 — <a href="#">@aurabusinessfr</a> &mdash; Simon. Tous droits réservés.</p>
+<p style="margin-top:8px">
+<a href="#" style="margin:0 5px" title="Twitter">🐦</a>
+<a href="#" style="margin:0 5px" title="Instagram">📸</a>
+<a href="#" style="margin:0 5px" title="TikTok">🎵</a>
+<a href="#" style="margin:0 5px" title="YouTube">▶️</a>
+<a href="#" style="margin:0 5px" title="WhatsApp">💬</a>
+</p>
+<p style="margin-top:8px;font-size:11px">Ce site n'est pas affilié à Beacons.ai. Template inspiré du style Beacons.</p>
+</div>
+</footer>
+
+<script>
+function toggleFaq(btn){btn.classList.toggle('active');var a=btn.nextElementSibling;a.classList.toggle('open')}
+
+document.addEventListener('DOMContentLoaded',function(){
+  var g=document.getElementById('followGate'),c=document.getElementById('gateContent'),b=document.getElementById('unlockBtn'),e=document.getElementById('verifyError'),i=document.getElementById('pseudoInput');
+  if(!g||!c||!b||!i)return;
+  if(localStorage.getItem('u_'+window.location.pathname)){g.style.display='none';c.classList.add('unlocked');return;}
+
+  b.addEventListener('click',function(){
+    if(!i.value.trim()||i.value.trim().length<3){e.style.display='block';return;}
+    e.style.display='none';b.disabled=true;b.textContent='🔄 Vérification...';
+    fetch('/api/verify-follow',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:i.value.trim()})})
+    .then(function(r){return r.json()}).then(function(d){
+      if(d.verified){localStorage.setItem('u_'+window.location.pathname,'true');g.style.display='none';c.classList.add('unlocked');}
+      else{b.disabled=false;b.textContent='🔓 Vérifier et débloquer mon guide';e.textContent=d.message||'Vérification échouée.';e.style.display='block';}
+    }).catch(function(){b.disabled=false;b.textContent='🔓 Vérifier et débloquer mon guide';e.textContent='Erreur réseau.';e.style.display='block';});
+  });
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var gate=document.getElementById('followGate');
+  var content=document.getElementById('gateContent');
+  var unlockBtn=document.getElementById('unlockBtn');
+  var checks=document.querySelectorAll('.follow-check input');
+  if(!gate||!content||!unlockBtn)return;
+  if(localStorage.getItem('unlocked_'+window.location.pathname)){
+    gate.style.display='none';
+    content.classList.add('unlocked');
+    return;
+  }
+  function checkFollowed(){
+    var allChecked=true;
+    checks.forEach(function(c){if(!c.checked)allChecked=false});
+    unlockBtn.disabled=!allChecked;
+  }
+  checks.forEach(function(c){c.addEventListener('change',checkFollowed)});
+  unlockBtn.addEventListener('click',function(){
+    localStorage.setItem('unlocked_'+window.location.pathname,'true');
+    gate.style.display='none';
+    content.classList.add('unlocked');
+  });
+});
+</script>
+</body>
+</html>

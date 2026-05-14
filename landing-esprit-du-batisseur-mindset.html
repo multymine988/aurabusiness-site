@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'ESPRIT DU BÂTISSEUR — Le mindset de l'entrepreneur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0f;
+            color: #e8e8ed;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        a { color: #0d7377; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        img { max-width: 100%; display: block; }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(160deg, #0a1a1b 0%, #0d3b3d 30%, #0d7377 70%, #0a8a8f 100%);
+            padding: 60px 0 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 50%, rgba(13,115,119,0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .hero .container { position: relative; z-index: 1; }
+        .hero-author {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            padding: 8px 18px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 28px;
+        }
+        .hero-author span { color: #0d7377; }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(13,115,119,0.3);
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #0d7377;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-size: clamp(32px, 6vw, 52px);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .hero h1 em {
+            font-style: normal;
+            color: #0d7377;
+        }
+        .hero-tagline {
+            font-size: clamp(17px, 2.5vw, 21px);
+            font-weight: 400;
+            color: rgba(255,255,255,0.85);
+            max-width: 560px;
+            margin: 0 auto 24px;
+            line-height: 1.5;
+        }
+        .hero-social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 30px;
+        }
+        .hero-social span { display: flex; align-items: center; gap: 6px; }
+        .hero-social .stars { color: #f59e0b; letter-spacing: 2px; }
+
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, #0d7377, #0d8b8f);
+            color: #fff;
+            font-weight: 700;
+            font-size: 18px;
+            padding: 16px 48px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            transition: transform .2s, box-shadow .2s;
+            box-shadow: 0 8px 24px rgba(13,115,119,0.35);
+            letter-spacing: -0.3px;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(13,115,119,0.45);
+            text-decoration: none;
+        }
+        .btn-secondary {
+            display: inline-block;
+            background: transparent;
+            color: #0d7377;
+            font-weight: 700;
+            font-size: 16px;
+            padding: 14px 40px;
+            border-radius: 12px;
+            border: 2px solid #0d7377;
+            cursor: pointer;
+            transition: background .2s, color .2s;
+        }
+        .btn-secondary:hover {
+            background: #0d7377;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Sections common */
+        section { padding: 64px 0; }
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #0d7377;
+            margin-bottom: 8px;
+        }
+        .section-title {
+            font-size: clamp(26px, 4vw, 36px);
+            font-weight: 800;
+            letter-spacing: -0.8px;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            color: #fff;
+        }
+        .section-sub {
+            font-size: 17px;
+            color: rgba(255,255,255,0.6);
+            max-width: 540px;
+            line-height: 1.6;
+        }
+
+        /* Problem */
+        .problem { background: #0e0e16; }
+        .problem-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 32px;
+        }
+        .problem-card {
+            background: rgba(13,115,119,0.06);
+            border: 1px solid rgba(13,115,119,0.15);
+            border-radius: 14px;
+            padding: 24px;
+            transition: border-color .2s;
+        }
+        .problem-card:hover { border-color: #0d7377; }
+        .problem-card .icon { font-size: 28px; margin-bottom: 10px; }
+        .problem-card h3 { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+        .problem-card p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.5; }
+
+        /* Solution */
+        .solution { background: #0a0a0f; }
+        .solution-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            margin-top: 32px;
+        }
+        .solution-text { font-size: 16px; color: rgba(255,255,255,0.65); line-height: 1.7; }
+        .solution-text strong { color: #0d7377; }
+
+        /* Modules */
+        .modules { background: #0e0e16; }
+        .modules-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 32px;
+        }
+        @media (max-width: 500px) {
+            .modules-grid { grid-template-columns: 1fr; }
+        }
+        .module-item {
+            background: rgba(13,115,119,0.05);
+            border: 1px solid rgba(13,115,119,0.12);
+            border-radius: 12px;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: border-color .2s;
+        }
+        .module-item:hover { border-color: #0d7377; }
+        .module-item .num {
+            font-size: 13px;
+            font-weight: 800;
+            color: #0d7377;
+            min-width: 26px;
+        }
+        .module-item h4 { font-size: 14px; font-weight: 600; color: #fff; line-height: 1.3; }
+
+        /* Benefits */
+        .benefits { background: #0a0a0f; }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 32px;
+        }
+        @media (max-width: 500px) {
+            .benefits-grid { grid-template-columns: 1fr; }
+        }
+        .benefit-card {
+            background: rgba(13,115,119,0.06);
+            border: 1px solid rgba(13,115,119,0.12);
+            border-radius: 14px;
+            padding: 22px 20px;
+            text-align: center;
+            transition: border-color .2s, transform .2s;
+        }
+        .benefit-card:hover {
+            border-color: #0d7377;
+            transform: translateY(-2px);
+        }
+        .benefit-card .icon { font-size: 32px; margin-bottom: 10px; }
+        .benefit-card h4 { font-size: 15px; font-weight: 700; color: #fff; }
+
+        /* Free Access */
+        .free-access { background: #0e0e16; }
+        .free-options { display: flex; flex-direction: column; gap: 24px; margin-top: 32px; }
+        .free-option { background: rgba(13,115,119,0.06); border: 1px solid rgba(13,115,119,0.15); border-radius: 16px; padding: 28px 24px; }
+        .free-option h3 { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+        .free-option > p { font-size: 14px; color: rgba(255,255,255,0.55); margin-bottom: 16px; line-height: 1.5; }
+        .free-form { display: flex; flex-direction: column; gap: 12px; }
+        .free-form input { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 14px 16px; font-family: 'Inter', sans-serif; font-size: 15px; color: #fff; outline: none; transition: border-color .2s; }
+        .free-form input:focus { border-color: #0d7377; }
+        .free-form input::placeholder { color: rgba(255,255,255,0.3); }
+        .free-form .btn-primary { width: 100%; }
+        .privacy-note { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 8px; text-align: center; }
+        .share-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+        .share-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 10px; font-size: 14px; font-weight: 600; color: #fff; border: none; cursor: pointer; transition: transform .2s; text-decoration: none; }
+        .share-btn:hover { transform: translateY(-2px); text-decoration: none; }
+        .share-btn.twitter { background: #1da1f2; }
+        .share-btn.instagram { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .share-btn.tiktok { background: #000; }
+        .share-btn.whatsapp { background: #25d366; }
+        .bonus-list { list-style: none; margin-top: 8px; }
+        .bonus-list li { font-size: 14px; color: rgba(255,255,255,0.7); padding: 5px 0; display: flex; align-items: center; gap: 10px; }
+
+        /* Testimonials */
+        .testimonials { background: #0a0a0f; }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+            margin-top: 32px;
+        }
+        .testimonial-card {
+            background: rgba(13,115,119,0.05);
+            border: 1px solid rgba(13,115,119,0.12);
+            border-radius: 16px;
+            padding: 24px;
+        }
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 12px;
+        }
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #0d7377;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+            color: #fff;
+            flex-shrink: 0;
+        }
+        .testimonial-meta { font-size: 13px; }
+        .testimonial-meta strong { display: block; color: #fff; font-size: 15px; }
+        .testimonial-meta span { color: rgba(255,255,255,0.4); }
+        .testimonial-card blockquote {
+            font-size: 15px;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.6;
+            font-style: italic;
+        }
+        .testimonial-card blockquote::before { content: '"'; color: #0d7377; }
+        .testimonial-card blockquote::after { content: '"'; color: #0d7377; }
+
+        /* FAQ */
+        .faq { background: #0e0e16; }
+        .faq-list {
+            margin-top: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .faq-item {
+            background: rgba(13,115,119,0.04);
+            border: 1px solid rgba(13,115,119,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 18px 22px;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: #fff;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background .2s;
+        }
+        .faq-question:hover { background: rgba(13,115,119,0.06); }
+        .faq-question .arrow {
+            font-size: 14px;
+            transition: transform .3s;
+            color: #0d7377;
+        }
+        .faq-item.open .faq-question .arrow {
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .35s ease, padding .35s ease;
+            padding: 0 22px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.7;
+        }
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+            padding: 0 22px 18px;
+        }
+
+        /* Community */
+        .community { background: #0a0a0f; }
+        .community-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 32px; }
+        @media (max-width: 500px) { .community-grid { grid-template-columns: 1fr; } }
+        .community-card { background: rgba(13,115,119,0.06); border: 1px solid rgba(13,115,119,0.12); border-radius: 14px; padding: 22px 20px; text-align: center; transition: border-color .2s; }
+        .community-card:hover { border-color: #0d7377; }
+        .community-card .icon { font-size: 36px; margin-bottom: 10px; }
+        .community-card h4 { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+        .community-card p { font-size: 12px; color: rgba(255,255,255,0.4); }
+        .community-card a { color: #0d7377; font-size: 13px; font-weight: 600; }
+        .community-mini-form { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; max-width: 400px; margin-left: auto; margin-right: auto; }
+        .community-mini-form input { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 14px 16px; font-family: 'Inter', sans-serif; font-size: 15px; color: #fff; outline: none; }
+        .community-mini-form input:focus { border-color: #0d7377; }
+        .community-mini-form input::placeholder { color: rgba(255,255,255,0.3); }
+
+        /* Final CTA */
+        .cta-final {
+            background: linear-gradient(160deg, #0a1a1b 0%, #0d3b3d 40%, #0d7377 100%);
+            padding: 72px 0;
+            text-align: center;
+        }
+        .cta-final h2 {
+            font-size: clamp(28px, 5vw, 42px);
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: -1px;
+            line-height: 1.15;
+            margin-bottom: 12px;
+        }
+        .cta-final p {
+            font-size: 17px;
+            color: rgba(255,255,255,0.7);
+            max-width: 500px;
+            margin: 0 auto 28px;
+            line-height: 1.6;
+        }
+        .cta-final .pricing-old {
+            font-size: 24px;
+            margin-bottom: 2px;
+        }
+        .cta-final .pricing-current {
+            font-size: 62px;
+            margin-bottom: 6px;
+        }
+        .cta-final .pricing-guarantee { margin-top: 16px; }
+
+        /* Footer */
+        footer {
+            background: #07070c;
+            padding: 32px 0;
+            text-align: center;
+            font-size: 13px;
+            color: rgba(255,255,255,0.25);
+        }
+        footer a { color: rgba(255,255,255,0.35); }
+        footer a:hover { color: #0d7377; }
+
+        /* Utils */
+        .text-center { text-align: center; }
+        .mt-24 { margin-top: 24px; }
+        .mt-32 { margin-top: 32px; }
+        .gap-12 { gap: 12px; }
+        .flex-center { display: flex; justify-content: center; align-items: center; }
+    
+.follow-overlay{max-width:460px;margin:0 auto;padding:24px 16px}
+.follow-header{text-align:center;margin-bottom:22px}
+.follow-header .lock-icon{font-size:42px;margin-bottom:6px}
+.follow-header h3{font-size:clamp(17px,3.5vw,22px);font-weight:800;color:#fff;margin:0 0 6px}
+.follow-header p{font-size:13px;color:#999;margin:0;line-height:1.4}
+.follow-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.follow-link{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:600;transition:all .2s;color:#ddd}
+.follow-link.ig{background:rgba(225,48,108,0.1);border:1px solid rgba(225,48,108,0.2)}
+.follow-link.ig:hover{background:rgba(225,48,108,0.2);border-color:rgba(225,48,108,0.35)}
+.follow-link.tt{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08)}
+.follow-link.tt:hover{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.15)}
+.follow-link.yt{background:rgba(255,0,0,0.08);border:1px solid rgba(255,0,0,0.2)}
+.follow-link.yt:hover{background:rgba(255,0,0,0.15);border-color:rgba(255,0,0,0.35)}
+
+#pseudoInput:focus{border-color:#0d7377!important}
+#pseudoInput::placeholder{color:#555}
+.unlock-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px 24px;border-radius:12px;border:none;background:#0d7377;color:#fff;font-size:15px;font-weight:700;cursor:pointer;transition:all .3s;font-family:inherit}
+.unlock-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px #0d737740}
+.unlock-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+.gate-content{display:none}
+.gate-content.unlocked{display:block}
+.follow-note{font-size:12px;color:#555;text-align:center;margin-top:14px}
+#verifyError{color:#0d7377;font-size:13px;display:none;text-align:center;margin:10px 0}
+
+/* FOLLOW ROW */
+/* FOLLOW GATE */
+</style>
+</head>
+<body>
+
+<!-- ==================== HERO ==================== -->
+<header class="hero">
+    <div class="container">
+        <div class="hero-author">
+            ✍️ Simon — <span>@aurabusinessfr</span>
+        </div>
+        <div class="hero-badge">📖 Ebook · Nouvelle édition 2026</div>
+        <h1>L'ESPRIT DU <em>BÂTISSEUR</em></h1>
+        <p class="hero-tagline">Le mindset qui transforme un jeune ordinaire en entrepreneur qui réussit.</p>
+        <div class="hero-social">
+            <span>👥 Déjà <strong>800+</strong> entrepreneurs en formation</span>
+            <span class="stars">⭐ 4.9/5</span>
+        </div>
+        <a href="#free-access" class="btn-primary">Télécharger gratuitement →</a>
+        <p style="margin-top: 14px; font-size: 13px; color: rgba(255,255,255,0.5);">100% gratuit · Accès immédiat · Sans inscription</p>
+    </div>
+</header>
+
+<!-- ==================== PROBLEM ==================== -->
+<section class="problem" id="problem">
+    <div class="container">
+        <p class="section-label">Le problème</p>
+        <h2 class="section-title">Tu as tout pour réussir… <br>sauf le mental ?</h2>
+        <p class="section-sub">Tu regardes les autres lancer leur business, gagner en liberté, et tu te demandes pourquoi toi tu n'y arrives pas. La réponse n'est pas dans une stratégie magique. Elle est dans ta tête.</p>
+        <div class="problem-grid">
+            <div class="problem-card">
+                <div class="icon">😔</div>
+                <h3>Tu doutes de toi et de tes capacités</h3>
+                <p>Tu te compares, tu te sens illégitime, tu crois que tu n'es pas "fait pour ça".</p>
+            </div>
+            <div class="problem-card">
+                <div class="icon">⏳</div>
+                <h3>Tu procrastines au lieu d'agir</h3>
+                <p>Tu passes des heures à consommer du contenu au lieu de construire ton projet.</p>
+            </div>
+            <div class="problem-card">
+                <div class="icon">💔</div>
+                <h3>Tu abandonnes dès que ça devient difficile</h3>
+                <p>Premier obstacle, premier rejet — et tout s'effondre. Tu repars à zéro, encore une fois.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SOLUTION ==================== -->
+<section class="solution" id="solution">
+    <div class="container">
+        <p class="section-label">La solution</p>
+        <h2 class="section-title">Le mindset, ça se construit. Pas à pas.</h2>
+        <div class="solution-wrap">
+            <p class="solution-text">
+                <strong>L'Esprit du Bâtisseur</strong> n'est pas un simple ebook. C'est un programme complet d'entraînement mental pour les jeunes entrepreneurs — ou ceux qui veulent le devenir.
+            </p>
+            <p class="solution-text">
+                Tu y découvriras <strong>8 modules</strong> conçus pour te faire passer du doute à l'action, de la peur à la confiance, de l'abandon à la résilience. Chaque chapitre est une fondation. Ensemble, ils construisent <strong>l'état d'esprit d'un bâtisseur</strong>.
+            </p>
+            <p class="solution-text">
+                Pas de théorie vide. Des principes opérationnels, des exercices concrets, et un cadre mental qui te servira <strong>toute ta vie d'entrepreneur</strong>.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== MODULES (WHAT'S INSIDE) ==================== -->
+<section class="modules" id="modules">
+    <div class="container">
+        <p class="section-label">Au programme</p>
+        <h2 class="section-title">Ce que tu vas apprendre</h2>
+        <p class="section-sub">8 modules pour construire un mental d'acier et un business solide.</p>
+        <div class="modules-grid">
+            <div class="module-item"><span class="num">01</span><h4>Identité de l'entrepreneur — qui tu dois devenir</h4></div>
+            <div class="module-item"><span class="num">02</span><h4>Croyances limitantes — les déconstruire pour avancer</h4></div>
+            <div class="module-item"><span class="num">03</span><h4>Maîtriser la peur — ton alliée, pas ton ennemie</h4></div>
+            <div class="module-item"><span class="num">04</span><h4>Discipline vs motivation — le moteur qui gagne toujours</h4></div>
+            <div class="module-item"><span class="num">05</span><h4>Rapport à l'échec — chaque chute est une leçon</h4></div>
+            <div class="module-item"><span class="num">06</span><h4>Prise de décision — choisir vite et bien</h4></div>
+            <div class="module-item"><span class="num">07</span><h4>Dialogue intérieur — le coach dans ta tête</h4></div>
+            <div class="module-item"><span class="num">08</span><h4>Vision et résilience — tenir sur la durée</h4></div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== BENEFITS ==================== -->
+<section class="benefits" id="benefits">
+    <div class="container">
+        <p class="section-label">Les bénéfices</p>
+        <h2 class="section-title">Ce que ce livre va t'apporter</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card"><div class="icon">🧠</div><h4>Développer une confiance inébranlable</h4></div>
+            <div class="benefit-card"><div class="icon">🔥</div><h4>Transformer la peur en carburant</h4></div>
+            <div class="benefit-card"><div class="icon">⚡</div><h4>Passer à l'action sans attendre</h4></div>
+            <div class="benefit-card"><div class="icon">🛡️</div><h4>Rebondir après chaque échec</h4></div>
+            <div class="benefit-card"><div class="icon">🎯</div><h4>Prendre les bonnes décisions</h4></div>
+            <div class="benefit-card"><div class="icon">💪</div><h4>Construire la discipline sur le long terme</h4></div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FREE ACCESS ==================== -->
+<section class="free-access" id="free-access">
+<div class="free-access-inner" style="max-width:600px;margin:0 auto">
+  <!-- FOLLOW GATE -->
+                          <div id="followGate" class="follow-overlay">
+    <div class="follow-header">
+      <div class="lock-icon">🔒</div>
+      <h3>Suis @aurabusinessfr pour débloquer ton guide</h3>
+      <p>Suis sur ces réseaux puis entre ton pseudo :</p>
+    </div>
+    <div class="follow-links">
+      <a href="https://instagram.com/aurabusinessfr" target="_blank" rel="noopener" class="follow-link ig">📸 Instagram</a>
+      <a href="https://tiktok.com/@aurabusinessfr" target="_blank" rel="noopener" class="follow-link tt">🎵 TikTok</a>
+      <a href="https://youtube.com/@aurabusinessfr" target="_blank" rel="noopener" class="follow-link yt">▶️ YouTube</a>
+    </div>
+    <div style="margin:14px 0 2px;width:100%">
+      <input type="text" id="pseudoInput" placeholder="Ton pseudo (ex: tonpseudo)" style="width:100%;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.03);color:#fff;font-size:14px;outline:none;font-family:inherit;transition:border-color .2s;box-sizing:border-box">
+    </div>
+    <div id="verifyError">Entre ton pseudo (3 caractères min).</div>
+    <button id="unlockBtn" class="unlock-btn">🔓 Vérifier et débloquer mon guide</button>
+    <p class="follow-note">J'utilise les pseudos pour vérifier manuellement. Pas de spam.</p>
+  </div>
+  <!-- GATED CONTENT -->
+  <div id="gateContent" class="gate-content">
+    <div style="text-align:center;margin-bottom:20px">
+      <span style="font-size:14px;display:inline-block;background:#0d737715;color:#0d7377;border:1px solid #0d737730;border-radius:50px;padding:4px 14px;font-weight:600;font-size:12px">✅ ACCÈS DÉBLOQUÉ</span>
+    </div>
+<div class="container">
+        <p class="section-label">Accès gratuit</p>
+        <h2 class="section-title">3 façons d'obtenir ton guide gratuitement</h2>
+        <div class="free-options">
+            <div class="free-option">
+                <h3>📧 Option 1 — Newsletter</h3>
+                <p>Inscris-toi à la newsletter et reçois le guide immédiatement dans ta boîte mail.</p>
+                <form class="free-form" data-netlify="true">
+        <input type="hidden" name="form-name" value="email-capture" />
+                    <input type="text" placeholder="Prénom" required>
+                    <input type="email" placeholder="Email" required>
+                    <button type="submit" class="btn-primary">👉 Télécharger mon guide gratuit</button>
+                </form>
+                <p class="privacy-note">🔒 Tes données sont protégées. Pas de spam, désinscription en 1 clic.</p>
+            </div>
+            <div class="free-option">
+                <h3>📢 Option 2 — Partage social</h3>
+                <p>Partage ce guide avec ta communauté et obtiens ton accès immédiat.</p>
+                <div class="share-grid">
+                    <a href="https://twitter.com/intent/tweet?text=D%C3%A9couvrez+L%27Esprit+du+B%C3%A2tisseur+%F0%9F%94%A5" target="_blank" class="share-btn twitter">𝕏 Twitter</a>
+                    <a href="https://instagram.com/aurabusinessfr" target="_blank" class="share-btn instagram">📸 Instagram</a>
+                    <a href="https://tiktok.com/@aurabusinessfr" target="_blank" class="share-btn tiktok">🎵 TikTok</a>
+                    <a href="https://api.whatsapp.com/send?text=D%C3%A9couvrez+L%27Esprit+du+B%C3%A2tisseur+%F0%9F%94%A5" target="_blank" class="share-btn whatsapp">💬 WhatsApp</a>
+                </div>
+            </div>
+            <div class="free-option">
+                <h3>⭐ Option 3 — Avis</h3>
+                <p>Laisse un avis sur le guide et reçois le pack bonus exclusif.</p>
+                <ul class="bonus-list">
+                    <li>🎁 Template journal de bord du bâtisseur</li>
+                    <li>🎁 5 exercices audio de visualisation guidée</li>
+                    <li>🎁 Accès au groupe privé WhatsApp</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ==================== TESTIMONIALS ==================== -->
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <p class="section-label">Témoignages</p>
+        <h2 class="section-title">Ils ont construit leur mindset</h2>
+        <p class="section-sub">Des jeunes comme toi qui ont transformé leur état d'esprit — et leur vie.</p>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">CM</div>
+                    <div class="testimonial-meta">
+                        <strong>Camille M.</strong>
+                        <span>19 ans — E-commerce</span>
+                    </div>
+                </div>
+                <blockquote>J'avais peur de lancer mon business. Ce livre m'a donné le mindset pour le faire. Aujourd'hui je gagne 600€/mois et je n'ai plus peur d'échouer.</blockquote>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">AL</div>
+                    <div class="testimonial-meta">
+                        <strong>Alexandre L.</strong>
+                        <span>22 ans — Freelance web</span>
+                    </div>
+                </div>
+                <blockquote>J'ai arrêté de me comparer et j'ai enfin lancé mon premier client. En 3 mois j'ai remplacé mon job étudiant. Le chapitre sur les croyances limitantes m'a ouvert les yeux.</blockquote>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">SR</div>
+                    <div class="testimonial-meta">
+                        <strong>Sarah R.</strong>
+                        <span>20 ans — Création de contenu</span>
+                    </div>
+                </div>
+                <blockquote>Je lisais tout sur l'entrepreneuriat mais je n'osais pas me lancer. Ce livre m'a fait passer de l'intention à l'action. Aujourd'hui je publie, je vends et je vis de ma passion.</blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="faq" id="faq">
+    <div class="container">
+        <p class="section-label">FAQ</p>
+        <h2 class="section-title">Tes questions, nos réponses</h2>
+        <div class="faq-list">
+            <div class="faq-item open">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Le mindset, ça se change vraiment ?<span class="arrow">▼</span>
+                </button>
+                <div class="faq-answer">Oui. Le mindset n'est pas une personnalité figée. C'est un ensemble de croyances et d'habitudes que tu peux reprogrammer. Ce livre te donne les outils pour le faire, pas à pas.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Est-ce que ce livre est fait pour moi si je n'ai aucune expérience ?<span class="arrow">▼</span>
+                </button>
+                <div class="faq-answer">Absolument. Il est spécialement conçu pour les jeunes qui débutent — ou qui hésitent encore à se lancer. Aucune connaissance pré-requise.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Sous quel format est livré l'ebook ?<span class="arrow">▼</span>
+                </button>
+                <div class="faq-answer">PDF haute qualité, lisible sur tout appareil (téléphone, tablette, ordinateur). Tu reçois aussi les bonus numériques immédiatement après téléchargement.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    C'est vraiment gratuit ?<span class="arrow">▼</span>
+                </button>
+                <div class="faq-answer">Totalement gratuit. Aucune carte bancaire demandée, aucun paiement caché. Tu choisis simplement comment tu veux obtenir ton accès — par email, partage social ou avis. C'est tout.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Que faites-vous de mon email ?<span class="arrow">▼</span>
+                </button>
+                <div class="faq-answer">Ton email est utilisé uniquement pour t'envoyer le guide et ma newsletter hebdomadaire (conseils entrepreneuriat, mindset, opportunités). Promis : pas de spam, pas de revente de données, désinscription en 1 clic.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Combien de pages fait l'ebook ?<span class="arrow">▼</span>
+                </button>
+                <div class="faq-answer">L'Esprit du Bâtisseur fait plus de 80 pages de contenu concret, structuré en 8 modules avec exercices pratiques à chaque chapitre.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Puis-je partager ce guide ?<span class="arrow">▼</span>
+                </button>
+                <div class="faq-answer">Oui ! Plus on est de bâtisseurs, plus on change la donne. Partage-le avec tes amis, ta famille, ta communauté. 🚀</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== COMMUNAUTÉ ==================== -->
+<section class="community" id="community">
+    <div class="container">
+        <p class="section-label">Communauté</p>
+        <h2 class="section-title">Rejoins la communauté</h2>
+        <p class="section-sub">Des centaines de jeunes bâtisseurs comme toi. Du contenu quotidien, des échanges, du mentorat.</p>
+        <div class="community-grid">
+            <div class="community-card">
+                <div class="icon">📸</div>
+                <h4>Instagram</h4>
+                <p>Conseils visuels quotidiens</p>
+                <a href="https://instagram.com/aurabusinessfr" target="_blank">@aurabusinessfr →</a>
+            </div>
+            <div class="community-card">
+                <div class="icon">🎵</div>
+                <h4>TikTok</h4>
+                <p>Vidéos mindset courtes</p>
+                <a href="https://tiktok.com/@aurabusinessfr" target="_blank">@aurabusinessfr →</a>
+            </div>
+            <div class="community-card">
+                <div class="icon">𝕏</div>
+                <h4>Twitter / X</h4>
+                <p>Threads et discussions</p>
+                </div>
+            <div class="community-card">
+                <div class="icon">▶️</div>
+                <h4>YouTube</h4>
+                <p>Formations et entretiens</p>
+                <a href="https://youtube.com/@aurabusinessfr" target="_blank">@aurabusinessfr →</a>
+            </div>
+        </div>
+        <form class="community-mini-form" data-netlify="true">
+        <input type="hidden" name="form-name" value="email-capture" />
+            <input type="email" placeholder="Entre ton email pour rester connecté" required>
+            <button type="submit" class="btn-primary">Je rejoins la communauté</button>
+        </form>
+    </div>
+</section>
+
+<!-- ==================== FINAL CTA ==================== -->
+<section class="cta-final" id="cta">
+    <div class="container">
+        <h2>Prêt à construire <br>ton mindset ?</h2>
+        <p>Rejoins les 800+ entrepreneurs qui ont déjà téléchargé le guide. Gratuitement.</p>
+        <a href="#free-access" class="btn-primary">Télécharger gratuitement →</a>
+        <div class="pricing-guarantee">
+            <span>🔥</span> 100% gratuit · Accès immédiat
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+    <div class="container">
+        <p>© 2026 — Simon @aurabusinessfr. Tous droits réservés.</p>
+        <p style="margin-top: 6px;">
+            📩 <a href="mailto:contact@aurabusiness.fr">contact@aurabusiness.fr</a>
+            &nbsp;·&nbsp; <a href="https://instagram.com/aurabusinessfr" target="_blank">Instagram</a>
+            &nbsp;·&nbsp; <a href="https://tiktok.com/@aurabusinessfr" target="_blank">TikTok</a>
+            &nbsp;·&nbsp; &nbsp;·&nbsp; <a href="#">Mentions légales</a>
+        </p>
+    </div>
+</footer>
+
+<script>
+
+document.addEventListener('DOMContentLoaded',function(){
+  var g=document.getElementById('followGate'),c=document.getElementById('gateContent'),b=document.getElementById('unlockBtn'),e=document.getElementById('verifyError'),i=document.getElementById('pseudoInput');
+  if(!g||!c||!b||!i)return;
+  if(localStorage.getItem('u_'+window.location.pathname)){g.style.display='none';c.classList.add('unlocked');return;}
+
+  b.addEventListener('click',function(){
+    if(!i.value.trim()||i.value.trim().length<3){e.style.display='block';return;}
+    e.style.display='none';b.disabled=true;b.textContent='🔄 Vérification...';
+    fetch('/api/verify-follow',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:i.value.trim()})})
+    .then(function(r){return r.json()}).then(function(d){
+      if(d.verified){localStorage.setItem('u_'+window.location.pathname,'true');g.style.display='none';c.classList.add('unlocked');}
+      else{b.disabled=false;b.textContent='🔓 Vérifier et débloquer mon guide';e.textContent=d.message||'Vérification échouée.';e.style.display='block';}
+    }).catch(function(){b.disabled=false;b.textContent='🔓 Vérifier et débloquer mon guide';e.textContent='Erreur réseau.';e.style.display='block';});
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RELATIONS HUMAINES — Le guide complet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:#0a0a0a;color:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:720px;margin:0 auto;padding:0 20px}
+.section{padding:60px 0}
+.accent{color:#c2185b}
+.badge{display:inline-block;background:rgba(194,24,91,0.15);color:#c2185b;padding:6px 16px;border-radius:100px;font-size:13px;font-weight:600;letter-spacing:0.3px;border:1px solid rgba(194,24,91,0.3)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:700;border-radius:12px;transition:all 0.3s;cursor:pointer;border:none;font-family:'Inter',sans-serif}
+.btn-primary{background:linear-gradient(135deg,#c2185b,#e0407a);color:#fff;font-size:18px;padding:16px 32px;width:100%;box-shadow:0 8px 32px rgba(194,24,91,0.35)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(194,24,91,0.5)}
+.btn-outline{background:transparent;color:#c2185b;border:2px solid #c2185b;font-size:15px;padding:12px 24px}
+.btn-outline:hover{background:#c2185b;color:#fff}
+.btn-small{background:transparent;color:#c2185b;border:1px solid #c2185b;font-size:13px;padding:6px 16px;border-radius:100px;text-decoration:none;font-weight:600;transition:all 0.3s;display:inline-block}
+.btn-small:hover{background:#c2185b;color:#fff}
+h1{font-size:clamp(32px,5vw,48px);font-weight:900;line-height:1.15;letter-spacing:-0.5px}
+h2{font-size:clamp(26px,4vw,36px);font-weight:800;line-height:1.2;letter-spacing:-0.3px;margin-bottom:12px}
+h3{font-size:20px;font-weight:700;margin-bottom:8px}
+p{color:rgba(255,255,255,0.8);font-size:16px}
+.text-center{text-align:center}
+.mt-8{margin-top:8px}
+.mt-16{margin-top:16px}
+.mt-24{margin-top:24px}
+.mt-32{margin-top:32px}
+.mt-40{margin-top:40px}
+.mb-8{margin-bottom:8px}
+.mb-16{margin-bottom:16px}
+.mb-24{margin-bottom:24px}
+.mb-32{margin-bottom:32px}
+
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(160deg,#0a0a0a 0%,#1a0a12 30%,#2d0f1e 60%,#0a0a0a 100%)}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 50%,rgba(194,24,91,0.12) 0%,transparent 60%),radial-gradient(circle at 70% 80%,rgba(224,64,122,0.08) 0%,transparent 50%);pointer-events:none}
+.hero-content{position:relative;z-index:1}
+.hero-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px}
+.author{font-size:14px;color:rgba(255,255,255,0.6)}
+.author span{color:#c2185b;font-weight:600}
+.stars{color:#ffb300;letter-spacing:2px;font-size:14px}
+.proof{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:8px 20px;width:fit-content;font-size:13px;color:rgba(255,255,255,0.7)}
+.proof strong{color:#fff}
+.gradient-text{background:linear-gradient(135deg,#fff 0%,#c2185b 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:clamp(16px,2vw,20px);color:rgba(255,255,255,0.7);line-height:1.5;max-width:560px}
+.hero-cta-wrap{margin-top:32px}
+.hero-guarantee{font-size:13px;color:rgba(255,255,255,0.4);margin-top:12px}
+
+.problem-list{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.problem-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:20px;border-left:3px solid #c2185b}
+.problem-item h3{font-size:16px}
+.problem-item p{font-size:14px;color:rgba(255,255,255,0.6)}
+
+.solution-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+@media(max-width:480px){.solution-grid{grid-template-columns:1fr}}
+.solution-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:20px;text-align:center}
+.solution-card .emoji{font-size:32px;margin-bottom:8px;display:block}
+.solution-card h4{font-size:15px;font-weight:600;margin-bottom:4px}
+.solution-card p{font-size:13px;color:rgba(255,255,255,0.55)}
+
+.modules{display:flex;flex-direction:column;gap:8px;margin-top:24px}
+.module-item{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:14px 18px;transition:all 0.2s}
+.module-item:hover{border-color:#c2185b;background:rgba(194,24,91,0.06)}
+.module-num{width:28px;height:28px;border-radius:50%;background:#c2185b;color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.module-item span:last-child{font-size:15px;font-weight:500}
+
+.benefits-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+@media(max-width:480px){.benefits-grid{grid-template-columns:1fr}}
+.benefit-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:24px 20px;text-align:center;transition:all 0.3s}
+.benefit-card:hover{border-color:#c2185b;transform:translateY(-4px);box-shadow:0 12px 40px rgba(194,24,91,0.15)}
+.benefit-card .emoji{font-size:36px;margin-bottom:10px;display:block}
+.benefit-card h4{font-size:15px;font-weight:600;margin-bottom:4px}
+.benefit-card p{font-size:13px;color:rgba(255,255,255,0.55)}
+
+.testimonials{display:flex;flex-direction:column;gap:16px;margin-top:24px}
+.testimonial-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:24px}
+.testimonial-header{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.testimonial-avatar{width:44px;height:44px;border-radius:50%;background:#c2185b;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;color:#fff;flex-shrink:0}
+.testimonial-name{font-size:15px;font-weight:600}
+.testimonial-name span{font-size:13px;color:rgba(255,255,255,0.4);font-weight:400}
+.testimonial-text{font-size:14px;color:rgba(255,255,255,0.7);line-height:1.6;font-style:italic}
+.testimonial-text::before{content:'"';color:#c2185b}
+.testimonial-text::after{content:'"';color:#c2185b}
+.testimonial-stars{color:#ffb300;font-size:13px;margin-top:8px}
+
+.faq-item{border-bottom:1px solid rgba(255,255,255,0.06);padding:18px 0}
+.faq-question{font-size:16px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:none;border:none;color:#fff;width:100%;text-align:left;padding:0;font-family:'Inter',sans-serif}
+.faq-question::after{content:'+';font-size:20px;color:#c2185b;font-weight:400;transition:transform 0.2s}
+.faq-question[aria-expanded="true"]::after{content:'−'}
+.faq-answer{font-size:14px;color:rgba(255,255,255,0.6);padding-top:12px;line-height:1.6;display:none}
+.faq-answer.open{display:block}
+
+.cta-section{background:linear-gradient(160deg,#0a0a0a 0%,#1a0a12 50%,#2d0f1e 100%);border-top:1px solid rgba(194,24,91,0.15);border-bottom:1px solid rgba(194,24,91,0.15);padding:80px 0;text-align:center}
+.cta-section h2{font-size:clamp(28px,4vw,40px)}
+.cta-section p{max-width:480px;margin:16px auto 0;color:rgba(255,255,255,0.6)}
+.cta-section .btn-primary{max-width:400px}
+
+footer{padding:32px 0;text-align:center;font-size:13px;color:rgba(255,255,255,0.25)}
+footer a{color:rgba(255,255,255,0.35);text-decoration:none}
+footer a:hover{color:#c2185b}
+
+.divider{width:40px;height:3px;background:#c2185b;border-radius:2px;margin:8px 0 16px}
+.divider-center{margin-left:auto;margin-right:auto}
+
+/* === Free Access Section === */
+.option-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:28px 24px;text-align:center;transition:all 0.3s}
+.option-card:hover{border-color:rgba(194,24,91,0.3)}
+.option-card h3{font-size:18px;margin-bottom:4px}
+.option-card p{font-size:14px;color:rgba(255,255,255,0.6);margin-bottom:16px}
+.option-card.primary{background:linear-gradient(145deg,rgba(194,24,91,0.12),rgba(194,24,91,0.03));border-color:rgba(194,24,91,0.3);position:relative}
+.option-card.primary::before{content:'RECOMMANDÉ';position:absolute;top:-10px;right:20px;background:#c2185b;color:#fff;font-size:10px;font-weight:800;padding:3px 14px;border-radius:100px;letter-spacing:0.5px}
+
+.free-form{display:flex;flex-direction:column;gap:12px;max-width:400px;margin:16px auto 0}
+.free-form input{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:14px 16px;font-size:15px;color:#fff;font-family:'Inter',sans-serif;outline:none;transition:border 0.3s}
+.free-form input::placeholder{color:rgba(255,255,255,0.35)}
+.free-form input:focus{border-color:#c2185b}
+.free-form .btn-primary{font-size:16px;padding:14px 32px}
+.privacy-note{font-size:12px;color:rgba(255,255,255,0.35);margin-top:8px}
+
+.social-share-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:400px;margin:16px auto 0}
+@media(max-width:400px){.social-share-grid{grid-template-columns:1fr}}
+.social-share-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:10px;text-decoration:none;font-size:14px;font-weight:600;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:#fff;transition:all 0.3s;cursor:pointer}
+.social-share-btn:hover{background:rgba(194,24,91,0.15);border-color:#c2185b;transform:translateY(-2px)}
+
+.bonus-list{margin-top:12px;text-align:left;max-width:340px;margin-left:auto;margin-right:auto}
+.bonus-list li{font-size:14px;color:rgba(255,255,255,0.7);list-style:none;padding:6px 0;display:flex;align-items:center;gap:10px}
+.bonus-list li::before{content:'✓';color:#c2185b;font-weight:700}
+
+/* === Community Section === */
+.community-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+@media(max-width:480px){.community-grid{grid-template-columns:1fr}}
+.community-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:20px;text-align:center;transition:all 0.3s}
+.community-card:hover{border-color:#c2185b;transform:translateY(-3px);box-shadow:0 8px 24px rgba(194,24,91,0.12)}
+.community-card .emoji{font-size:32px;display:block;margin-bottom:6px}
+.community-card .handle{font-size:14px;font-weight:600;color:#fff;margin-bottom:4px}
+.community-card .label{font-size:12px;color:rgba(255,255,255,0.4);margin-bottom:12px}
+
+.community-form-wrap{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:24px;text-align:center;margin-top:24px}
+.community-form-wrap p{font-size:15px;font-weight:600;margin-bottom:12px}
+.community-mini-form{display:flex;gap:8px;max-width:400px;margin:0 auto}
+@media(max-width:480px){.community-mini-form{flex-direction:column}}
+.community-mini-form input{flex:1;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:12px 14px;font-size:14px;color:#fff;font-family:'Inter',sans-serif;outline:none}
+.community-mini-form input::placeholder{color:rgba(255,255,255,0.35)}
+.community-mini-form input:focus{border-color:#c2185b}
+.community-mini-form .btn-primary{font-size:14px;padding:12px 20px;width:auto;white-space:nowrap}
+
+.follow-overlay{max-width:460px;margin:0 auto;padding:24px 16px}
+.follow-header{text-align:center;margin-bottom:22px}
+.follow-header .lock-icon{font-size:42px;margin-bottom:6px}
+.follow-header h3{font-size:clamp(17px,3.5vw,22px);font-weight:800;color:#fff;margin:0 0 6px}
+.follow-header p{font-size:13px;color:#999;margin:0;line-height:1.4}
+.follow-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.follow-link{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:600;transition:all .2s;color:#ddd}
+.follow-link.ig{background:rgba(225,48,108,0.1);border:1px solid rgba(225,48,108,0.2)}
+.follow-link.ig:hover{background:rgba(225,48,108,0.2);border-color:rgba(225,48,108,0.35)}
+.follow-link.tt{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08)}
+.follow-link.tt:hover{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.15)}
+.follow-link.yt{background:rgba(255,0,0,0.08);border:1px solid rgba(255,0,0,0.2)}
+.follow-link.yt:hover{background:rgba(255,0,0,0.15);border-color:rgba(255,0,0,0.35)}
+
+#pseudoInput:focus{border-color:#c2185b!important}
+#pseudoInput::placeholder{color:#555}
+.unlock-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px 24px;border-radius:12px;border:none;background:#c2185b;color:#fff;font-size:15px;font-weight:700;cursor:pointer;transition:all .3s;font-family:inherit}
+.unlock-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px #c2185b40}
+.unlock-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+.gate-content{display:none}
+.gate-content.unlocked{display:block}
+.follow-note{font-size:12px;color:#555;text-align:center;margin-top:14px}
+#verifyError{color:#c2185b;font-size:13px;display:none;text-align:center;margin:10px 0}
+
+/* FOLLOW ROW */
+/* FOLLOW GATE */
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-top">
+      <div class="author">Simon — <span>@aurabusinessfr</span></div>
+      <div class="stars">★★★★<span style="color:rgba(255,255,255,0.15)">★</span></div>
+    </div>
+
+    <div class="proof">
+      <span>📘</span> 500+ lecteurs · <strong>4.6/5</strong>
+    </div>
+
+    <h1 class="mt-24 gradient-text">RELATIONS HUMAINES</h1>
+    <p class="hero-sub mt-16">Le guide complet pour devenir quelqu'un que les gens veulent connaître</p>
+    <p class="mt-16" style="font-size:15px;color:rgba(255,255,255,0.6);line-height:1.5">Les compétences sociales s'apprennent. Voici comment maîtriser les relations humaines en 2026.</p>
+
+    <div class="hero-cta-wrap">
+      <a href="#free-access" class="btn btn-primary">Télécharger gratuitement →</a>
+      <p class="hero-guarantee">100% gratuit · Accès immédiat · Sans inscription</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="problem">
+  <div class="container">
+    <div class="text-center">
+      <span class="badge">TU RESSENS ÇA ?</span>
+      <h2 class="mt-16">Tu te sens invisible dans les conversations ?</h2>
+      <p style="max-width:520px;margin:0 auto">Tu regardes les autres discuter avec aisance pendant que toi, tu cherches tes mots. Tu aimerais être cette personne que tout le monde apprécie.</p>
+    </div>
+
+    <div class="problem-list">
+      <div class="problem-item">
+        <h3>😶 Tu ne sais pas quoi dire</h3>
+        <p>Les blancs s'installent, les sujets s'épuisent, et tu te retrouves figé. Pas par manque d'intelligence — par manque de réflexes sociaux.</p>
+      </div>
+      <div class="problem-item">
+        <h3>😰 Tu es timide et ça te bloque</h3>
+        <p>L'anxiété sociale te paralyse avant même d'ouvrir la bouche. Tu ressens le trac, le cœur qui s'emballe, et tu finis par rester dans ton coin.</p>
+      </div>
+      <div class="problem-item">
+        <h3>🤷 Tu veux te faire plus d'amis mais tu ne sais pas comment</h3>
+        <p>Tu vois les autres construire des cercles sociaux solides, sortir, être invités — et toi tu ne comprends pas ce qui te manque.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:rgba(194,24,91,0.02);border-top:1px solid rgba(194,24,91,0.06);border-bottom:1px solid rgba(194,24,91,0.06)">
+  <div class="container">
+    <div class="text-center">
+      <span class="badge">LA VÉRITÉ</span>
+      <h2 class="mt-16">La socialité est une compétence. Pas un don.</h2>
+      <p style="max-width:540px;margin:0 auto">Les personnes magnétiques ne sont pas nées comme ça. Elles ont simplement appris les codes, les réflexes et la psychologie qui font qu'on a envie de les connaître.</p>
+    </div>
+
+    <div class="solution-grid mt-32">
+      <div class="solution-card">
+        <span class="emoji">🧪</span>
+        <h4>100% science-backed</h4>
+        <p>Psychologie sociale, neurosciences et recherches comportementales à la base de chaque chapitre.</p>
+      </div>
+      <div class="solution-card">
+        <span class="emoji">📝</span>
+        <h4>Scripts prêts à l'emploi</h4>
+        <p>Des phrases, des répliques, des structures de conversation que tu peux utiliser dès maintenant.</p>
+      </div>
+      <div class="solution-card">
+        <span class="emoji">🏋️</span>
+        <h4>Exercices pratiques</h4>
+        <p>Chaque module contient des défis concrets pour ancrer les compétences dans le réel.</p>
+      </div>
+      <div class="solution-card">
+        <span class="emoji">📖</span>
+        <h4>Format digital</h4>
+        <p>PDF + EPUB — lis sur ton téléphone, ta tablette ou ton ordi, où que tu sois.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="inside">
+  <div class="container">
+    <div class="text-center">
+      <span class="badge">LE PROGRAMME</span>
+      <h2 class="mt-16">Ce que contient le guide</h2>
+      <p>8 modules complets pour transformer tes relations</p>
+    </div>
+
+    <div class="modules">
+      <div class="module-item"><span class="module-num">1</span><span>L'aura et la présence — exister dans une pièce sans dire un mot</span></div>
+      <div class="module-item"><span class="module-num">2</span><span>Posture & langage corporel — ce que ton corps raconte avant ta bouche</span></div>
+      <div class="module-item"><span class="module-num">3</span><span>Charisme (les 3 piliers) — présence, pouvoir, chaleur</span></div>
+      <div class="module-item"><span class="module-num">4</span><span>Art de la conversation — lancer, maintenir, approfondir</span></div>
+      <div class="module-item"><span class="module-num">5</span><span>Confiance en soi — éliminer le syndrome de l'imposteur social</span></div>
+      <div class="module-item"><span class="module-num">6</span><span>Drague & relations — attirer sans forcer</span></div>
+      <div class="module-item"><span class="module-num">7</span><span>Limites & affirmation — dire non avec respect et fermeté</span></div>
+      <div class="module-item"><span class="module-num">8</span><span>Cercles sociaux & réseau — construire et entretenir un entourage de qualité</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:rgba(194,24,91,0.02);border-top:1px solid rgba(194,24,91,0.06);border-bottom:1px solid rgba(194,24,91,0.06)">
+  <div class="container">
+    <div class="text-center">
+      <span class="badge">POURQUOI CE GUIDE</span>
+      <h2 class="mt-16">Ce que tu vas gagner</h2>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <span class="emoji">🎯</span>
+        <h4>Captiver n'importe quelle conversation</h4>
+        <p>Fini les silences gênants et les échanges superficiels. Tu sauras créer du lien en quelques minutes.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="emoji">🧠</span>
+        <h4>Lire le langage corporel</h4>
+        <p>Déchiffre les signaux invisibles : savoir si quelqu'un est intéressé, mal à l'aise, ou en confiance.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="emoji">💬</span>
+        <h4>Des scripts pour toutes les situations</h4>
+        <p>Networking, premier date, entretien, soirée entre inconnus — tu auras les mots justes.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="emoji">🔥</span>
+        <h4>Développer ton charisme</h4>
+        <p>Cette aura magnétique qui fait que les gens t'écoutent et te respectent naturellement.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="emoji">💪</span>
+        <h4>Te faire respecter sans être agressif</h4>
+        <p>Poser tes limites, dire non, et affirmer ta position avec calme et assurance.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="emoji">🤝</span>
+        <h4>Construire un réseau solide</h4>
+        <p>Des relations professionnelles et personnelles qui durent et qui t'ouvrent des portes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="free-access">
+<div class="free-access-inner" style="max-width:600px;margin:0 auto">
+  <!-- FOLLOW GATE -->
+                          <div id="followGate" class="follow-overlay">
+    <div class="follow-header">
+      <div class="lock-icon">🔒</div>
+      <h3>Suis @aurabusinessfr pour débloquer ton guide</h3>
+      <p>Suis sur ces réseaux puis entre ton pseudo :</p>
+    </div>
+    <div class="follow-links">
+      <a href="https://instagram.com/aurabusinessfr" target="_blank" rel="noopener" class="follow-link ig">📸 Instagram</a>
+      <a href="https://tiktok.com/@aurabusinessfr" target="_blank" rel="noopener" class="follow-link tt">🎵 TikTok</a>
+      <a href="https://youtube.com/@aurabusinessfr" target="_blank" rel="noopener" class="follow-link yt">▶️ YouTube</a>
+    </div>
+    <div style="margin:14px 0 2px;width:100%">
+      <input type="text" id="pseudoInput" placeholder="Ton pseudo (ex: tonpseudo)" style="width:100%;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.03);color:#fff;font-size:14px;outline:none;font-family:inherit;transition:border-color .2s;box-sizing:border-box">
+    </div>
+    <div id="verifyError">Entre ton pseudo (3 caractères min).</div>
+    <button id="unlockBtn" class="unlock-btn">🔓 Vérifier et débloquer mon guide</button>
+    <p class="follow-note">J'utilise les pseudos pour vérifier manuellement. Pas de spam.</p>
+  </div>
+  <!-- GATED CONTENT -->
+  <div id="gateContent" class="gate-content">
+    <div style="text-align:center;margin-bottom:20px">
+      <span style="font-size:14px;display:inline-block;background:#c2185b15;color:#c2185b;border:1px solid #c2185b30;border-radius:50px;padding:4px 14px;font-weight:600;font-size:12px">✅ ACCÈS DÉBLOQUÉ</span>
+    </div>
+<div class="container">
+    <div class="text-center">
+      <span class="badge">ACCÈS GRATUIT</span>
+      <h2 class="mt-16">Comment obtenir ton guide gratuitement</h2>
+      <p>3 façons simples — choisis celle qui te correspond le mieux</p>
+    </div>
+
+    <div class="mt-32" style="display:flex;flex-direction:column;gap:24px">
+      <div class="option-card primary">
+        <h3>📧 Option 1 — Reçois le guide + les prochains contenus exclusifs</h3>
+        <p>Entre ton prénom et ton email, je t'envoie le guide immédiatement. En plus, tu recevras mes prochains guides et contenus exclusifs.</p>
+        <form class="free-form" action="#" method="post" data-netlify="true">
+        <input type="hidden" name="form-name" value="email-capture" />
+          <input type="text" name="prenom" placeholder="Ton prénom" required>
+          <input type="email" name="email" placeholder="Ton adresse email" required>
+          <button type="submit" class="btn btn-primary">👉 Télécharger mon guide gratuit</button>
+        </form>
+        <p class="privacy-note">🔒 Tes données sont protégées. Pas de spam, désinscription en 1 clic.</p>
+      </div>
+
+      <div class="option-card">
+        <h3>📢 Option 2 — Partage social</h3>
+        <p>Partage cette page avec TA communauté et aide d'autres personnes à découvrir le guide.</p>
+        <div class="social-share-grid">
+          <a href="#" class="social-share-btn">🐦 Twitter</a>
+          <a href="#" class="social-share-btn">📸 Instagram</a>
+          <a href="#" class="social-share-btn">🎵 TikTok</a>
+          <a href="#" class="social-share-btn">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="option-card">
+        <h3>⭐ Option 3 — Télécharge et laisse un avis</h3>
+        <p>Télécharge le guide, et si tu l'as aimé, laisse un avis → reçois le pack bonus.</p>
+        <div class="bonus-list">
+          <ul>
+            <li>Checklist des réflexes sociaux (PDF)</li>
+            <li>30 scripts de conversation prêts à l'emploi</li>
+            <li>Journal d'entraînement 21 jours</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+</section>
+
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="text-center">
+      <span class="badge">TÉMOIGNAGES</span>
+      <h2 class="mt-16">Ils ont transformé leurs relations</h2>
+    </div>
+
+    <div class="testimonials">
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="testimonial-avatar">AL</div>
+          <div>
+            <div class="testimonial-name">Alexandre L. <span>· 27 ans</span></div>
+          </div>
+        </div>
+        <div class="testimonial-text">J'ai toujours été le gars silencieux dans les soirées. Ce guide m'a donné des scripts tellement simples que j'ai cru que ça marcherait pas. Première soirée après l'avoir lu, j'ai tenu une conversation de 20 minutes avec une inconnue. Ma meuf actuelle, je l'ai rencontrée grâce à une technique du module 6. Je recommande les yeux fermés.</div>
+        <div class="testimonial-stars">★★★★★</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="testimonial-avatar">MC</div>
+          <div>
+            <div class="testimonial-name">Marie C. <span>· 31 ans</span></div>
+          </div>
+        </div>
+        <div class="testimonial-text">Je suis arrivée dans une nouvelle ville sans connaître personne. Le module sur les cercles sociaux a changé ma vie. J'ai appliqué les exercices pendant 3 semaines et maintenant j'ai un groupe d'amis solide avec qui je sors chaque semaine. Le guide m'a appris à créer des connexions authentiques, pas juste des connaissances superficielles.</div>
+        <div class="testimonial-stars">★★★★★</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="testimonial-avatar">TH</div>
+          <div>
+            <div class="testimonial-name">Thomas H. <span>· 24 ans</span></div>
+          </div>
+        </div>
+        <div class="testimonial-text">J'avais tellement d'anxiété sociale que je commandais à manger livré pour éviter les interactions. Le chapitre sur les 3 piliers du charisme m'a fait comprendre que je n'avais pas besoin d'être extraverti pour être charismatique. Aujourd'hui je manage une équipe de 8 personnes et mes collègues disent que je suis la personne la plus calme et posée du bureau. Si tu avais vu mon état y a 6 mois...</div>
+        <div class="testimonial-stars">★★★★★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <div class="text-center">
+      <span class="badge">FAQ</span>
+      <h2 class="mt-16">Tes questions, nos réponses</h2>
+    </div>
+
+    <div class="mt-24" style="border-top:1px solid rgba(255,255,255,0.06)">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">C'est vraiment gratuit ?</button>
+        <div class="faq-answer">Oui. 100%. Pas de CB, pas d'abonnement. Juste de la valeur. Tu télécharges le guide, tu le lis, tu l'appliques. Gratuit. Point.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">Que faites-vous de mon email ?</button>
+        <div class="faq-answer">Ton email sert uniquement à t'envoyer le guide et, si tu le souhaites, mes prochains contenus exclusifs. Je ne revends rien, je ne spamme pas. Tu peux te désinscrire en 1 clic à tout moment, et tu ne recevras plus rien.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">Puis-je partager ce guide ?</button>
+        <div class="faq-answer">Oui, et c'est même encouragé ! Si tu trouves le guide utile, partage-le avec tes amis, ta famille, ta communauté. Plus on est à améliorer ses relations humaines, mieux c'est.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">Je suis introverti, ce guide est-il fait pour moi ?</button>
+        <div class="faq-answer">Absolument. Le guide a été conçu spécifiquement pour les introvertis. Les techniques sont douces, progressives et ne te demandent jamais d'être quelqu'un d'autre. Au contraire, tu apprendras à utiliser ta nature introvertie comme une force.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">Et si j'ai de l'anxiété sociale ?</button>
+        <div class="faq-answer">Le module 5 est entièrement dédié à la confiance en soi et à la gestion de l'anxiété sociale. Les exercices sont progressifs : tu commences par des micro-interactions à faible enjeu et tu montes graduellement. Beaucoup de lecteurs avec une anxiété sociale sévère ont vu des améliorations significatives.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">Combien de temps faut-il pour voir des résultats ?</button>
+        <div class="faq-answer">Certaines techniques donnent des résultats immédiats (scripts de conversation, posture). Pour les changements profonds (confiance, charisme), compte 2 à 4 semaines de pratique régulière. Le journal d'entraînement 21 jours t'accompagne pas à pas.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">Quel est le format du guide ?</button>
+        <div class="faq-answer">Le guide est disponible en PDF et EPUB. Tu peux le lire sur ton téléphone (recommandé), ta tablette, liseuse ou ordinateur. Il est optimisé pour une lecture mobile avec une navigation interactive.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">Le guide est-il à jour ?</button>
+        <div class="faq-answer">Oui, le guide a été rédigé en 2026 avec les dernières recherches en psychologie sociale et neurosciences. Il est régulièrement mis à jour et tu reçois les mises à jour gratuitement à vie.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="community" style="background:rgba(194,24,91,0.02);border-top:1px solid rgba(194,24,91,0.06);border-bottom:1px solid rgba(194,24,91,0.06)">
+  <div class="container">
+    <div class="text-center">
+      <span class="badge">COMMUNAUTÉ</span>
+      <h2 class="mt-16">Rejoins la communauté</h2>
+      <p>Suis-moi sur les réseaux pour du contenu quotidien sur les relations humaines, la confiance et le charisme.</p>
+    </div>
+
+    <div class="community-grid">
+      <div class="community-card">
+        <span class="emoji">📸</span>
+        <div class="handle">@aurabusinessfr</div>
+        <div class="label">Instagram</div>
+        <a href="#" class="btn-small">Suivre</a>
+      </div>
+      <div class="community-card">
+        <span class="emoji">🎵</span>
+        <div class="handle">@aurabusinessfr</div>
+        <div class="label">TikTok</div>
+        <a href="#" class="btn-small">Suivre</a>
+      </div>
+      <div class="community-card">
+        <span class="emoji">🐦</span>
+        <div class="handle">@aurabusinessfr</div>
+        <div class="label">Twitter / X</div>
+        <a href="#" class="btn-small">Suivre</a>
+      </div>
+      <div class="community-card">
+        <span class="emoji">▶️</span>
+        <div class="handle">AuraBusiness</div>
+        <div class="label">YouTube</div>
+        <a href="#" class="btn-small">Suivre</a>
+      </div>
+    </div>
+
+    <div class="community-form-wrap">
+      <p>📧 Reçois les prochains guides →</p>
+      <form class="community-mini-form" action="#" method="post" data-netlify="true">
+        <input type="hidden" name="form-name" value="email-capture" />
+        <input type="email" name="email" placeholder="Ton email" required>
+        <button type="submit" class="btn btn-primary">Je m'inscris</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="cta-final">
+  <div class="container">
+    <span class="badge">PRÊT ?</span>
+    <h2 class="mt-16">Prêt à améliorer tes relations humaines ?</h2>
+    <p>Rejoins les 500+ personnes qui ont déjà téléchargé ce guide et commencent à transformer leurs interactions sociales.</p>
+    <div class="mt-32">
+      <a href="#free-access" class="btn btn-primary" style="max-width:400px;margin:0 auto">👉 Télécharger gratuitement</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 — Simon · @aurabusinessfr</p>
+    <p style="margin-top:8px">Retrouve-moi sur Instagram, TikTok : @aurabusinessfr</p>
+    <p style="margin-top:8px">Relations Humaines — Le guide complet pour devenir quelqu'un que les gens veulent connaître</p>
+    <p style="margin-top:12px"><a href="mailto:contact@aurabusiness.fr">contact@aurabusiness.fr</a></p>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(btn) {
+  const expanded = btn.getAttribute('aria-expanded') === 'true';
+  btn.setAttribute('aria-expanded', !expanded);
+  const answer = btn.nextElementSibling;
+  answer.classList.toggle('open');
+}
+</script>
+
+<script>
+
+document.addEventListener('DOMContentLoaded',function(){
+  var g=document.getElementById('followGate'),c=document.getElementById('gateContent'),b=document.getElementById('unlockBtn'),e=document.getElementById('verifyError'),i=document.getElementById('pseudoInput');
+  if(!g||!c||!b||!i)return;
+  if(localStorage.getItem('u_'+window.location.pathname)){g.style.display='none';c.classList.add('unlocked');return;}
+
+  b.addEventListener('click',function(){
+    if(!i.value.trim()||i.value.trim().length<3){e.style.display='block';return;}
+    e.style.display='none';b.disabled=true;b.textContent='🔄 Vérification...';
+    fetch('/api/verify-follow',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:i.value.trim()})})
+    .then(function(r){return r.json()}).then(function(d){
+      if(d.verified){localStorage.setItem('u_'+window.location.pathname,'true');g.style.display='none';c.classList.add('unlocked');}
+      else{b.disabled=false;b.textContent='🔓 Vérifier et débloquer mon guide';e.textContent=d.message||'Vérification échouée.';e.style.display='block';}
+    }).catch(function(){b.disabled=false;b.textContent='🔓 Vérifier et débloquer mon guide';e.textContent='Erreur réseau.';e.style.display='block';});
+  });
+});
+</script>
+</body>
+</html>

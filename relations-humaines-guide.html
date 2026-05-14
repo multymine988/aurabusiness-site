@@ -1,0 +1,2469 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RELATIONS HUMAINES — Le guide complet pour devenir quelqu'un que les gens veulent connaitre</title>
+<style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap');
+  :root { --primary: #1a1a2e; --accent: #c2185b; --accent2: #880e4f; --gold: #f0a500; --light: #f8f9fa; --gray: #6c757d; --text: #212529; --text-light: #495057; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; color: var(--text); line-height: 1.7; background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .cover { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(135deg, #1a1a2e 0%, #4a0033 50%, #c2185b 100%); color: #fff; padding: 60px 40px; position: relative; overflow: hidden; }
+  .cover::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 30% 70%, rgba(194,24,91,0.15) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(240,165,0,0.1) 0%, transparent 50%); pointer-events: none; }
+  .cover-badge { display: inline-block; background: var(--accent); color: #fff; padding: 8px 24px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 40px; position: relative; z-index: 1; }
+  .cover h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 900; line-height: 1.15; max-width: 700px; margin-bottom: 24px; position: relative; z-index: 1; }
+  .cover h1 span { color: var(--accent); }
+  .cover-subtitle { font-size: 1.25rem; font-weight: 300; color: rgba(255,255,255,0.8); max-width: 600px; margin-bottom: 50px; position: relative; z-index: 1; }
+  .cover-author { font-size: 1rem; font-weight: 500; color: rgba(255,255,255,0.6); position: relative; z-index: 1; }
+  .cover-author strong { color: var(--gold); font-weight: 700; }
+  .cover-line { width: 60px; height: 3px; background: var(--accent); margin: 30px auto; position: relative; z-index: 1; }
+  .content { max-width: 740px; margin: 0 auto; padding: 30px 40px; }
+  .toc { padding: 30px 40px; max-width: 740px; margin: 0 auto; }
+  .toc h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary); margin-bottom: 10px; }
+  .toc-line { width: 60px; height: 3px; background: var(--accent); margin-bottom: 40px; }
+  .toc-list { list-style: none; }
+  .toc-list li { padding: 12px 0; border-bottom: 1px solid #e9ecef; display: flex; align-items: baseline; gap: 16px; }
+  .toc-list a { text-decoration: none; color: inherit; display: flex; align-items: baseline; gap: 16px; width: 100%; transition: color 0.2s; }
+  .toc-list a:hover { color: var(--accent); }
+  .toc-number { font-weight: 800; color: var(--accent); font-size: 1.1rem; min-width: 30px; }
+  .toc-title { font-weight: 600; font-size: 1.05rem; color: var(--primary); }
+  .module-header { padding-top: 10px; margin-bottom: 30px; border-bottom: 3px solid var(--accent); padding-bottom: 16px; }
+  .module-number { font-size: 0.85rem; font-weight: 700; color: var(--accent); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px; }
+  .module-header h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--primary); line-height: 1.2; margin-bottom: 8px; }
+  .module-tagline { font-size: 1.05rem; color: var(--gray); }
+  h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--primary); margin: 32px 0 14px; line-height: 1.3; }
+  h3 { font-family: 'Playfair Display', serif; font-size: 1.45rem; color: var(--primary); margin: 32px 0 14px; line-height: 1.3; }
+  h4 { font-size: 1.1rem; font-weight: 700; color: var(--accent2); margin: 24px 0 10px; }
+  p { margin-bottom: 14px; color: var(--text-light); font-size: 0.98rem; }
+  strong { color: var(--text); font-weight: 600; }
+  blockquote { border-left: 4px solid var(--accent); background: #fce4ec; padding: 18px 22px; margin: 20px 0; border-radius: 0 8px 8px 0; color: var(--text-light); }
+  .callout { background: linear-gradient(135deg, #fff9e6 0%, #fff3cc 100%); border-left: 4px solid var(--gold); padding: 18px 22px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .callout-dark { background: #fad8e5; border-left: 4px solid var(--accent); padding: 18px 22px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .callout-success { background: linear-gradient(135deg, #f0fff4 0%, #e6ffe6 100%); border-left: 4px solid #28a745; padding: 18px 22px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+  thead th { background: var(--primary); color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.5px; }
+  thead th:first-child { border-radius: 8px 0 0 0; }
+  thead th:last-child { border-radius: 0 8px 0 0; }
+  tbody td { padding: 10px 14px; border-bottom: 1px solid #e9ecef; vertical-align: top; }
+  tbody tr:nth-child(even) { background: #f8f9fa; }
+  hr { border: none; height: 2px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 30px 0; }
+  hr.concl-divider { border: none; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); width: 60px; margin: 20px auto; }
+  .notes-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .notes-card { background: var(--light); border: 2px solid #e9ecef; border-radius: 10px; padding: 18px; text-align: center; }
+  .notes-card .label { font-size: 0.75rem; font-weight: 700; color: var(--gray); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
+  .notes-card .value { font-size: 1.1rem; font-weight: 600; color: var(--primary); }
+  .notes-card .note { font-size: 0.82rem; color: var(--gray); margin-top: 4px; }
+  .bonus-header { background: linear-gradient(135deg, var(--gold) 0%, #e09400 100%); color: #fff; padding: 26px; border-radius: 12px; text-align: center; margin: 30px 0 24px; }
+  .bonus-header h2 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 4px; color: #fff; }
+  .bonus-header p { color: rgba(255,255,255,0.85); font-size: 0.95rem; }
+  .exercise { background: linear-gradient(135deg, #1a1a2e 0%, #4a0033 100%); color: #fff; padding: 26px; border-radius: 12px; margin: 30px 0; }
+  .exercise h4 { color: var(--gold); font-size: 1.05rem; margin-bottom: 14px; letter-spacing: 1px; text-transform: uppercase; }
+  .exercise p, .exercise li { color: rgba(255,255,255,0.85); }
+  .exercise strong { color: #fff; }
+  .checklist { background: var(--light); border: 2px solid #e9ecef; border-radius: 12px; padding: 20px 24px; margin: 20px 0; }
+  .checklist-item { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e9ecef; cursor: pointer; font-size: 0.95rem; color: var(--text-light); transition: color 0.2s; }
+  .checklist-item:last-child { border-bottom: none; }
+  .checklist-item input[type="checkbox"] { width: 20px; height: 20px; cursor: pointer; accent-color: var(--accent); flex-shrink: 0; }
+  .checklist-item:has(input:checked) { color: var(--gray); text-decoration: line-through; }
+  .conclusion { text-align: center; padding: 35px 40px; background: #1a1a2e; color: #fff; margin-top: 40px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact; }
+  .conclusion h2 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 16px; color: #fff; }
+  .conclusion p { color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto 12px; font-size: 0.95rem; }
+  .conclusion li { color: rgba(255,255,255,0.85); }
+  .conclusion strong { color: var(--gold); }
+  ul, ol { margin: 14px 0; padding-left: 24px; }
+  li { margin-bottom: 6px; color: var(--text-light); font-size: 0.98rem; }
+  li strong { color: var(--text); }
+  pre, code { font-family: 'Consolas', 'Courier New', monospace; font-size: 0.86rem; }
+  pre { background: var(--primary); color: #e9ecef; padding: 18px 22px; border-radius: 8px; margin: 20px 0; overflow-x: auto; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word; }
+  code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; font-size: 0.86rem; color: var(--accent); }
+  pre code { background: none; padding: 0; color: inherit; }
+
+  /* ===== PRINT STYLES — Optimized for Perfect PDF ===== */
+  @page {
+    size: A4;
+    margin: 18mm 15mm;
+  }
+
+  @page :first {
+    margin: 0;
+  }
+
+  .content.page-break {
+    page-break-before: always;
+    page-break-inside: avoid;
+  }
+
+  .module-header {
+    page-break-inside: avoid;
+  }
+
+  .exercise,
+  .callout,
+  .callout-dark,
+  .callout-success,
+  blockquote,
+  table,
+  pre,
+  .checklist {
+    page-break-inside: avoid;
+  }
+
+  .conclusion {
+    page-break-before: always;
+    min-height: 100vh;
+  }
+
+  .bonus-header {
+    page-break-before: always;
+    page-break-inside: avoid;
+  }
+
+
+  @media print {
+    body {
+      font-size: 11pt;
+      line-height: 1.6;
+      color: #000;
+      background: #fff;
+    }
+
+    .cover {
+      height: 100vh;
+      page-break-after: always;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .cover::before,
+    .intro-quote::before {
+      display: none !important;
+    }
+
+    .toc {
+      page-break-after: always;
+    }
+
+    .content {
+      padding: 0;
+      max-width: 100%;
+    }
+
+    h2, h3, h4 {
+      page-break-after: avoid;
+    }
+
+    p, li {
+      orphans: 3;
+      widows: 3;
+    }
+
+    .exercise,
+    .callout,
+    .callout-dark,
+    .callout-success,
+    blockquote,
+    table,
+    pre,
+    .checklist {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .conclusion {
+      margin-top: 0;
+      padding: 60px 40px;
+      page-break-inside: avoid;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .bonus-header {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    thead th {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .exercise {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .conclusion * {
+      color: #fff !important;
+    }
+    .conclusion strong {
+      color: var(--gold) !important;
+    }
+    .bonus-header * {
+      color: #fff !important;
+    }
+    .bonus-header h2, .bonus-header strong {
+      color: #fff !important;
+    }
+    .conclusion hr {
+      border-color: rgba(255,255,255,0.2) !important;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .cover {
+      height: auto;
+      min-height: 100dvh;
+      padding: 40px 24px;
+    }
+
+    .cover h1 {
+      font-size: 2.2rem;
+    }
+
+    .cover-subtitle {
+      font-size: 1rem;
+    }
+
+    .cover-badge {
+      font-size: 0.75rem;
+      padding: 6px 16px;
+      margin-bottom: 24px;
+    }
+
+    .content {
+      padding: 20px 16px;
+      max-width: 100%;
+    }
+
+    .toc {
+      padding: 20px 16px;
+    }
+
+    .toc h2 {
+      font-size: 1.8rem;
+    }
+
+    .module-header h2 {
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+    }
+
+    h4 {
+      font-size: 1rem;
+    }
+
+    p, li {
+      font-size: 0.92rem;
+    }
+
+    .exercise,
+    .callout,
+    .callout-dark,
+    .callout-success,
+    blockquote,
+    .checklist {
+      padding: 16px;
+      margin: 16px 0;
+    }
+
+    .bonus-header {
+      padding: 20px 16px;
+    }
+
+    .bonus-header h2 {
+      font-size: 1.4rem;
+    }
+
+    .conclusion {
+      padding: 40px 20px;
+    }
+
+    .conclusion h2 {
+      font-size: 1.5rem;
+    }
+
+    .intro-quote {
+      font-size: 1rem;
+      padding: 20px 16px;
+    }
+
+    table {
+      font-size: 0.8rem;
+    }
+
+    thead th,
+    tbody td {
+      padding: 8px 10px;
+    }
+
+    pre {
+      font-size: 0.78rem;
+      padding: 14px 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cover h1 {
+      font-size: 1.7rem;
+    }
+
+    .cover {
+      padding: 30px 16px;
+      min-height: 100dvh;
+    }
+
+    .cover-badge {
+      font-size: 0.7rem;
+      padding: 5px 14px;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      padding: 16px 12px;
+    }
+
+    .toc {
+      padding: 16px 12px;
+    }
+
+    .module-header h2 {
+      font-size: 1.3rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+    }
+
+    .exercise,
+    .callout,
+    .callout-dark,
+    .callout-success,
+    blockquote {
+      padding: 14px;
+      margin: 12px 0;
+    }
+
+    .conclusion {
+      padding: 30px 16px;
+    }
+
+    .checklist {
+      padding: 14px;
+    }
+
+    .checklist-item {
+      font-size: 0.85rem;
+      gap: 8px;
+    }
+
+    table {
+      font-size: 0.72rem;
+    }
+
+    thead th,
+    tbody td {
+      padding: 6px 8px;
+    }
+  }
+
+
+  .content {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  @media (max-width: 768px) {
+    .cover {
+      height: auto;
+      min-height: 100dvh;
+      padding: 40px 24px;
+    }
+
+    .cover h1 {
+      font-size: 2.2rem;
+    }
+
+    .cover-subtitle {
+      font-size: 1rem;
+    }
+
+    .cover-badge {
+      font-size: 0.75rem;
+      padding: 6px 16px;
+      margin-bottom: 24px;
+    }
+
+    .content {
+      padding: 20px 16px;
+      max-width: 100%;
+    }
+
+    .toc {
+      padding: 20px 16px;
+    }
+
+    .toc h2 {
+      font-size: 1.8rem;
+    }
+
+    .module-header h2 {
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+    }
+
+    h4 {
+      font-size: 1rem;
+    }
+
+    p, li {
+      font-size: 0.92rem;
+    }
+
+    .exercise,
+    .callout,
+    .callout-dark,
+    .callout-success,
+    blockquote,
+    .checklist {
+      padding: 16px;
+      margin: 16px 0;
+    }
+
+    .bonus-header {
+      padding: 20px 16px;
+    }
+
+    .bonus-header h2 {
+      font-size: 1.4rem;
+    }
+
+    .conclusion {
+      padding: 40px 20px;
+    }
+
+    .conclusion h2 {
+      font-size: 1.5rem;
+    }
+
+    .intro-quote {
+      font-size: 1rem;
+      padding: 20px 16px;
+    }
+
+    table {
+      font-size: 0.8rem;
+    }
+
+    thead th,
+    tbody td {
+      padding: 8px 10px;
+    }
+
+    pre {
+      font-size: 0.78rem;
+      padding: 14px 16px;
+    }
+  }
+
+  
+
+
+</style>
+
+</head>
+<body>
+
+
+<!-- ===== COVER ===== -->
+<div class="cover">
+  <div class="cover-badge">Guide Relations Humaines</div>
+  <h1>RELATIONS HUMAINES <span>Devenir quelqu'un que les gens veulent connaitre</span></h1>
+  <div class="cover-line"></div>
+  <p class="cover-subtitle">Socialite, aura, posture, charisme, drague — tout pour maitriser les relations humaines</p>
+  <p class="cover-author">Cree par <strong>Simon</strong> &mdash; <strong>@aurabusinessfr</strong></p>
+</div>
+
+<!-- ===== TABLE OF CONTENTS ===== -->
+<div class="toc">
+  <h2>Table des Matieres</h2>
+  <div class="toc-line"></div>
+  <ul class="toc-list">
+    <li><a href="#avant-propos"><span class="toc-number">&#9670;</span><span class="toc-title">Avant-Propos</span></a></li>
+    <li><a href="#module-1--la-socialite-est-une-competence"><span class="toc-number">1</span><span class="toc-title">Module 1 — La socialite est une competence</span></a></li>
+    <li><a href="#module-2--laura-et-la-presence"><span class="toc-number">2</span><span class="toc-title">Module 2 — L'aura et la presence</span></a></li>
+    <li><a href="#module-3--la-posture-et-le-langage-corporel"><span class="toc-number">3</span><span class="toc-title">Module 3 — La posture et le langage corporel</span></a></li>
+    <li><a href="#module-4--le-charisme-les-3-piliers"><span class="toc-number">4</span><span class="toc-title">Module 4 — Le charisme : les 3 piliers</span></a></li>
+    <li><a href="#module-5--lart-de-la-conversation"><span class="toc-number">5</span><span class="toc-title">Module 5 — L'art de la conversation</span></a></li>
+    <li><a href="#module-6--la-confiance-en-soi"><span class="toc-number">6</span><span class="toc-title">Module 6 — La confiance en soi</span></a></li>
+    <li><a href="#module-7--la-drague-et-les-relations-amoureuses"><span class="toc-number">7</span><span class="toc-title">Module 7 — La drague et les relations amoureuses</span></a></li>
+    <li><a href="#module-8--les-limites-et-laffirmation-de-soi"><span class="toc-number">8</span><span class="toc-title">Module 8 — Les limites et l'affirmation de soi</span></a></li>
+    <li><a href="#module-9--les-cercles-sociaux-et-le-reseau"><span class="toc-number">9</span><span class="toc-title">Module 9 — Les cercles sociaux et le reseau</span></a></li>
+    <li><a href="#module-10--plan-daction-90-jours"><span class="toc-number">10</span><span class="toc-title">Module 10 — Plan d'action 90 jours</span></a></li>
+    <li><a href="#faq--les-10-questions-les-plus-frequentes"><span class="toc-number">&#9670;</span><span class="toc-title">FAQ — Les 10 questions les plus frequentes</span></a></li>
+    <li><a href="#les-10-erreurs-sociales-qui-te-freinent"><span class="toc-number">&#9670;</span><span class="toc-title">Les 10 erreurs sociales qui te freinent</span></a></li>
+    <li><a href="#scripts-de-conversation-pour-toutes-les-situations"><span class="toc-number">&#9670;</span><span class="toc-title">Scripts de conversation</span></a></li>
+    <li><a href="#la-psychologie-de-l-attraction"><span class="toc-number">&#9670;</span><span class="toc-title">Psychologie de l'attraction</span></a></li>
+    <li><a href="#defis-30-jours-de-developpement-social"><span class="toc-number">&#9670;</span><span class="toc-title">Defis 30 jours</span></a></li>
+    <li><a href="#communication-non-verbale-avancee"><span class="toc-number">11</span><span class="toc-title">Communication non-verbale avancee — 20 signaux decodes</span></a></li>
+    <li><a href="#gerer-les-conflits"><span class="toc-number">12</span><span class="toc-title">Gerer les conflits et les conversations difficiles</span></a></li>
+    <li><a href="#networking-strategique"><span class="toc-number">13</span><span class="toc-title">Networking strategique — Construire un reseau puissant</span></a></li>
+    <li><a href="#relations-durables"><span class="toc-number">14</span><span class="toc-title">Relations durables — De la seduction a une vraie relation</span></a></li>
+    <li><a href="#conclusion--les-relations-humaines-sont-un-muscle"><span class="toc-number">&#9670;</span><span class="toc-title">Conclusion — Les relations humaines sont un muscle</span></a></li>
+    <li><a href="#bonus--exercices-scripts-et-ressources"><span class="toc-number">&#9670;</span><span class="toc-title">Bonus — Exercices, scripts et ressources</span></a></li>
+  </ul>
+</div>
+
+<!-- ===== AVANT-PROPOS ===== -->
+<div class="content page-break" id="avant-propos">
+  <h2>Avant-Propos</h2>
+  <h3>Pourquoi ce guide existe</h3>
+  <p>Tu as déjà ressenti ce malaise. Cette gene dans une conversation. Cette impression de ne pas savoir quoi dire. Ce moment ou tu entres dans une piece et personne ne te regarde. Ou au contraire, tu as vu quelqu'un entrer et TOUT LE MONDE l'a regarde.</p>
+  <p>Tu t'es dit que certaines personnes sont "nes pour ca". Que le charisme, le talent social, le succes avec les autres est un don du ciel.</p>
+  <p><strong>C'est faux.</strong></p>
+  <p>Les relations humaines sont une competence. Comme le sport, la musique ou les maths, ca s'apprend, ca se pratique, ca se developpe. Ce guide est ton manuel d'apprentissage.</p>
+  <p>Peu importe d'ou tu pars. Tu peux être timide, anxieux, maladroit, ou juste "pas très social". En appliquant ce que tu vas lire, tu vas devenir une personne differente dans tes interactions.</p>
+  <h3>Comment utiliser ce guide</h3>
+  <p>Les 10 modules construisent les uns sur les autres. Commence par le debut. Ne saute pas d'etape. Chaque module contient :</p>
+  <ul>
+    <li>Les concepts pour comprendre</li>
+    <li>Des actions concretes a appliquer</li>
+    <li>Un exercice pratique</li>
+  </ul>
+  <p><strong>Ne te contente pas de lire. Les exercices sont le vrai programme d'entrainement.</strong> Tu ne deviens pas social en lisant un livre. Tu deviens social en parlant aux gens. Chaque exercice est une repetition pour le vrai match.</p>
+  <h3>Un principe avant de commencer</h3>
+  <p><strong>Tu n'es pas seul.</strong> La grande majorite des gens se sentent mal a l'aise socialement au moins une partie du temps. Meme les personnes les plus charismatiques ont des doutes et des insecurites. La difference, c'est qu'elles ont appris a les gerer.</p>
+  <p>Toi aussi tu peux apprendre.</p>
+</div>
+
+<!-- ===== MODULE 1 ===== -->
+<div class="content page-break" id="module-1--la-socialite-est-une-competence">
+  <div class="module-header">
+    <div class="module-number">Module 1</div>
+    <h2>La socialite est une competence</h2>
+    <p class="module-tagline">Pourquoi certaines personnes attirent les autres et comment toi aussi tu peux le faire</p>
+  </div>
+  <h3>Le mythe du "charismatique ne"</h3>
+  <p>On imagine que les personnes sociales sont nees comme ca. Qu'elles ont un don. Qu'elles n'ont jamais connu le doute ou la timidite.</p>
+  <p>La verite, c'est que les personnes les plus sociales sont souvent celles qui ont le plus travaille leur socialite. Derriere chaque personne a l'aise en societe, il y a des centaines de conversations, des milliers d'interactions, et beaucoup d'echecs.</p>
+  <p><strong>Le talent social n'existe pas. L'effort social, si.</strong></p>
+  <h3>Pourquoi la socialite est cruciale</h3>
+  <p>Dans un monde ou l'IA et l'automatisation remplacent de plus en plus de competences techniques, les competences humaines prennent encore plus de valeur. Savoir parler aux gens, les convaincre, les inspirer, les comprendre — c'est ce qui fait la difference.</p>
+  <p>Les personnes les plus sociales ne sont pas seulement plus heureuses en amour et en amitie. Elles reussissent mieux professionnellement. Elles sont mieux payees. Elles ont plus d'opportunites.</p>
+  <h3>Les 3 piliers du succes social</h3>
+  <p><strong>1. La presence (l'aura).</strong> Ce que tu degages avant meme d'ouvrir la bouche. Ta posture, ton regard, ton energie.</p>
+  <p><strong>2. La communication.</strong> Ce que tu dis et comment tu le dis. Les conversations, l'ecoute, l'humour, le storytelling.</p>
+  <p><strong>3. La connexion.</strong> La capacite a créer du lien. L'empathie, la confiance, la vulnerabilite.</p>
+  <div class="exercise">
+    <h4>Exercice</h4>
+    <p><strong>Faire le point sur ta socialite</strong></p>
+    <p><strong>-</strong> Sur une echelle de 1 a 10, a quel point es-tu satisfait de ta vie sociale actuelle ?</p>
+    <p><strong>-</strong> Quel est ton plus grand defi social ? (approcher, parler en groupe, draguer, garder des amis, dire non)</p>
+    <p><strong>-</strong> Qui est la personne la plus sociale que tu connais ? Qu'est-ce qui la rend speciale ?</p>
+    <p><strong>-</strong> Imagine-toi dans 1 an avec des competences sociales developpees. Qu'est-ce qui changerait dans ta vie ?</p>
+  </div>
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">Competence</div>
+      <div class="value">Ca s'apprend</div>
+      <div class="note">Personne ne nait "social". Ca se pratique comme un sport.</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Pourquoi</div>
+      <div class="value">Crucial pour tout</div>
+      <div class="note">Amour, amitie, carriere, opportunites — tout passe par les relations</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">3 piliers</div>
+      <div class="value">Presence, Communication, Connexion</div>
+      <div class="note">Les 3 axes que ce guide va developper</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODULE 2 ===== -->
+<div class="content page-break" id="module-2--laura-et-la-presence">
+  <div class="module-header">
+    <div class="module-number">Module 2</div>
+    <h2>L'aura et la presence</h2>
+    <p class="module-tagline">Ce que tu degages sans dire un mot</p>
+  </div>
+  <h3>Qu'est-ce que l'aura ?</h3>
+  <p>L'aura, ce n'est pas un concept mystique. C'est l'impression que tu laisses avant meme d'avoir parle. C'est la somme de ta posture, de ton regard, de ton energie, de ta facon d'occuper l'espace.</p>
+  <p>Certaines personnes entrent dans une piece et on les remarque immediatement. D'autres entrent et personne ne les voit. La difference, c'est l'aura.</p>
+  <p><strong>La bonne nouvelle : l'aura se construit.</strong> Ce n'est pas une question de beaute, de taille ou de richesse. C'est une question de presence.</p>
+  <h3>Les composantes de la presence</h3>
+  <p><strong>L'ancrage.</strong> Les personnes avec de la presence sont calmes a l'interieur. Elles ne sont pas agitees, nerveuses, dans leur tete. Elles sont la, pleinement.</p>
+  <p><strong>Le calme.</strong> La nervosite se voit et se sent. Les personnes avec de l'aura sont calmes meme dans des situations de stress. Ce calme attire les autres car il est rassurant.</p>
+  <p><strong>La lenteur controlee.</strong> Les personnes avec de l'aura ne se depêchent pas. Elles parlent posement, bougent posement, prennent leur temps.</p>
+  <p><strong>L'attention.</strong> Les personnes avec de la presence regardent vraiment les gens. Elles ne regardent pas leur telephone. Elles regardent la personne en face d'elles.</p>
+  <h3>Exercices pour developper ta presence</h3>
+  <p><strong>L'exercice du centrage :</strong> Avant d'entrer dans une piece, prends 3 respirations profondes. Inspire 4s, retiens 2s, expire 6s.</p>
+  <p><strong>L'exercice du regard :</strong> Quand tu parles a quelqu'un, regarde-le dans les yeux. Un regard doux mais soutenu.</p>
+  <p><strong>L'exercice de la lenteur :</strong> Pendant une journee, parle et bouge 20% plus lentement que d'habitude.</p>
+  <div class="exercise">
+    <h4>Exercice</h4>
+    <p><strong>Developper ta presence</strong></p>
+    <p><strong>-</strong> Quand est-ce que tu te sens le plus "present" et "ancré" ? Dans quel contexte ?</p>
+    <p><strong>-</strong> Qu'est-ce qui te fait perdre ta presence ? (telephone, stress, pensees negatives)</p>
+    <p><strong>-</strong> Pratique l'exercice du centrage 3 fois aujourd'hui avant chaque interaction sociale.</p>
+    <p><strong>-</strong> Demande a un ami proche : "Quelle impression je degage quand j'arrive quelque part ?"</p>
+  </div>
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">Aura</div>
+      <div class="value">L'impression que tu laisses</div>
+      <div class="note">Posture + regard + energie + facon d'occuper l'espace</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Presence</div>
+      <div class="value">Calme + Lenteur + Attention</div>
+      <div class="note">Les personnes avec de l'aura sont calmes, lentes et attentives</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Exercices</div>
+      <div class="value">Centrage, regard, lenteur</div>
+      <div class="note">3 exercices quotidiens pour construire ta presence</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODULE 3 ===== -->
+<div class="content page-break" id="module-3--la-posture-et-le-langage-corporel">
+  <div class="module-header">
+    <div class="module-number">Module 3</div>
+    <h2>La posture et le langage corporel</h2>
+    <p class="module-tagline">Ton corps parle avant ta bouche</p>
+  </div>
+  <h3>Le langage corporel : le fondement de toute interaction</h3>
+  <p>Les etudes montrent que 60 a 80% de la communication est non-verbale. Ce n'est pas ce que tu dis qui compte le plus, c'est comment tu le dis avec ton corps.</p>
+  <h3>Les cles d'une posture confiante</h3>
+  <p><strong>Le dos droit.</strong> Pas de rigidite militaire, mais un dos droit, les epaules legerement en arriere.</p>
+  <p><strong>Les epaules ouvertes.</strong> Epaules vers l'avant = soumission. Epaules en arriere = ouverture et confiance.</p>
+  <p><strong>La tete haute.</strong> Regarde droit devant toi, pas le sol. Le menton leve signale que tu es a l'aise.</p>
+  <p><strong>Les bras ouverts.</strong> Bras croises = barriere. Bras ouverts = accessibilite.</p>
+  <p><strong>La gestuelle expressive.</strong> Les gestes amplifient ton message. Gestes amples = confiance. Gestes saccades = nervosite.</p>
+  <h3>Le contact visuel</h3>
+  <p><strong>La regle du 60/40 :</strong> Regarde ton interlocuteur 60% du temps quand tu parles, 80% du temps quand tu ecoutes.</p>
+  <h3>La voix : ton instrument</h3>
+  <ul>
+    <li><strong>Rythme :</strong> pas trop vite (nervosite), pas trop lent. Varie le rythme.</li>
+    <li><strong>Volume :</strong> parle assez fort pour être entendu sans effort.</li>
+    <li><strong>Ton :</strong> un ton monotone tue l'intérêt. Varie les intonations.</li>
+    <li><strong>Pause :</strong> les silences sont puissants. Faire une pause avant un mot important le souligne.</li>
+  </ul>
+  <div class="exercise">
+    <h4>Exercice</h4>
+    <p><strong>Corriger ta posture et ta voix</strong></p>
+    <p><strong>-</strong> Filme-toi en train de parler pendant 30 secondes sans le son : que dit ta posture ?</p>
+    <p><strong>-</strong> Meme video avec le son : comment est ta voix ? Trop vite ? Trop monotone ?</p>
+    <p><strong>-</strong> Quels sont les 2 ajustements de posture que tu vas appliquer des aujourd'hui ?</p>
+    <p><strong>-</strong> Pratique la "pose de pouvoir" 2 minutes chaque matin devant le miroir.</p>
+  </div>
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">Posture</div>
+      <div class="value">Dos droit, epaules ouvertes, tete haute</div>
+      <div class="note">Ton corps parle avant ta bouche. 60-80% de la communication est non-verbale.</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Regard</div>
+      <div class="value">Regle du 60/40</div>
+      <div class="note">60% du temps en parlant, 80% en ecoutant. Regarde les yeux.</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Voix</div>
+      <div class="value">Rythme, volume, ton, pauses</div>
+      <div class="note">La voix est un instrument qui se travaille. Les pauses sont puissantes.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODULE 4 ===== -->
+<div class="content page-break" id="module-4--le-charisme-les-3-piliers">
+  <div class="module-header">
+    <div class="module-number">Module 4</div>
+    <h2>Le charisme : les 3 piliers</h2>
+    <p class="module-tagline">Ce magnetisme qui attire les gens vers toi</p>
+  </div>
+  <h3>Qu'est-ce que le charisme ?</h3>
+  <p>Le charisme est souvent vu comme un mystere. On dit de quelqu'un qu'il est "charismatique" sans vraiment savoir pourquoi. En realite, le charisme repose sur trois piliers bien identifiables.</p>
+  <p>Et comme tout ce qu'on a vu jusqu'ici, <strong>le charisme se travaille et se developpe.</strong></p>
+  <h3>Pilier 1 : La presence</h3>
+  <p>On l'a vu dans le Module 2. Les personnes charismatiques sont <strong>pleinement presentes</strong> quand elles sont avec quelqu'un. Elles ne regardent pas leur telephone, elles ne pensent pas a autre chose. Elles sont LA.</p>
+  <p>Cette presence est rare et donc precieuse. Quand tu donnes toute ton attention a quelqu'un, cette personne se sent importante. Et elle t'associe a ce sentiment.</p>
+  <h3>Pilier 2 : Le pouvoir (ou le statut)</h3>
+  <p>Le deuxieme pilier du charisme est le pouvoir. Attention : il ne s'agit pas de dominer les autres. Il s'agit de <strong>controle sur toi-meme et sur la situation.</strong></p>
+  <p>Les personnes charismatiques ont le controle de leurs emotions. Elles ne se laissent pas destabiliser. Elles restent calmes dans le stress. Ce controle est percu comme de la force.</p>
+  <p>Sources de pouvoir : la competence dans un domaine, le calme face a l'adversite, la capacite a prendre des decisions, la maitrise de soi.</p>
+  <h3>Pilier 3 : La chaleur humaine</h3>
+  <p>Sans chaleur, le pouvoir devient de l'intimidation. Les personnes vraiment charismatiques sont a la fois fortes ET chaleureuses. C'est cette combinaison qui cree le magnetisme.</p>
+  <p>La chaleur se traduit par : un sourire authentique, de l'empathie, de l'ecoute, de la gentillesse, de l'intérêt pour les autres.</p>
+  <p><strong>Pouvoir + Chaleur = Charisme.</strong> L'un sans l'autre, c'est incomplet.</p>
+  <div class="exercise">
+    <h4>Exercice</h4>
+    <p><strong>Identifier tes forces et faiblesses charismatiques</strong></p>
+    <p><strong>-</strong> Sur les 3 piliers (presence, pouvoir, chaleur), quel est ton point fort ? Ton point faible ?</p>
+    <p><strong>-</strong> Pendant tes prochaines interactions, concentre-toi sur le pilier que tu veux developper.</p>
+    <p><strong>-</strong> Observe une personne que tu trouves charismatique. Quel pilier utilise-t-elle le plus ?</p>
+    <p><strong>-</strong> Comment peux-tu montrer plus de chaleur DEMAIN dans 3 interactions ?</p>
+  </div>
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">Pilier 1</div>
+      <div class="value">Presence</div>
+      <div class="note">Être pleinement la. Donner toute ton attention.</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Pilier 2</div>
+      <div class="value">Pouvoir</div>
+      <div class="note">Controle de toi et de la situation. Calme et maitrise.</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Pilier 3</div>
+      <div class="value">Chaleur</div>
+      <div class="note">Sourire, empathie, intérêt pour les autres.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODULE 5 ===== -->
+<div class="content page-break" id="module-5--lart-de-la-conversation">
+  <div class="module-header">
+    <div class="module-number">Module 5</div>
+    <h2>L'art de la conversation</h2>
+    <p class="module-tagline">Comment parler a n'importe qui, n'importe quand</p>
+  </div>
+  <h3>Pourquoi les conversations sont difficiles</h3>
+  <p>La plupart des gens ont peur des conversations pour trois raisons :</p>
+  <ol>
+    <li><strong>La peur du vide :</strong> "Et si je ne sais pas quoi dire ?"</li>
+    <li><strong>La peur du jugement :</strong> "Et si je parais idiot ?"</li>
+    <li><strong>La peur du rejet :</strong> "Et si la personne ne veut pas me parler ?"</li>
+  </ol>
+  <p>Ces peurs sont normales. Elles disparaissent avec la pratique et la maitrise des techniques de conversation.</p>
+  <h3>Les 4 niveaux d'une conversation</h3>
+  <p><strong>Niveau 1 : Les formalites.</strong> "Salut, ca va ?" — La glace. Permet de briser le silence sans risque.</p>
+  <p><strong>Niveau 2 : Les faits.</strong> "Tu fais quoi dans la vie ?" — Les informations. On echange des donnees, on apprend a connaitre l'autre.</p>
+  <p><strong>Niveau 3 : Les opinions et emotions.</strong> "J'ai adore ce film, et toi ?" — On commence a partager qui on est vraiment.</p>
+  <p><strong>Niveau 4 : La connexion personnelle.</strong> "Je ressens la meme chose." — Le niveau ou la conversation devient memorable.</p>
+  <p>L'objectif est d'emmener progressivement la conversation du niveau 1 vers le niveau 4.</p>
+  <h3>La methode FORD</h3>
+  <table>
+    <thead>
+      <tr><th>Lettre</th><th>Theme</th><th>Exemple de question</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>F</td><td>Family (Famille)</td><td>"Tu as des freres et soeurs ?"</td></tr>
+      <tr><td>O</td><td>Occupation (Travail)</td><td>"Qu'est-ce qui te plait dans ton metier ?"</td></tr>
+      <tr><td>R</td><td>Recreation (Loisirs)</td><td>"Tu fais quoi de ton temps libre ?"</td></tr>
+      <tr><td>D</td><td>Dreams (Reves)</td><td>"Si tu pouvais faire n'importe quoi, ce serait quoi ?"</td></tr>
+    </tbody>
+  </table>
+  <h3>L'ecoute active</h3>
+  <p>L'ecoute active est la technique la plus puissante en conversation. Elle consiste a :</p>
+  <ul>
+    <li><strong>Reformuler :</strong> "Si je comprends bien, ce qui te gene c'est..."</li>
+    <li><strong>Poser des questions de suivi :</strong> "Et ensuite, qu'est-ce qui s'est passe ?"</li>
+    <li><strong>Valider les emotions :</strong> "Ca a du être vraiment difficile pour toi."</li>
+    <li><strong>Resumer :</strong> "Donc en resume, ce que tu me dis c'est que..."</li>
+  </ul>
+  <div class="exercise">
+    <h4>Exercice</h4>
+    <p><strong>Pratiquer la conversation</strong></p>
+    <p><strong>-</strong> Aujourd'hui, engage une conversation avec un inconnu (cafe, transport, file d'attente).</p>
+    <p><strong>-</strong> Pendant la conversation, utilise la methode FORD pour trouver des sujets.</p>
+    <p><strong>-</strong> Entraine-toi a reformuler ce que l'autre dit pour montrer que tu ecoutes.</p>
+    <p><strong>-</strong> Essaye d'emmener la conversation au niveau 3 ou 4 (emotions/connexion).</p>
+  </div>
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">4 niveaux</div>
+      <div class="value">Formalites > Faits > Opinions > Connexion</div>
+      <div class="note">Emmene la conversation progressivement vers la profondeur.</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">FORD</div>
+      <div class="value">Family, Occupation, Recreation, Dreams</div>
+      <div class="note">4 themes pour trouver des sujets de conversation.</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Ecoute active</div>
+      <div class="value">Reformuler, questionner, valider, resumer</div>
+      <div class="note">La technique la plus puissante pour connecter avec les autres.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODULE 6 ===== -->
+<div class="content page-break" id="module-6--la-confiance-en-soi">
+  <div class="module-header">
+    <div class="module-number">Module 6</div>
+    <h2>La confiance en soi</h2>
+    <p class="module-tagline">Le socle de toute reussite sociale</p>
+  </div>
+  <h3>Le cercle vicieux de la timidite</h3>
+  <p>La timidite fonctionne en cercle vicieux :</p>
+  <p><strong>Peur → Evitement → Manque de pratique → Incompetence sociale → Confirmation de la peur → Plus d'evitement</strong></p>
+  <p>Pour briser ce cercle, il faut inverser la logique : <strong>Action → Experience positive → Confiance → Plus d'action</strong></p>
+  <h3>La confiance ne precede pas l'action, elle la suit</h3>
+  <p>Beaucoup de gens pensent : "Je vais attendre d'avoir confiance avant d'agir."</p>
+  <p>La verite, c'est le contraire : <strong>l'action precede la confiance.</strong> Ce n'est pas parce que tu as confiance que tu agis. C'est parce que tu agis que la confiance vient.</p>
+  <h3>Les 3 sources de la confiance sociale</h3>
+  <p><strong>1. Les preuves.</strong> Chaque fois que tu reussis une interaction, tu accumules une preuve que tu es capable. Chaque "petite victoire" sociale renforce ta confiance. Commence petit et augmente progressivement.</p>
+  <p><strong>2. La preparation.</strong> La confiance vient aussi de la preparation. Si tu sais quoi dire (scripts, sujets, techniques), tu es moins anxieux. C'est pourquoi ce guide te donne des outils concrets.</p>
+  <p><strong>3. L'etat d'esprit.</strong> La facon dont tu interprees les evenements determine ta confiance. Un rejet social n'est pas la fin du monde. C'est juste un match qui n'a pas marche. La prochaine fois, ca ira mieux.</p>
+  <h3>Exercices pour la confiance</h3>
+  <p><strong>Les micro-interactions :</strong> Chaque jour, fais 5 micro-interactions : dire bonjour a un inconnu, sourire a quelqu'un dans la rue, tenir une porte, complimenter un collegue.</p>
+  <div class="exercise">
+    <h4>Exercice</h4>
+    <p><strong>Construire ta confiance par l'action</strong></p>
+    <p><strong>-</strong> Quelle est la plus petite action sociale qui te fait peur aujourd'hui ? (saluer quelqu'un, poser une question, etc.)</p>
+    <p><strong>-</strong> Fais-la des aujourd'hui. Puis fais-la encore demain.</p>
+    <p><strong>-</strong> Tiens un journal de tes "petites victoires" sociales cette semaine.</p>
+    <p><strong>-</strong> Quand une interaction ne se passe pas bien, demande-toi : "Qu'est-ce que j'apprends de cette experience ?"</p>
+  </div>
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">Cercle vertueux</div>
+      <div class="value">Action > Experience > Confiance > Plus d'action</div>
+      <div class="note">La confiance ne precede pas l'action, elle la suit.</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">3 sources</div>
+      <div class="value">Preuves, Preparation, Etat d'esprit</div>
+      <div class="note">Construis ta confiance sur ces 3 piliers.</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Micro-interactions</div>
+      <div class="value">5 par jour</div>
+      <div class="note">Petits gestes quotidiens pour accumuler des preuves de capacite sociale.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODULE 7 ===== -->
+<div class="content page-break" id="module-7--la-drague-et-les-relations-amoureuses">
+  <div class="module-header">
+    <div class="module-number">Module 7</div>
+    <h2>La drague et les relations amoureuses</h2>
+    <p class="module-tagline">De l'approche a la connexion romantique</p>
+  </div>
+  <h3>Pourquoi la drague fait peur</h3>
+  <p>La drague est le domaine social le plus redoute. Parce que l'enjeu est plus grand : il ne s'agit pas juste d'être accepte socialement, mais d'être desire sexuellement/romantiquement.</p>
+  <p>Mais la drague repose sur les memes principes que tout le reste : <strong>presence, confiance, conversation, connexion.</strong></p>
+  <h3>Les pre-requis avant de draguer</h3>
+  <p><strong>1. Sois quelqu'un qu'on a envie de connaitre.</strong> Tout le travail des modules precedents. Developpe-toi, cultive-toi, aie une vie interessante. Les gens (et particulierement les partenaires potentiels) sont attires par les personnes qui ont une vie riche.</p>
+  <p><strong>2. Assume ton desir.</strong> La drague n'est pas une manipulation. C'est l'expression d'un intérêt romantique ou sexuel. Assume-le. Les personnes qui assument leur desir sans être insistantes sont attractives.</p>
+  <p><strong>3. Sois pret au rejet.</strong> Le rejet fait partie du jeu. Ce n'est pas une condamnation de ta valeur. C'est juste une incompatibilite. Les meilleurs dragueurs sont ceux qui ne prennent pas le rejet personnellement.</p>
+  <h3>L'approche : les bases</h3>
+  <p><strong>Le contexte :</strong> Approche dans un contexte socialement legitime. Soiree, bar, evenement, cours, activite, reseau social. Plus le contexte est naturel, plus l'approche est facile.</p>
+  <p><strong>L'ouverture :</strong> Pas de "technique de pick-up" artificielle. Une ouverture simple et naturelle : "Salut, je m'appelle [prenom], et toi ?" ou une remarque sur le contexte : "Sympa cette soiree, non ?"</p>
+  <p><strong>Le follow-up :</strong> Si la conversation passe bien, propose un verre ou un echange de contact. "On continue cette discussion autour d'un verre un de ces jours ?"</p>
+  <h3>Les signaux d'intérêt</h3>
+  <table>
+    <thead>
+      <tr><th>Signal</th><th>Signification</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Contact visuel prolonge + sourire</td><td>Intérêt</td></tr>
+      <tr><td>Se touche les cheveux / vetements</td><td>Nervosite positive (intérêt)</td></tr>
+      <tr><td>Se rapproche de toi</td><td>Intérêt marque</td></tr>
+      <tr><td>Rit a tes blagues (mimes nulles)</td><td>Intérêt + confort</td></tr>
+      <tr><td>Repond par messages longs</td><td>Investissement</td></tr>
+      <tr><td>Initie le contact physique</td><td>Intérêt fort</td></tr>
+      <tr><td>Regard fuyant, reponses courtes</td><td>Pas d'intérêt</td></tr>
+    </tbody>
+  </table>
+  <div class="exercise">
+    <h4>Exercice</h4>
+    <p><strong>Pratiquer l'approche</strong></p>
+    <p><strong>-</strong> Aujourd'hui, engage la conversation avec quelqu'un qui t'attire (ne serait-ce qu'un peu).</p>
+    <p><strong>-</strong> Entraine-toi juste a ouvrir la conversation sans attente de resultat.</p>
+    <p><strong>-</strong> Observe les signaux d'intérêt chez les personnes avec qui tu parles.</p>
+    <p><strong>-</strong> Rappelle-toi : le rejet n'est pas personnel. C'est une incompatibilite.</p>
+  </div>
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">Prerequis</div>
+      <div class="value">Sois interessant, assume ton desir, accepte le rejet</div>
+      <div class="note">Les 3 cles avant meme d'approcher</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Approche</div>
+      <div class="value">Simple, naturelle, contextuelle</div>
+      <div class="note">Context > ouverture > follow-up. Pas de technique artificielle.</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Signaux</div>
+      <div class="value">Contact visuel, proximite, investissement</div>
+      <div class="note">Apprends a lire les signaux d'intérêt et de desinteret.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODULE 8 ===== -->
+<div class="content page-break" id="module-8--les-limites-et-laffirmation-de-soi">
+  <div class="module-header">
+    <div class="module-number">Module 8</div>
+    <h2>Les limites et l'affirmation de soi</h2>
+    <p class="module-tagline">Dire non, poser des limites, être respecte</p>
+  </div>
+  <h3>Pourquoi les limites sont essentielles</h3>
+  <p>Les personnes qui plaisent a tout le monde finissent par ne plaire a personne. Si tu dis toujours oui, tu deviens un paillasson. Tu perds le respect des autres et le respect de toi-meme.</p>
+  <p>Poser des limites, ce n'est pas être mechant. <strong>C'est s'affirmer en tant que personne.</strong> C'est dire aux autres : "Voilà qui je suis, voilà ce que j'accepte, voilà ce que je n'accepte pas."</p>
+  <h3>Les 3 types de limites</h3>
+  <p><strong>Limites physiques :</strong> L'espace personnel. "Je n'aime pas qu'on me touche sans me demander." "J'ai besoin de mon espace."</p>
+  <p><strong>Limites emotionnelles :</strong> Ce que tu es pret a porter emotionnellement. "Je ne peux pas gerer tes problemes en permanence." "Je comprends que tu sois fache, mais je ne suis pas ton punching-ball."</p>
+  <p><strong>Limites temporelles :</strong> Ton temps est precieux. "Je ne peux pas rester ce soir." "J'ai besoin de temps pour moi."</p>
+  <h3>Comment poser une limite : la methode DESC</h3>
+  <table>
+    <thead>
+      <tr><th>Lettre</th><th>Signification</th><th>Exemple</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>D</td><td>Decrire la situation</td><td>"Quand tu arrives en retard sans prevenir..."</td></tr>
+      <tr><td>E</td><td>Exprimer ton ressenti</td><td>"...je me sens manque de respect..."</td></tr>
+      <tr><td>S</td><td>Specifier ce que tu veux</td><td>"...j'aimerais que tu m'envoies un message si tu es en retard."</td></tr>
+      <tr><td>C</td><td>Consequences (positives)</td><td>"Comme ca, on pourra mieux s'organiser et profiter de notre temps ensemble."</td></tr>
+    </tbody>
+  </table>
+  <div class="exercise">
+    <h4>Exercice</h4>
+    <p><strong>Pratiquer l'affirmation de soi</strong></p>
+    <p><strong>-</strong> Dans quel domaine as-tu le plus de mal a dire non ?</p>
+    <p><strong>-</strong> Cette semaine, exerce-toi a dire non a quelque chose de petit (une invitation, un service).</p>
+    <p><strong>-</strong> Utilise la methode DESC pour poser une limite claire cette semaine.</p>
+    <p><strong>-</strong> Rappelle-toi : poser une limite, c'est prendre soin de toi. Tu ne peux pas être utile aux autres si tu t'epuises.</p>
+  </div>
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">3 types de limites</div>
+      <div class="value">Physiques, Emotionnelles, Temporelles</div>
+      <div class="note">Poser des limites, c'est s'affirmer, pas être mechant.</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Methode DESC</div>
+      <div class="value">Decrire, Exprimer, Specifier, Consequences</div>
+      <div class="note">Un cadre clair pour poser des limites respectueuses.</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Piege</div>
+      <div class="value">Le "people pleaser"</div>
+      <div class="note">Dire oui a tout, c'est se perdre soi-meme. Le respect commence par le respect de soi.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODULE 9 ===== -->
+<div class="content page-break" id="module-9--les-cercles-sociaux-et-le-reseau">
+  <div class="module-header">
+    <div class="module-number">Module 9</div>
+    <h2>Les cercles sociaux et le reseau</h2>
+    <p class="module-tagline">Elargir ton cercle et construire des connexions durables</p>
+  </div>
+  <h3>La qualite > la quantite</h3>
+  <p>Beaucoup de gens pensent que le succes social, c'est d'avoir des milliers d'amis. En realite, le nombre de personnes avec qui tu peux avoir une veritable amitie est limite.</p>
+  <p><strong>Le nombre de Dunbar :</strong> Les neuroscientifiques estiment que notre cerveau peut gerer environ 150 relations stables, dont seulement 5 a 15 amities proches.</p>
+  <p>L'objectif n'est pas de connaitre tout le monde. <strong>L'objectif est de construire un cercle de personnes de qualite</strong> avec qui tu partages des interets, des valeurs, et une veritable connexion.</p>
+  <h3>Les 3 cercles</h3>
+  <p><strong>Cercle 1 — Les proches (5-10 personnes) :</strong> Tes amis les plus intimes. Ceux avec qui tu peux tout partager. Ceux qui seront la pour toi dans les moments difficiles. Ce cercle demande du temps et de l'investissement emotionnel.</p>
+  <p><strong>Cercle 2 — Les connaissances (20-50 personnes) :</strong> Les gens avec qui tu passes du temps regulierement. Collègues, amis d'amis, personnes de ton club/activite. Des relations positives mais moins profondes.</p>
+  <p><strong>Cercle 3 — Le reseau (50-150 personnes) :</strong> Les personnes que tu connais et qui te connaissent. Pas necessairement des amis proches, mais des contacts precieux pour les opportunites, les conseils, les connexions.</p>
+  <h3>Comment elargir ton cercle</h3>
+  <p><strong>1. Va la ou sont les gens.</strong> Clubs de sport, associations, cours, meetups, evenements, reseaux sociaux. Tu ne peux pas rencontrer du monde si tu restes chez toi.</p>
+  <p><strong>2. Deviens un "hub social".</strong> Organise des evenements, invite des gens, fais des introductions. Les personnes qui connectent les autres deviennent centrales dans leur reseau.</p>
+  <p><strong>3. Fais le suivi.</strong> La plupart des gens rencontrent quelqu'un et ne donnent jamais suite. Pour construire une relation, il faut un suivi : un message après la rencontre, une invitation a boire un verre, un partage d'intérêt commun.</p>
+  <div class="exercise">
+    <h4>Exercice</h4>
+    <p><strong>Elargir ton reseau</strong></p>
+    <p><strong>-</strong> Fais la liste de tes 3 cercles actuels : qui est dans ton cercle proche ? Tes connaissances ? Ton reseau ?</p>
+    <p><strong>-</strong> Dans quel cercle veux-tu investir davantage cette semaine ?</p>
+    <p><strong>-</strong> Contacte une personne de ton reseau que tu n'as pas vu depuis longtemps.</p>
+    <p><strong>-</strong> Va a un evenement ou tu rencontreras des gens nouveaux cette semaine.</p>
+  </div>
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">Nombre de Dunbar</div>
+      <div class="value">150 relations max</div>
+      <div class="note">Dont 5-15 amities proches. Qualite > quantite.</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">3 cercles</div>
+      <div class="value">Proches, Connaissances, Reseau</div>
+      <div class="note">Chaque cercle demande un niveau d'investissement different.</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Strategie</div>
+      <div class="value">Sors, connecte, suis</div>
+      <div class="note">Va la ou sont les gens, deviens un hub, fais le suivi.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODULE 10 ===== -->
+<div class="content page-break" id="module-10--plan-daction-90-jours">
+  <div class="module-header">
+    <div class="module-number">Module 10</div>
+    <h2>Plan d'action 90 jours</h2>
+    <p class="module-tagline">De la theorie a la pratique — ton programme d'entrainement social</p>
+  </div>
+  <h3>Le principe : la progression</h3>
+  <p>Personne ne devient un maitre des relations humaines en un jour. La progression se fait par paliers. Chaque mois, tu travailles un aspect differents de ta socialite.</p>
+  <p>Ne cherche pas a tout faire en meme temps. <strong>Un pas a la fois.</strong></p>
+  
+  <h3>Mois 1 — Les fondations (Jours 1-30)</h3>
+  <h4>Semaine 1 : La conscience de soi</h4>
+  <div class="checklist">
+    <div class="checklist-item"><input type=""checkbox""> J'ai identifie mes forces et faiblesses sociales (Module 1)</div>
+    <div class="checklist-item"><input type=""checkbox""> J'ai note mes objectifs sociaux pour les 3 prochains mois</div>
+    <div class="checklist-item"><input type=""checkbox""> Je tiens un journal de mes interactions sociales</div>
+  </div>
+  <h4>Semaine 2 : La presence et la posture</h4>
+  <div class="checklist">
+    <div class="checklist-item"><input type=""checkbox""> Je pratique le centrage 3 fois par jour (Module 2)</div>
+    <div class="checklist-item"><input type=""checkbox""> J'ai corrige ma posture (dos droit, epaules ouvertes)</div>
+    <div class="checklist-item"><input type=""checkbox""> Je travaille mon regard : contact visuel soutenu</div>
+  </div>
+  <h4>Semaine 3 : Les micro-interactions</h4>
+  <div class="checklist">
+    <div class="checklist-item"><input type=""checkbox""> Je fais 5 micro-interactions par jour (saluer, sourire, complimenter)</div>
+    <div class="checklist-item"><input type=""checkbox""> J'engage une conversation par jour avec un inconnu</div>
+    <div class="checklist-item"><input type=""checkbox""> J'utilise la methode FORD dans mes conversations</div>
+  </div>
+  <h4>Semaine 4 : La confiance</h4>
+  <div class="checklist">
+    <div class="checklist-item"><input type=""checkbox""> J'ai fait quelque chose qui me faisait peur socialement</div>
+    <div class="checklist-item"><input type=""checkbox""> J'ai note mes petites victoires</div>
+    <div class="checklist-item"><input type=""checkbox""> J'ai accepte un rejet sans le prendre personnellement</div>
+  </div>
+
+  <h3>Mois 2 — L'expansion (Jours 31-60)</h3>
+  <h4>Semaines 5-6 : Les conversations profondes</h4>
+  <div class="checklist">
+    <div class="checklist-item"><input type=""checkbox""> J'ai eu 3 conversations de niveau 3+ (emotions/opinions)</div>
+    <div class="checklist-item"><input type=""checkbox""> J'ai pratique l'ecoute active (reformuler, questionner, valider)</div>
+    <div class="checklist-item"><input type=""checkbox""> J'ai utilise le storytelling dans mes conversations</div>
+  </div>
+  <h4>Semaines 7-8 : Le reseau</h4>
+  <div class="checklist">
+    <div class="checklist-item"><input type=""checkbox""> J'ai contacte 5 personnes de mon reseau</div>
+    <div class="checklist-item"><input type=""checkbox""> Je suis alle a un evenement social</div>
+    <div class="checklist-item"><input type=""checkbox""> J'ai fait une introduction entre deux personnes de mon reseau</div>
+  </div>
+
+  <h3>Mois 3 — La maitrise (Jours 61-90)</h3>
+  <h4>Semaines 9-10 : L'affirmation de soi</h4>
+  <div class="checklist">
+    <div class="checklist-item"><input type=""checkbox""> J'ai pose une limite en utilisant la methode DESC</div>
+    <div class="checklist-item"><input type=""checkbox""> J'ai dit non a quelque chose</div>
+    <div class="checklist-item"><input type=""checkbox""> J'ai exprime mon desaccord de maniere respectueuse</div>
+  </div>
+  <h4>Semaines 11-12 : L'integration et le lifestyle</h4>
+  <div class="checklist">
+    <div class="checklist-item"><input type=""checkbox""> Les competences sociales font partie de ma routine quotidienne</div>
+    <div class="checklist-item"><input type=""checkbox""> J'ai developpe une nouvelles relation significative</div>
+    <div class="checklist-item"><input type=""checkbox""> Je me sens naturellement plus a l'aise en societe</div>
+    <div class="checklist-item"><input type=""checkbox""> Je continue a me fixer de nouveaux defis sociaux</div>
+  </div>
+
+  <div class="exercise">
+    <h4>Exercice</h4>
+    <p><strong>Planifier tes 90 jours</strong></p>
+    <p><strong>-</strong> Prends 30 minutes pour planifier tes 90 prochains jours.</p>
+    <p><strong>-</strong> Quels sont les 3 plus grands defis que tu veux relever ?</p>
+    <p><strong>-</strong> Qui va t'accompagner dans ce voyage ? (coach, ami, groupe)</p>
+    <p><strong>-</strong> Marque dans ton calendrier des rendez-vous reguliers avec toi-meme pour travailler tes competences sociales.</p>
+  </div>
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">Mois 1</div>
+      <div class="value">Les fondations</div>
+      <div class="note">Conscience, presence, micro-interactions, confiance</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Mois 2</div>
+      <div class="value">L'expansion</div>
+      <div class="note">Conversations profondes, ecoute active, reseau</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Mois 3</div>
+      <div class="value">La maitrise</div>
+      <div class="note">Affirmation de soi, integration lifestyle</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECTION 11 — FAQ ===== -->
+<div class="content page-break" id="faq--les-10-questions-les-plus-frequentes">
+  <div class="module-header">
+    <div class="module-number">FAQ</div>
+    <h2>FAQ — Les 10 questions les plus frequentes sur les relations sociales</h2>
+    <p class="module-tagline">Les reponses aux questions que tout le monde se pose</p>
+  </div>
+
+  <h3>1. "Je suis introverti, puis-je devenir bon socialement ?"</h3>
+  <p><strong>Oui, completement.</strong> Être introverti signifie que tu te recharges en étant seul — pas que tu es incapable socialement. Ce sont deux choses differentes.</p>
+  <p>Beaucoup des personnes les plus charismatiques sont introverties. Barack Obama, Bill Gates, Warren Buffett — tous des introvertis reconnus. Leur secret ? Ils ont developpe des competences sociales <strong>malgre</strong> leur nature introvertie.</p>
+  <p>La difference entre un introverti timide et un introverti socialement competent : le premier evite les interactions, le second les maitrise mais a besoin de recuperation apres.</p>
+  <p><strong>Ton avantage cache :</strong> Les introvertis sont souvent meilleurs a l'ecoute, plus reflechis, plus authentiques. Ces qualites sont extremement attractives socialement.</p>
+  <div class="callout-success">
+    <p><strong>Action concrete :</strong> Arrete de te dire "je suis introverti donc je peux pas". Dis-toi "je suis introverti donc je dois recuperer apres, mais pendant l'interaction je donne tout." Planifie des temps de recharge apres les evenements sociaux.</p>
+  </div>
+
+  <h3>2. "Comment faire des amis apres le lycee/la fac ?"</h3>
+  <p>C'est LA question qu'on se pose tous apres 25 ans. A l'ecole, les amis etaient la — dans la meme classe, le meme campus. Dans la vie adulte, il faut <strong>creer activement</strong> les occasions.</p>
+  <p>Voici les methodes qui marchent :</p>
+  <ul>
+    <li><strong>Les hobbies reguliers :</strong> Rejoins un club de sport (escalade, crossfit, trail), un atelier (poterie, photo, cuisine), une association. La regularite cree les rencontres. Voir les memes visages chaque semaine transforme des inconnus en connaissances puis en amis.</li>
+    <li><strong>Les groupes de meetup :</strong> Des applications comme Meetup, Frimake, ou les groupes Facebook locaux organisent des evenements pour rencontrer du monde. Va-y. Pas une fois — plusieurs fois.</li>
+    <li><strong>Le travail :</strong> Oui, les collegues peuvent devenir des amis. Mais il faut franchir le pas : proposer un verre apres le boulot, un afterwork, un dej en dehors de l'open space.</li>
+    <li><strong>Deviens l'organisateur :</strong> La facon la plus puissante de se faire des amis : organise toi-meme des sorties. "Je vais prendre un verre vendredi, qui veut venir ?" Les gens te seront reconnaissants de creer du lien.</li>
+  </ul>
+  <div class="callout-dark">
+    <p><strong>Phrase a retenir :</strong> "L'amitie adulte est un investissement, pas une coincidence." Personne ne va frapper a ta porte pour devenir ton ami. C'est a toi de faire le premier pas, et le deuxieme, et le troisieme.</p>
+  </div>
+
+  <h3>3. "Comment parler a des inconnus sans etre awkward ?"</h3>
+  <p>L'awkwardness vient du <strong>decalage</strong> entre ce que tu veux faire et ce que tu fais. Tu veux paraître naturel mais tu forces. La solution : arreter d'essayer de paraître naturel et <strong>accepter l'inconfort</strong>.</p>
+  <p>Quelques techniques concretes :</p>
+  <ul>
+    <li><strong>L'ouverture contextuelle :</strong> Commente ce qui est autour de toi. "J'adore la musique dans ce cafe, non ?" "Tu sais a quelle heure ferme la boutique ?" "La queue est longue aujourd'hui !" — Ces phrases sont faciles car elles parlent du moment present.</li>
+    <li><strong>L'approche honnete :</strong> "Salut, desole si c'est random mais je voulais te parler parce que [raison]. Moi c'est [prenom]." L'honnetete desarme les defenses.</li>
+    <li><strong>L'autoderision :</strong> "Je suis nul pour commencer les conversations, mais je me suis dit que je le regretterais si je ne te parlais pas." — Ca montre de la confiance tout en etant vulnerable.</li>
+    <li><strong>La technique du "moi aussi" :</strong> Ecoute ce que l'autre dit et trouve UN point commun. "Tu fais du trail ? Moi aussi ! Tu cours ou ?" Une connexion meme minuscule suffit a lancer la conversation.</li>
+  </ul>
+  <p>Et souviens-toi : l'awkwardness, c'est surtout dans ta tete. La plupart des gens sont trop occupés a stresser sur leur propre apparence pour juger la tienne.</p>
+
+  <h3>4. "Comment savoir si quelqu'un veut parler ?"</h3>
+  <p>Avant d'approcher quelqu'un, lis ces <strong>signaux d'ouverture</strong> :</p>
+  <table>
+    <thead>
+      <tr><th>Signal</th><th>Interpretation</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Contact visuel + sourire</td><td>Invitation claire a parler</td></tr>
+      <tr><td>Regard prolonge (>2 secondes)</td><td>Interet, tu peux approcher</td></tr>
+      <tr><td>Regard fuyant / sur le telephone</td><td>Pas disponible maintenant</td></tr>
+      <tr><td>Position ouverte (bras pas croises)</td><td>Ouvert a l'interaction</td></tr>
+      <tr><td>Ecouteurs dans les oreilles</td><td>Ne pas deranger (sauf contexte approprie)</td></tr>
+      <tr><td>Regarde autour d'eux, tete qui bouge</td><td>Cherche quelqu'un ou s'ennuie — opportunite</td></tr>
+    </tbody>
+  </table>
+  <p><strong>La regle d'or :</strong> Si tu vois 2+ signaux positifs (par exemple regard prolonge + sourire), approche-toi avec une ouverture simple. Si la personne repond de maniere breve, regarde ailleurs, ou remet ses ecouteurs — elle signale qu'elle n'est pas interesee. <strong>Respecte ca et va voir ailleurs.</strong></p>
+  <div class="callout">
+    <p><strong>Astuce :</strong> Le meilleur moment pour parler a quelqu'un, c'est quand la personne est "en attente" : file d'attente, arret de bus, salle d'attente, transport en commun. Elle n'a rien d'autre a faire, l'interaction est naturelle.</p>
+  </div>
+
+  <h3>5. "Que faire si je n'ai rien a dire ?"</h3>
+  <p>Le silence en conversation n'est pas un probleme — c'est la <strong>peur du silence</strong> qui est un probleme. Beaucoup de gens comblent le vide par des paroles inutiles, ce qui rend la conversation artificielle.</p>
+  <p>Quand tu ne sais pas quoi dire :</p>
+  <ul>
+    <li><strong>Pose une question.</strong> Les questions sont le carburant de la conversation. "Et toi, qu'est-ce que tu en penses ?" "Comment t'es arrive la-dedans ?" "Qu'est-ce qui t'a donne envie de faire ca ?"</li>
+    <li><strong>Fais une observation.</strong> Regarde autour de toi. Qu'est-ce qui est interessant dans l'environnement ? "J'ai remarque que...", "C'est interessant comme...", "Tu as vu que..."</li>
+    <li><strong>Reviens a un sujet precedent.</strong> "Tu parlais de [sujet] tout a l'heure, j'aimerais en savoir plus."</li>
+    <li><strong>Partage ce que tu ressens.</strong> "Je suis un peu timide la, d'habitude je suis meilleur en conversation." L'honnetete cree de la connexion.</li>
+    <li><strong>Accepte le silence.</strong> Parfois, le silence est juste un moment de pause. Souris, respire, et laisse la conversation repartir naturellement.</li>
+  </ul>
+
+  <h3>6. "Comment gerer le rejet social ?"</h3>
+  <p>Le rejet fait mal. Des etudes en neuro-imagerie montrent que le rejet social active les memes zones du cerveau que la <strong>douleur physique</strong>. Ce n'est pas "dans ta tete" — c'est reel.</p>
+  <p>Mais le rejet n'est pas ce que tu crois. Quand quelqu'un te rejette, ce n'est pas un verdict sur ta valeur. C'est l'une de ces 3 choses :</p>
+  <ol>
+    <li><strong>Incompatibilite :</strong> Vous n'etes pas sur la meme longueur d'onde, et c'est OK. Tu ne peux pas plaire a tout le monde.</li>
+    <li><strong>Mauvais timing :</strong> La personne est stresse, occupee, dans sa bulle. Ce n'est pas toi, c'est le moment.</li>
+    <li><strong>Mauvaise approche :</strong> Tu as peut-etre mal lu les signaux ou choisi un mauvais contexte. Ca s'apprend.</li>
+  </ol>
+  <p><strong>Comment rebondir :</strong></p>
+  <ul>
+    <li>Accepte le rejet avec grace : "Pas de souci, bonne soiree !" — Tu restes digne.</li>
+    <li>Analyse froidement : est-ce que tu aurais pu faire les choses differemment ? Prends ce qui est utile, jette le reste.</li>
+    <li>Relance-toi vite : la meilleure facon de surmonter un rejet, c'est d'avoir une autre interaction positive juste apres.</li>
+  </ul>
+  <div class="exercise">
+    <h4>Exercice de resilience</h4>
+    <p>Fais 3 approches "d'entrainement" sans attente de resultat. Le but n'est pas que la conversation dure — le but est de t'habituer au "risque" du rejet. Apres 10 rejets, tu verras que ce n'est pas si grave. Apres 50, tu n'y penseras meme plus.</p>
+  </div>
+
+  <h3>7. "Comment maintenir une conversation ?"</h3>
+  <p>Le secret pour maintenir une conversation, c'est le <strong>threading</strong> (le filage). Chaque phrase que dit ton interlocuteur contient des "fils" que tu peux tirer pour continuer.</p>
+  <p>Exemple : "Je travaille dans le marketing digital et je viens de rentrer d'un voyage au Japon."</p>
+  <p>Fils possibles :</p>
+  <ul>
+    <li><strong>Marketing :</strong> "Qu'est-ce qui t'a attire dans le marketing ?"</li>
+    <li><strong>Voyage :</strong> "Le Japon ? Trop cool ! C'etait pour le travail ou les vacances ?"</li>
+    <li><strong>Retour :</strong> "Ca fait longtemps que t'es rentre ? La transition a ete dure ?"</li>
+    <li><strong>Emotion :</strong> "Qu'est-ce qui t'a le plus marque la-bas ?"</li>
+  </ul>
+  <p>Techniques avancees :</p>
+  <ul>
+    <li><strong>Le reflet :</strong> Reprends les 2-3 derniers mots de l'autre sous forme de question. "J'ai adoré ce resto." -> "Adoré ? Qu'est-ce qui t'a plu exactement ?"</li>
+    <li><strong>Le pont emotionnel :</strong> Relie un fait a une emotion. "Tu as change de job" -> "Ca a du etre un gros changement emotionnellement, non ?"</li>
+    <li><strong>Le pivot :</strong> Une fois que t'as explore un fil, pivote vers un autre. "Bon, assez parle de mon travail — raconte-moi ce qui t'a amene ici."</li>
+    <li><strong>La revelation personnelle :</strong> Partage quelque chose de toi pour encourager l'autre a en faire autant. "Ca me rappelle quand j'ai moi-meme change de carriere..."</li>
+  </ul>
+
+  <h3>8. "Comment lire le langage corporel ?"</h3>
+  <p>Lire le langage corporel, ce n'est pas decoder des "signes secrets". C'est observer des <strong>patterns de comportement</strong>. Un geste isole ne veut rien dire. C'est la combinaison de plusieurs signaux qui compte.</p>
+  <p><strong>Signaux POSITIFS (interet, confort) :</strong></p>
+  <ul>
+    <li>Pieds et torse orientes vers toi</li>
+    <li>Penche vers toi</li>
+    <li>Contact visuel soutenu (avec pauses naturelles)</li>
+    <li>Sourit avec les yeux (les pattes d'oie se plissent)</li>
+    <li>Hoche la tete en t'ecoutant</li>
+    <li>Mains visibles, paumes ouvertes</li>
+    <li>Imite subtilement ta posture (mirroring naturel)</li>
+  </ul>
+  <p><strong>Signaux NEGATIFS (desinteret, malaise) :</strong></p>
+  <ul>
+    <li>Pieds orientes vers la porte</li>
+    <li>Bras croises (sauf si position naturelle)</li>
+    <li>Regard qui fuit ou qui fixe ton telephone</li>
+    <li>Se recule ou cree de la distance</li>
+    <li>Tape du pied ou des doigts (impatience)</li>
+    <li>Regarde par-dessus ton epaule</li>
+    <li>Sourit avec la bouche seulement (pas les yeux)</li>
+  </ul>
+  <div class="callout-dark">
+    <p><strong>Regle importante :</strong> Ne juge jamais sur un seul signal. Quelqu'un peut avoir les bras croises parce qu'il a froid. Et quelqu'un qui evite le regard peut juste etre timide. Regarde les <strong>groupes de 3 signaux</strong> avant de conclure.</p>
+  </div>
+
+  <h3>9. "Comment arreter d'etre timide ?"</h3>
+  <p>La timidite n'est pas un trait de personnalite fixe. C'est une <strong>habitude de pensee</strong> qui se desapprend. La timidite, c'est essentiellement : une peur du jugement des autres + un manque de pratique sociale.</p>
+  <p>Le processus en 4 etapes :</p>
+  <ol>
+    <li><strong>Accepte ta timidite.</strong> Plus tu luttes contre, plus elle s'aggrave. "Je suis timide et c'est OK. Ca ne me definit pas."</li>
+    <li><strong>Expose-toi progressivement.</strong> Commence par des micro-interactions (saluer un caissier, demander l'heure, complimenter quelqu'un). Chaque petite victoire reprogramme ton cerveau.</li>
+    <li><strong>Decale le focus.</strong> La timidite, c'est trop d'attention sur toi-meme. Decale l'attention sur l'autre. Pose des questions. Interesse-toi vraiment.</li>
+    <li><strong>Utilise la preparation.</strong> Avoir des scripts, des sujets, des techniques en tete reduit l'anxiete. C'est exactement ce que ce guide te donne.</li>
+  </ol>
+  <div class="callout">
+    <p><strong>Le mindset qui change tout :</strong> Les autres ne pensent pas a toi autant que tu le crois. Vraiment. Tout le monde est trop occupe a penser a sa propre vie pour te juger en permanence. C'est appellé "l'effet projecteur" — tu crois qu'on te regarde plus qu'on ne le fait reellement.</p>
+  </div>
+
+  <h3>10. "Comment etre plus interessant ?"</h3>
+  <p>La bonne nouvelle : tu es deja interessant. La mauvaise : tu ne le sais pas, et tu ne le montres pas. Être interessant, ce n'est pas avoir une vie extraordinaire. C'est <strong>savoir raconter ta vie</strong> de maniere interessante.</p>
+  <p>Les 4 leviers pour devenir plus interessant :</p>
+  <ul>
+    <li><strong>Aie des passions.</strong> Peu importe quoi — la photo, le trail, la cuisine, les jeux video, la philosophie. Les personnes passionnees sont fascinantes parce qu'elles degagent de l'energie. Investis dans UNE chose et deviens vraiment competent.</li>
+    <li><strong>Cultive la curiosite.</strong> Lis, regarde des documentaires, voyage (meme pres de chez toi), essaye des nouvelles experiences. Chaque nouvelle experience est une histoire a raconter.</li>
+    <li><strong>Sois curieux des autres.</strong> Ironiquement, la meilleure facon d'etre interessant, c'est d'etre interesse. Pose des questions, ecoute, rebondis. Les gens trouvent fascinants ceux qui les fascinent.</li>
+    <li><strong>Maitrise le storytelling.</strong> Une histoire banale bien racontee est plus captivante qu'une histoire incroyable mal racontee. Structure : contexte → probleme → action → resultat → lecon.</li>
+  </ul>
+  <div class="exercise">
+    <h4>Exercice : Prends conscience de ta valeur</h4>
+    <p>Ecris 10 choses interessantes sur toi. Ca peut etre des experiences (voyages, rencontres), des competences (tu parles anglais, tu sais cuisiner), des opinions fortes, des projets, des anecdotes droles. Tu verras que t'as plus a dire que tu ne le penses.</p>
+  </div>
+</div>
+
+<!-- ===== SECTION 12 — 10 ERREURS ===== -->
+<div class="content page-break" id="les-10-erreurs-sociales-qui-te-freinent">
+  <div class="module-header">
+    <div class="module-number">Erreurs</div>
+    <h2>Les 10 erreurs sociales qui te freinent</h2>
+    <p class="module-tagline">Et comment les corriger des aujourd'hui</p>
+  </div>
+
+  <h3>Erreur #1 : Parler trop de soi</h3>
+  <p><strong>Le probleme :</strong> Tu passes la conversation a parler de tes experiences, de tes opinions, de ta vie. Monopoliser la parole est l'erreur sociale numero 1.</p>
+  <p><strong>Pourquoi c'est toxique :</strong> Ca donne l'impression que tu ne t'interesses qu'a toi-meme. Meme si c'est de la nervosite, l'effet est le meme.</p>
+  <p><strong>La correction :</strong> Applique la regle du 50/50. Parle 50% du temps, ecoute 50% du temps. Si tu realise que tu parles depuis plus de 30 secondes sans interruption, rends la parole : "Mais assez parle de moi — et toi, qu'est-ce que tu en penses ?"</p>
+
+  <h3>Erreur #2 : Interrompre les autres</h3>
+  <p><strong>Le probleme :</strong> Tu coupes la parole parce que tu as peur d'oublier ce que tu veux dire, ou parce que tu es trop excite par la conversation.</p>
+  <p><strong>Pourquoi c'est toxique :</strong> Ca signifie : "Ce que j'ai a dire est plus important que ce que tu dis." C'est l'une des manieres les plus rapides de faire sentir a quelqu'un qu'il n'est pas respecte.</p>
+  <p><strong>La correction :</strong> Quand tu sens que tu vas interrompre, prends une <strong>respiration</strong>. Laisse la personne finir sa phrase. Compte 2 secondes de silence avant de parler. Si tu as peur d'oublier, dis : "Je note ca pour y revenir dans un instant."</p>
+
+  <h3>Erreur #3 : Ne pas ecouter vraiment</h3>
+  <p><strong>Le probleme :</strong> Tu "pretends" ecouter mais en realite tu prepares ta reponse dans ta tete. Tu entends les mots mais tu ne traites pas le message.</p>
+  <p><strong>Pourquoi c'est toxique :</strong> Les gens sentent quand tu n'es pas vraiment la. Ca cree de la distance et de la mefiance.</p>
+  <p><strong>La correction :</strong> Pratique l'ecoute active. Concentre-toi sur chaque mot. Pose une question de suivi qui montre que tu as vraiment ecoute. "Tu as dit que [mot cle] — qu'est-ce qui s'est passe ensuite ?" Reformule ce que l'autre vient de dire avant de repondre.</p>
+
+  <h3>Erreur #4 : Un langage corporel ferme</h3>
+  <p><strong>Le probleme :</strong> Bras croises, epaules rentrees, regard fuyant, corps tourne vers la porte. Ton corps envoie "ne m'approche pas" pendant que ta bouche dit "viens me parler".</p>
+  <p><strong>Pourquoi c'est toxique :</strong> Le langage corporel parle plus fort que les mots. Meme si tu dis les bonnes choses, ton corps sabote ton message.</p>
+  <p><strong>La correction :</strong> Avant chaque interaction sociale, fais un scan rapide : epaules en arriere, bras decroises, torse oriente vers l'autre, tete haute, sourire leger. Check les 5 points en 2 secondes.</p>
+
+  <h3>Erreur #5 : Manquer de reciprocite</h3>
+  <p><strong>Le probleme :</strong> Tu prends mais tu ne donnes pas. Tu poses des questions mais tu ne reponds pas aux memes questions. Tu demandes de l'aide mais tu n'en donnes jamais.</p>
+  <p><strong>Pourquoi c'est toxique :</strong> Les relations sont des echanges. Si tu prends sans donner, les gens se sentent utilises et s'eloignent.</p>
+  <p><strong>La correction :</strong> Dans chaque interaction, assure-toi d'apporter autant que tu reçois. Quelqu'un te pose une question ? Reponds et rends-la. "Et toi ?" "Et de ton cote ?" Quelqu'un t'aide ? Trouve une facon de l'aider en retour meme petite.</p>
+
+  <h3>Erreur #6 : Juger trop vite</h3>
+  <p><strong>Le probleme :</strong> Tu categorises les gens avant meme de les connaitre. "Lui il a l'air arrogant.", "Elle doit etre superficielle."</p>
+  <p><strong>Pourquoi c'est toxique :</strong> Les jugements prematures te ferment aux autres. Tu vois ce que tu t'attends a voir, pas la realite. Et les gens sentent quand tu les juges.</p>
+  <p><strong>La correction :</strong> Adopte un etat d'esprit de "decouverte". Chaque personne est un monde que tu ne connais pas encore. Meme quelqu'un qui semble "boring" a des histoires fascinantes si tu creuses. Approche chaque nouvelle personne comme un livre que tu n'as jamais ouvert.</p>
+
+  <h3>Erreur #7 : Essayer de plaire a tout le monde</h3>
+  <p><strong>Le probleme :</strong> Tu changes d'avis, de personnalite, d'opinions selon qui est en face de toi. Tu dis "oui" a tout, tu evites les conflits, tu lisses tout.</p>
+  <p><strong>Pourquoi c'est toxique :</strong> Les personnes qui cherchent a plaire a tout le monde finissent par ne plaire a personne. On les percoit comme faibles, sans colonne vertebrale. Et toi-meme tu te perds dans ce jeu.</p>
+  <p><strong>La correction :</strong> Avoir des opinions et les exprimer respectueusement, c'est plus attractif que d'etre d'accord avec tout le monde. "Je comprends ton point de vue, mais je vois les choses differemment parce que..." — c'est puissant. Les gens respectent ceux qui ont une position claire.</p>
+
+  <h3>Erreur #8 : Ne pas poser de questions</h3>
+  <p><strong>Le probleme :</strong> Tu restes dans le "small talk" superficiel sans jamais approfondir. Ou pire, tu parles de toi sans jamais interroger l'autre.</p>
+  <p><strong>Pourquoi c'est toxique :</strong> Les conversations restent plates. Tu passes a cote de connexions profondes. L'autre se dit "il/elle ne s'interesse pas vraiment a moi".</p>
+  <p><strong>La correction :</strong> Sois methodique. Memorise 5 questions qui marchent a tous les coups :</p>
+  <ul>
+    <li>"Qu'est-ce qui t'a donne envie de faire [activite/travail] ?"</li>
+    <li>"Quel est le meilleur moment de ta semaine jusqu'ici ?"</li>
+    <li>"Si tu pouvais apprendre n'importe quoi en un jour, ce serait quoi ?"</li>
+    <li>"Qu'est-ce qui te passionne en ce moment ?"</li>
+    <li>"C'est quoi ton avis sur [sujet du contexte] ?"</li>
+  </ul>
+  <p>Et n'oublie pas : une question de suivi vaut 10 questions superficielles. "Pourquoi ?" est souvent la meilleure question du monde.</p>
+
+  <h3>Erreur #9 : Etre trop serieux</h3>
+  <p><strong>Le probleme :</strong> Tu prends tout au premier degre. Tu ne ris pas, tu ne taquines pas, tu ne deconnes pas. Chaque interaction est "importante".</p>
+  <p><strong>Pourquoi c'est toxique :</strong> Les gens veulent se sentir bien en ta presence. Le serieux excessif cree une atmosphere lourde. Les personnes avec qui on se marre, on a envie de les revoir.</p>
+  <p><strong>La correction :</strong> Apprends a rire de toi-meme. C'est le niveau ultime de confiance en soi. Fais des blagues legères, taquine gentiment (quand le contexte le permet). Le jeu et l'humour sont des lubrifiants sociaux puissants. Si tu es naturellement serieux, commence par sourire plus — c'est le premier pas vers la legerete.</p>
+
+  <h3>Erreur #10 : Ne pas oser approcher</h3>
+  <p><strong>Le probleme :</strong> Tu vois quelqu'un d'interessant, tu veux lui parler, mais tu te retiens. "Je vais attendre le bon moment." "Je vais d'abord preparer ce que je vais dire." "Et si ca se passe mal ?"</p>
+  <p><strong>Pourquoi c'est toxique :</strong> L'occasion passe. La personne part. Et tu restes avec la frustration et le "et si...". Le regret de ne pas avoir ose est bien plus grand que la douleur d'un rejet.</p>
+  <p><strong>La correction :</strong> La regle des 3 secondes. Quand tu as l'impulsion d'approcher quelqu'un, tu as 3 secondes pour agir avant que ton cerveau ne trouve des excuses. 3... 2... 1... GO. Approche sans reflechir. Ta bouche trouvera les mots. Et si c'est nul, ce sera une histoire drole a raconter plus tard.</p>
+
+  <div class="callout-success">
+    <p><strong>Resume :</strong> Parmi ces 10 erreurs, laquelle est la tienne ? Choisis LA plus importante et travaille-la cette semaine. Une seule. Pas 10. La maitrise sociale, ce n'est pas tout corriger d'un coup — c'est corriger une erreur a la fois jusqu'a ce que ce devienne naturel.</p>
+  </div>
+</div>
+
+<!-- ===== SECTION 13 — SCRIPTS ===== -->
+<div class="content page-break" id="scripts-de-conversation-pour-toutes-les-situations">
+  <div class="module-header">
+    <div class="module-number">Scripts</div>
+    <h2>Scripts de conversation pour toutes les situations</h2>
+    <p class="module-tagline">Des dialogues complets pour ne jamais etre a court de mots</p>
+  </div>
+
+  <h3>Script #1 : Aborder un inconnu dans un evenement</h3>
+  <p><strong>Contexte :</strong> Soiree, meetup, conference, vernissage. Tu vois quelqu'un qui te semble interessant.</p>
+  <div class="callout-dark">
+    <p><strong>Toi :</strong> "Salut, je m'appelle [prenom]. Je me suis dit que j'allais me presenter vu qu'on est dans le meme coin."</p>
+    <p><strong>Lui/elle :</strong> "Enchantee, moi c'est [prenom]."</p>
+    <p><strong>Toi :</strong> "T'es venu(e) avec qui ou t'es solo comme moi ?"</p>
+    <p><strong>Lui/elle :</strong> "Je suis venu(e) avec des collegues mais ils sont partis fumer."</p>
+    <p><strong>Toi :</strong> "Pareil, je connais personne ici a part l'organisateur. Du coup je me fais mon petit tour. Tu connais du monde ?"</p>
+    <p><strong>Lui/elle :</strong> "Quelques personnes, mais pas beaucoup."</p>
+    <p><strong>Toi :</strong> "On pourrait faire un deal : je te presente les deux personnes que j'ai rencontrées tout a l'heure, tu me presentes les tiennes, et on double nos cercles sociaux en 10 minutes."</p>
+  </div>
+  <p><strong>Pourquoi ca marche :</strong> L'honnetete du "je connais personne" desarme les defenses. La proposition de valeur (doubler le reseau) est concrete et playful.</p>
+
+  <h3>Script #2 : Networking professionnel</h3>
+  <p><strong>Contexte :</strong> Evenement pro, conference, salon. Tu veux creer une connexion utile sans etre forceur.</p>
+  <div class="callout-dark">
+    <p><strong>Toi :</strong> "Bonjour, [prenom]. J'ai assiste a ta presentation tout a l'heure — super interessant ce que tu as dit sur [sujet specifique]."</p>
+    <p><strong>Lui/elle :</strong> "Merci beaucoup ! C'etait un sujet qui me tient a coeur."</p>
+    <p><strong>Toi :</strong> "La partie sur [point precis] m'a particulierement parle parce que dans mon boulot on rencontre le meme genre de defis. Comment tu as resolu le probleme de [challenge specifique] ?"</p>
+    <p><strong>Lui/elle :</strong> "Alors, en fait on a..." [repond en detaillant]</p>
+    <p><strong>Toi :</strong> "Tres malin. Moi j'aurais pas pense a cette approche. Tu serais partant pour qu'on continue cette discussion autour d'un cafe la semaine prochaine ? Je suis sur que je peux aussi apporter ma perspective sur [sujet]."</p>
+  </div>
+  <p><strong>Pourquoi ca marche :</strong> Tu montres que t'as ecoute (specifique), tu valorises son expertise (ego positif), et tu proposes un echange de valeur (pas juste prendre).</p>
+
+  <h3>Script #3 : Premier rendez-vous amoureux</h3>
+  <p><strong>Contexte :</strong> Premier date. Vous etes dans un bar ou un cafe. L'enjeu est de creer une connexion romantique sans pression.</p>
+  <div class="callout-dark">
+    <p><strong>Toi :</strong> "Je suis content(e) qu'on ait enfin trouve un creneau pour se voir. T'avais l'air d'avoir une semaine chargee."</p>
+    <p><strong>Lui/elle :</strong> "Oui, c'etait intense mais je me suis libere(e) ce soir et j'en suis content(e) !"</p>
+    <p><strong>Toi :</strong> "Alors, la question la plus importante de la soiree : est-ce que tu as deja regarde la suite de [serie/emission] ou pas encore ?" [Question playful pour briser la glace]</p>
+    <p><strong>Lui/elle :</strong> [rit] "Pas encore ! Et toi ?"</p>
+    <p><strong>Toi :</strong> "Je me retiens de finir la saison pour pas etre tente de tout spoiler. Sinon, parle-moi de ton week-end — t'as fait quoi de beau ?"</p>
+    <p><strong>Lui/elle :</strong> [raconte]</p>
+    <p><strong>Toi :</strong> "Ca a l'air cool. Ce qui me frappe chez toi, c'est que t'as l'air de vraiment profiter des petits plaisirs. C'est une qualite que j'admire." [Compliment authentique]</p>
+    <p><strong>Lui/elle :</strong> [sourit, se sent valorise(e)]</p>
+  </div>
+  <p><strong>Pourquoi ca marche :</strong> La legèreté au debut met a l'aise. Le compliment specifique montre que tu vois la personne vraiment. La progression est naturelle : playful → factuel → emotionnel.</p>
+
+  <h3>Script #4 : Se faire des amis dans une nouvelle ville</h3>
+  <p><strong>Contexte :</strong> Tu viens d'emménager. Tu ne connais personne. Tu es dans un cafe, un parc, un cours de sport.</p>
+  <div class="callout-dark">
+    <p><strong>Toi :</strong> "Salut, desole de te deranger — je viens d'arriver dans la ville et je cherche des bons plans. Tu serais d'accord pour me recommander un bon resto dans le quartier ?"</p>
+    <p><strong>Lui/elle :</strong> "Oh, pleins ! Tout depend de ce que tu veux..."</p>
+    <p><strong>Toi :</strong> "Ecoute, je suis ouvert(e) a tout. Je m'appelle [prenom] en passant."</p>
+    <p><strong>Lui/elle :</strong> "Moi c'est [prenom]. Ca fait 3 ans que je suis la."</p>
+    <p><strong>Toi :</strong> "3 ans ? T'es deja un(e) veteran(e) alors. Et entre nous, c'est comment de vivre ici cote vie sociale ? Je debarque et je sais pas trop par ou commencer."</p>
+    <p><strong>Lui/elle :</strong> "C'est sympa, y'a pas mal de trucs. Y'a un groupe de [activite] qui se reunit tous les [jour], je peux te filer le lien si tu veux."</p>
+    <p><strong>Toi :</strong> "Franchement ce serait genial. Tiens, je te donne mon numero et on se tient au courant ?"</p>
+  </div>
+  <p><strong>Pourquoi ca marche :</strong> Demander de l'aide est un super connecteur social. Le "je debarque" est un statut qui invite les gens a t'aider. La transition vers l'echange de contact est naturelle.</p>
+
+  <h3>Script #5 : Renouer avec un vieil ami</h3>
+  <p><strong>Contexte :</strong> Ca fait des mois voire des annees. Vous vous etes perdus de vue. Tu veux renouer sans que ce soit awkward.</p>
+  <div class="callout-dark">
+    <p><strong>Toi :</strong> "Hey [prenom] ! Ca fait un bail. J'ai repense a [souvenir commun drole] l'autre jour et ca m'a donne envie de prendre de tes nouvelles."</p>
+    <p><strong>Lui/elle :</strong> "Oh trop bien ! Oui ca fait longtemps ! Comment tu vas ?"</p>
+    <p><strong>Toi :</strong> "Ca va, je voulais pas etre ce gars/fille qui reapparaît comme une fleur apres 2 ans, mais je me suis dit que c'etait mieux que de ne jamais le faire. Et toi, quoi de neuf dans ta vie ?"</p>
+    <p><strong>Lui/elle :</strong> "T'inquiete, je suis content(e) d'avoir de tes nouvelles. Ecoute, beaucoup de choses ont change..."</p>
+    <p><strong>Toi :</strong> "Ca donne envie d'en parler autour d'un verre. Tu es libre [jour] ? Je serais content de te revoir."</p>
+  </div>
+  <p><strong>Pourquoi ca marche :</strong> L'autoderision sur le "j'ai disparu" desamorce le malaise. Le souvenir commun prouve que la relation compte. La proposition est claire: on se voit.</p>
+
+  <h3>Script #6 : Gerer les silences awkward</h3>
+  <p><strong>Contexte :</strong> La conversation s'est arretee. Vous vous regardez. Le silence s'installe. Tu sens la pression monter.</p>
+  <div class="callout-dark">
+    <p><em>Option 1 — L'observation humoristique :</em></p>
+    <p><strong>Toi :</strong> "Et voila, le fameux silence awkward dont tout le monde parle. Je crois qu'on vient de passer un cap dans notre relation." [sourire]</p>
+    <p><strong>Lui/elle :</strong> [rit] "On est officiellement des amis maintenant ?"</p>
+
+    <p><em>Option 2 — Le pivot honnete :</em></p>
+    <p><strong>Toi :</strong> "Bon, on a epuise les sujets classiques. Je vais te poser une question randomness : quelle est la chose la plus folle que t'as faite cette annee ?"</p>
+
+    <p><em>Option 3 — L'aveu :</em></p>
+    <p><strong>Toi :</strong> "Desole, je reflechissais a ce que tu viens de dire. En fait, [sujet precedent] m'a fait penser a quelque chose..."</p>
+
+    <p><em>Option 4 — Le jeu :</em></p>
+    <p><strong>Toi :</strong> "OK, on va jouer a un jeu. Question rapide : montagne ou plage ?"</p>
+    <p><strong>Lui/elle :</strong> "Plage !"</p>
+    <p><strong>Toi :</strong> "OK, et pourquoi ?" [Le jeu relance la conversation sur un ton leger]</p>
+  </div>
+  <p><strong>La verite sur les silences :</strong> Ils ne sont pas aussi longs que tu le crois. 5 secondes de silence semblent une eternite pour celui qui le vit, mais c'est a peine perceptible pour l'autre. Parfois, l'autre est juste en train de reflechir a ce qu'il veut dire. Respire, souris, et laisse le silence exister.</p>
+
+  <div class="exercise">
+    <h4>Exercice pratique</h4>
+    <p>Choisis UN de ces scripts et utilise-le cette semaine. Vraiment. Pas "je vais le lire et le comprendre" — utilise-le dans une vraie conversation. Les scripts sont des entrainements, pas de la theorie.</p>
+  </div>
+</div>
+
+<!-- ===== SECTION 14 — PSYCHOLOGIE DE L'ATTRACTION ===== -->
+<div class="content page-break" id="la-psychologie-de-l-attraction">
+  <div class="module-header">
+    <div class="module-number">Psychologie</div>
+    <h2>La psychologie de l'attraction</h2>
+    <p class="module-tagline">Ce qui rend vraiment quelqu'un attractif (au-dela du physique)</p>
+  </div>
+
+  <h3>Pourquoi l'attraction ne se resumepas au physique</h3>
+  <p>On a tendance a croire que l'attraction est principalement physique. C'est faux. Le physique est ce qui <strong>attire l'attention</strong> dans les premieres secondes, mais ce n'est pas ce qui <strong>cree l'attraction durable</strong>.</p>
+  <p>Des etudes montrent que l'attraction est le resultat d'une <strong>combinaison complexe</strong> de facteurs : confiance, statut social, humour, similitudes, proximite, familiarite, et bien plus. Le physique est un facteur parmi d'autres — et pas le plus important.</p>
+  <p>Voici les piliers de l'attraction psychologique, et comment developper chacun.</p>
+
+  <h3>1. La confiance en soi</h3>
+  <p><strong>Pourquoi c'est attractif :</strong> La confiance signale que tu es capable, stable, et que tu n'as pas besoin de l'approbation des autres. C'est extremement rassurant et seduisant.</p>
+  <p><strong>Ce que la confiance N'EST PAS :</strong> Arrogance (j'ai besoin de me prouver), bravade (je fais semblant), ou agressivite (j'impose ma presence).</p>
+  <p><strong>Comment la developper :</strong></p>
+  <ul>
+    <li><strong>Accumule des preuves.</strong> Chaque reussite, meme petite, est une preuve de ta competence. Tiens un journal de tes victoires.</li>
+    <li><strong>Soigne ton corps.</strong> Le sport, une bonne posture, une tenue soignee — le corps et l'esprit sont lies. Un corps qu'on respecte genere de la confiance.</li>
+    <li><strong>Accepte tes defauts.</strong> La confiance, ce n'est pas croire que tu es parfait. C'est accepter que tu ne l'es pas ET que c'est OK.</li>
+    <li><strong>Arrete de te comparer.</strong> Tu es sur ta propre route. La seule comparaison utile, c'est toi d'hier vs toi d'aujourd'hui.</li>
+  </ul>
+
+  <h3>2. L'humour et la legerete</h3>
+  <p><strong>Pourquoi c'est attractif :</strong> L'humour signale plusieurs choses : intelligence (il faut etre malin pour etre drole), securite (je suis assez en confiance pour jouer), et legerete (je ne vais pas te faire subir un drame).</p>
+  <p><strong>Comment le developper :</strong></p>
+  <ul>
+    <li><strong>Observe les comedies.</strong> Regarde des humoristes, des comedies. Analyse ce qui fait rire. Le rythme, la surprise, l'observation du quotidien.</li>
+    <li><strong>Apprends a rire de toi.</strong> C'est la forme d'humour la plus securisante. "Je suis tellement nul en orientation que j'ai failli me perdre dans un parking" — ca montre de l'humilite et de la confiance.</li>
+    <li><strong>Ne force jamais.</strong> L'humour force est pire que pas d'humour du tout. Si rien ne vient, un simple sourire suffit.</li>
+    <li><strong>Prefere la taquinerie legere au sarcasme.</strong> Le sarcasme peut blesser. La taquinerie affectueuse (teasing) cree un jeu partage.</li>
+  </ul>
+
+  <h3>3. L'authenticite</h3>
+  <p><strong>Pourquoi c'est attractif :</strong> L'authenticite est rare. La plupart des gens portent un masque social. Quand tu es authentique, tu te demarques immediatement. Les gens sentent quand quelqu'un est "vrai" — et ils lui font confiance.</p>
+  <p><strong>Comment la developper :</strong></p>
+  <ul>
+    <li><strong>Connais-toi.</strong> Tu ne peux pas etre authentique si tu ne sais pas qui tu es. Quelles sont tes valeurs ? Tes opinions ? Tes gouts ?</li>
+    <li><strong>Assume tes particularites.</strong> Ce qui te rend bizarre est souvent ce qui te rend interessant. Tes passions inhabituelles, tes experiences uniques, ta facon de voir le monde.</li>
+    <li><strong>Exprime tes emotions.</strong> "Je suis nerveux", "Je suis emu", "Je suis vraiment heureux d'etre la" — la vulnerabilite est une forme de force.</li>
+  </ul>
+
+  <h3>4. La passion et l'ambition</h3>
+  <p><strong>Pourquoi c'est attractif :</strong> Les personnes passionnees sont magnetiques. Elles ont de l'energie, une direction, un feu interieur. L'ambition signale que tu vas quelque part, que tu as un projet, que tu ne vas pas t'encroûter.</p>
+  <p><strong>Comment la developper :</strong></p>
+  <ul>
+    <li><strong>Trouve ta chose.</strong> Peu importe quoi — un projet pro, un sport, un art, une cause. Investis-toi dedans a fond. Deviens bon.</li>
+    <li><strong>Parle de ta passion avec enthousiasme.</strong> Ne minimise pas ce qui te fait vibrer. "Je sais que c'est un peu niche mais je suis completement accro a [activite] et je pourrais en parler pendant des heures."</li>
+    <li><strong>Les projets sont sexy.</strong> "Je construis [projet]", "J'apprends [competence]", "Je prepare [voyage/evenement]" — les gens veulent etre la ou les choses se passent.</li>
+  </ul>
+
+  <h3>5. L'ecoute active</h3>
+  <p><strong>Pourquoi c'est attractif :</strong> Ecouter vraiment est le plus grand compliment que tu puisses faire a quelqu'un. Dans un monde de distractions, donner ton attention complete est un cadeau rare et precieux.</p>
+  <p><strong>Comment la developper :</strong></p>
+  <ul>
+    <li><strong>Range ton telephone.</strong> Vraiment. Pas "sur la table face cachee". Range-le. Poche. Sac. Hors de vue.</li>
+    <li><strong>Regarde dans les yeux.</strong> Pas en fixant — mais en etant present. Regarde les yeux, les expressions, le langage corporel.</li>
+    <li><strong>Pose des questions qui montrent que tu suis.</strong> "Tu as dit que [X] — pourquoi est-ce que c'etait important pour toi ?"</li>
+    <li><strong>Ne prepare pas ta reponse.</strong> Ecoute pour comprendre, pas pour repondre. La difference est enorme.</li>
+  </ul>
+
+  <h3>6. Le statut social (et pourquoi c'est mal compris)</h3>
+  <p><strong>Pourquoi c'est attractif :</strong> Le statut social n'est pas (que) l'argent ou la celebrite. Le statut, c'est <strong>la valeur percue dans un groupe</strong>. C'est le respect et l'influence que tu as aupres des autres. Les humains sont des animaux sociaux — le statut signale la capacite a proteger, nourrir, et soutenir.</p>
+  <p><strong>Comment le developper (sans etre un "fake") :</strong></p>
+  <ul>
+    <li><strong>Deviens competent dans un domaine.</strong> Le statut vient de la competence. Sois la personne a qui on pense pour [sujet].</li>
+    <li><strong>Sois celui/celle qui connecte les gens.</strong> Les hubs sociaux ont un statut eleve parce qu'ils creent de la valeur pour tout le groupe.</li>
+    <li><strong>Aie de l'integrite.</strong> Les gens respectent ceux qui tiennent leurs promesses, qui sont fiables, qui ont des valeurs.</li>
+    <li><strong>Porte-toi bien.</strong> Une bonne hygiene, des vetements adaptes, une posture soignee — le statut passe aussi par l'apparence.</li>
+  </ul>
+
+  <h3>7. Le storytelling</h3>
+  <p><strong>Pourquoi c'est attractif :</strong> Les histoires sont le langage natif du cerveau humain. Une histoire bien racontee capte l'attention, genere des emotions, et cree du lien. Les personnes qui savent raconter des histoires sont perçues comme plus intelligentes, plus interessantes, et plus charismatiques.</p>
+  <p><strong>La structure d'une bonne histoire :</strong></p>
+  <ol>
+    <li><strong>Contexte :</strong> "L'annee derniere, j'etais en vacances au Portugal..." (ou, quand, qui)</li>
+    <li><strong>Probleme/Tension :</strong> "...et je me suis rendu compte que j'avais perdu mon portefeuille dans un train." (le conflit)</li>
+    <li><strong>Action :</strong> "J'ai couru a la gare, j'ai trouve un employe qui parlait a peine anglais, et j'ai essaye de lui expliquer la situation avec mes mains et 3 mots de portugais." (ce qui s'est passe)</li>
+    <li><strong>Resolution :</strong> "Finalement, un touriste français qui passait par la a traduit et on a recupere le portefeuille."</li>
+    <li><strong>Chute/Lecon :</strong> "Depuis, j'ai toujours une copie de mes papiers dans ma chaussette. Et j'ai appris a dire 'portefeuille' en portugais." (pourquoi l'histoire merite d'etre racontee)</li>
+  </ol>
+  <p><strong>Comment pratiquer :</strong> Prends une experience banale de ta journee et raconte-la avec cette structure a un ami. "J'ai essaye un nouveau cafe aujourd'hui..." peut devenir une mini-histoire captivante avec la bonne structure.</p>
+
+  <h3>L'attraction est une equation, pas un mystere</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">Facteur #1</div>
+      <div class="value">Confiance</div>
+      <div class="note">Preuves + corps + acceptation</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Facteur #2</div>
+      <div class="value">Humour</div>
+      <div class="note">Legerete + autoderision + teasing</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Facteur #3</div>
+      <div class="value">Authenticite</div>
+      <div class="note">Connaissance de soi + vulnerabilite</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Facteur #4</div>
+      <div class="value">Passion</div>
+      <div class="note">Energie + projet + enthousiasme</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Facteur #5</div>
+      <div class="value">Ecoute</div>
+      <div class="note">Attention + questions + presence</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Facteur #6</div>
+      <div class="value">Statut</div>
+      <div class="note">Competence + connexion + integrite</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECTION 15 — DEFIS 30 JOURS ===== -->
+<div class="content page-break" id="defis-30-jours-de-developpement-social">
+  <div class="module-header">
+    <div class="module-number">Defi</div>
+    <h2>Defis 30 jours de developpement social</h2>
+    <p class="module-tagline">Un mois pour transformer completement tes competences sociales</p>
+  </div>
+
+  <h3>Comment participer a ce defi</h3>
+  <p>Ce defi est concu pour te pousser <strong>un peu plus loin chaque jour</strong>. Le principe est simple : chaque jour, tu fais la mission du jour. Pas de triche, pas de "je le ferai demain". Un jour a la fois.</p>
+  <p>Avant de commencer :</p>
+  <ul>
+    <li>Prends un carnet ou un document pour noter tes experiences chaque jour</li>
+    <li>Si une mission te fait trop peur, tu peux la "scalar" (la reduire) — mais pas la sauter</li>
+    <li>Si tu rates un jour, pas grave — reprends le lendemain</li>
+    <li>La seule regle : ne reste jamais 2 jours sans rien faire</li>
+  </ul>
+
+  <h3>Semaine 1 — Briser la glace (Jours 1-7)</h3>
+  <table>
+    <thead>
+      <tr><th>Jour</th><th>Mission</th><th>Niveau difficile</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Dis "bonjour" avec un sourire a 3 inconnus dans la rue</td><td>Fais-le en les regardant dans les yeux</td></tr>
+      <tr><td>2</td><td>Fais un compliment sincere a quelqu'un (collegue, caissier, voisin)</td><td>Complimente un inconnu complet</td></tr>
+      <tr><td>3</td><td>Demande l'heure ou un renseignement a quelqu'un dans la rue</td><td>Apres le renseignement, pose une question de suivi</td></tr>
+      <tr><td>4</td><td>Engage une conversation avec un barista ou un commerçant</td><td>Demande-lui son avis sur quelque chose</td></tr>
+      <tr><td>5</td><td>Appelle un ami que tu n'as pas contacté depuis 1 mois+</td><td>Propose-lui de se voir cette semaine</td></tr>
+      <tr><td>6</td><td>Va dans un cafe ou un bar seul et reste 30 min sans telephone</td><td>Engage la conversation avec quelqu'un</td></tr>
+      <tr><td>7</td><td>Rejoins un groupe sur Meetup/Facebook et inscris-toi a un evenement</td><td>Va a l'evenement cette semaine</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Semaine 2 — Approfondir (Jours 8-14)</h3>
+  <table>
+    <thead>
+      <tr><th>Jour</th><th>Mission</th><th>Niveau difficile</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>8</td><td>Pose une question personnelle a un collegue/connaissance</td><td>Pose une question sur ses reves ou ses peurs</td></tr>
+      <tr><td>9</td><td>Pratique l'ecoute active : reformule ce que l'autre dit</td><td>Fais-le sans poser de question — juste reformule</td></tr>
+      <tr><td>10</td><td>Raconte une histoire personnelle dans une conversation</td><td>Utilise la structure (contexte > probleme > action > resolution)</td></tr>
+      <tr><td>11</td><td>Dis "non" a quelque chose que tu ne veux pas faire</td><td>Dis "non" sans te justifier</td></tr>
+      <tr><td>12</td><td>Va manger seul dans un restaurant (pas fast-food)</td><td>Engage la conversation avec le serveur ou un voisin</td></tr>
+      <tr><td>13</td><td>Exprime une opinion impopulaire dans une conversation</td><td>Defends ton point de vue calmement face au desaccord</td></tr>
+      <tr><td>14</td><td>Propose un plan a un ami (sortie, resto, activite)</td><td>Organise un plan de groupe avec 3+ personnes</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Semaine 3 — Oser (Jours 15-21)</h3>
+  <table>
+    <thead>
+      <tr><th>Jour</th><th>Mission</th><th>Niveau difficile</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>15</td><td>Va a un evenement social SEUL (soiree, meetup, atelier)</td><td>Repars avec 3 nouveaux contacts</td></tr>
+      <tr><td>16</td><td>Prends la parole dans un groupe de 3+ personnes</td><td>Partage une opinion ou une anecdote</td></tr>
+      <tr><td>17</td><td>Fais un "cold approach" : parle a quelqu'un qui t'attire</td><td>Juste une ouverture, pas d'attente de resultat</td></tr>
+      <tr><td>18</td><td>Demande un retour honnete a quelqu'un sur ta communication</td><td>Demande : "Qu'est-ce que je pourrais ameliorer ?"</td></tr>
+      <tr><td>19</td><td>Partage quelque chose de vulnerable avec quelqu'un</td><td>Parle d'une peur ou d'une insécurité</td></tr>
+      <tr><td>20</td><td>Fais une introduction entre deux personnes de ton reseau</td><td>Explique pourquoi elles devraient se connaitre</td></tr>
+      <tr><td>21</td><td>Pratique le silence volontaire dans une conversation</td><td>Laisse l'autre combler le silence</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Semaine 4 — Maitriser (Jours 22-30)</h3>
+  <table>
+    <thead>
+      <tr><th>Jour</th><th>Mission</th><th>Niveau difficile</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>22</td><td>Organise un evenement (jeu, degustation, pique-nique, etc.)</td><td>Invite des gens que tu connais peu</td></tr>
+      <tr><td>23</td><td>Aide quelqu'un sans qu'il te le demande</td><td>Aide un inconnu dans la rue</td></tr>
+      <tr><td>24</td><td>Fais 5 "cold approaches" dans la meme journee</td><td>Au moins une conversation qui dure 5+ minutes</td></tr>
+      <tr><td>25</td><td>Exprime tes sentiments a quelqu'un (affection, gratitude, admiration)</td><td>Ecris une lettre ou un message detaillé</td></tr>
+      <tr><td>26</td><td>Va dans un endroit ou tu ne parles pas la langue (bar etranger)</td><td>Communique sans mots - gestes, sourires, langage corporel</td></tr>
+      <tr><td>27</td><td>Fais un discours ou une presentation devant au moins 5 personnes</td><td>Pas de notes, parle du coeur</td></tr>
+      <tr><td>28</td><td>Contacte quelqu'un que tu admires (mentor, influenceur, expert)</td><td>Demande un conseil specifique</td></tr>
+      <tr><td>29</td><td>Fais une "journee du oui" — accepte toute invitation sociale</td><td>Va au-dela de ta zone de confort a chaque fois</td></tr>
+      <tr><td>30</td><td>Celebre tes progres — ecris tout ce que tu as accompli en 30 jours</td><td>Partage ton experience avec quelqu'un</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout-success">
+    <p><strong>Le savais-tu ?</strong> Apres 30 jours de pratique quotidienne, les premieres connexions neuronales de tes nouvelles competences sociales commencent a se consolider. Ce n'est pas encore automatique, mais le chemin est trace. La magie opere entre le jour 30 et le jour 90 — c'est la que les efforts deviennent des habitudes.</p>
+  </div>
+
+  <div class="exercise">
+    <h4>Engagement</h4>
+    <p>Prends un engagement maintenant : "Je commence le defi 30 jours [DATE] et je le termine [DATE+30]."</p>
+    <p>Ecris-le. Dis-le a quelqu'un. Fais-toi accountable.</p>
+    <p><strong>Et quand tu auras fini les 30 jours, tu ne seras plus la meme personne socialement.</strong> Et ca, ca n'a pas de prix.</p>
+  </div>
+</div>
+
+<!-- ===== SECTION 16 — COMMUNICATION NON-VERBALE AVANCEE ===== -->
+<div class="content page-break" id="communication-non-verbale-avancee">
+  <div class="module-header">
+    <div class="module-number">Module 11</div>
+    <h2>Communication non-verbale avancee — 20 signaux decodes</h2>
+    <p class="module-tagline">Maitrise le langage silencieux du corps pour lire les gens comme un livre</p>
+  </div>
+
+  <h3>Pourquoi la communication non-verbale est ton super-pouvoir cache</h3>
+  <p>Tu le sais deja : le corps parle plus fort que les mots. Mais ce que tu ne sais peut-etre pas, c'est a quel point <strong>chaque geste, chaque posture, chaque micro-expression</strong> est un message que tu peux decoder.</p>
+  <p>Les etudes en psychologie sociale montrent que 60 a 80% du sens d'une interaction passe par le non-verbal. Pourtant, la plupart des gens passent a cote de 90% de ces signaux. Toi, tu vas apprendre a les voir, les comprendre, et les utiliser.</p>
+  <p>Attention : un signal isole ne veut jamais rien dire. C'est la <strong>combinaison de signaux</strong> et le <strong>contexte</strong> qui donnent le vrai sens. Lis toujours les signaux en groupes de 3.</p>
+
+  <h3>Les 20 signaux non-verbaux decodes</h3>
+
+  <h4>1. Les bras croises — Barriere defensive</h4>
+  <p><strong>Ce que ca signifie :</strong> Protection, desaccord, fermeture. La personne se coupe de toi et de l'environnement. C'est une posture de defense.</p>
+  <p><strong>Attention au contexte :</strong> Parfois c'est juste une position confortable ou la personne a froid. Regarde si les pouces sont visibles (pouces dehors = confiance cachee) ou caches (vraie fermeture).</p>
+  <p><strong>Comment repondre :</strong> Donne-lui quelque chose a tenir (un verre, un stylo, un document) — ca la force a decroiser les bras. Ou change de sujet vers quelque chose de moins conflictuel.</p>
+
+  <h4>2. Les jambes croisees — Reserve / timidite</h4>
+  <p><strong>Ce que ca signifie :</strong> Les jambes sont la partie la plus honnete du corps parce qu'on les controle moins. Jambes croisees = attitude defensive ou reservee. Jambes ecartees = confiance, domination.</p>
+  <p><strong>Comment repondre :</strong> Si tu vois des jambes croisees chez quelqu'un a qui tu parles, essaie de creer plus de confort. Assieds-toi a cote plutot qu'en face (angle de 90 degres) pour reduire la confrontation.</p>
+
+  <h4>3. Les paumes ouvertes — Honnetete / ouverture</h4>
+  <p><strong>Ce que ca signifie :</strong> Les paumes visibles signalent "je n'ai rien a cacher". C'est un signal ancestral de confiance et de soumission non-agressive.</p>
+  <p><strong>Comment l'utiliser :</strong> Quand tu veux etre credible ou convaincant, montre tes paumes. Quand tu parles en public, les paumes ouvertes vers le public creent de la confiance.</p>
+
+  <h4>4. Le contact visuel fuyant — Inconfort / mensonge / timidite</h4>
+  <p><strong>Ce que ca signifie :</strong> Eviter le regard peut signaler plusieurs choses : gene, mensonge, timidite, ou simplement une culture differente (dans certaines cultures, baisser les yeux est respectueux).</p>
+  <p><strong>Comment repondre :</strong> Ne force pas le regard. Si la personne evite ton regard, regarde son front ou son nez — ca donne la meme impression sans la pression. Avec le temps et le confort, le regard viendra.</p>
+
+  <h4>5. Le regard prolonge (>3 secondes) — Interet romantique / defi</h4>
+  <p><strong>Ce que ca signifie :</strong> Un regard qui dure plus de 3 secondes est un signal fort. En contexte amical = defi ou intimidation. En contexte romantique = interet marque. Avec un sourire = interet positif. Sans sourire = competition ou hostilite.</p>
+  <p><strong>Comment repondre :</strong> Si tu veux encourager l'interet, soutiens le regard et souris legerement. Si tu veux desamorcer, regarde ailleurs et reprends le regard apres quelques secondes.</p>
+
+  <h4>6. Les pieds orientes vers la porte — Desir de partir</h4>
+  <p><strong>Ce que ca signifie :</strong> Les pieds pointent dans la direction ou la personne veut aller. Si ses pieds sont tournes vers la porte ou vers la sortie, elle cherche inconsciemment a partir.</p>
+  <p><strong>Comment repondre :</strong> C'est le signal le plus honnete de desinteret. Si tu vois ca, abrege la conversation ou change completement de dynamique. Propose de bouger vers un autre endroit.</p>
+
+  <h4>7. Le mirroring — Connexion et rapport</h4>
+  <p><strong>Ce que ca signifie :</strong> Le mirroring (imitation subtile) est un signe de synchronisation et de connexion. Quand deux personnes sont en phase, elles imitent inconsciemment leurs postures, gestes, et rythmes.</p>
+  <p><strong>Comment l'utiliser :</strong> Imite subtilement la posture de ton interlocuteur (avec 2-3 secondes de decalage). Si tu es assis en face de quelqu'un qui se penche en avant, penche-toi aussi. Le mirroring cree un sentiment de familiarite et de confiance.</p>
+
+  <h4>8. Les mains cachees — Dissimulation / nervosite</h4>
+  <p><strong>Ce que ca signifie :</strong> Mettre les mains dans les poches, sous la table, ou derriere le dos signale qu'on cache quelque chose ou qu'on est nerveux.</p>
+  <p><strong>Comment repondre :</strong> Si tu veux mettre la personne a l'aise, montre tes propres paumes et garde tes mains visibles. La visibilite appelle la visibilite.</p>
+
+  <h4>9. Le sourire asymetrique — Sarcasme / deception</h4>
+  <p><strong>Ce que ca signifie :</strong> Un sourire qui ne monte que d'un cote est un "sourire de politesse" ou cache une emotion negative. Un vrai sourire (sourire de Duchenne) plisse les yeux et monte les deux coins de la bouche.</p>
+  <p><strong>Comment detecter le vrai sourire :</strong> Regarde les yeux. Les pattes d'oie (rides au coin des yeux) sont le signe d'un sourire authentique. Si seules les levres bougent, le sourire est faux.</p>
+
+  <h4>10. Les doigts qui tapent — Impatience / ennui</h4>
+  <p><strong>Ce que ca signifie :</strong> Tapoter des doigts, taper du pied, ou bouger constamment signale de l'impatience, de l'ennui, ou de l'anxiete. La personne veut que ca avance.</p>
+  <p><strong>Comment repondre :</strong> Accelere le rythme de ta communication. Va droit au but. Ou propose une pause si tu sens que l'attention est perdue.</p>
+
+  <h4>11. Le penchement vers l'avant — Interet actif</h4>
+  <p><strong>Ce que ca signifie :</strong> Quand quelqu'un se penche vers toi, c'est un signe d'interet et d'engagement. Le corps se rapproche de ce qui l'interesse.</p>
+  <p><strong>Comment repondre :</strong> Si la personne se penche vers toi, c'est le bon moment pour approfondir la conversation. Tu as son attention. Utilise-la pour aller vers des sujets plus personnels.</p>
+
+  <h4>12. Le penchement en arriere — Distance / desinteret</h4>
+  <p><strong>Ce que ca signifie :</strong> Se pencher en arriere cree de la distance. La personne se retire de l'interaction, que ce soit par desinteret, mefiance, ou inconfort.</p>
+  <p><strong>Comment repondre :</strong> Reduis la pression. Fais une blague legere, change de sujet, ou donne-lui de l'espace. Parfois, reculer toi-meme un peu peut resynchroniser la dynamique.</p>
+
+  <h4>13. Le hochement de tete excessif — Desir d'approbation</h4>
+  <p><strong>Ce que ca signifie :</strong> Hocher la tete excessivement (trop vite, trop souvent) signale que la personne veut etre approuvee. C'est un signe de nervosite ou de subordination.</p>
+  <p><strong>Comment repondre :</strong> Si tu vois ca, rassure la personne. Donne-lui des signes d'approbation verbaux : "Tout a fait", "Je vois", "C'est interessant". Ca l'aidera a se calmer.</p>
+
+  <h4>14. Le toucher du visage — Stress / reflection</h4>
+  <p><strong>Ce que ca signifie :</strong> Se toucher le visage (menton, joue, levres) peut signaler de la reflection (main sur le menton = evaluation) ou du stress (se frotter la nuque, se pincer l'arête du nez).</p>
+  <p><strong>Comment interpreter :</strong> Main sur le menton avec regard pensif = reflexion profonde. Se frotter la nuque ou le cou = stress ou mensonge. Se toucher les levres = desir ou hesitation.</p>
+
+  <h4>15. La dilatation des pupilles — Interet / desir</h4>
+  <p><strong>Ce que ca signifie :</strong> Les pupilles se dilatent quand on voit quelque chose qu'on aime ou qu'on desire. C'est un signal inconscient que meme les animaux ont. En contexte romantique, des pupilles dilatees = attraction.</p>
+  <p><strong>Attention :</strong> La lumiere affecte aussi les pupilles. Alors ne saute pas aux conclusions si vous etes dans une piece sombre.</p>
+
+  <h4>16. Le placement dans l'espace — Proxemique</h4>
+  <p><strong>Ce que ca signifie :</strong> La distance a laquelle quelqu'un se tient de toi est un signal puissant. Il existe 4 zones : intime (0-45cm, reserve aux proches), personnelle (45cm-1.2m, amis), sociale (1.2m-3.6m, connaissances), publique (>3.6m, public).</p>
+  <p><strong>Comment repondre :</strong> Respecte toujours la zone dans laquelle l'autre se place. Si tu veux creer de l'intimité, rapproche-toi progressivement et vois si la personne recule. Si elle recule, tu as atteint sa limite. Respecte-la.</p>
+
+  <h4>17. Le croisement de cheville — Retenue / nervosite</h4>
+  <p><strong>Ce que ca signifie :</strong> En position assise, les chevilles croisees sous la chaise signalent de la retenue, de la nervosite, ou qu'on retient quelque chose (une emotion, une opinion).</p>
+  <p><strong>Comment repondre :</strong> Pose une question ouverte pour inviter la personne a s'exprimer : "Qu'est-ce que tu en penses vraiment ?" ou "J'ai l'impression que tu as quelque chose a dire."</p>
+
+  <h4>18. La tete inclinee — Interet / ecoute</h4>
+  <p><strong>Ce que ca signifie :</strong> Incliner la tete sur le cote expose la gorge et les carotides — c'est un signal de vulnérabilite et de confiance. Ca montre que la personne ecoute attentivement et est receptive.</p>
+  <p><strong>Comment l'utiliser :</strong> Incline legerement la tete quand tu ecoutes quelqu'un. Ca signale que tu es vraiment attentif et ca encourage l'autre a continuer.</p>
+
+  <h4>19. Les epaules vers l'avant — Soumission / manque de confiance</h4>
+  <p><strong>Ce que ca signifie :</strong> Epaules rentrees, torse ferme = attitude de protection et de soumission. Ca signale un manque de confiance ou un malaise.</p>
+  <p><strong>Comment repondre :</strong> Si tu remarques ca chez quelqu'un, reduis la pression sociale. Evite les questions directes ou confrontantes. Donne-lui le temps de s'ouvrir.</p>
+
+  <h4>20. Le rythme de la respiration — Etat emotionnel</h4>
+  <p><strong>Ce que ca signifie :</strong> Respiration rapide et superficielle = stress, nervosite, excitation. Respiration lente et profonde = calme, confiance, relaxation. La synchronisation des respirations est aussi un signe de connexion.</p>
+  <p><strong>Comment l'utiliser :</strong> Si tu veux calmer quelqu'un, ralentis ta propre respiration. La respiration est contagieuse — l'autre va inconsciemment synchroniser son rythme sur le tien.</p>
+
+  <h3>Tableau de reference rapide — Body Language Cheat Sheet</h3>
+  <table>
+    <thead>
+      <tr><th>Signal</th><th>Signification</th><th>Comment repondre</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Bras croises</td><td>Fermeture, defense</td><td>Donne-lui un objet a tenir</td></tr>
+      <tr><td>Paumes ouvertes</td><td>Honnêtete, confiance</td><td>Utilise-les pour etre credible</td></tr>
+      <tr><td>Regard fuyant</td><td>Malaise, timidite</td><td>Regarde son front, mets a l'aise</td></tr>
+      <tr><td>Regard prolonge + sourire</td><td>Interet romantique</td><td>Soutiens le regard, souris</td></tr>
+      <tr><td>Pieds vers la porte</td><td>Envie de partir</td><td>Abrege ou change de dynamique</td></tr>
+      <tr><td>Mirroring (imitation)</td><td>Connexion, synchro</td><td>Imite subtilement en retour</td></tr>
+      <tr><td>Penche vers toi</td><td>Interet actif</td><td>Approfondis la conversation</td></tr>
+      <tr><td>Penche en arriere</td><td>Distance, mefiance</td><td>Reduis la pression, detends</td></tr>
+      <tr><td>Mains cachees</td><td>Dissimulation, stress</td><td>Montre tes propres mains</td></tr>
+      <tr><td>Doigts qui tapent</td><td>Impatience, ennui</td><td>Accelere ou propose une pause</td></tr>
+      <tr><td>Se touche le visage</td><td>Stress ou reflection</td><td>Observe le contexte pour savoir</td></tr>
+      <tr><td>Tete inclinee</td><td>Ecoute, receptivite</td><td>Continue, tu as son attention</td></tr>
+      <tr><td>Pupilles dilatees</td><td>Interet, desir</td><td>Bon signe, continue l'echange</td></tr>
+      <tr><td>Epaules rentrees</td><td>Soumission, malaise</td><td>Mets a l'aise, moins de pression</td></tr>
+      <tr><td>Respiration lente</td><td>Calme, confiance</td><td>Synchronise-toi avec le rythme</td></tr>
+      <tr><td>Chevilles croisees</td><td>Retenue, nervosite</td><td>Invite a s'exprimer</td></tr>
+      <tr><td>Sourire asymetrique</td><td>Faux, sarcasme</td><td>Regarde les yeux, pas la bouche</td></tr>
+      <tr><td>Proximite physique</td><td>Confort ou interet</td><td>Respecte la zone de l'autre</td></tr>
+      <tr><td>Hochement excessif</td><td>Desir d'approbation</td><td>Rassure verbalement</td></tr>
+      <tr><td>Jambes ecartees</td><td>Confiance, domination</td><td>Reflete ou contre-equilibre</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout-dark">
+    <p><strong>Entrainement du jour :</strong> Pendant tes 3 prochaines interactions, choisis UN signal et observe-le consciemment. Par exemple : "Ou est-ce que les pieds de mon interlocuteur pointent ?" Un signal a la fois. Avec le temps, tu deviendras un lecteur naturel du langage corporel.</p>
+  </div>
+
+  <div class="exercise">
+    <h4>Exercice : L'observateur silencieux</h4>
+    <p>Va dans un lieu public (cafe, parc, transport) et observe les gens sans interagir. Pendant 10 minutes, note les paires non-verbales que tu vois : qui est a l'aise, qui ne l'est pas, qui est interesse, qui veut partir. Verifie tes hypotheses en regardant si elles correspondent a l'interaction reelle. C'est un entrainement puissant pour calibrer ton œil.</p>
+  </div>
+
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">Principe #1</div>
+      <div class="value">Toujours en groupe de 3</div>
+      <div class="note">Un signal isole ne veut rien dire. Regarde les combinaisons.</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Principe #2</div>
+      <div class="value">Contexte avant tout</div>
+      <div class="note">Froid, fatigue, culture — le contexte change l'interpretation.</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Principe #3</div>
+      <div class="value">Pratique un signal a la fois</div>
+      <div class="note">N'essaie pas de tout lire d'un coup. Un signal par jour.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECTION 17 — GERER LES CONFLITS ===== -->
+<div class="content page-break" id="gerer-les-conflits">
+  <div class="module-header">
+    <div class="module-number">Module 12</div>
+    <h2>Gerer les conflits et les conversations difficiles</h2>
+    <p class="module-tagline">Transformer les desaccords en opportunites de connexion</p>
+  </div>
+
+  <h3>Pourquoi les conflits sont inevitables (et necessaires)</h3>
+  <p>Beaucoup de gens evitent les conflits a tout prix. Ils disent oui quand ils pensent non. Ils encaissent en silence. Ils accumulent de la frustration jusqu'a l'explosion. Et ils croient que c'est "etre gentil".</p>
+  <p><strong>La verite :</strong> Eviter les conflits, ce n'est pas preserver la relation. C'est la condamner a mort lentement. Les conflits bien geres renforcent les relations. Ils clarifient les attentes, ils creent du respect, ils permettent de vraiment se connaitre.</p>
+  <p>La difference entre une relation saine et une relation toxique n'est pas la presence ou l'absence de conflits. C'est la <strong>facon de les gerer</strong>.</p>
+
+  <h3>Les 5 styles de conflit — Lequel est le tien ?</h3>
+  <p>Selon le modele Thomas-Kilmann, il existe 5 styles de gestion de conflit. Chacun a son utilite selon la situation. Le probleme, c'est quand tu utilises TOUJOURS le meme style par reflexe.</p>
+
+  <table>
+    <thead>
+      <tr><th>Style</th><th>Assertivite</th><th>Cooperativite</th><th>Quand l'utiliser</th><th>Quand l'eviter</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Competing</strong> (Competition)</td><td>Haute</td><td>Basse</td><td>Urgence, decision impopulaire, protection de soi</td><td>Relations importantes, sujets non-critiques</td></tr>
+      <tr><td><strong>Avoiding</strong> (Evitement)</td><td>Basse</td><td>Basse</td><td>Sujet trivial, besoin de temps, danger</td><td>Problemes recurrents, relations proches</td></tr>
+      <tr><td><strong>Accommodating</strong> (Accommodation)</td><td>Basse</td><td>Haute</td><td>Preserver la relation, tu as tort, sujet mineur</td><td>Si utilise par faiblesse ou peur du conflit</td></tr>
+      <tr><td><strong>Compromising</strong> (Compromis)</td><td>Moyenne</td><td>Moyenne</td><td>Solutions rapides, interets partages, blocage</td><td>Quand une solution creative est preferable</td></tr>
+      <tr><td><strong>Collaborating</strong> (Collaboration)</td><td>Haute</td><td>Haute</td><td>Sujet important, volonté de trouver le meilleur pour les deux</td><td>Quand le temps ou l'energie manque</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <p><strong>Exercice d'auto-diagnostic :</strong> Quel est ton style de conflit par defaut ? Si tu evites toujours les conflits, tu es probablement "Avoiding" ou "Accommodating". Si tu cherches toujours a gagner, tu es "Competing". Le but n'est pas d'avoir un style unique — c'est d'avoir <strong>tous les styles a disposition</strong> et de choisir celui qui est adapte a la situation.</p>
+  </div>
+
+  <h3>Le protocole en 4 etapes pour les conversations difficiles</h3>
+  <p>Quand tu dois avoir une conversation difficile — que ce soit pour dire non, donner un feedback, ou aborder un sujet sensible — suis ce protocole.</p>
+
+  <h4>Etape 1 : Prepare-toi (avant la conversation)</h4>
+  <ul>
+    <li><strong>Clarifie ton intention :</strong> Pourquoi cette conversation est necessaire ? Quel est le resultat ideal ? Pas "pour gagner" — mais pour resoudre un vrai probleme.</li>
+    <li><strong>Prepare tes mots :</strong> Ecris ce que tu veux dire. Pas un script rigide, mais les points cles et le message principal.</li>
+    <li><strong>Choisis le bon moment et lieu :</strong> Prive, calme, pas pres de la pause dej ou du depart. "Est-ce que tu as 15 minutes pour qu'on parle de quelque chose ?" — le consentement a la conversation est important.</li>
+    <li><strong>Anticipe les reactions :</strong> Comment l'autre va-t-il recevoir ce que tu dis ? Prepare-toi a ses defenses, ses justifications, ses emotions.</li>
+  </ul>
+
+  <h4>Etape 2 : Ouvre (les premieres secondes)</h4>
+  <p>Les premieres secondes donnent le ton. N'attaque pas. N'accuse pas. Utilise une ouverture neutre qui cadre la conversation comme un <strong>probleme a deux</strong>, pas une attaque contre l'autre.</p>
+  <p><strong>Phrases d'ouverture efficaces :</strong></p>
+  <ul>
+    <li>"J'aimerais qu'on parle de [sujet] parce que je tiens a notre relation et je sens que quelque chose cloche."</li>
+    <li>"Il y a un truc qui me gene depuis quelques jours et j'aimerais qu'on en parle pour qu'on soit sur la meme page."</li>
+    <li>"J'ai un feedback a te donner, c'est un peu delicat mais je pense que ca va nous aider."</li>
+    <li>"Je sais pas si t'as remarque mais [observation]. Je voulais qu'on en discute."</li>
+  </ul>
+
+  <h4>Etape 3 : Explore (le coeur de la conversation)</h4>
+  <p>Une fois que le sujet est ouvert, l'objectif est d'explorer le probleme <strong>ensemble</strong>, pas de convaincre l'autre que tu as raison.</p>
+  <ul>
+    <li><strong>Parle de toi, pas de l'autre :</strong> Utilise le "Je". "Je me sens..." au lieu de "Tu es...". "Je me sens mis de cote" au lieu de "Tu m'ignores".</li>
+    <li><strong>Ecoute vraiment :</strong> Laisse l'autre parler sans l'interrompre. Reformule ce que tu comprends. "Si je t'entends bien, ce qui te frustre c'est que..."</li>
+    <li><strong>Cherche a comprendre, pas a gagner :</strong> Pose des questions : "Aide-moi a comprendre ton point de vue." "Qu'est-ce qui est important pour toi dans cette situation ?"</li>
+    <li><strong>Valide ses emotions :</strong> Meme si tu n'es pas d'accord, ses sentiments sont valides. "Je comprends que tu te sentes comme ca." "C'est legitime de ressentir ca."</li>
+    <li><strong>Reconnais ta part :</strong> Il y a presque toujours une part de responsabilite de chaque cote. Montre-toi ouvert. "Je reconnais que j'aurais pu mieux communiquer."</li>
+  </ul>
+
+  <h4>Etape 4 : Resolve (vers une solution)</h4>
+  <p>L'objectif est d'arriver a une <strong>solution acceptee par les deux</strong>. Pas de "j'ai raison, t'as tort".</p>
+  <ul>
+    <li><strong>Resume ce que vous avez etabli :</strong> "Donc si je recapitule, on est d'accord que..."</li>
+    <li><strong>Propose une solution concrete :</strong> "Comment est-ce qu'on peut faire en sorte que ca ne se reproduise pas ?" "Qu'est-ce qu'on met en place pour ameliorer la situation ?"</li>
+    <li><strong>Demande son avis :</strong> "Est-ce que ca te semble juste ?" "Qu'est-ce que tu proposerais de ton cote ?"</li>
+    <li><strong>Concluez par un accord clair :</strong> "OK, donc la prochaine fois, on fait [X]. Ca te va ?"</li>
+    <li><strong>Remercie :</strong> "Merci d'avoir eu cette conversation avec moi. Je sais que c'etait pas facile, mais je suis content qu'on l'ait fait."</li>
+  </ul>
+
+  <div class="callout-success">
+    <p><strong>Rappel crucial :</strong> Le but d'une conversation difficile n'est pas "d'avoir raison". C'est de resoudre un probleme et de <strong>preserver ou renforcer la relation</strong>. Si tu "gagnes" l'argument mais que tu perds la relation, tu as perdu.</p>
+  </div>
+
+  <h3>Le script DESC pour les feedbacks difficiles</h3>
+  <p>Le DESC est un outil puissant pour donner un feedback ou exprimer un desaccord de maniere structuree et non-agressive.</p>
+  <table>
+    <thead>
+      <tr><th>Lettre</th><th>Signification</th><th>Exemple concret</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>D</strong></td><td><strong>Decrire</strong> la situation factuellement</td><td>"Hier, pendant la reunion d'equipe, tu as coupe la parole a Karim a 3 reprises."</td></tr>
+      <tr><td><strong>E</strong></td><td><strong>Exprimer</strong> ce que tu ressens</td><td>"Je me suis senti gene pour Karim, et je pense que ca a casse la dynamique du groupe."</td></tr>
+      <tr><td><strong>S</strong></td><td><strong>Specifier</strong> ce que tu voudrais</td><td>"J'aimerais qu'on laisse chaque personne finir son idee avant de repondre."</td></tr>
+      <tr><td><strong>C</strong></td><td><strong>Consequences</strong> positives de ce changement</td><td>"Comme ca, tout le monde se sentira ecoute et les idees circuleront mieux."</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Scripts pour les situations difficiles</h3>
+
+  <h4>Dire non</h4>
+  <div class="callout-dark">
+    <p><strong>"Merci de penser a moi, c'est toucheant. Malheureusement, je ne peux pas accepter cette fois-ci. J'ai trop de choses en cours et je veux etre sur de pouvoir tenir mes engagements actuels."</strong></p>
+    <p>Version plus courte : <strong>"Je suis flatté mais je vais devoir refuser. Mes priorites sont ailleurs en ce moment."</strong></p>
+    <p>Tu n'as pas besoin de te justifier longuement. Un "non" poli et ferme est plus respectueux qu'un "oui" resentiment.</p>
+  </div>
+
+  <h4>Donner une critique constructive</h4>
+  <div class="callout-dark">
+    <p><strong>"J'aimerais te donner un retour sur [sujet] parce que je sais que tu veux t'ameliorer et que je tiens a notre collaboration. J'ai remarque que [fait precis]. J'ai pense que ca pourrait etre utile de [suggestion]. Qu'est-ce que t'en penses ?"</strong></p>
+    <p>Points cles : soit specifique, parle de comportements pas de personnalité, propose une alternative, demande son avis.</p>
+  </div>
+
+  <h4>Recevoir une critique</h4>
+  <div class="callout-dark">
+    <p><strong>"Merci de me le dire. Je ne vois pas les choses comme ca, mais je prends note que c'est ton ressenti. Est-ce que tu peux me donner un exemple concret pour que je comprenne mieux ?"</strong></p>
+    <p>Points cles : ne te defends pas immediatement, remercie, demande des details, prends le temps de reflechir avant de repondre.</p>
+  </div>
+
+  <h4>Presenter des excuses sinceres</h4>
+  <div class="callout-dark">
+    <p><strong>"Je suis desole pour [acte precis]. J'ai realise que [impact sur toi]. Je reconnais que c'etait [erreur] et je comprends que ca t'ait blesse/frustre. La prochaine fois, je ferai [changement concret] pour que ca ne se reproduise pas. Est-ce que tu peux me pardonner ?"</strong></p>
+    <p>Les 3 elements d'excuses sinceres : reconnaissance de l'erreur, expression de l'impact, engagement a changer.</p>
+  </div>
+
+  <h4>Etre en desaccord respectueusement</h4>
+  <div class="callout-dark">
+    <p><strong>"Je vois les choses differemment. Je comprends ton raisonnement et je suis d'accord sur [point commun], mais sur [point de divergence], ma perspective est differente. Je pense que [ton argument]. Qu'est-ce que t'en penses ?"</strong></p>
+    <p>Structure : accord partiel → desaccord → argument → ouverture. Le but est de montrer que tu as ecoute et compris avant de diverger.</p>
+  </div>
+
+  <h4>Mettre fin a une relation (amicale ou amoureuse)</h4>
+  <div class="callout-dark">
+    <p><strong>"J'ai beaucoup reflechi et je dois etre honnete avec toi. Je sens que notre relation ne me correspond plus/comme avant. Ce n'est pas facile a dire parce que tu comptes pour moi et que je tiens a toi. Mais je pense qu'il est temps pour moi de prendre du recul. Je te souhaite vraiment le meilleur et j'espere que tu comprendras."</strong></p>
+    <p>Points cles : soit sincere, ne blesse pas inutilement, assume ta decision, ne laisse pas de faux espoirs. La clarte est plus respectueuse que le silence.</p>
+  </div>
+
+  <div class="exercise">
+    <h4>Exercice : La conversation difficile que tu evites</h4>
+    <p><strong>-</strong> Quelle est LA conversation difficile que tu reportes depuis des semaines ou des mois ?</p>
+    <p><strong>-</strong> Utilise le protocole en 4 etapes pour la preparer (Prepare → Ouvre → Explore → Resolve).</p>
+    <p><strong>-</strong> Ecris les premieres phrases que tu vas dire.</p>
+    <p><strong>-</strong> Fixe une date dans les 48h pour avoir cette conversation. Vraiment. Mets un rappel.</p>
+  </div>
+
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">5 styles</div>
+      <div class="value">Competing, Avoiding, Accommodating, Compromising, Collaborating</div>
+      <div class="note">Aucun n'est "meilleur" — l'important est de savoir utiliser chacun selon le contexte.</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">4 etapes</div>
+      <div class="value">Prepare → Ouvre → Explore → Resolve</div>
+      <div class="note">Un cadre pour toute conversation difficile. Preparation = 80% du succes.</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Principe d'or</div>
+      <div class="value">Preserver la relation > Avoir raison</div>
+      <div class="note">Si tu gagnes l'argument mais perds la relation, tu as perdu.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECTION 18 — NETWORKING STRATEGIQUE ===== -->
+<div class="content page-break" id="networking-strategique">
+  <div class="module-header">
+    <div class="module-number">Module 13</div>
+    <h2>Networking strategique — Construire un reseau puissant a tout age</h2>
+    <p class="module-tagline">Comment te constituer un reseau de qualite meme si tu debutes</p>
+  </div>
+
+  <h3>Le networking n'est pas ce que tu crois</h3>
+  <p>Quand on entend "networking", on imagine des salles bondées de gens en costard qui echangeent des cartes de visite avec des sourires forces. On imagine qu'il faut etre deja bien place, avoir un bon titre, etre extraverti.</p>
+  <p><strong>La verite :</strong> Le networking, c'est juste le fait de constuire des relations authentiques avec des personnes qui partagent tes interets ou qui peuvent mutuellement s'apporter de la valeur. Ca n'a rien a voir avec le costard ou le titre. Ca a tout a voir avec ta <strong>sincerite et ta valeur ajoutee</strong>.</p>
+  <p>Et le meilleur moment pour commencer a construire ton reseau, c'est maintenant — pas quand tu auras "reussi". Les reseaux les plus puissants sont ceux qu'on construit AVANT d'en avoir besoin.</p>
+
+  <h3>Trouver les bonnes communautes et evenements</h3>
+  <p>Tu ne peux pas construire un reseau depuis ta chambre. Il faut aller la ou sont les gens. Mais pas n'importe ou — la ou se trouvent les personnes qui partagent tes valeurs et tes ambitions.</p>
+
+  <h4>Pour les jeunes (16-25 ans)</h4>
+  <ul>
+    <li><strong>Les associaitons etudiantes :</strong> BDE, junior-entreprise, associations caritatives, clubs de debat. C'est le meilleur endroit pour rencontrer des gens motives et apprendre le travail d'equipe.</li>
+    <li><strong>Les hackathons et competiions :</strong> Hackathons, startup weekends, concours d'eloquence. Les gens qui participent a ces evenements sont ambitieux et ouverts.</li>
+    <li><strong>Les meetups thematiques :</strong> Sur Meetup.com, Eventbrite, ou les groupes Facebook locaux. Choisis un sujet qui te passionne et vas-y regulierement.</li>
+  </ul>
+
+  <h4>Pour les jeunes adultes (25-35 ans)</h4>
+  <ul>
+    <li><strong>Les afterworks professionnels :</strong> Dans chaque ville, il y a des afterworks par secteur (tech, marketing, finance, creation). Cherche sur LinkedIn ou dans les groupes WhatsApp.</li>
+    <li><strong>Les formations et ateliers :</strong> Une formation en presentiel est un excellent moyen de rencontrer des gens qui investissent dans leur developpement.</li>
+    <li><strong>Les clubs de sport et hobbies :</strong> Escalade, crossfit, trail, yoga, poterie, cuisine — la regularite cree les rencontres.</li>
+    <li><strong>Les espaces de coworking :</strong> Meme si tu travailles chez toi, prendre un desk dans un coworking un jour par semaine te met en contact avec d'autres professionnels.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Conseil cle :</strong> La regularite bat l'intensite. Va au MEME evenement 3 fois de suite. La premiere fois, tu es un inconnu. La deuxieme, tu deviens un visage familier. La troisieme, tu fais partie du decor et les gens viennent a toi.</p>
+  </div>
+
+  <h3>Le cadre de conversation en 5 minutes pour le networking</h3>
+  <p>Tu n'as pas besoin de parler pendant 1 heure. Les meilleures connexions de networking se font en 5 minutes bien structurees.</p>
+
+  <table>
+    <thead>
+      <tr><th>Phase</th><th>Temps</th><th>Ce que tu fais</th><th>Exemple</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1. Ouverture</td><td>30s</td><td>Salutation, presentation, contexte</td><td>"Salut, je m'appelle Alex. Je suis la parce que je m'interesse a [theme]. Et toi ?"</td></tr>
+      <tr><td>2. Decouverte</td><td>2 min</td><td>Pose des questions sur l'autre, trouve des points communs</td><td>"Qu'est-ce qui t'a amene a travailler dans [secteur] ?" "Tu connais du monde ici ?"</td></tr>
+      <tr><td>3. Valeur</td><td>1 min</td><td>Partage ce que tu fais, ce qui te rend unique</td><td>"De mon cote, je fais [X]. Ce qui est interessant c'est que je [valeur unique]."</td></tr>
+      <tr><td>4. Echange</td><td>1 min</td><td>Propose une connexion, un conseil, ou une ressource</td><td>"Ca te dirait qu'on echange nos contacts ? J'ai un article sur [sujet] qui pourrait t'interesser."</td></tr>
+      <tr><td>5. Cloture</td><td>30s</td><td>Remercie, confirme le prochain pas</td><td>"Ravi de t'avoir rencontre. Je t'envoie un message sur LinkedIn et on se tient au courant !"</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout-success">
+    <p><strong>L'astuce de l'hote :</strong> Si tu ne sais pas comment ouvrir une conversation en networking, deviens l'hote. Va vers les gens qui sont seuls, dis "Salut, je vois que tu es seul(e) comme moi, je me suis dit qu'on pourrait se tenir compagnie." Tu fais une faveur a l'autre ET tu ouvres la conversation naturellement.</p>
+  </div>
+
+  <h3>Le systeme de suivi — La difference entre un contact et une relation</h3>
+  <p>La plupart des gens rencontrent quelqu'un, echangeent des contacts, et... ne donnent jamais suite. Le suivi est ce qui transforme un contact en relation. Voici un systeme simple.</p>
+
+  <h4>Les 3 suivis essentiels</h4>
+  <ul>
+    <li><strong>J+1 :</strong> Message LinkedIn ou email dans les 24h. "Ravi d'avoir echange avec toi a [evenement]. Comme promis, voici le lien vers [ressource]. Au plaisir de continuer la discussion !"</li>
+    <li><strong>J+7 :</strong> Proposition d'echange plus profond. "J'ai beaucoup pense a notre discussion sur [sujet]. Si ca te dit, on pourrait prendre un cafe ou un call de 15 min pour approfondir ?"</li>
+    <li><strong>J+30 :</strong> Check-in sans demande. "Salut [prenom], je suis tombe sur [article/ressource] qui m'a fait penser a toi et a notre conversation sur [sujet]. J'espere que tout va bien de ton cote !"</li>
+  </ul>
+
+  <h4>Le CRM humain — Gerer son reseau</h4>
+  <p>Tu n'as pas besoin d'un logiciel complique. Un simple document ou un tableau Google Sheets suffit :</p>
+  <table>
+    <thead>
+      <tr><th>Nom</th><th>Ou rencontre</th><th>Ce qu'il/elle fait</th><th>Points communs</th><th>Dernier contact</th><th>Prochaine action</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Julie Martin</td><td>Meetup Marketing</td><td>Community Manager</td><td>Escalade, IA</td><td>12/04</td><td>Envoyer article IA</td></tr>
+      <tr><td>Thomas Lefevre</td><td>Hackathon 2025</td><td>Developpeur freelance</td><td>Projets no-code</td><td>03/03</td><td>Proposer cafe</td></tr>
+      <tr><td>Sarah Cohen</td><td>Conference Growth</td><td>Growth Hacker</td><td>Lecture, podcast</td><td>18/02</td><td>Partager event</td></tr>
+    </tbody>
+  </table>
+
+  <p>Consacre 15 minutes par semaine a parcourir ta liste et a envoyer un message a 2-3 personnes. C'est tout ce qu'il faut pour entretenir un reseau de 50-100 personnes.</p>
+
+  <h3>La strategie de la valeur d'abord</h3>
+  <p>Le plus grand secret du networking : <strong>donne avant de demander.</strong> La plupart des gens abordent le networking comme une extraction : "Qu'est-ce que cette personne peut m'apporter ?" Les meilleurs networkers abordent comme une contribution : "Qu'est-ce que je peux apporter a cette personne ?"</p>
+  <p><strong>Comment donner de la valeur sans rien demander :</strong></p>
+  <ul>
+    <li>Partage un article, un livre, un podcast qui correspond a ses interets</li>
+    <li>Presente-la a quelqu'un de ton reseau qui peut l'aider</li>
+    <li>Donne-lui un conseil ou une ressource gratuite sur son sujet</li>
+    <li>Felicite-la pour une realisation que tu as vue sur LinkedIn</li>
+    <li>Invite-la a un evenement qui pourrait l'interesser</li>
+  </ul>
+  <p><strong>Quand tu donnes sans attendre, les gens se souviennent de toi.</strong> Et quand tu auras besoin de quelque chose, ils seront naturellement enclins a t'aider. C'est le principe de reciprocite : les humains ont un besoin psychologique de rendre ce qu'ils ont recu.</p>
+
+  <h3>LinkedIn pour les jeunes — Ton CV social</h3>
+  <p>LinkedIn n'est pas reserve aux cadres de 40 ans. C'est l'outil de networking le plus puissant pour les jeunes, parce que c'est la que les opportunites se creent. Voici comment t'optimiser.</p>
+
+  <h4>Les 5 elements d'un profil LinkedIn irresistible</h4>
+  <ol>
+    <li><strong>Photo professionnelle mais accessible :</strong> Sourire, bonne lumiere, fond neutre. Pas de photo de soiree, pas d'avatar. Les profils avec photo recoivent 21x plus de messages.</li>
+    <li><strong>Titre qui dit ce que tu FAIS (pas ton poste) :</strong> Pas "Etudiant" ou "En recherche d'emploi". Plutot : "Je construis [X] | Passionne par [Y] | J'aide [persona] a [resultat]".</li>
+    <li><strong>Section "A propos" qui raconte une histoire :</strong> Pas un CV fade. 3-4 phrases qui disent qui tu es, ce qui te motive, ce que tu construis. Les gens embauchent/connectent avec des humains, pas des CV.</li>
+    <li><strong>Posts reguliers (1-2x par semaine) :</strong> Tu n'as pas besoin d'etre un expert. Partage ce que tu apprends, ce que tu construis, des questions que tu te poses. Les gens qui publient sont 10x plus visibles que ceux qui ne font que consommer.</li>
+    <li><strong>Recommandations et recommandations :</strong> Demande a 3 personnes (collegues, profs, mentors) d'ecrire une recommandation. Ca cree de la preuve sociale instantanee.</li>
+  </ol>
+
+  <h4>Comment approcher les gens que tu admires sur LinkedIn</h4>
+  <div class="callout-dark">
+    <p><strong>Modele de message froid (cold DM) :</strong></p>
+    <p>"Bonjour [Prenom], je suis [ton nom]. Je suis un grand admirateur de ton travail sur [sujet specifique]. J'ai particulierement aime [point precis]. Je suis moi-meme en train de [ton projet] et j'aimerais beaucoup avoir ton avis sur [question precise] si tu as 5 minutes. Merci d'avance pour ton temps !"</p>
+    <p><strong>Regles :</strong> Personnalise toujours. Sois specifique (prouve que tu l'as vraiment suivie). Demande peu (5 min, pas 1 heure). Propose de la valeur si possible ("Je pourrais partager ce que j'apprends sur [sujet] en retour").</p>
+  </div>
+
+  <h4>Modele d'email pour contacter un professionnel etabli</h4>
+  <div class="callout-dark">
+    <p><strong>Objet :</strong> Question rapide sur [sujet] — [ton nom]</p>
+    <p>"Bonjour [Prenom],</p>
+    <p>Je m'appelle [ton nom] et je suis [ta situation : etudiant/junior/entrepreneur dans X].</p>
+    <p>Je suis tes travaux sur [sujet] depuis [temps] et j'ai ete particulierement impressionne par [point specifique].</p>
+    <p>Je suis en train de [ton projet/defi] et j'aimerais te poser une question rapide : [question specifique qui montre que t'as reflechi].</p>
+    <p>Je sais que tu es tres occupe, donc meme une reponse de 2 phrases m'aiderait enormement. Je te remercie par avance pour ton temps.</p>
+    <p>Bien cordialement,</p>
+    <p>[Ton prenom] [Ton nom]</p>
+    <p>[Lien vers ton LinkedIn]</p>
+    <p>P.S. : Si jamais je peux t'etre utile sur [sujet ou tu peux apporter de la valeur], n'hesite pas !"</p>
+  </div>
+
+  <div class="exercise">
+    <h4>Exercice : Ajouter 10 personnes a ton reseau cette semaine</h4>
+    <p><strong>-</strong> Trouve 3 evenements (en ligne ou physiques) auxquels participer cette semaine.</p>
+    <p><strong>-</strong> Ajoute 5 personnes sur LinkedIn apres chaque evenement avec un message personnalise.</p>
+    <p><strong>-</strong> Fais le suivi J+1 pour chaque nouvelle connexion.</p>
+    <p><strong>-</strong> Mets a jour ton profil LinkedIn avec les 5 elements ci-dessus.</p>
+    <p><strong>-</strong> Envoie 1 message froid a quelqu'un que tu admires.</p>
+  </div>
+
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">Principe #1</div>
+      <div class="value">Valeur d'abord</div>
+      <div class="note">Donne avant de demander. La reciprocite fera le reste.</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Principe #2</div>
+      <div class="value">Suivi systematique</div>
+      <div class="note">Un contact sans suivi n'est pas une relation. J+1, J+7, J+30.</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Principe #3</div>
+      <div class="value">Regularite > Intensite</div>
+      <div class="note">Meme evenement 3 fois. Meme cercle social. Presence longue duree.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECTION 19 — RELATIONS DURABLES ===== -->
+<div class="content page-break" id="relations-durables">
+  <div class="module-header">
+    <div class="module-number">Module 14</div>
+    <h2>Relations durables — Passer de la seduction a une vraie relation</h2>
+    <p class="module-tagline">Construire une relation qui dure au-dela de la phase de lune de miel</p>
+  </div>
+
+  <h3>Le grand saut : de l'etincelle a la flamme durable</h3>
+  <p>La seduction, c'est l'etincelle. C'est excitant, c'est nouveau, c'est l'adrenaline de la decouverte. Mais une relation durable, ce n'est pas ca. C'est un feu qu'on alimente chaque jour, pas une explosion qu'on attend.</p>
+  <p>Beaucoup de gens savent seduire mais ne savent pas <strong>constuire une relation qui tient</strong>. Ils enchainent les debuts passionnes et les fins decues, sans comprendre pourquoi ca ne marche pas.</p>
+  <p>Ce module est la pour ca : te donner les cles pour transformer une attraction naissante en une relation solide, saine et epanouissante.</p>
+
+  <h3>L'intimité emotionnelle — Le vrai ciment d'une relation</h3>
+  <p>L'intimité emotionnelle, c'est la capacite a partager qui tu es vraiment — tes peurs, tes reves, tes insécurites, tes joies — sans crainte d'etre juge ou rejete. C'est ce qui transforme un "partenaire" en "personne avec qui je peux tout partager".</p>
+
+  <h4>Comment construire l'intimité emotionnelle</h4>
+  <ul>
+    <li><strong>La vulnerabilite reciproque :</strong> L'intimité se construit par la revelation progressive. Tu partages quelque chose de personnel → l'autre partage en retour → tu partages plus profond. C'est un escalier, pas un ascenseur. Ne te jette pas dans la vulnérabilité totale des le premier date, mais n'attends pas non plus 2 ans.</li>
+    <li><strong>Les conversations profondes regulieres :</strong> Posez-vous ces questions : "Qu'est-ce qui te fait peur en ce moment ?" "Quel est ton plus grand reve ?" "Qu'est-ce que tu ressens par rapport a nous ?" Ces conversations sont le carburant de l'intimité.</li>
+    <li><strong>La presence dans les moments difficiles :</strong> L'intimité ne se construit pas dans les bons moments. Elle se construit quand l'autre traverse une epreuve et que tu es LA — pas pour "resoudre" mais pour accompagner. "Tu sais que je suis la, quoi qu'il arrive."</li>
+    <li><strong>Les rituels de connexion :</strong> Chaque jour, un moment de connexion authentique. 10 minutes sans telephone a se raconter sa journee. Un rituel du soir. Un check-in emotionnel. Ce sont ces petits rituels qui construisent l'intimité sur la duree.</li>
+  </ul>
+
+  <h3>Les 5 langages de l'amour — Parle la langue de ton partenaire</h3>
+  <p>Le concept de Gary Chapman est simple : chaque personne exprime et recoit l'amour de 5 manieres differentes. Le probleme arrive quand tu exprimes ton amour dans un langage que ton partenaire ne comprend pas. Il ne "sent" pas ton amour, meme si tu fais des efforts.</p>
+
+  <table>
+    <thead>
+      <tr><th>Langage</th><th>Description</th><th>Exemples concrets</th><th>Signes que c'est ton langage</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Paroles valorisantes</strong></td><td>L'amour passe par les mots : compliments, encouragements, remerciements</td><td>"Tu es belle/beau aujourd'hui." "Merci d'avoir fait ca." "Je suis fier/fiere de toi."</td><td>Tu es touche par les compliments. Les mots blessent plus que les actes.</td></tr>
+      <tr><td><strong>Temps de qualite</strong></td><td>L'amour passe par l'attention pleine : pas de telephone, pas de tele, juste vous deux</td><td>Un diner sans ecran, une promenade main dans la main, une conversation profonde</td><td>Tu es frustre quand l'autre est sur son telephone. Tu veux de l'attention exclusive.</td></tr>
+      <tr><td><strong>Cadeaux</strong></td><td>L'amour passe par des symboles materiels : petits gestes, attentions, surprises</td><td>Un petit mot, un cadeau surprise, son dessert prefere ramene sans raison</td><td>Tu fais attention aux petits details. Les cadeaux choisis avec soin te touchent profondement.</td></tr>
+      <tr><td><strong>Services rendus</strong></td><td>L'amour passe par des actions concretes : aider, faciliter la vie de l'autre</td><td>Faire le menage sans qu'on le demande, preparer le cafe, l'aider sur un projet</td><td>"Les actes parlent plus fort que les mots." Tu montres ton amour en faisant des choses.</td></tr>
+      <tr><td><strong>Toucher physique</strong></td><td>L'amour passe par le contact : câlins, main dans la main, sexe, proximite physique</td><td>Un câlin en rentrant, une main sur l'epaule, des calins spontanes</td><td>Tu as besoin de contact physique regulier. Tu te sens deconnecte sans toucher.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <p><strong>Exercice a faire en couple :</strong> Chacun ecrit son top 2 des langages de l'amour. Ensuite, chaque jour pendant une semaine, exprime deliberateument l'amour dans le langage de l'autre. Tu vas voir la difference. La plupart des conflits ne sont pas des problemes d'amour — ce sont des problemes de <strong>traduction</strong> entre langages differents.</p>
+  </div>
+
+  <h3>Les schemas de communication dans les relations saines</h3>
+  <p>Les chercheurs John Gottman et Julie Schwartz Gottman ont etudie des milliers de couples pendant des decennies. Leurs decouvertes sont fascinantes : ils peuvent predire avec 91% de precision si un couple va divorcer apres avoir observe 5 minutes de conversation.</p>
+  <p>Voici ce qui distingue les couples qui durent de ceux qui se separent.</p>
+
+  <h4>Les 4 cavaliers de l'apocalypse (signes de danger)</h4>
+  <table>
+    <thead>
+      <tr><th>Cavalier</th><th>Description</th><th>Exemple</th><th>Antidote</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Critique</strong></td><td>Attaquer la personnalite de l'autre, pas son comportement</td><td>"Tu es nul/nulle" au lieu de "Ce comportement me gene"</td><td>Plainte avec "Je" : "Je me sens blesse quand [fait]."</td></tr>
+      <tr><td><strong>Mepris</strong></td><td>Insultes, sarcasme, moquerie, roulement des yeux</td><td>"Tu es ridicule." "Encore toi et tes idees brillantes..."</td><td>La culture de l'appreciation : dire ce que tu apprecies chaque jour</td></tr>
+      <tr><td><strong>Defensive</strong></td><td>Se justifier, contre-attaquer, refuser la responsabilite</td><td>"Ce n'est pas de ma faute, c'est toi qui..."</td><td>Reconnaître sa part : "Tu as raison sur [point], je peux faire mieux."</td></tr>
+      <tr><td><strong>Stonewalling</strong></td><td>Mur du silence, retrait emotionnel, arret de la communication</td><td>Se taire, quitter la piece, ignorer l'autre</td><td>Pause de 20 min : "J'ai besoin d'une pause pour me calmer, on en reparle dans 20 min."</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout-dark">
+    <p><strong>Le ratio magique :</strong> Selon Gottman, les couples heureux ont un ratio de 5 interactions positives pour 1 interaction negative. Ca veut dire 5 sourires, compliments, attentions pour chaque reproche ou dispute. Si le ratio tombe a 1:1, le couple est en danger. Pose-toi la question : est-ce que tu apportes assez de positif pour compenser le negatif ?</p>
+  </div>
+
+  <h3>Resoudre les conflits dans le couple</h3>
+  <p>Les conflits de couple sont inevitables — et meme sains. Ce qui compte c'est comment vous les gerez. Voici un protocole specifique pour le couple.</p>
+
+  <h4>Le protocole en 5 etapes pour une dispute constructive</h4>
+  <ol>
+    <li><strong>Choisis le bon moment :</strong> "Je suis fache la, mais je sens que je vais dire des choses que je vais regretter. Est-ce qu'on peut en parler dans 30 minutes quand je serai plus calme ?"</li>
+    <li><strong>Ouvre avec douceur :</strong> "J'ai besoin de parler de [sujet]. Je me sens [emotion] par rapport a ca. Est-ce qu'on peut en discuter ?" Pas d'attaque, pas de "tu fais toujours".</li>
+    <li><strong>Parle de toi :</strong> "Je me sens seul(e) quand tu rentres tard sans prevenir" au lieu de "Tu rentres toujours tard sans jamais prevenir".</li>
+    <li><strong>Ecoute pour comprendre :</strong> Reformule ce que l'autre dit avant de repondre. "Si je comprends bien, ce qui t'a frustre c'est que..."</li>
+    <li><strong>Trouve une solution ensemble :</strong> "Qu'est-ce qu'on peut mettre en place pour que ca marche pour nous deux ?"</li>
+  </ol>
+
+  <div class="callout-success">
+    <p><strong>Ne jamais utiliser ces mots (sauf si tu veux tout casser) :</strong> "Tu exageres", "Tu es trop sensible", "Tu t'énerves pour rien", "Calme-toi", "De toute facon tu..." — ces phrases invalident les emotions de l'autre et sont des accelerateurs de conflit.</p>
+  </div>
+
+  <h3>Maintenir son individualité — Grandir ensemble, pas l'un dans l'autre</h3>
+  <p>La plus grande erreur dans les jeunes relations : se fondre l'un dans l'autre au point de perdre son identite. Tu arretes tes hobbies parce que l'autre ne les partage pas. Tu vois moins tes amis. Tu abandonnes tes projets personnels. Et un jour, tu te regardes dans le miroir et tu ne te reconnais plus.</p>
+  <p><strong>Une relation saine, c'est 1 + 1 = 3.</strong> Toi + Moi + Nous. Les trois existent. Les trois sont importants.</p>
+  <ul>
+    <li><strong>Toi :</strong> Tes passions, tes amis, tes projets, ton temps seul. Non-negociable.</li>
+    <li><strong>Moi :</strong> Ses passions, ses amis, ses projets, son temps seul. A respecter.</li>
+    <li><strong>Nous :</strong> Ce que vous construisez ensemble. Temps partage, projets communs, rituels de couple.</li>
+  </ul>
+
+  <h4>Signaux d'alarme : la fusion malsaine</h4>
+  <ul>
+    <li>Tu as arreté tes hobbies ou sports favoris depuis la rencontre</li>
+    <li>Tu vois tes amis beaucoup moins souvent (et ca te manque)</li>
+    <li>Tu annules des plans personnels pour etre avec l'autre</li>
+    <li>Tu ne sais plus ce que tu veux "seul" sans l'autre</li>
+    <li>L'autre est jaloux/jalouse de ton temps pour toi</li>
+  </ul>
+
+  <div class="exercise">
+    <h4>Exercice individuel : Mon contrat personnel</h4>
+    <p>Ecris une liste de 5 choses qui sont NON-NEGOCIABLES pour toi dans une relation. Par exemple : "Je garde mon sport du mardi soir", "Je vois mes amis au moins 1 fois par semaine sans mon partenaire", "J'ai un jour par mois pour moi tout seul". Ces limites ne sont pas un rejet de l'autre — ce sont la condition pour que tu restes toi-meme dans la relation.</p>
+  </div>
+
+  <h3>Red flags vs Green flags — Le guide de compatibilite</h3>
+  <p>Quand on commence une relation, on porte des lunettes roses. Tout semble parfait. Mais il y a des signaux a ne pas ignorer. Voici comment distinguer les signaux d'alarme des signaux de qualite.</p>
+
+  <table>
+    <thead>
+      <tr><th>Domaine</th><th>Red flags (drapeaux rouges)</th><th>Green flags (drapeaux verts)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Communication</strong></td><td>Evite les conversations difficiles, ment par omission, te fait sentir coupable de t'exprimer</td><td>Initie les conversations difficiles, ecoute sans se defendre, exprime ses besoins clairement</td></tr>
+      <tr><td><strong>Respect</strong></td><td>Rit de tes opinions, minimise tes sentiments, te parle avec mepris</td><td>Respecte tes opinions meme differentes, valide tes emotions meme s'il/elle ne les comprend pas</td></tr>
+      <tr><td><strong>Autonomie</strong></td><td>Est jaloux/jalouse de ton temps, veut tout faire ensemble, critique tes amis</td><td>A sa propre vie, encourage ton independance, aime ses amis et respecte les tiens</td></tr>
+      <tr><td><strong>Croissance</strong></td><td>Reste dans sa zone de confort, ne veut pas progresser, critique tes ambitions</td><td>Travaille sur lui-meme/elle-meme, a des objectifs, te soutient dans tes projets</td></tr>
+      <tr><td><strong>Conflit</strong></td><td>Guele, insulte, fait du chantage affectif, menace de partir</td><td>Cherche a comprendre, reconnaît ses torts, fait des compromis, demande pardon</td></tr>
+      <tr><td><strong>Conflance</strong></td><td>Verifie ton telephone, demande ton mot de passe, demande des comptes sur ton emploi du temps</td><td>Fait confiance par defaut, n'a pas besoin de verifier, te laisse ton espace</td></tr>
+      <tr><td><strong>Engagement</strong></td><td>Change d'avis sur ce qu'il/elle veut, te fait sentir insecure sur l'avenir</td><td>Sait ce qu'il/elle veut, est coherent/e entre ses paroles et ses actes</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout-dark">
+    <p><strong>Un conseil pour les jeunes couples :</strong> Ne cherche pas "la personne parfaite". Elle n'existe pas. Cherche quelqu'un avec qui les problemes sont <strong>compatibles avec toi</strong>. Tout le monde a des defauts. La question, c'est : est-ce que tu peux vivre avec SES defauts specifiquement ? Et est-ce qu'elle peut vivre avec les tiens ? Le vrai amour, ce n'est pas de trouver quelqu'un avec qui tout est facile. C'est de trouver quelqu'un pour qui tu es pret a faire l'effort.</p>
+  </div>
+
+  <h3>Grandir ensemble ou grandir separement</h3>
+  <p>Les relations qui durent ne sont pas celles ou les deux personnes restent identiques. C'est impossible. On change tous avec le temps. Les relations qui durent sont celles ou les deux personnes <strong>changent dans la meme direction</strong>, ou apprennent a accommoder les changements de l'autre.</p>
+  <p><strong>Les questions a se poser regulierement :</strong></p>
+  <ul>
+    <li>"Est-ce qu'on grandit dans la meme direction ou on s'eloigne l'un de l'autre ?"</li>
+    <li>"Est-ce que je suis heureux/heureuse dans cette relation aujourd'hui — pas dans le souvenir du debut ?"</li>
+    <li>"Est-ce que cette relation me rend meilleur/meilleure ou est-ce qu'elle me retient ?"</li>
+    <li>"Est-ce que je reste par peur d'etre seul(e) ou par veritable desir ?"</li>
+  </ul>
+  <p>Parfois, la reponse la plus aimante que tu puisses donner a quelqu'un, c'est de le/la laisser partir. Les relations qui ne nous servent plus, qui nous empechent de grandir, ou qui sont devenues toxiques — il faut savoir les quitter. Avec respect, avec gratitude pour ce qui a ete, mais avec la clarte que c'est fini.</p>
+
+  <div class="exercise">
+    <h4>Exercice de couple : Le check-in hebdomadaire</h4>
+    <p>Chaque semaine, prenez 15 minutes pour un check-in structure. Pas pour se critiquer — pour se reconnecter.</p>
+    <p><strong>-</strong> Qu'est-ce qui a ete bon cette semaine dans notre relation ?</p>
+    <p><strong>-</strong> Qu'est-ce qui a ete difficile ou frustrant ?</p>
+    <p><strong>-</strong> Qu'est-ce qu'on peut faire la semaine prochaine pour ameliorer notre connexion ?</p>
+    <p><strong>-</strong> Est-ce qu'il y a quelque chose dont on n'a pas parle et dont on devrait parler ?</p>
+    <p>Ce simple rituel peut prevenir 90% des conflits et maintenir une connexion forte sur la duree.</p>
+  </div>
+
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">Pilier #1</div>
+      <div class="value">Intimite emotionnelle</div>
+      <div class="note">Vulnerabilite, conversations profondes, presence dans les moments durs.</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Pilier #2</div>
+      <div class="value">Langages de l'amour</div>
+      <div class="note">Parle la langue de l'autre. La plupart des conflits sont des problemes de traduction.</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Pilier #3</div>
+      <div class="value">Individualite + Unite</div>
+      <div class="note">Toi + Moi + Nous. Les trois existent. Ne te perds pas dans le couple.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CONCLUSION ===== -->
+<div class="conclusion" id="conclusion--les-relations-humaines-sont-un-muscle">
+  <h2>Les relations humaines sont un muscle</h2>
+  <hr class="concl-divider">
+  <p>On commence ce guide en disant que les relations humaines sont une competence. On termine en disant que c'est un <strong>muscle</strong>.</p>
+  <p>Un muscle se muscle a force d'être utilise. Si tu ne l'utilises pas, il s'atrophie. Si tu l'entraines, il se renforce.</p>
+  <p>Ca ne se fait pas en un jour. Ca ne se fait pas sans effort. Mais ca se fait.</p>
+  <p><strong>Ce guide t'a donne les outils. Les plans d'entrainement. Les exercices. Les techniques.</strong></p>
+  <p>Mais il manque une chose. La chose la plus importante.</p>
+  <p><strong>Toi.</strong></p>
+  <p>Tu es la seule personne qui peut mettre en pratique ce que tu as appris. Personne ne peut le faire a ta place.</p>
+  <p>Va parler aux gens. Va te tromper. Va reussir. Va vivre.</p>
+  <p>Si tu as un problème ou une question, contacte Simon sur Instagram : <strong>@aurabusinessfr</strong></p>
+  <p>Chaque jour est une nouvelle opportunite de devenir la personne que tu veux être.</p>
+  <p><strong>Alors vas-y.</strong></p>
+</div>
+
+<!-- ===== BONUS ===== -->
+<div class="content page-break" id="bonus--exercices-scripts-et-ressources">
+  <div class="bonus-header" style="background:linear-gradient(135deg,#c2185b 0%,#880e4f 100%)">
+    <h2>Bonus</h2>
+    <p>Exercices, scripts et ressources pour aller plus loin</p>
+  </div>
+
+  <h3>Exercices supplementaires</h3>
+  
+  <h4>Le defi des 30 jours sociaux</h4>
+  <p>Un defi progressif pour sortir de ta zone de confort chaque jour :</p>
+  <table>
+    <thead>
+      <tr><th>Jour</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Dire bonjour a un inconnu</td></tr>
+      <tr><td>2</td><td>Sourire a 5 personnes dans la rue</td></tr>
+      <tr><td>3</td><td>Tenir la porte a quelqu'un</td></tr>
+      <tr><td>4</td><td>Faire un compliment a un collegue/ami</td></tr>
+      <tr><td>5</td><td>Demander l'heure a quelqu'un</td></tr>
+      <tr><td>6</td><td>Engager une conversation dans un cafe</td></tr>
+      <tr><td>7</td><td>Rappeler un ami oublie</td></tr>
+      <tr><td>8</td><td>Poser une question personnelle a quelqu'un</td></tr>
+      <tr><td>9</td><td>Dire non a quelque chose</td></tr>
+      <tr><td>10</td><td>Participer a un evenement seul(e)</td></tr>
+      <tr><td>11</td><td>Demander un service a quelqu'un</td></tr>
+      <tr><td>12</td><td>Initier un sujet de conversation profond</td></tr>
+      <tr><td>13</td><td>Pratiquer le silence dans une conversation</td></tr>
+      <tr><td>14</td><td>Parler a quelqu'un d'un avis different</td></tr>
+      <tr><td>15</td><td>Rejoindre un groupe de discussion</td></tr>
+      <tr><td>16</td><td>Se presenter a 3 inconnus</td></tr>
+      <tr><td>17</td><td>Raconter une histoire personnelle</td></tr>
+      <tr><td>18</td><td>Demander un retour honnete sur ta communication</td></tr>
+      <tr><td>19</td><td>Dire ce que tu ressens a quelqu'un</td></tr>
+      <tr><td>20</td><td>Exprimer un desaccord respectueux</td></tr>
+      <tr><td>21</td><td>Proposer un plan a quelqu'un</td></tr>
+      <tr><td>22</td><td>Parler en public (meme 1 minute)</td></tr>
+      <tr><td>23</td><td>Refuser poliment une invitation</td></tr>
+      <tr><td>24</td><td>Ecouter quelqu'un sans l'interrompre</td></tr>
+      <tr><td>25</td><td>Encourager quelqu'un</td></tr>
+      <tr><td>26</td><td>Demander de l'aide</td></tr>
+      <tr><td>27</td><td>Parler a quelqu'un que tu admires</td></tr>
+      <tr><td>28</td><td>Organiser une sortie de groupe</td></tr>
+      <tr><td>29</td><td>Exprimer ta vulnerabilite</td></tr>
+      <tr><td>30</td><td>Celebrer tes progres sociaux</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Scripts de conversation</h3>
+  
+  <h4>Pour ouvrir une conversation</h4>
+  <p>"Salut, je m'appelle [prenom], et toi ?"</p>
+  <p>"Je ne pouvais pas partir sans te dire — j'adore ta veste."</p>
+  <p>"Desole de te deranger, mais je cherchais justement quelqu'un avec qui parler de [sujet du contexte]."</p>
+  <p>"Je suis nouveau ici, tu connaisrais un bon plan pour [manger/boire] dans le coin ?"</p>
+  
+  <h4>Pour approfondir</h4>
+  <p>"Qu'est-ce qui t'a amene ici ce soir ?"</p>
+  <p>"Tu fais quoi dans la vie ? Qu'est-ce qui te plait la-dedans ?"</p>
+  <p>"Si tu pouvais voyager n'importe ou demain, ce serait ou ?"</p>
+  <p>"Quel est le meilleur conseil qu'on t'ait jamais donne ?"</p>
+  
+  <h4>Pour créer du lien</h4>
+  <p>"Je ressens la meme chose — c'est fou comme on vit la meme experience."</p>
+  <p>"Merci d'avoir partage ca avec moi, c'est pas toujours facile d'en parler."</p>
+  <p>"Tu sais, cette conversation me fait vraiment du bien."</p>
+  <p>"J'aime beaucoup ta facon de voir les choses."</p>
+
+  <h3>Journal de bord social</h3>
+  <p>Utilise ce modele chaque jour pour suivre ta progression :</p>
+  <div class="callout-dark">
+    <p><strong>Date :</strong> ___/___/___</p>
+    <p><strong>Interactions du jour :</strong> ___</p>
+    <p><strong>Ce qui s'est bien passe :</strong> _______________</p>
+    <p><strong>Ce que je peux ameliorer :</strong> _______________</p>
+    <p><strong>Ce que j'ai appris :</strong> _______________</p>
+    <p><strong>Defi du jour :</strong> _______________</p>
+    <p><strong>Niveau de confiance (1-10) :</strong> ___</p>
+  </div>
+
+  <h3>Ressources recommandees</h3>
+  
+  <h4>Livres</h4>
+  <ul>
+    <li>"How to Win Friends and Influence People" — Dale Carnegie (le classique absolu)</li>
+    <li>"The Charisma Myth" — Olivia Fox Cabane (la science du charisme)</li>
+    <li>"Supercommunicators" — Charles Duhigg (l'art de la connexion)</li>
+    <li>"Captivating" — Vanessa Van Edwards (le charisme scientifique)</li>
+    <li>"Never Split the Difference" — Chris Voss (negociation et communication)</li>
+  </ul>
+  
+  <h4>Comptes Instagram a suivre</h4>
+  <ul>
+    <li><strong>@aurabusinessfr</strong> — Simon (ton coach)</li>
+    <li>@vanessavanedwards — La science des relations</li>
+    <li>@thegodofcharisma — Charisme et developpement personnel</li>
+    <li>@jordanwproof — Confiance en soi et communication</li>
+  </ul>
+
+  <h3>Conclusion du bonus</h3>
+  <p>Ce guide est un point de depart, pas une destination. Les veritables competences sociales se construisent sur le terrain, pas dans la lecture. Prends ces scripts, ces exercices, ces ressources, et <strong>passe a l'action.</strong></p>
+  <p>Le monde est rempli de personnes formidables qui attendent de te rencontrer. Va les rencontrer.</p>
+</div>
+
+
+<section style="background:#0e0e10;padding:50px 20px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif">
+  <div style="max-width:600px;margin:0 auto">
+    <div style="background:linear-gradient(135deg,#c2185b15,#c2185b05);border:2px solid #c2185b25;border-radius:16px;padding:32px 24px;margin-bottom:30px">
+      <span style="font-size:36px;display:block;margin-bottom:8px">📧</span>
+      <h3 style="color:#fff;font-size:20px;margin:0 0 6px;font-weight:700">Reçois les prochains guides gratuitement</h3>
+      <p style="color:#999;font-size:14px;margin:0 0 18px;line-height:1.5">Une astuce business par semaine + les nouveaux guides en exclusivité. Rejoins les 500+ abonnés.</p>
+      <form action="#" method="POST" style="display:flex;flex-direction:column;gap:10px;max-width:400px;margin:0 auto">
+        <input type="text" placeholder="Ton prénom" required style="padding:12px 16px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:14px;outline:none;font-family:inherit">
+        <input type="email" placeholder="Ton email" required style="padding:12px 16px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:14px;outline:none;font-family:inherit">
+        <button type="submit" style="padding:14px 24px;border-radius:10px;border:none;background:linear-gradient(135deg,#c2185b,#c2185bcc);color:#fff;font-size:16px;font-weight:700;cursor:pointer;font-family:inherit;transition:all .3s">👉 Recevoir les prochains guides</button>
+      </form>
+      <p style="color:#666;font-size:11px;margin:10px 0 0">🔒 Pas de spam. Désinscription en 1 clic. Tes données sont protégées.</p>
+    </div>
+
+    <div style="margin-bottom:30px">
+      <h4 style="color:#fff;font-size:16px;margin:0 0 16px;font-weight:600">📢 Tu as aimé ce guide ?</h4>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <a href="#" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:#ddd;text-decoration:none;font-size:13px;font-weight:500;transition:all .3s">📸 Instagram</a>
+        <a href="#" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:#ddd;text-decoration:none;font-size:13px;font-weight:500;transition:all .3s">🎵 TikTok</a>
+        <a href="#" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:#ddd;text-decoration:none;font-size:13px;font-weight:500;transition:all .3s">🐦 Twitter/X</a>
+        <a href="#" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:#ddd;text-decoration:none;font-size:13px;font-weight:500;transition:all .3s">▶️ YouTube</a>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;font-size:13px">
+      <span style="color:#aaa">⭐ Laisse un avis → <a href="#" style="color:#c2185b;text-decoration:none;font-weight:600">Écrire un avis</a></span>
+      <span style="color:#555">|</span>
+      <span style="color:#aaa">🔗 Partage le guide → <a href="#" style="color:#c2185b;text-decoration:none;font-weight:600">Copier le lien</a></span>
+    </div>
+
+    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.06);margin:30px 0 16px">
+    <p style="color:#555;font-size:12px">Créé par <strong style="color:#888">Simon — @aurabusinessfr</strong></p>
+  </div>
+</section>
+
+</body>
+</html>

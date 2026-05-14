@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TeenPreneur — Le Business Avant 18 Ans</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;background:#0a0a0a;color:#f5f5f5;line-height:1.6;overflow-x:hidden}
+.container{max-width:680px;margin:0 auto;padding:0 20px}
+/* Hero */
+.hero{background:linear-gradient(160deg,#0a0a0a 0%,#1a0a0f 30%,#2d0a15 60%,#4a0a20 100%);padding:60px 0 50px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 40%,rgba(233,69,96,0.12) 0%,transparent 60%),radial-gradient(circle at 70% 60%,rgba(233,69,96,0.08) 0%,transparent 50%);pointer-events:none}
+.badge{display:inline-block;background:rgba(233,69,96,0.15);border:1px solid rgba(233,69,96,0.3);border-radius:50px;padding:6px 16px;font-size:12px;font-weight:600;color:#e94560;letter-spacing:0.5px;margin-bottom:20px;text-transform:uppercase}
+.hero h1{font-size:clamp(32px,7vw,52px);font-weight:900;line-height:1.15;margin-bottom:12px;background:linear-gradient(135deg,#fff 30%,#e94560 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero .author{font-size:14px;color:#999;margin-bottom:16px}
+.hero .author strong{color:#e94560}
+.hero .tagline{font-size:clamp(15px,3vw,18px);color:#bbb;max-width:560px;margin:0 auto 24px;line-height:1.5}
+.proof-row{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;font-size:13px;color:#aaa}
+.proof-row span{display:flex;align-items:center;gap:4px}
+.cta-primary{display:inline-block;padding:16px 40px;background:linear-gradient(135deg,#e94560,#d63350);border:none;border-radius:12px;color:#fff;font-size:18px;font-weight:700;text-decoration:none;transition:all .3s;margin-top:8px;box-shadow:0 8px 32px rgba(233,69,96,0.35);cursor:pointer;letter-spacing:-0.3px}
+.cta-primary:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(233,69,96,0.5)}
+.cta-sub{display:block;font-size:12px;color:#777;margin-top:10px}
+.hero-mockup{margin:30px auto 0;max-width:280px;position:relative}
+.hero-mockup img{width:100%;border-radius:16px;border:1px solid rgba(233,69,96,0.2);box-shadow:0 20px 60px rgba(233,69,96,0.2)}
+/* Sections */
+section{padding:50px 0}
+.section-label{text-align:center;font-size:12px;font-weight:600;color:#e94560;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px}
+.section-title{text-align:center;font-size:clamp(24px,5vw,34px);font-weight:800;margin-bottom:32px;line-height:1.2}
+.section-title span{background:linear-gradient(135deg,#fff,#e94560);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+/* Problem */
+.problem{background:#0e0e0e}
+.problem-grid{display:flex;flex-direction:column;gap:14px}
+.problem-card{background:rgba(233,69,96,0.06);border:1px solid rgba(233,69,96,0.12);border-radius:12px;padding:18px 20px;display:flex;align-items:center;gap:14px}
+.problem-card .icon{font-size:24px;flex-shrink:0}
+.problem-card p{font-size:15px;font-weight:500;color:#ddd}
+.problem-card .desc{font-size:13px;color:#888;margin-top:2px}
+/* Solution */
+.solution{background:#0a0a0a}
+.solution-text{font-size:15px;color:#bbb;text-align:center;max-width:580px;margin:0 auto 24px;line-height:1.7}
+.solution-highlight{background:linear-gradient(135deg,rgba(233,69,96,0.1),rgba(233,69,96,0.02));border:1px solid rgba(233,69,96,0.15);border-radius:14px;padding:28px 24px;max-width:560px;margin:0 auto}
+.solution-highlight p{font-size:14px;color:#aaa;line-height:1.7;margin-bottom:10px}
+.solution-highlight p:last-child{margin-bottom:0}
+.solution-highlight strong{color:#e94560}
+/* Modules */
+.modules{background:#0e0e0e}
+.module-list{display:flex;flex-direction:column;gap:10px}
+.module-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:12px;transition:all .3s}
+.module-item:hover{border-color:rgba(233,69,96,0.25);background:rgba(233,69,96,0.04)}
+.module-num{background:rgba(233,69,96,0.15);color:#e94560;font-weight:800;font-size:12px;width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.module-item .text{font-size:14px;font-weight:500;color:#ddd}
+.module-item .text small{font-weight:400;color:#888;font-size:12px}
+.bonus-badge{background:linear-gradient(135deg,#e94560,#d63350);color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;text-transform:uppercase;margin-left:6px}
+/* Benefits */
+.benefits{background:#0a0a0a}
+.benefits-grid{display:flex;flex-direction:column;gap:14px}
+.benefit-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:18px 20px;display:flex;align-items:center;gap:14px;transition:all .3s}
+.benefit-card:hover{border-color:rgba(233,69,96,0.2)}
+.benefit-card .emoji{font-size:26px;flex-shrink:0}
+.benefit-card .text{font-size:14px;font-weight:500;color:#ddd}
+.benefit-card .text small{display:block;font-weight:400;font-size:12px;color:#888;margin-top:2px}
+/* Pricing */
+.pricing{background:linear-gradient(160deg,#0e0e10 0%,#1a0a0f 50%,#0e0e10 100%);text-align:center}
+.price-box{background:rgba(233,69,96,0.06);border:2px solid rgba(233,69,96,0.2);border-radius:16px;padding:36px 24px 30px;max-width:460px;margin:0 auto;position:relative}
+.price-box .popular{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:#e94560;color:#fff;font-size:11px;font-weight:700;padding:4px 18px;border-radius:50px;text-transform:uppercase;letter-spacing:1px}
+.price-old{font-size:20px;color:#777;text-decoration:line-through}
+.price-current{font-size:56px;font-weight:900;line-height:1;margin:6px 0 4px;background:linear-gradient(135deg,#fff 30%,#e94560);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.price-label{font-size:13px;color:#999;margin-bottom:20px}
+.price-features{list-style:none;margin:20px 0;text-align:left;display:inline-block}
+.price-features li{font-size:14px;color:#ccc;padding:6px 0;display:flex;align-items:center;gap:8px}
+.price-features li::before{content:'\2713';color:#e94560;font-weight:700}
+.guarantee{border:1px solid rgba(233,69,96,0.15);border-radius:10px;padding:14px 18px;max-width:460px;margin:20px auto 0;display:flex;align-items:center;gap:12px;font-size:13px;color:#aaa;text-align:left}
+.guarantee strong{color:#e94560}
+/* Testimonials */
+.testimonials{background:#0e0e0e}
+.testimonial-grid{display:flex;flex-direction:column;gap:16px}
+.testimonial-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:20px}
+.testimonial-card .stars{color:#e94560;font-size:14px;margin-bottom:8px;letter-spacing:2px}
+.testimonial-card blockquote{font-size:14px;color:#ccc;line-height:1.6;font-style:italic;margin-bottom:12px}
+.testimonial-card .author-info{display:flex;align-items:center;gap:10px}
+.testimonial-card .avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#e94560,#d63350);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#fff;flex-shrink:0}
+.testimonial-card .name{font-size:14px;font-weight:600;color:#eee}
+.testimonial-card .detail{font-size:12px;color:#e94560;font-weight:600}
+.testimonial-card .detail span{color:#888;font-weight:400}
+/* FAQ */
+.faq{background:#0a0a0a}
+.faq-item{border-bottom:1px solid rgba(255,255,255,0.06);padding:16px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-size:15px;font-weight:600;color:#eee;display:flex;justify-content:space-between;align-items:center;cursor:pointer;user-select:none;gap:12px}
+.faq-toggle{font-size:18px;color:#e94560;transition:transform .3s;flex-shrink:0}
+.faq-item.active .faq-toggle{transform:rotate(45deg)}
+.faq-a{font-size:14px;color:#999;line-height:1.6;margin-top:10px;display:none}
+.faq-item.active .faq-a{display:block}
+/* CTA Final */
+.cta-final{background:linear-gradient(160deg,#0a0a0a 0%,#1a0a0f 40%,#2d0a15 70%,#0a0a0a 100%);text-align:center;padding:60px 0}
+.cta-final h2{font-size:clamp(26px,5vw,38px);font-weight:900;line-height:1.15;margin-bottom:12px}
+.cta-final h2 span{background:linear-gradient(135deg,#fff,#e94560);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.cta-final p{font-size:15px;color:#bbb;max-width:500px;margin:0 auto 24px}
+.cta-urgency{display:inline-block;background:rgba(233,69,96,0.12);border:1px solid rgba(233,69,96,0.25);border-radius:8px;padding:8px 18px;font-size:13px;font-weight:600;color:#e94560;margin-bottom:20px}
+.cta-final .cta-primary{padding:18px 48px;font-size:20px}
+/* Footer */
+footer{background:#080808;text-align:center;padding:30px 20px;border-top:1px solid rgba(255,255,255,0.04)}
+footer p{font-size:12px;color:#555;margin-bottom:4px}
+footer a{color:#777;text-decoration:none;font-size:12px}
+footer a:hover{color:#e94560}
+/* Responsive */
+@media(min-width:480px){
+  .problem-grid{flex-direction:row;flex-wrap:wrap}
+  .problem-card{flex:1;min-width:200px}
+  .benefits-grid{flex-direction:row;flex-wrap:wrap}
+  .benefit-card{flex:1;min-width:200px}
+  .testimonial-grid{flex-direction:row;flex-wrap:wrap}
+  .testimonial-card{flex:1;min-width:200px}
+}
+
+.follow-overlay{max-width:460px;margin:0 auto;padding:24px 16px}
+.follow-header{text-align:center;margin-bottom:22px}
+.follow-header .lock-icon{font-size:42px;margin-bottom:6px}
+.follow-header h3{font-size:clamp(17px,3.5vw,22px);font-weight:800;color:#fff;margin:0 0 6px}
+.follow-header p{font-size:13px;color:#999;margin:0;line-height:1.4}
+.follow-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.follow-link{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:600;transition:all .2s;color:#ddd}
+.follow-link.ig{background:rgba(225,48,108,0.1);border:1px solid rgba(225,48,108,0.2)}
+.follow-link.ig:hover{background:rgba(225,48,108,0.2);border-color:rgba(225,48,108,0.35)}
+.follow-link.tt{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08)}
+.follow-link.tt:hover{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.15)}
+.follow-link.yt{background:rgba(255,0,0,0.08);border:1px solid rgba(255,0,0,0.2)}
+.follow-link.yt:hover{background:rgba(255,0,0,0.15);border-color:rgba(255,0,0,0.35)}
+
+#pseudoInput:focus{border-color:#e94560!important}
+#pseudoInput::placeholder{color:#555}
+.unlock-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px 24px;border-radius:12px;border:none;background:#e94560;color:#fff;font-size:15px;font-weight:700;cursor:pointer;transition:all .3s;font-family:inherit}
+.unlock-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px #e9456040}
+.unlock-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+.gate-content{display:none}
+.gate-content.unlocked{display:block}
+.follow-note{font-size:12px;color:#555;text-align:center;margin-top:14px}
+#verifyError{color:#e94560;font-size:13px;display:none;text-align:center;margin:10px 0}
+
+/* FOLLOW ROW */
+/* FOLLOW GATE */
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="container">
+    <div class="badge">&#127775; Guide gratuit</div>
+    <h1>TEENPRENEUR<br>Réussir dans le Business en Étant Mineur</h1>
+    <p class="author">Simon &mdash; <strong>@aurabusinessfr</strong></p>
+    <p class="tagline">Le guide complet pour lancer et réussir ton business avant 18 ans &mdash; sans diplôme, sans argent, sans expérience.</p>
+    <div class="proof-row">
+      <span>&#9989; Déjà <strong>500+</strong> TeenPreneurs formés</span>
+      <span>&#11088; <strong>4.9</strong>/5</span>
+      <span>&#128170; Âge moyen: <strong>15 ans</strong></span>
+    </div>
+    <a href="#free-access" class="cta-primary">Télécharger gratuitement &#8594;</a>
+    <span class="cta-sub">100% gratuit &middot; Accès immédiat &middot; Sans inscription</span>
+  </div>
+</header>
+
+<!-- ===== PROBLEM ===== -->
+<section class="problem" id="problem">
+  <div class="container">
+    <div class="section-label">Tu te reconnais ?</div>
+    <h2 class="section-title">Tu veux gagner ton propre argent mais&hellip;</h2>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <span class="icon">&#128566;</span>
+        <div><p>Tout le monde te dit que tu es trop jeune</p><div class="desc">"Reviens dans 5 ans" — ton entourage, l'administration, le marché</div></div>
+      </div>
+      <div class="problem-card">
+        <span class="icon">&#129300;</span>
+        <div><p>Tu ne sais pas quoi vendre</p><div class="desc">Des idées vagues. Rien de concret qui te semble réalisable.</div></div>
+      </div>
+      <div class="problem-card">
+        <span class="icon">&#128584;</span>
+        <div><p>Tes parents ne te prennent pas au sérieux</p><div class="desc">Pour eux c'est un caprice. Ils veulent que tu te concentres sur l'école.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SOLUTION ===== -->
+<section class="solution">
+  <div class="container">
+    <div class="section-label">La vérité</div>
+    <h2 class="section-title">L'âge n'est pas un obstacle.<br><span>L'absence de méthode, si.</span></h2>
+    <p class="solution-text">J'ai commencé à 14 ans. Sans argent, sans contacts, sans savoir quoi vendre. Aujourd'hui je génère plus que mes profs. Ce livre numérique est tout ce que j'aurais voulu avoir à mes débuts.</p>
+    <div class="solution-highlight">
+      <p><strong>TEENPRENEUR</strong> n'est pas un livre théorique. C'est un <strong>système complet</strong> qui te prend par la main de l'idée jusqu'à ton premier client &mdash; puis au-delà.</p>
+      <p>Chaque module a été testé et validé par des dizaines de jeunes comme toi. Pas de blabla. Des actions concrètes, dans l'ordre, avec des templates prêts à l'emploi.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHAT'S INSIDE ===== -->
+<section class="modules">
+  <div class="container">
+    <div class="section-label">Le plan de bataille</div>
+    <h2 class="section-title">Ce que tu vas apprendre</h2>
+    <div class="module-list">
+      <div class="module-item"><span class="module-num">01</span><span class="text">Mindset TeenPreneur &mdash; <small>Deviens celui qui entreprend</small></span></div>
+      <div class="module-item"><span class="module-num">02</span><span class="text">Trouver ton idée &mdash; <small>Les 3 niches qui cartonnent chez les -18 ans</small></span></div>
+      <div class="module-item"><span class="module-num">03</span><span class="text">Valider en 7 jours &mdash; <small>Sans construire un produit inutile</small></span></div>
+      <div class="module-item"><span class="module-num">04</span><span class="text">Construire ton offre &mdash; <small>Pricing, packag, valeur perçue</small></span></div>
+      <div class="module-item"><span class="module-num">05</span><span class="text">Acquérir tes clients &mdash; <small>Les canaux gratuits qui marchent pour les jeunes</small></span></div>
+      <div class="module-item"><span class="module-num">06</span><span class="text">Ton premier revenu &mdash; <small>Passe de 0 à client payant</small></span></div>
+      <div class="module-item"><span class="module-num">07</span><span class="text">Systématiser &mdash; <small>Gagne sans passer plus de temps</small></span></div>
+      <div class="module-item"><span class="module-num">08</span><span class="text">Plan croissance 6 mois &mdash; <small>Devient autonome financièrement</small></span></div>
+    </div>
+    <div style="margin-top:20px;text-align:center">
+      <div class="section-label" style="margin-bottom:6px">&#127873; BONUS INCLUS</div>
+      <div style="display:flex;flex-direction:column;gap:8px;max-width:450px;margin:0 auto">
+        <div class="module-item" style="background:rgba(233,69,96,0.06);border-color:rgba(233,69,96,0.15)"><span class="module-num" style="background:#e94560;color:#fff">+</span><span class="text">Template "Convaincre tes parents" <span class="bonus-badge">EXCLUSIF</span></span></div>
+        <div class="module-item" style="background:rgba(233,69,96,0.06);border-color:rgba(233,69,96,0.15)"><span class="module-num" style="background:#e94560;color:#fff">+</span><span class="text">Guide juridique du travail pour mineur</span></div>
+        <div class="module-item" style="background:rgba(233,69,96,0.06);border-color:rgba(233,69,96,0.15)"><span class="module-num" style="background:#e94560;color:#fff">+</span><span class="text">50 scripts de prospection prêts à envoyer</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BENEFITS ===== -->
+<section class="benefits">
+  <div class="container">
+    <div class="section-label">Pourquoi ce livre change tout</div>
+    <h2 class="section-title"><span>Les résultats concrets</span> que tu obtiendras</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card"><span class="emoji">&#127919;</span><div class="text">Trouver une idée VIABLE en 1 jour<small>Fini les hésitations. Tu sors du lot avec une offre qui vend.</small></div></div>
+      <div class="benefit-card"><span class="emoji">&#128176;</span><div class="text">Lancer avec 0&#128;<small>Pas besoin d'argent de poche. Tout est gratuit ou quasi.</small></div></div>
+      <div class="benefit-card"><span class="emoji">&#128200;</span><div class="text">Décrocher ton premier client en 7 jours<small>La méthode pas-à-pas qui transforme les inconnus en clients.</small></div></div>
+      <div class="benefit-card"><span class="emoji">&#9889;</span><div class="text">Gagner ton premier 1000&#128; en 30 jours<small>Objectif réaliste &mdash; des teenpreneurs le font chaque mois.</small></div></div>
+      <div class="benefit-card"><span class="emoji">&#128737;</span><div class="text">Convaincre tes parents de te soutenir<small>Le template qui transforme les sceptiques en fans.</small></div></div>
+      <div class="benefit-card"><span class="emoji">&#128293;</span><div class="text">Construire un business durable<small>Pas un coup de chance. Une machine qui tourne sans toi.</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FREE ACCESS ===== -->
+<section class="pricing" id="free-access">
+<div class="free-access-inner" style="max-width:600px;margin:0 auto">
+  <!-- FOLLOW GATE -->
+                          <div id="followGate" class="follow-overlay">
+    <div class="follow-header">
+      <div class="lock-icon">🔒</div>
+      <h3>Suis @aurabusinessfr pour débloquer ton guide</h3>
+      <p>Suis sur ces réseaux puis entre ton pseudo :</p>
+    </div>
+    <div class="follow-links">
+      <a href="https://instagram.com/aurabusinessfr" target="_blank" rel="noopener" class="follow-link ig">📸 Instagram</a>
+      <a href="https://tiktok.com/@aurabusinessfr" target="_blank" rel="noopener" class="follow-link tt">🎵 TikTok</a>
+      <a href="https://youtube.com/@aurabusinessfr" target="_blank" rel="noopener" class="follow-link yt">▶️ YouTube</a>
+    </div>
+    <div style="margin:14px 0 2px;width:100%">
+      <input type="text" id="pseudoInput" placeholder="Ton pseudo (ex: tonpseudo)" style="width:100%;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.03);color:#fff;font-size:14px;outline:none;font-family:inherit;transition:border-color .2s;box-sizing:border-box">
+    </div>
+    <div id="verifyError">Entre ton pseudo (3 caractères min).</div>
+    <button id="unlockBtn" class="unlock-btn">🔓 Vérifier et débloquer mon guide</button>
+    <p class="follow-note">J'utilise les pseudos pour vérifier manuellement. Pas de spam.</p>
+  </div>
+  <!-- GATED CONTENT -->
+  <div id="gateContent" class="gate-content">
+    <div style="text-align:center;margin-bottom:20px">
+      <span style="font-size:14px;display:inline-block;background:#e9456015;color:#e94560;border:1px solid #e9456030;border-radius:50px;padding:4px 14px;font-weight:600;font-size:12px">✅ ACCÈS DÉBLOQUÉ</span>
+    </div>
+<div class="container">
+    <div class="section-label">Accès gratuit</div>
+    <h2 class="section-title">Comment obtenir ton guide gratuitement</h2>
+    <p style="text-align:center;font-size:14px;color:#bbb;margin-bottom:28px;margin-top:-20px">3 façons simples — choisis celle qui te convient</p>
+
+    <!-- Option 1 — Newsletter (primary) -->
+    <div class="price-box" style="border-color:#e94560;background:rgba(233,69,96,0.08);max-width:500px">
+      <div class="popular" style="background:linear-gradient(135deg,#e94560,#ff6b81);white-space:nowrap">⭐ Recommandé</div>
+      <h3 style="font-size:18px;font-weight:700;color:#fff;margin:16px 0 10px">Reçois le guide + les prochains contenus</h3>
+      <p style="font-size:14px;color:#bbb;line-height:1.6;margin-bottom:20px">Entre ton prénom et ton email, je t'envoie le guide immédiatement + tu rejoins la newsletter TeenPreneur (conseils exclusifs chaque semaine).</p>
+      <form data-netlify="true" name="email-capture" style="display:flex;flex-direction:column;gap:10px;text-align:left">
+        <input type="hidden" name="form-name" value="email-capture" />
+        <input type="text" placeholder="Ton prénom" style="background:rgba(255,255,255,0.06);border:1px solid rgba(233,69,96,0.2);border-radius:10px;padding:14px 16px;color:#fff;font-size:15px;font-family:inherit;outline:none;transition:border-color .3s" required>
+        <input type="email" placeholder="Ton email" style="background:rgba(255,255,255,0.06);border:1px solid rgba(233,69,96,0.2);border-radius:10px;padding:14px 16px;color:#fff;font-size:15px;font-family:inherit;outline:none;transition:border-color .3s" required>
+        <button type="submit" class="cta-primary" style="border:none;cursor:pointer;margin-top:4px">👉 Télécharger mon guide gratuit</button>
+      </form>
+      <p style="font-size:12px;color:#777;margin-top:12px;text-align:center">🔒 Tes données sont protégées. Pas de spam, désinscription en 1 clic.</p>
+    </div>
+
+    <!-- Option 2 — Partage social -->
+    <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:24px;max-width:500px;margin:20px auto 0">
+      <h3 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:6px">📢 Partage social</h3>
+      <p style="font-size:13px;color:#bbb;margin-bottom:16px">Partage cette page avec TA communauté et obtiens l'accès immédiat</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+
+        <a href="#" style="flex:1;min-width:100px;background:rgba(225,48,108,0.1);border:1px solid rgba(225,48,108,0.25);border-radius:10px;padding:12px 16px;text-align:center;text-decoration:none;color:#ddd;font-size:13px;font-weight:600;transition:all .3s;display:flex;align-items:center;justify-content:center;gap:6px">🟣 Instagram</a>
+        <a href="#" style="flex:1;min-width:100px;background:rgba(0,0,0,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:12px 16px;text-align:center;text-decoration:none;color:#ddd;font-size:13px;font-weight:600;transition:all .3s;display:flex;align-items:center;justify-content:center;gap:6px">🎵 TikTok</a>
+        <a href="#" style="flex:1;min-width:100px;background:rgba(37,211,102,0.1);border:1px solid rgba(37,211,102,0.25);border-radius:10px;padding:12px 16px;text-align:center;text-decoration:none;color:#ddd;font-size:13px;font-weight:600;transition:all .3s;display:flex;align-items:center;justify-content:center;gap:6px">🟢 WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Option 3 — Avis -->
+    <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:24px;max-width:500px;margin:20px auto 0">
+      <h3 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:6px">⭐ Avis</h3>
+      <p style="font-size:13px;color:#bbb;margin-bottom:14px">Télécharge le guide et laisse un avis → reçois le pack bonus exclusif</p>
+      <div style="display:flex;flex-direction:column;gap:8px;text-align:left">
+        <div class="module-item" style="background:rgba(233,69,96,0.06);border-color:rgba(233,69,96,0.15)"><span class="module-num" style="background:#e94560;color:#fff">+</span><span class="text">Template "Convaincre tes parents"</span></div>
+        <div class="module-item" style="background:rgba(233,69,96,0.06);border-color:rgba(233,69,96,0.15)"><span class="module-num" style="background:#e94560;color:#fff">+</span><span class="text">Guide juridique du travail pour mineur</span></div>
+        <div class="module-item" style="background:rgba(233,69,96,0.06);border-color:rgba(233,69,96,0.15)"><span class="module-num" style="background:#e94560;color:#fff">+</span><span class="text">50 scripts de prospection</span></div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-label">Ils l'ont fait. Pourquoi pas toi ?</div>
+    <h2 class="section-title">Ce que disent les <span>TeenPreneurs</span></h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+        <blockquote>"J'étais bloqué. Je savais pas par où commencer. Le module 3 m'a fait gagner 3 semaines. Après 2 mois je facturais du montage vidéo à 3000&#128;/mois. Mes parents m'ont enfin pris au sérieux."</blockquote>
+        <div class="author-info">
+          <div class="avatar">L</div>
+          <div><div class="name">Lucas</div><div class="detail">17 ans &mdash; Montage vidéo <span>&#124;</span> 3 000&#128;/mois</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+        <blockquote>"Je pensais qu'il fallait un compte pro et des licences. Le guide m'a montré le contraire. En 3 semaines j'avais mon premier client pour des carrousels Instagram. Aujourd'hui je me paye tout ce que je veux."</blockquote>
+        <div class="author-info">
+          <div class="avatar">I</div>
+          <div><div class="name">Inès</div><div class="detail">16 ans &mdash; Carrousels Instagram <span>&#124;</span> 1 200&#128;/mois</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+        <blockquote>"Le template parent a changé la donne. Ma mère lisait le doc et à la fin elle m'a dit 'ok, on le fait'. Sans ça, j'aurais jamais eu le feu vert. Cet été j'ai gagné 2500&#128; en donnant des cours en ligne."</blockquote>
+        <div class="author-info">
+          <div class="avatar">M</div>
+          <div><div class="name">Malik</div><div class="detail">15 ans &mdash; Tutorat en ligne <span>&#124;</span> 2 500&#128;/été</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq">
+  <div class="container">
+    <div class="section-label">Toutes tes questions</div>
+    <h2 class="section-title">FAQ &mdash; <span>On répond à tout</span></h2>
+    <div class="faq-item active">
+      <div class="faq-q"><span>"C'est vraiment gratuit ?"</span><span class="faq-toggle">+</span></div>
+      <div class="faq-a">Oui. 100% gratuit. Pas de carte bleue, pas d'abonnement caché. En échange, je te demande juste de laisser un avis ou de partager si tu trouves de la valeur — ça m'aide à faire connaître le guide à d'autres jeunes qui en ont besoin.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>"Que faites-vous de mon email ?"</span><span class="faq-toggle">+</span></div>
+      <div class="faq-a">Je t'envoie les prochains guides et conseils exclusifs pour t'aider dans ton business. Pas de spam, pas de revente de données. Tu peux te désinscrire à tout moment en 1 clic.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>"Puis-je partager ce guide avec mes amis ?"</span><span class="faq-toggle">+</span></div>
+      <div class="faq-a">Oui, et c'est même encouragé ! Plus on est à entreprendre jeune, mieux c'est. Envoie-leur le lien de cette page.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>"Je suis trop jeune ?"</span><span class="faq-toggle">+</span></div>
+      <div class="faq-a">Non. L'âge minimum pour entreprendre est &hellip; la naissance. Sérieusement, tu peux lancer un business à 13, 14, 15 ans. La loi ne t'interdit pas de travailler (avec accord parental). Et les clients s'en fichent : ce qui compte c'est la valeur que tu apportes. Le plus jeune TeenPreneur formé avait 12 ans.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>"Je n'ai pas d'argent pour investir"</span><span class="faq-toggle">+</span></div>
+      <div class="faq-a">Parfait. Ce livre est pensé pour les jeunes sans capital. 90% des idées présentées nécessitent 0&#128; de départ. Tu utilises ton téléphone, Canva (gratuit), Instagram/TikTok (gratuit). Pas besoin d'un euro pour commencer.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>"Mes parents sont contre"</span><span class="faq-toggle">+</span></div>
+      <div class="faq-a">C'est le #1 obstacle des jeunes. C'est pour ça que j'ai inclus le Template "Convaincre tes parents". Un document clé en main qui répond à toutes leurs objections : études, argent, légalité, sécurité. Imprime-le, donne-le leur. Ça marche dans 90% des cas.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>"Et l'école ? Je n'aurai pas le temps"</span><span class="faq-toggle">+</span></div>
+      <div class="faq-a">Le business n'est pas l'ennemi des études. Au contraire : il t'apprends la discipline, la gestion du temps et des priorités. La plupart de nos TeenPreneurs consacrent 3-5h par semaine à leur business, le soir et le week-end. Le module 7 te montre comment optimiser ton temps.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>"Combien de temps avant les premiers résultats ?"</span><span class="faq-toggle">+</span></div>
+      <div class="faq-a">Si tu suis le plan du livre pas à pas : premier client en 7 jours, premier 1000&#128; en 30 jours. C'est réaliste pour ceux qui appliquent vraiment. Certains y arrivent en 2 semaines, d'autres en 2 mois. Tout dépend de ta régularité. Mais tu auras des résultats si tu passes à l'action.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>"Par quoi je commence concrètement ?"</span><span class="faq-toggle">+</span></div>
+      <div class="faq-a">Télécharge le livre. Ouvre le Module 1. Lis les 10 premières pages. Fais l'exercice "Qui je veux devenir". C'est tout. Le premier pas est ridiculement simple &mdash; et il change tout. Les 500+ TeenPreneurs avant toi ont commencé exactement comme ça.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMMUNITY ===== -->
+<section style="background:#0e0e0e;padding:50px 0">
+  <div class="container">
+    <div class="section-label">Suis-moi</div>
+    <h2 class="section-title">Rejoins la communauté <span>TeenPreneur</span></h2>
+    <p style="text-align:center;font-size:14px;color:#bbb;margin-bottom:28px;margin-top:-16px">Du contenu gratuit tous les jours pour t'aider à lancer et développer ton business</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center">
+      <div style="flex:1;min-width:140px;max-width:180px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:20px;text-align:center">
+        <div style="font-size:36px;margin-bottom:8px">▶️</div>
+        <p style="font-size:14px;font-weight:600;color:#eee;margin-bottom:4px">YouTube</p>
+        <p style="font-size:12px;color:#e94560;margin-bottom:12px">AuraBusiness</p>
+        <a href="#" style="display:inline-block;padding:8px 20px;background:linear-gradient(135deg,#e94560,#d63350);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:600;text-decoration:none;transition:all .3s">S'abonner</a>
+      </div>
+    </div>
+    <div style="margin-top:28px;text-align:center">
+      <p style="font-size:14px;color:#ddd;font-weight:600;margin-bottom:12px">📧 Reçois les prochains guides →</p>
+      <form style="display:flex;gap:8px;max-width:400px;margin:0 auto;flex-wrap:wrap;justify-content:center" data-netlify="true">
+        <input type="hidden" name="form-name" value="email-capture" />
+        <input type="email" placeholder="Ton email" style="flex:1;min-width:200px;background:rgba(255,255,255,0.06);border:1px solid rgba(233,69,96,0.15);border-radius:8px;padding:10px 14px;color:#fff;font-size:14px;font-family:inherit;outline:none">
+        <button type="submit" style="padding:10px 20px;background:linear-gradient(135deg,#e94560,#d63350);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:600;cursor:pointer;transition:all .3s;font-family:inherit">👉 Je veux</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="cta-final">
+  <div class="container">
+    <h2>Prêt à lancer <span>ton business</span> ?</h2>
+    <p>Rejoins les 500+ jeunes qui ont déjà téléchargé le guide. La seule chose qui te manque, c'est la décision de commencer.</p>
+    <a href="#free-access" class="cta-primary">👉 Télécharger gratuitement</a>
+    <span class="cta-sub">100% gratuit &middot; Rejoins la communauté</span>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p style="font-size:13px;color:#888;margin-bottom:10px">Retrouve-moi sur Instagram, TikTok : <strong style="color:#e94560">@aurabusinessfr</strong></p>
+  <p style="margin-bottom:8px;font-size:16px;letter-spacing:6px">
+    <a href="#" style="font-size:20px;text-decoration:none">📸</a>
+    <a href="#" style="font-size:20px;text-decoration:none">🎵</a>
+    <a href="#" style="font-size:20px;text-decoration:none">▶️</a>
+  </p>
+  <p>&copy; 2026 &mdash; @aurabusinessfr &mdash; Tous droits réservés</p>
+  <p>Une question ? <a href="mailto:aurabusinessfr@gmail.com">aurabusinessfr@gmail.com</a></p>
+  <p style="margin-top:6px;font-size:11px;color:#444">Ce site n'est pas affilié à Beacons.ai. Inspiré du format Beacons.</p>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    var item=this.parentElement;
+    var isActive=item.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('active')});
+    if(!isActive) item.classList.add('active');
+  });
+});
+</script>
+
+<script>
+
+document.addEventListener('DOMContentLoaded',function(){
+  var g=document.getElementById('followGate'),c=document.getElementById('gateContent'),b=document.getElementById('unlockBtn'),e=document.getElementById('verifyError'),i=document.getElementById('pseudoInput');
+  if(!g||!c||!b||!i)return;
+  if(localStorage.getItem('u_'+window.location.pathname)){g.style.display='none';c.classList.add('unlocked');return;}
+
+  b.addEventListener('click',function(){
+    if(!i.value.trim()||i.value.trim().length<3){e.style.display='block';return;}
+    e.style.display='none';b.disabled=true;b.textContent='🔄 Vérification...';
+    fetch('/api/verify-follow',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:i.value.trim()})})
+    .then(function(r){return r.json()}).then(function(d){
+      if(d.verified){localStorage.setItem('u_'+window.location.pathname,'true');g.style.display='none';c.classList.add('unlocked');}
+      else{b.disabled=false;b.textContent='🔓 Vérifier et débloquer mon guide';e.textContent=d.message||'Vérification échouée.';e.style.display='block';}
+    }).catch(function(){b.disabled=false;b.textContent='🔓 Vérifier et débloquer mon guide';e.textContent='Erreur réseau.';e.style.display='block';});
+  });
+});
+</script>
+</body>
+</html>

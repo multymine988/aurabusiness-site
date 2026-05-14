@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuraBusiness — Guides Gratuits</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a0a1a 50%, #0a0a0a 100%);
+      text-align: center;
+      padding: 70px 20px 60px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(233,69,96,0.15);
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 50% 50%, rgba(233,69,96,0.06) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 52px);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #fff 30%, #e94560 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      position: relative;
+    }
+    .hero p {
+      font-size: clamp(15px, 2vw, 18px);
+      color: #999;
+      max-width: 520px;
+      margin: 0 auto 20px;
+      position: relative;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(233,69,96,0.1);
+      border: 1px solid rgba(233,69,96,0.2);
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #e94560;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      position: relative;
+      margin-top: 8px;
+    }
+    .social-links a {
+      color: #666;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 8px;
+      transition: all 0.2s;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .social-links a:hover {
+      color: #e94560;
+      border-color: rgba(233,69,96,0.3);
+      background: rgba(233,69,96,0.08);
+    }
+
+    /* ── SECTION ── */
+    .section {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 50px 20px 60px;
+    }
+    .section-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+    .section-sub {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 30px;
+    }
+
+    /* ── CARDS ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 14px;
+      padding: 24px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      border-color: rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      transform: translateY(-2px);
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      opacity: 0.6;
+    }
+    .card-icon {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+    .card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+    .card p {
+      font-size: 13px;
+      color: #888;
+      line-height: 1.5;
+      flex: 1;
+    }
+    .card-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 50px;
+      margin-top: 14px;
+      align-self: flex-start;
+    }
+
+    /* Card theme colors */
+    .card-purple::before { background: linear-gradient(90deg, #6c5ce7, #a29bfe); }
+    .card-purple .card-tag { background: rgba(108,92,231,0.15); color: #a29bfe; }
+    .card-purple:hover { border-color: rgba(108,92,231,0.3); }
+
+    .card-blue::before { background: linear-gradient(90deg, #0984e3, #74b9ff); }
+    .card-blue .card-tag { background: rgba(9,132,227,0.15); color: #74b9ff; }
+    .card-blue:hover { border-color: rgba(9,132,227,0.3); }
+
+    .card-teal::before { background: linear-gradient(90deg, #0d7377, #38b2ac); }
+    .card-teal .card-tag { background: rgba(13,115,119,0.15); color: #38b2ac; }
+    .card-teal:hover { border-color: rgba(13,115,119,0.3); }
+
+    .card-red::before { background: linear-gradient(90deg, #e94560, #ff6b81); }
+    .card-red .card-tag { background: rgba(233,69,96,0.15); color: #ff6b81; }
+    .card-red:hover { border-color: rgba(233,69,96,0.3); }
+
+    .card-pink::before { background: linear-gradient(90deg, #c2185b, #e0407a); }
+    .card-pink .card-tag { background: rgba(194,24,91,0.15); color: #e0407a; }
+    .card-pink:hover { border-color: rgba(194,24,91,0.3); }
+
+    .card-orange::before { background: linear-gradient(90deg, #e67e22, #f39c12); }
+    .card-orange .card-tag { background: rgba(230,126,34,0.15); color: #f39c12; }
+    .card-orange:hover { border-color: rgba(230,126,34,0.3); }
+
+    .card-green::before { background: linear-gradient(90deg, #00b894, #55efc4); }
+    .card-green .card-tag { background: rgba(0,184,148,0.15); color: #55efc4; }
+    .card-green:hover { border-color: rgba(0,184,148,0.3); }
+
+    .card-crimson::before { background: linear-gradient(90deg, #e94560, #ff6b81); }
+    .card-crimson .card-tag { background: rgba(233,69,96,0.15); color: #e94560; }
+    .card-crimson:hover { border-color: rgba(233,69,96,0.3); }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #444;
+      font-size: 12px;
+      border-top: 1px solid rgba(255,255,255,0.04);
+    }
+    footer a { color: #666; text-decoration: none; }
+    footer a:hover { color: #e94560; }
+
+    @media (max-width: 640px) {
+      .grid { grid-template-columns: 1fr; }
+      .hero { padding: 50px 20px 40px; }
+      .section { padding: 30px 16px 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="hero-badge">✦ Guides Gratuits</div>
+    <h1>AuraBusiness</h1>
+    <p>8 guides concrets pour développer ton business, ton mindset et ta vie. Télécharge-les gratuitement.</p>
+    <div class="social-links">
+      <a href="https://instagram.com/aurabusinessfr" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://tiktok.com/@aurabusinessfr" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://twitter.com/aurabusinessfr" target="_blank" rel="noopener">Twitter</a>
+      <a href="https://youtube.com/@aurabusinessfr" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">📚 Tous les guides</h2>
+    <p class="section-sub">Choisis ton guide, reçois-le gratuitement en échange d'un follow et d'un email.</p>
+    <div class="grid">
+
+      <a href="landing-teenpreneur-business-mineur.html" class="card card-crimson">
+        <div class="card-icon">🚀</div>
+        <h3>TeenPreneur — Business Mineur</h3>
+        <p>Lancer et développer un business quand on a moins de 18 ans. Légal, concret, actionnable.</p>
+        <span class="card-tag">Business</span>
+      </a>
+
+      <a href="landing-25-idees-de-business-2026.html" class="card card-purple">
+        <div class="card-icon">💡</div>
+        <h3>25 Idées de Business 2026</h3>
+        <p>25 concepts business prêts à lancer avec peu de budget. Opportunités réelles, pas du bullshit.</p>
+        <span class="card-tag">Idées</span>
+      </a>
+
+      <a href="landing-reseaux-sociaux-percer.html" class="card card-orange">
+        <div class="card-icon">📱</div>
+        <h3>Réseaux Sociaux — Percer</h3>
+        <p>Stratégie concrète pour percer sur Instagram, TikTok, Twitter et YouTube sans budget pub.</p>
+        <span class="card-tag">Marketing</span>
+      </a>
+
+      <a href="landing-ia-mode-demploi.html" class="card card-red">
+        <div class="card-icon">🤖</div>
+        <h3>IA — Mode d'Emploi</h3>
+        <p>Maîtriser l'intelligence artificielle au quotidien : productivité, création, automatisation.</p>
+        <span class="card-tag">Tech</span>
+      </a>
+
+      <a href="landing-esprit-du-batisseur-mindset.html" class="card card-teal">
+        <div class="card-icon">🧠</div>
+        <h3>Esprit du Bâtisseur — Mindset</h3>
+        <p>Le mindset qui sépare ceux qui réussissent de ceux qui rêvent. Mentalité, discipline, vision.</p>
+        <span class="card-tag">Mindset</span>
+      </a>
+
+      <a href="landing-relations-humaines-guide.html" class="card card-pink">
+        <div class="card-icon">💬</div>
+        <h3>Relations Humaines — Guide</h3>
+        <p>Communiquer, négocier, influencer et construire des relations solides dans la vie et le business.</p>
+        <span class="card-tag">Relations</span>
+      </a>
+
+      <a href="landing-sante-physique-transformation.html" class="card card-green">
+        <div class="card-icon">💪</div>
+        <h3>Santé Physique — Transformation</h3>
+        <p>Programme complet pour transformer ton corps et ton énergie. Nutrition, entraînement, récupération.</p>
+        <span class="card-tag">Santé</span>
+      </a>
+
+      <a href="landing-addictions-sen-liberer.html" class="card card-blue">
+        <div class="card-icon">🔄</div>
+        <h3>Addictions — S'en Libérer</h3>
+        <p>Comprendre, arrêter et remplacer les addictions. Un cadre psychologique et pratique.</p>
+        <span class="card-tag">Développement</span>
+      </a>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>AuraBusiness &copy; 2026 &mdash; <a href="https://instagram.com/aurabusinessfr" target="_blank" rel="noopener">@aurabusinessfr</a></p>
+  </footer>
+
+</body>
+</html>

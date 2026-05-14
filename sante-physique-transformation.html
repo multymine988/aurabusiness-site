@@ -1,0 +1,2958 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SANTÉ PHYSIQUE Le guide complet pour transformer ton corps et ta santé</title>
+<style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap');
+
+  :root {
+    --primary: #1a1a2e;
+    --accent: #00b894;
+    --accent2: #0f3460;
+    --gold: #f0a500;
+    --light: #f8f9fa;
+    --gray: #6c757d;
+    --text: #212529;
+    --text-light: #495057;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--text);
+    line-height: 1.7;
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .cover {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #fff;
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 70%, rgba(0,184,148,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(240,165,0,0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .cover-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.15;
+    max-width: 700px;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover h1 span { color: var(--accent); }
+
+  .cover-subtitle {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.8);
+    max-width: 600px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-author {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.6);
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-author strong {
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  .cover-line {
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    margin: 30px auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .content {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 30px 40px;
+  }
+
+  .toc {
+    padding: 30px 40px;
+    max-width: 740px;
+    margin: 0 auto;
+  }
+
+  .toc h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+
+  .toc-line {
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    margin-bottom: 40px;
+  }
+
+  .toc-list {
+    list-style: none;
+  }
+
+  .toc-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+
+  .toc-list a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    width: 100%;
+    transition: color 0.2s;
+  }
+
+  .toc-list a:hover {
+    color: var(--accent);
+  }
+
+  .toc-number {
+    font-weight: 800;
+    color: var(--accent);
+    font-size: 1.1rem;
+    min-width: 30px;
+  }
+
+  .toc-title {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--primary);
+  }
+
+  .module-header {
+    padding-top: 10px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 16px;
+  }
+
+  .module-number {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .module-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--primary);
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .module-tagline {
+    font-size: 1.05rem;
+    color: var(--gray);
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--primary);
+    margin: 32px 0 14px;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.45rem;
+    color: var(--primary);
+    margin: 32px 0 14px;
+    line-height: 1.3;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent2);
+    margin: 24px 0 10px;
+  }
+
+  p {
+    margin-bottom: 14px;
+    color: var(--text-light);
+    font-size: 0.98rem;
+  }
+
+  strong { color: var(--text); font-weight: 600; }
+
+  blockquote {
+    border-left: 4px solid var(--accent);
+    background: #e8f8f3;
+    padding: 18px 22px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+    color: var(--text-light);
+  }
+
+  .callout {
+    background: linear-gradient(135deg, #fff9e6 0%, #fff3cc 100%);
+    border-left: 4px solid var(--gold);
+    padding: 18px 22px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .callout-dark {
+    background: #d0f2e7;
+    border-left: 4px solid var(--accent);
+    padding: 18px 22px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .callout-success {
+    background: linear-gradient(135deg, #f0fff4 0%, #e6ffe6 100%);
+    border-left: 4px solid #28a745;
+    padding: 18px 22px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.88rem;
+  }
+
+  thead th {
+    background: var(--primary);
+    color: #fff;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.82rem;
+    letter-spacing: 0.5px;
+  }
+
+  thead th:first-child { border-radius: 8px 0 0 0; }
+  thead th:last-child { border-radius: 0 8px 0 0; }
+
+  tbody td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: top;
+  }
+
+  tbody tr:nth-child(even) { background: #f8f9fa; }
+
+  pre, code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.86rem;
+  }
+
+  pre {
+    background: var(--primary);
+    color: #e9ecef;
+    padding: 18px 22px;
+    border-radius: 8px;
+    margin: 20px 0;
+    overflow-x: auto;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  code {
+    background: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.86rem;
+    color: var(--accent);
+  }
+
+  pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+  }
+
+  ul, ol {
+    margin: 14px 0;
+    padding-left: 24px;
+  }
+
+  li {
+    margin-bottom: 6px;
+    color: var(--text-light);
+    font-size: 0.98rem;
+  }
+
+  li strong { color: var(--text); }
+
+  .checklist {
+    background: var(--light);
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 20px 0;
+  }
+
+  .checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e9ecef;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    transition: color 0.2s;
+  }
+
+  .checklist-item:last-child {
+    border-bottom: none;
+  }
+
+  .checklist-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .checklist-item:has(input:checked) {
+    color: var(--gray);
+    text-decoration: line-through;
+  }
+
+  .exercise {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 26px;
+    border-radius: 12px;
+    margin: 30px 0;
+  }
+
+  .exercise h4 {
+    color: var(--gold);
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .exercise p, .exercise li {
+    color: rgba(255,255,255,0.85);
+  }
+
+  .exercise strong { color: #fff; }
+
+  hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    margin: 30px 0;
+  }
+
+  hr.concl-divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    width: 60px;
+    margin: 20px auto;
+  }
+
+  .intro-quote {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-light);
+    padding: 30px 20px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    position: relative;
+  }
+
+  .intro-quote::before {
+    content: '\201C';
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: var(--accent);
+    opacity: 0.3;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+  }
+
+  .bonus-header {
+    background: linear-gradient(135deg, var(--gold) 0%, #e09400 100%);
+    color: #fff;
+    padding: 26px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 30px 0 24px;
+  }
+
+  .bonus-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 4px;
+  }
+
+  .bonus-header p {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.95rem;
+  }
+
+  .conclusion {
+    text-align: center;
+    padding: 35px 40px;
+      background: #2d2d2d;
+    color: #fff;
+    margin-top: 40px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .conclusion h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+
+  .conclusion h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.45rem;
+    margin: 32px 0 14px;
+    line-height: 1.3;
+  }
+
+  .conclusion p {
+    color: rgba(255,255,255,0.85);
+    max-width: 600px;
+    margin: 0 auto 12px;
+    font-size: 0.95rem;
+  }
+
+  .conclusion li {
+    color: rgba(255,255,255,0.85);
+  }
+
+  .conclusion strong { color: var(--gold); }
+
+  /* ===== PRINT STYLES — Optimized for Perfect PDF ===== */
+  @page {
+    size: A4;
+    margin: 18mm 15mm;
+  }
+
+  @page :first {
+    margin: 0;
+  }
+
+  .content.page-break {
+    page-break-before: always;
+    page-break-inside: avoid;
+  }
+
+  .module-header {
+    page-break-inside: avoid;
+  }
+
+  .exercise,
+  .callout,
+  .callout-dark,
+  .callout-success,
+  blockquote,
+  table,
+  pre,
+  .checklist {
+    page-break-inside: avoid;
+  }
+
+  .conclusion {
+    page-break-before: always;
+    min-height: 100vh;
+  }
+
+  .bonus-header {
+    page-break-before: always;
+    page-break-inside: avoid;
+  }
+
+
+  @media print {
+    body {
+      font-size: 11pt;
+      line-height: 1.6;
+      color: #000;
+      background: #fff;
+    }
+
+    .cover {
+      height: 100vh;
+      page-break-after: always;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .cover::before,
+    .intro-quote::before {
+      display: none !important;
+    }
+
+    .toc {
+      page-break-after: always;
+    }
+
+    .content {
+      padding: 0;
+      max-width: 100%;
+    }
+
+    h2, h3, h4 {
+      page-break-after: avoid;
+    }
+
+    p, li {
+      orphans: 3;
+      widows: 3;
+    }
+
+    .exercise,
+    .callout,
+    .callout-dark,
+    .callout-success,
+    blockquote,
+    table,
+    pre,
+    .checklist {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .conclusion {
+      margin-top: 0;
+      padding: 60px 40px;
+      page-break-inside: avoid;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .bonus-header {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    thead th {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .exercise {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .conclusion * {
+      color: #fff !important;
+    }
+    .conclusion strong {
+      color: var(--gold) !important;
+    }
+    .bonus-header * {
+      color: #fff !important;
+    }
+    .bonus-header h2, .bonus-header strong {
+      color: #fff !important;
+    }
+    .conclusion hr {
+      border-color: rgba(255,255,255,0.2) !important;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .cover {
+      height: auto;
+      min-height: 100dvh;
+      padding: 40px 24px;
+    }
+
+    .cover h1 {
+      font-size: 2.2rem;
+    }
+
+    .cover-subtitle {
+      font-size: 1rem;
+    }
+
+    .cover-badge {
+      font-size: 0.75rem;
+      padding: 6px 16px;
+      margin-bottom: 24px;
+    }
+
+    .content {
+      padding: 20px 16px;
+      max-width: 100%;
+    }
+
+    .toc {
+      padding: 20px 16px;
+    }
+
+    .toc h2 {
+      font-size: 1.8rem;
+    }
+
+    .module-header h2 {
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+    }
+
+    h4 {
+      font-size: 1rem;
+    }
+
+    p, li {
+      font-size: 0.92rem;
+    }
+
+    .exercise,
+    .callout,
+    .callout-dark,
+    .callout-success,
+    blockquote,
+    .checklist {
+      padding: 16px;
+      margin: 16px 0;
+    }
+
+    .bonus-header {
+      padding: 20px 16px;
+    }
+
+    .bonus-header h2 {
+      font-size: 1.4rem;
+    }
+
+    .conclusion {
+      padding: 40px 20px;
+    }
+
+    .conclusion h2 {
+      font-size: 1.5rem;
+    }
+
+    .intro-quote {
+      font-size: 1rem;
+      padding: 20px 16px;
+    }
+
+    table {
+      font-size: 0.8rem;
+    }
+
+    thead th,
+    tbody td {
+      padding: 8px 10px;
+    }
+
+    pre {
+      font-size: 0.78rem;
+      padding: 14px 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cover h1 {
+      font-size: 1.7rem;
+    }
+
+    .cover {
+      padding: 30px 16px;
+      min-height: 100dvh;
+    }
+
+    .cover-badge {
+      font-size: 0.7rem;
+      padding: 5px 14px;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      padding: 16px 12px;
+    }
+
+    .toc {
+      padding: 16px 12px;
+    }
+
+    .module-header h2 {
+      font-size: 1.3rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+    }
+
+    .exercise,
+    .callout,
+    .callout-dark,
+    .callout-success,
+    blockquote {
+      padding: 14px;
+      margin: 12px 0;
+    }
+
+    .conclusion {
+      padding: 30px 16px;
+    }
+
+    .checklist {
+      padding: 14px;
+    }
+
+    .checklist-item {
+      font-size: 0.85rem;
+      gap: 8px;
+    }
+
+    table {
+      font-size: 0.72rem;
+    }
+
+    thead th,
+    tbody td {
+      padding: 6px 8px;
+    }
+  }
+
+
+  .content {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  @media (max-width: 768px) {
+    .cover {
+      height: auto;
+      min-height: 100dvh;
+      padding: 40px 24px;
+    }
+
+    .cover h1 {
+      font-size: 2.2rem;
+    }
+
+    .cover-subtitle {
+      font-size: 1rem;
+    }
+
+    .cover-badge {
+      font-size: 0.75rem;
+      padding: 6px 16px;
+      margin-bottom: 24px;
+    }
+
+    .content {
+      padding: 20px 16px;
+      max-width: 100%;
+    }
+
+    .toc {
+      padding: 20px 16px;
+    }
+
+    .toc h2 {
+      font-size: 1.8rem;
+    }
+
+    .module-header h2 {
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+    }
+
+    h4 {
+      font-size: 1rem;
+    }
+
+    p, li {
+      font-size: 0.92rem;
+    }
+
+    .exercise,
+    .callout,
+    .callout-dark,
+    .callout-success,
+    blockquote,
+    .checklist {
+      padding: 16px;
+      margin: 16px 0;
+    }
+
+    .bonus-header {
+      padding: 20px 16px;
+    }
+
+    .bonus-header h2 {
+      font-size: 1.4rem;
+    }
+
+    .conclusion {
+      padding: 40px 20px;
+    }
+
+    .conclusion h2 {
+      font-size: 1.5rem;
+    }
+
+    .intro-quote {
+      font-size: 1rem;
+      padding: 20px 16px;
+    }
+
+    table {
+      font-size: 0.8rem;
+    }
+
+    thead th,
+    tbody td {
+      padding: 8px 10px;
+    }
+
+    pre {
+      font-size: 0.78rem;
+      padding: 14px 16px;
+    }
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .callout-dark p, .callout-dark li, .callout-dark { color: var(--text); }
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+<div class="cover">
+  <div class="cover-badge">Guide Santé</div>
+  <h1>SANTÉ PHYSIQUE Le guide complet pour transformer ton corps et ta santé</h1>
+  <div class="cover-line"></div>
+  <p class="cover-subtitle">Nutrition, cardio, musculation, récupération — tout ce que tu dois savoir pour passer à l'action et tenir sur la durée</p>
+  <p class="cover-author">Créé par <strong>Simon</strong> — <strong>@aurabusinessfr</strong></p>
+</div>
+<div class="toc">
+  <h2>Table des matières</h2>
+  <div class="toc-line"></div>
+  <ul class="toc-list">
+    <li><a href="#avant-propos"><span class="toc-number">◆</span><span class="toc-title">Avant-Propos</span></a></li>
+    <li><a href="#module-1--pourquoi-ta-sante-est-ton-actif-le-plus-precieux"><span class="toc-number">1</span><span class="toc-title">Module 1 — Pourquoi ta santé est ton actif le plus précieux</span></a></li>
+    <li><a href="#module-2--nutrition-les-fondamentaux"><span class="toc-number">2</span><span class="toc-title">Module 2 — Nutrition : les fondamentaux</span></a></li>
+    <li><a href="#module-3--nutrition-stratégies-avancees"><span class="toc-number">3</span><span class="toc-title">Module 3 — Nutrition : stratégies avancées</span></a></li>
+    <li><a href="#module-4--cardio-les-bases"><span class="toc-number">4</span><span class="toc-title">Module 4 — Cardio : les bases</span></a></li>
+    <li><a href="#module-5--cardio-programmes-et-progression"><span class="toc-number">5</span><span class="toc-title">Module 5 — Cardio : programmes et progression</span></a></li>
+    <li><a href="#module-6--musculation-les-fondations"><span class="toc-number">6</span><span class="toc-title">Module 6 — Musculation : les fondations</span></a></li>
+    <li><a href="#module-7--musculation-programmes-et-progression"><span class="toc-number">7</span><span class="toc-title">Module 7 — Musculation : programmes et progression</span></a></li>
+    <li><a href="#module-8--le-sommeil-et-la-recuperation"><span class="toc-number">8</span><span class="toc-title">Module 8 — Le sommeil et la récupération</span></a></li>
+    <li><a href="#module-9--la-sante-mentale-et-le-lien-corps-esprit"><span class="toc-number">9</span><span class="toc-title">Module 9 — La santé mentale et le lien corps-esprit</span></a></li>
+    <li><a href="#module-10--la-coherence-construire-des-habitudes-durables"><span class="toc-number">10</span><span class="toc-title">Module 10 — La cohérence : construire des habitudes durables</span></a></li>
+    <li><a href="#conclusion--ta-transformation-commence-maintenant"><span class="toc-number">◆</span><span class="toc-title">Conclusion — Ta transformation commence maintenant</span></a></li>
+    <li><a href="#bonus--plans-daction-et-ressources"><span class="toc-number">◆</span><span class="toc-title">Bonus — Plans d'action et ressources</span></a></li>
+  </ul>
+</div>
+<div class="content page-break" id="avant-propos">
+  <h2>Avant-propos</h2>
+  <h3>Pourquoi j'ai écrit ce livre</h3>
+  <p>Tu as déjà essayé de te mettre à la santé. Tu t'es dit "cette fois c'est la bonne". Tu as tenu une semaine, peut-être deux. Puis la vie a repris le dessus.</p>
+  <p>Ce n'est pas ta faute. Le problème n'est pas toi. Le problème, c'est que tu n'avais pas de système, pas de plan, pas de méthode.</p>
+  <p>Ce livre n'est pas un énième guide qui te dit "mange mieux et bouge plus". Tu sais déjà tout ça. Ce livre te donne un cadre complet, structuré, actionnable, pour transformer ta santé physique de A à Z.</p>
+  <h3>Comment utiliser ce livre</h3>
+  <p>Chaque module contient :</p>
+  <ul>
+    <li>Les concepts essentiels à comprendre</li>
+    <li>Des actions concrètes à mettre en place</li>
+    <li>Un exercice pratique</li>
+  </ul>
+  <p>Ne passe pas au module suivant sans avoir commencé à appliquer le précédent. La santé ne se lit pas, elle se vit.</p>
+  <h3>Avant de commencer</h3>
+  <p>Tu n'as pas besoin d'être parfait. Tu n'as pas besoin de tout changer du jour au lendemain. <strong>La perfection est l'ennemi de la progression.</strong></p>
+  <p>Commence par une chose. Une seule. Maîtrise-la. Ajoutes-en une autre.</p>
+  <p>La santé n'est pas une destination. C'est un mode de vie.</p>
+</div>
+<div class="content page-break" id="module-1--pourquoi-ta-sante-est-ton-actif-le-plus-precieux">
+  <div class="module-header">
+    <div class="module-number">Module 1</div>
+    <h2>Pourquoi ta santé est ton actif le plus précieux</h2>
+  </div>
+  <p>Comprendre pourquoi tout le reste dépend de ton corps</p>
+  <h3>Le mythe du "je m'y mettrai plus tard"</h3>
+  <p>L'erreur la plus courante est de croire que la santé est un projet secondaire. "Je me concentre sur mon business maintenant, je ferai du sport quand j'aurai réussi."</p>
+  <p>C'est exactement l'inverse.</p>
+  <p>Ta santé est le socle de tout le reste. Sans énergie, tu ne produis rien. Sans concentration, tu ne crées rien. Sans force, tu ne construis rien.</p>
+  <p>Un entrepreneur fatigué prend de mauvaises décisions. Un employé épuisé livre un travail médiocre. Un parent vidé n'est pas vraiment présent.</p>
+  <p><strong>Investir dans ta santé, c'est investir dans tout le reste.</strong></p>
+  <h3>Les 4 piliers de la santé physique</h3>
+  <p><strong>1. La nutrition.</strong> Ce que tu mets dans ton corps détermine ton énergie, ta composition corporelle, ta santé à long terme. C'est le pilier le plus important.</p>
+  <p><strong>2. L'activité physique.</strong> Cardio pour le cœur et les poumons. Musculation pour les muscles et les os. Mobilité pour les articulations. Les trois sont essentiels.</p>
+  <p><strong>3. Le sommeil et la récupération.</strong> C'est pendant le repos que ton corps se répare, que tes muscles se reconstruisent, que ton cerveau se nettoie.</p>
+  <p><strong>4. La santé mentale.</strong> Le stress chronique annule tous les bénéfices d'une bonne hygiène physique. Gérer son mental fait partie de la santé physique.</p>
+  <h3>Ce que tu vas gagner</h3>
+  <ul>
+    <li>Plus d'énergie chaque jour</li>
+    <li>Une meilleure concentration</li>
+    <li>Un corps plus fort et plus résistant</li>
+    <li>Moins de maladies et de blessures</li>
+    <li>Une meilleure confiance en toi</li>
+    <li>Plus d'années de vie en bonne santé</li>
+  </ul>
+  <div class="exercise">
+    <h4>Définir ton pourquoi</h4>
+    <p><strong>-</strong> Pourquoi veux-tu améliorer ta santé physique ? Sois précis. "Je veux" n'est pas une réponse.</p>
+    <p><strong>-</strong> Comment sera ta vie dans 1 an si tu appliques ce livre ? Imagine en détail.</p>
+    <p><strong>-</strong> Comment sera ta vie dans 1 an si tu ne changes rien ? Sois honnête.</p>
+    <p><strong>-</strong> Quelle est la première chose que tu changeras en finissant ce module ?</p>
+  </div>
+</div>
+<div class="content page-break" id="module-2--nutrition-les-fondamentaux">
+  <div class="module-header">
+    <div class="module-number">Module 2</div>
+    <h2>Nutrition : les fondamentaux</h2>
+  </div>
+  <p>Comprendre comment ton corps transforme la nourriture en énergie</p>
+  <h3>Pourquoi la nutrition est le pilier le plus important</h3>
+  <p>Tu peux t'entraîner comme un athlète. Si ta nutrition est mauvaise, tu n'auras pas de résultats. La transformation physique passe d'abord par l'assiette.</p>
+  <p>La nutrition, ce n'est pas un régime. Un régime est temporaire. La nutrition est une façon de manger durable.</p>
+  <h3>Les calories : la base de tout</h3>
+  <p>Ton corps a besoin d'énergie pour fonctionner. Cette énergie se mesure en calories.</p>
+  <p><strong>Dépense calorique totale = métabolisme de base + activité physique + digestion</strong></p>
+  <ul>
+    <li>Pour perdre du poids : manger moins de calories que tu n'en dépenses (déficit calorique)</li>
+    <li>Pour prendre du poids : manger plus de calories que tu n'en dépenses (surplus calorique)</li>
+    <li>Pour stabiliser : équilibrer les deux</li>
+  </ul>
+  <p>C'est la seule règle qui compte vraiment pour le poids. Tout le reste est secondaire.</p>
+  <h3>Les macronutriments : les 3 familles</h3>
+  <p><strong>Les protéines :</strong> Les briques de ton corps. Muscles, peau, cheveux, enzymes, hormones.</p>
+  <ul>
+    <li>Sources : viande, poisson, œufs, laitages, légumineuses, tofu</li>
+    <li>Quantité recommandée : 1.6 à 2.2g par kg de poids de corps</li>
+    <li>Pour une personne de 70kg : 112 à 154g par jour</li>
+  </ul>
+  <p><strong>Les glucides :</strong> Le carburant de ton corps et de ton cerveau.</p>
+  <ul>
+    <li>Sources : riz, pâtes, pain, pommes de terre, fruits, légumes</li>
+    <li>Pas besoin d'avoir peur des glucides. Ils ne font pas grossir. Les excès de calories font grossir.</li>
+    <li>Privilégie les glucides complexes (complets) plutôt que les glucides simples (sucres rapides)</li>
+  </ul>
+  <p><strong>Les lipides :</strong> Essentiels pour les hormones, le cerveau, l'absorption des vitamines.</p>
+  <ul>
+    <li>Sources : huiles, avocat, noix, poissons gras, œufs</li>
+    <li>Ne pas les diaboliser. 0.8 à 1g par kg de poids de corps minimum.</li>
+    <li>Privilégie les graisses insaturées (huile d'olive, avocat, poisson)</li>
+  </ul>
+  <h3>Les micronutriments : les petites choses qui changent tout</h3>
+  <p>Les vitamines et minéraux ne fournissent pas d'énergie, mais ils sont essentiels à tous les processus du corps.</p>
+  <p><strong>Les plus importants à surveiller :</strong></p>
+  <ul>
+    <li><strong>Vitamine D</strong> : soleil, poissons gras, œufs. Carence quasi générale en hiver.</li>
+    <li><strong>Magnésium</strong> : légumes verts, noix, chocolat noir. Essentiel pour le sommeil et la récupération.</li>
+    <li><strong>Fer</strong> : viande rouge, légumineuses, épinards. Carence fréquente chez les femmes.</li>
+    <li><strong>Oméga-3</strong> : poissons gras, huile de lin, noix. Anti-inflammatoire naturel.</li>
+  </ul>
+  <h3>La règle des 80/20 pour l'alimentation</h3>
+  <p>80% de ton assiette = des aliments non transformés (viande, poisson, œufs, légumes, fruits, féculents complets)</p>
+  <p>20% de ton assiette = ce que tu veux (plaisir, sortie, écart)</p>
+  <p>La perfection n'existe pas. Vise la constance, pas la perfection.</p>
+  <h3>L'hydratation</h3>
+  <p>L'eau est le nutriment le plus sous-estimé. La déshydratation même légère réduit tes performances physiques et mentales.</p>
+  <ul>
+    <li>Objectif : 2 à 3 litres par jour</li>
+    <li>Plus si tu fais du sport ou s'il fait chaud</li>
+    <li>L'eau, pas les sodas. Pas les jus industriels. L'eau.</li>
+  </ul>
+  <h3>Les erreurs courantes en nutrition</h3>
+  <p><strong>Erreur 1 : Suivre un régime trop restrictif.</strong> Tu tiendras 2 semaines, puis tu craqueras. Vise la durabilité.</p>
+  <p><strong>Erreur 2 : Croire qu'il faut supprimer tous les aliments "mauvais".</strong> Ce n'est pas un aliment isolé qui fait la différence. C'est l'équilibre global.</p>
+  <p><strong>Erreur 3 : Se peser tous les jours.</strong> Le poids varie chaque jour pour des raisons d'eau, de digestion, de cycle. Pèse-toi 1 fois par semaine, le même jour, au réveil.</p>
+  <p><strong>Erreur 4 : Copier le régime d'un autre.</strong> Ce qui marche pour quelqu'un d'autre ne marchera pas forcément pour toi. Teste, ajuste, trouve ce qui te convient.</p>
+  <div class="exercise">
+    <h4>Calculer tes besoins et analyser ton alimentation</h4>
+    <p><strong>-</strong> Calcule ton métabolisme de base (formule simple : poids en kg x 10 pour une estimation rapide).</p>
+    <p><strong>-</strong> Pendant 3 jours, note tout ce que tu manges sans rien changer. Utilise une appli comme MyFitnessPal ou Cronometer.</p>
+    <p><strong>-</strong> Analyse : combien de calories en moyenne ? Combien de protéines par kg de poids de corps ?</p>
+    <p><strong>-</strong> Identifie 3 changements simples à faire cette semaine (ex : ajouter une portion de légumes à chaque repas, boire un verre d'eau de plus par jour, augmenter les protéines au petit-déjeuner).</p>
+  </div>
+</div>
+<div class="content page-break" id="module-3--nutrition-stratégies-avancees">
+  <div class="module-header">
+    <div class="module-number">Module 3</div>
+    <h2>Nutrition : stratégies avancées</h2>
+  </div>
+  <p>Passer au niveau supérieur dans ton alimentation</p>
+  <h3>Le meal prep : préparer ses repas à l'avance</h3>
+  <p>La raison numéro 1 pour laquelle les gens échouent en nutrition : ils n'ont rien de sain à manger quand la faim arrive.</p>
+  <p>La solution : préparer tes repas à l'avance.</p>
+  <p><strong>Comment commencer :</strong></p>
+  <ol>
+    <li>Choisis un jour dans la semaine (dimanche après-midi par exemple)</li>
+    <li>Décide ce que tu vas manger : 2-3 plats différents pour la semaine</li>
+    <li>Fais les courses en une fois</li>
+    <li>Cuisine en quantité</li>
+    <li>Portionne dans des boîtes</li>
+  </ol>
+  <p><strong>Exemple de session meal prep (2h) :</strong></p>
+  <ul>
+    <li>Une grande portion de riz complet ou de patates douces</li>
+    <li>Une grande portion de légumes variés</li>
+    <li>Une source de protéine pour chaque jour (poulet, bœuf, poisson, œufs)</li>
+    <li>Des snacks sains préparés (noix portionnées, fruits, yaourts)</li>
+  </ul>
+  <h3>Le timing des repas</h3>
+  <p>Le mythe des "6 petits repas par jour qui accélèrent le métabolisme" a été démenti. Peu importe le nombre de repas, ce qui compte c'est le total calorique.</p>
+  <p><strong>L'essentiel à retenir :</strong></p>
+  <ul>
+    <li>Mange quand tu as faim, arrête quand tu es rassasié</li>
+    <li>Si tu t'entraînes le matin, un repas avant aide la performance</li>
+    <li>Si tu t'entraînes le soir, un repas après aide la récupération</li>
+    <li>Le jeûne intermittent peut être un outil, mais ce n'est pas une obligation</li>
+  </ul>
+  <h3>Les suppléments qui valent vraiment le coup</h3>
+  <p>La plupart des suppléments sont inutiles. Voici ceux qui sont scientifiquement prouvés :</p>
+  <p><strong>1. Whey protéine (ou protéine végétale).</strong> Le plus utile. Atteindre tes objectifs protéiques quotidiennement est difficile. La whey rend ça facile.</p>
+  <p><strong>2. Créatine.</strong> Le supplément le plus étudié et le plus efficace pour la force et la masse musculaire. Sans effet secondaire connu à dose normale (5g/jour).</p>
+  <p><strong>3. Vitamine D.</strong> Essentielle si tu ne vois pas assez le soleil. La majorité des gens sont carencés.</p>
+  <p><strong>4. Magnésium.</strong> Aide le sommeil, la récupération, la gestion du stress. Prends-le le soir.</p>
+  <p><strong>5. Oméga-3.</strong> Anti-inflammatoire, bon pour le cœur et le cerveau.</p>
+  <p>Tout le reste est secondaire. D'abord, maîtrise la nourriture réelle avant de penser aux suppléments.</p>
+  <h3>L'adaptation à ton mode de vie</h3>
+  <p>Tu es entrepreneur, étudiant ou salarié avec un emploi du temps chargé ? Voici comment adapter ta nutrition :</p>
+  <p><strong>Petit-déjeuner rapide :</strong> Oeufs brouillés + avocat + pain complet (5 minutes). Ou shaker protéiné + flocons d'avoine + fruits.</p>
+  <p><strong>Déjeuner :</strong> Repas préparé à l'avance. Si tu manges dehors : protéine + légumes + féculent. Évite les plats en sauce et les fritures.</p>
+  <p><strong>Dîner :</strong> Similaire au déjeuner. Varie les sources de protéines et de légumes.</p>
+  <p><strong>Snacks :</strong> Amandes, fruits, yaourt grec, oeuf dur, barre protéinée.</p>
+  <h3>Comment gérer les écarts et les sorties</h3>
+  <p>Tu vas avoir des écarts. C'est normal. Ce n'est pas un écart qui fait la différence, c'est ce que tu fais après.</p>
+  <p><strong>Règle d'or :</strong> Si tu as un mauvais repas, ne transforme pas en mauvaise journée. Si tu as une mauvaise journée, ne transforme pas en mauvaise semaine.</p>
+  <p>Reprends ton plan au repas suivant. Pas demain, pas lundi prochain. Maintenant.</p>
+  <div class="exercise">
+    <h4>Planifier ta semaine alimentaire</h4>
+    <p><strong>-</strong> Choisis un jour de meal prep cette semaine. Bloque-le dans ton calendrier.</p>
+    <p><strong>-</strong> Planifie 3 déjeuners et 3 dîners différents pour la semaine. Écris les ingrédients nécessaires.</p>
+    <p><strong>-</strong> Identifie tes 3 snacks sains préférés et assure-toi de les avoir sous la main.</p>
+    <p><strong>-</strong> Si tu sors cette semaine, décide à l'avance ce que tu commanderas. Pas au moment de commander.</p>
+  </div>
+</div>
+<div class="content page-break" id="module-4--cardio-les-bases">
+  <div class="module-header">
+    <div class="module-number">Module 4</div>
+    <h2>Cardio : les bases</h2>
+  </div>
+  <p>Comprendre pourquoi ton cœur a besoin de travailler</p>
+  <h3>Pourquoi le cardio est indispensable</h3>
+  <p>Le cardio, c'est tout ce qui augmente ta fréquence cardiaque de façon soutenue. Ce n'est pas une option. C'est une nécessité.</p>
+  <p>Les bénéfices du cardio régulier :</p>
+  <ul>
+    <li>Coeur plus fort et plus efficace</li>
+    <li>Meilleure capacité pulmonaire</li>
+    <li>Plus d'énergie au quotidien</li>
+    <li>Meilleure gestion du stress</li>
+    <li>Meilleur sommeil</li>
+    <li>Réduction du risque de maladies cardiovasculaires, diabète, certains cancers</li>
+    <li>Meilleure endurance dans tous les domaines de la vie</li>
+  </ul>
+  <h3>Les deux types de cardio</h3>
+  <p><strong>Cardio à intensité modérée (LISS — Low Intensity Steady State)</strong></p>
+  <p>Fréquence cardiaque modérée, effort soutenable sur la durée.</p>
+  <ul>
+    <li>Exemples : marche rapide, vélo tranquille, natation, randonnée</li>
+    <li>Durée : 30 à 60 minutes</li>
+    <li>Frequence : 2 à 4 fois par semaine</li>
+    <li>Avantage : facile à récupérer, brûle des calories, bon pour la santé générale</li>
+  </ul>
+  <p><strong>Cardio à haute intensité (HIIT — High Intensity Interval Training)</strong></p>
+  <p>Effort intense par intervalles, entrecoupé de repos.</p>
+  <ul>
+    <li>Exemples : sprints, burpees, corde à sauter, vélo en intervalle</li>
+    <li>Durée : 10 à 20 minutes</li>
+    <li>Fréquence : 1 à 2 fois par semaine</li>
+    <li>Avantage : très efficace en peu de temps, boost le métabolisme</li>
+  </ul>
+  <p><strong>Le meilleur choix : les deux.</strong> Le LISS pour la santé et la récupération, le HIIT pour la performance et l'efficacité.</p>
+  <h3>Comment commencer le cardio</h3>
+  <p>Si tu ne fais pas de cardio aujourd'hui, commence par la marche.</p>
+  <p><strong>Programme débutant (semaines 1-4) :</strong></p>
+  <ul>
+    <li>Marche rapide 20-30 minutes, 3 fois par semaine</li>
+    <li>Effort : tu dois pouvoir parler mais pas chanter</li>
+    <li>Augmente de 5 minutes chaque semaine</li>
+  </ul>
+  <p><strong>Quand tu es prêt à passer au niveau supérieur :</strong></p>
+  <ul>
+    <li>Ajoute une séance de LISS (vélo, natation, jogging léger)</li>
+    <li>Commence le HIIT avec 1 séance par semaine</li>
+    <li>Alterne jours de cardio et jours de repos</li>
+  </ul>
+  <h3>Les erreurs courantes en cardio</h3>
+  <p><strong>Erreur 1 : Faire trop de HIIT.</strong> Le HIIT est exigeant. Ton corps a besoin de récupérer. 2 séances par semaine maximum.</p>
+  <p><strong>Erreur 2 : Faire du cardio à jeun pour "brûler plus de graisse".</strong> La différence est négligeable. Si tu as moins d'énergie, tu feras moins d'effort. Entraîne-toi quand tu te sens le plus fort.</p>
+  <p><strong>Erreur 3 : Penser que le cardio fait tout perdre.</strong> Le cardio brûle des calories mais ne fait pas fondre les graisses localement. La perte de poids globale dépend du déficit calorique.</p>
+  <p><strong>Erreur 4 : Se forcer à faire un cardio qu'on déteste.</strong> Si tu détestes courir, ne cours pas. Marche, nage, fais du vélo, de la corde à sauter. Trouve ce qui te plaît.</p>
+  <div class="exercise">
+    <h4>Trouver ton cardio et commencer</h4>
+    <p><strong>-</strong> Quel type de cardio pourrais-tu pratiquer régulièrement sans détester ? Sois honnête.</p>
+    <p><strong>-</strong> Planifie 3 séances de 20 minutes de marche rapide cette semaine. À quelle heure ? Quels jours ?</p>
+    <p><strong>-</strong> Augmente l'intensité une fois que tu maîtrises la marche. Ajoute 5 min ou augmente le rythme.</p>
+    <p><strong>-</strong> Note comment tu te sens après une semaine. Plus d'énergie ? Meilleur sommeil ?</p>
+  </div>
+</div>
+<div class="content page-break" id="module-5--cardio-programmes-et-progression">
+  <div class="module-header">
+    <div class="module-number">Module 5</div>
+    <h2>Cardio : programmes et progression</h2>
+  </div>
+  <p>Structurer ton cardio pour des résultats durables</p>
+  <h3>Programme cardio débutant (semaines 1 à 4)</h3>
+  <p>L'objectif est de créer l'habitude, pas la performance.</p>
+  <table>
+    <thead>
+      <tr><th>Jour</th><th>Activité</th><th>Durée</th><th>Intensité</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Lundi</td><td>Marche rapide</td><td>20 min</td><td>Faible</td></tr>
+      <tr><td>Mercredi</td><td>Vélo tranquille</td><td>25 min</td><td>Faible</td></tr>
+      <tr><td>Vendredi</td><td>Marche rapide</td><td>25 min</td><td>Faible</td></tr>
+      <tr><td>Samedi ou Dimanche</td><td>Marche ou vélo</td><td>30 min</td><td>Faible</td></tr>
+    </tbody>
+  </table>
+  <h3>Programme cardio intermédiaire (semaines 5 à 8)</h3>
+  <p>Ajoute une séance de HIIT et de la variété.</p>
+  <table>
+    <thead>
+      <tr><th>Jour</th><th>Activité</th><th>Durée</th><th>Intensité</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Lundi</td><td>HIIT (30s effort / 30s repos x 8)</td><td>12 min</td><td>Élevée</td></tr>
+      <tr><td>Mardi</td><td>Marche ou vélo</td><td>30 min</td><td>Faible</td></tr>
+      <tr><td>Jeudi</td><td>Course à pied légère</td><td>20 min</td><td>Modérée</td></tr>
+      <tr><td>Samedi</td><td>Vélo ou natation</td><td>40 min</td><td>Modérée</td></tr>
+    </tbody>
+  </table>
+  <h3>Programme cardio avancé (semaines 9 à 12)</h3>
+  <p>Augmente le volume et l'intensité.</p>
+  <table>
+    <thead>
+      <tr><th>Jour</th><th>Activité</th><th>Durée</th><th>Intensité</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Lundi</td><td>HIIT (45s effort / 15s repos x 10)</td><td>15 min</td><td>Très élevée</td></tr>
+      <tr><td>Mardi</td><td>Course à pied</td><td>30 min</td><td>Modérée</td></tr>
+      <tr><td>Jeudi</td><td>HIIT (30s / 30s x 10)</td><td>15 min</td><td>Élevée</td></tr>
+      <tr><td>Vendredi</td><td>Vélo ou natation</td><td>45 min</td><td>Modérée</td></tr>
+      <tr><td>Samedi</td><td>Marche longue</td><td>60 min</td><td>Faible</td></tr>
+    </tbody>
+  </table>
+  <h3>Comment mesurer ta progression</h3>
+  <ul>
+    <li><strong>Temps</strong> : combien de temps tiens-tu à la même intensité ?</li>
+    <li><strong>Distance</strong> : combien parcours-tu dans le même temps ?</li>
+    <li><strong>Récupération</strong> : combien de temps ta fréquence cardiaque met-elle à redescendre ?</li>
+    <li><strong>Effort perçu</strong> : sur une échelle de 1 à 10, quel est ton niveau d'effort ?</li>
+  </ul>
+  <h3>Adapter le cardio à ton objectif</h3>
+  <p><strong>Objectif perte de poids :</strong> Privilégie le LISS (marche, vélo) à volume modéré. Brûle des calories sans fatiguer ton système nerveux.</p>
+  <p><strong>Objectif performance :</strong> Augmente le HIIT progressivement. Travaille des intervalles plus longs ou plus intenses.</p>
+  <p><strong>Objectif santé générale :</strong> Mélange LISS et HIIT. 3-4 séances par semaine suffisent.</p>
+  <div class="exercise">
+    <h4>Créer ton programme cardio sur 4 semaines</h4>
+    <p><strong>-</strong> Choisis ton niveau : débutant, intermédiaire ou avancé.</p>
+    <p><strong>-</strong> Prends le programme correspondant et adapte-le à tes disponibilités (jours, horaires).</p>
+    <p><strong>-</strong> Ajoute une progression : comment vas-tu augmenter chaque semaine ?</p>
+    <p><strong>-</strong> Note après 4 semaines : ton endurance a-t-elle augmenté ? Ton énergie quotidienne ?</p>
+  </div>
+</div>
+<div class="content page-break" id="module-6--musculation-les-fondations">
+  <div class="module-header">
+    <div class="module-number">Module 6</div>
+    <h2>Musculation : les fondations</h2>
+  </div>
+  <p>Comprendre comment construire du muscle et de la force</p>
+  <h3>Pourquoi la musculation est essentielle</h3>
+  <p>La musculation n'est pas réservée aux bodybuilders. C'est l'activité physique la plus importante pour la santé à long terme.</p>
+  <p><strong>Bénéfices de la musculation :</strong></p>
+  <ul>
+    <li>Maintien et développement de la masse musculaire (qui diminue naturellement avec l'âge)</li>
+    <li>Augmentation du métabolisme de base (plus de muscle = plus de calories brûlées au repos)</li>
+    <li>Renforcement des os et des articulations (prévention de l'ostéoporose)</li>
+    <li>Meilleure posture et réduction des douleurs</li>
+    <li>Meilleure sensibilité à l'insuline (prévention du diabète)</li>
+    <li>Confiance en soi et bien-être mental</li>
+  </ul>
+  <h3>Les mouvements fondamentaux</h3>
+  <p>Tout programme de musculation devrait être construit autour de ces mouvements de base :</p>
+  <p><strong>1. Poussée horizontale :</strong> Développé couché (barre ou haltères), pompes</p>
+  <p><strong>2. Poussée verticale :</strong> Développé militaire, élévations latérales</p>
+  <p><strong>3. Tirage horizontal :</strong> Rowing (barre ou haltère), tirage à la poulie</p>
+  <p><strong>4. Tirage vertical :</strong> Tractions (ou tirage vertical à la poulie)</p>
+  <p><strong>5. Squat :</strong> Squat (barre, haltères, ou poids du corps)</p>
+  <p><strong>6. Soulevé de terre / Verrouillage de hanches :</strong> Soulevé de terre, hip thrust, good morning</p>
+  <p><strong>7. Porté / Charge :</strong> Farmer walk, porté de charges asymétriques</p>
+  <p>Maîtrise ces 7 mouvements et tu as tout ce qu'il faut pour transformer ton corps.</p>
+  <h3>Comprendre les séries, répétitions et charges</h3>
+  <p><strong>Répétitions :</strong> Le nombre de fois que tu effectues un mouvement.</p>
+  <p><strong>Séries :</strong> Le nombre de groupes de répétitions.</p>
+  <p><strong>Charge :</strong> Le poids que tu utilises.</p>
+  <p><strong>Les zones de répétitions :</strong></p>
+  <ul>
+    <li><strong>1-5 répétitions :</strong> Force maximale. Charges lourdes.</li>
+    <li><strong>6-12 répétitions :</strong> Hypertrophie (développement musculaire). Zone idéale pour la plupart des gens.</li>
+    <li><strong>12-20+ répétitions :</strong> Endurance musculaire. Charges plus légères.</li>
+  </ul>
+  <p><strong>Le principe de la progression :</strong> Pour que le muscle se développe, tu dois lui donner une raison de le faire. Augmente progressivement la charge, le nombre de répétitions, ou le nombre de séries.</p>
+  <h3>La technique avant tout</h3>
+  <p>Avant d'augmenter les charges, maîtrise la technique. Une mauvaise technique avec du lourd, c'est la blessure assurée.</p>
+  <p><strong>Règles de base :</strong></p>
+  <ul>
+    <li>Contrôle le mouvement (pas de balancier, pas d'élan)</li>
+    <li>Respire : expire en poussant, inspire en descendant</li>
+    <li>Garde le dos droit (pas de dos rond)</li>
+    <li>Engage les abdos pendant tout le mouvement</li>
+    <li>Si tu ne peux pas faire le mouvement avec la bonne forme, le poids est trop lourd</li>
+  </ul>
+  <h3>La fréquence d'entraînement</h3>
+  <p>Pour un débutant, 3 séances par semaine suffisent pour progresser.</p>
+  <ul>
+    <li><strong>Full body (corps entier)</strong> : 3 fois par semaine. Idéal pour les débutants.</li>
+    <li><strong>Upper/Lower (haut/bas)</strong> : 4 fois par semaine. Pour les intermédiaires.</li>
+    <li><strong>PPL (Push/Pull/Legs)</strong> : 3 à 6 fois par semaine. Pour les avancés.</li>
+  </ul>
+  <div class="exercise">
+    <h4>Apprendre les mouvements fondamentaux</h4>
+    <p><strong>-</strong> Choisis 3 mouvements parmi les 7 fondamentaux que tu ne maîtrises pas.</p>
+    <p><strong>-</strong> Regarde une vidéo de démonstration pour chaque mouvement (cherche sur YouTube "how to [nom du mouvement] proper form").</p>
+    <p><strong>-</strong> Pratique chaque mouvement avec une charge très légère (ou sans charge). Filme-toi pour vérifier ta forme.</p>
+    <p><strong>-</strong> Notes quel poids tu pourrais utiliser pour commencer (choisis un poids où tu peux faire 10 répétitions avec une bonne forme mais où les 2 dernières sont difficiles).</p>
+  </div>
+</div>
+<div class="content page-break" id="module-7--musculation-programmes-et-progression">
+  <div class="module-header">
+    <div class="module-number">Module 7</div>
+    <h2>Musculation : programmes et progression</h2>
+  </div>
+  <p>Structurer ta musculation pour des résultats durables</p>
+  <h3>Programme débutant : Full Body 3x par semaine</h3>
+  <p><strong>Jour A (lundi) :</strong></p>
+  <ul>
+    <li>Squat (ou goblet squat) : 3 x 8-10</li>
+    <li>Développé couché (ou pompes) : 3 x 8-10</li>
+    <li>Rowing (barre ou haltère) : 3 x 8-10</li>
+    <li>Planche : 3 x 30-60 secondes</li>
+  </ul>
+  <p><strong>Jour B (mercredi) :</strong></p>
+  <ul>
+    <li>Soulevé de terre (ou hip thrust) : 3 x 8-10</li>
+    <li>Développé militaire (haltères) : 3 x 8-10</li>
+    <li>Tractions assistées (ou tirage vertical) : 3 x 8-10</li>
+    <li>Gainage latéral : 3 x 20-40 secondes par côté</li>
+  </ul>
+  <p><strong>Jour C (vendredi) :</strong></p>
+  <ul>
+    <li>Squat avant (ou fentes) : 3 x 8-10</li>
+    <li>Développé couché incliné (haltères) : 3 x 8-10</li>
+    <li>Rowing unilatéral (haltère) : 3 x 8-10 par côté</li>
+    <li>Farmer walk : 3 x 30-45 secondes</li>
+  </ul>
+  <h3>Programme intermédiaire : Upper/Lower 4x par semaine</h3>
+  <p><strong>Jour 1 (Upper A) :</strong></p>
+  <ul>
+    <li>Développé couché (barre) : 4 x 6-8</li>
+    <li>Rowing (barre) : 4 x 8-10</li>
+    <li>Développé militaire (haltères) : 3 x 8-10</li>
+    <li>Tirage vertical (poulie) : 3 x 10-12</li>
+    <li>Élévations latérales : 3 x 12-15</li>
+    <li>Curl biceps + extensions triceps : 3 x 10-12</li>
+  </ul>
+  <p><strong>Jour 2 (Lower A) :</strong></p>
+  <ul>
+    <li>Squat (barre) : 4 x 6-8</li>
+    <li>Soulevé de terre roumain : 3 x 8-10</li>
+    <li>Fentes (haltères) : 3 x 10-12 par côté</li>
+    <li>Mollets debout : 4 x 12-15</li>
+    <li>Gainage : 3 x 45-60 secondes</li>
+  </ul>
+  <p><strong>Jour 3 (Upper B) :</strong></p>
+  <ul>
+    <li>Développé incliné (haltères) : 4 x 8-10</li>
+    <li>Tractions (ou tirage) : 4 x 6-8</li>
+    <li>Rowing unilatéral (haltère) : 3 x 10-12</li>
+    <li>Pompes : 3 x max</li>
+    <li>Oiseau inversé (postérieur d'épaule) : 3 x 12-15</li>
+  </ul>
+  <p><strong>Jour 4 (Lower B) :</strong></p>
+  <ul>
+    <li>Soulevé de terre (barre) : 4 x 5-7</li>
+    <li>Presse à cuisses (leg press) : 3 x 10-12</li>
+    <li>Leg curl : 3 x 10-12</li>
+    <li>Mollets assis : 4 x 12-15</li>
+    <li>Planche : 3 x 45-60 secondes</li>
+  </ul>
+  <h3>Comment progresser : la surcharge progressive</h3>
+  <p>Le principe de base de la musculation : si tu fais toujours la même chose, tu obtiendras toujours les mêmes résultats.</p>
+  <p><strong>Comment progresser chaque semaine :</strong></p>
+  <ol>
+    <li>Ajoute des répétitions : passe de 3x8 à 3x9, puis 3x10</li>
+    <li>Ajoute des séries : passe de 3x8 à 4x8</li>
+    <li>Augmente la charge : passe de 10kg à 12.5kg, puis baisse les reps à 8 et recommence</li>
+    <li>Améliore la technique : plus de contrôle, meilleure amplitude</li>
+  </ol>
+  <h3>La musculation sans salle de sport</h3>
+  <p>Pas de salle ? Pas de problème. Tu peux faire des progrès significatifs à la maison.</p>
+  <p><strong>Exercices au poids du corps :</strong></p>
+  <ul>
+    <li>Pompes (standard, larges, serrées, inclinées, déclinées)</li>
+    <li>Squats (air squat, squat sautés, pistol squat)</li>
+    <li>Fentes (avant, arrière, latérales, marchées)</li>
+    <li>Tractions (si tu as une barre)</li>
+    <li>Dips (sur chaise ou banc)</li>
+    <li>Planche et variantes</li>
+    <li>Pont fessier / hip thrust</li>
+    <li>Burpees</li>
+    <li>Mountain climbers</li>
+  </ul>
+  <p><strong>Matériel minimum recommandé :</strong></p>
+  <ul>
+    <li>Une paire d'haltères réglables (ou des élastiques)</li>
+    <li>Un tapis de sol</li>
+    <li>Une barre de traction (si possible)</li>
+  </ul>
+  <h3>Les erreurs courantes en musculation</h3>
+  <p><strong>Erreur 1 : Prendre trop lourd trop vite.</strong> La technique d'abord, la charge ensuite.</p>
+  <p><strong>Erreur 2 : Ne pas dormir assez.</strong> Le muscle ne se construit pas dans la salle, il se construit pendant le sommeil.</p>
+  <p><strong>Erreur 3 : Manger trop peu.</strong> Tu ne peux pas construire du muscle sans carburant.</p>
+  <p><strong>Erreur 4 : Changer de programme toutes les 2 semaines.</strong> Donne à ton programme le temps de fonctionner. 8 à 12 semaines minimum.</p>
+  <p><strong>Erreur 5 : Négliger les jambes.</strong> Les exercices de jambes sont les plus importants pour la santé globale.</p>
+  <div class="exercise">
+    <h4>Créer ta première séance</h4>
+    <p><strong>-</strong> Choisis ton niveau (débutant, intermédiaire) et note le programme correspondant.</p>
+    <p><strong>-</strong> Pour chaque exercice, détermine le poids de départ. Commence léger.</p>
+    <p><strong>-</strong> Planifie tes séances dans la semaine. À quels jours ? À quelle heure ?</p>
+    <p><strong>-</strong> Après ta première semaine, note : quels exercices étaient les plus difficiles ? Où dois-tu ajuster ?</p>
+  </div>
+</div>
+<div class="content page-break" id="module-8--le-sommeil-et-la-recuperation">
+  <div class="module-header">
+    <div class="module-number">Module 8</div>
+    <h2>Le sommeil et la récupération</h2>
+  </div>
+  <p>Le moment où ton corps se transforme vraiment</p>
+  <h3>Pourquoi le sommeil est ton arme secrète</h3>
+  <p>C'est pendant le sommeil que ton corps se répare, que tes muscles se reconstruisent, que ton cerveau traite les informations de la journée.</p>
+  <p>Sans un sommeil de qualité, tous tes efforts en nutrition et en entraînement sont réduits de moitié.</p>
+  <p><strong>Ce qui se passe quand tu dors :</strong></p>
+  <ul>
+    <li>Sécrétion d'hormone de croissance (réparation musculaire)</li>
+    <li>Élimination des toxines du cerveau</li>
+    <li>Consolidation de la mémoire et de l'apprentissage</li>
+    <li>Régulation des hormones de la faim (ghréline et leptine)</li>
+    <li>Renforcement du système immunitaire</li>
+  </ul>
+  <h3>Combien d'heures faut-il ?</h3>
+  <p>7 à 9 heures par nuit. Pas négociable.</p>
+  <p>Moins de 6 heures par nuit régulièrement :</p>
+  <ul>
+    <li>Augmentation du cortisol (stress)</li>
+    <li>Baisse de la testostérone</li>
+    <li>Diminution de la récupération musculaire</li>
+    <li>Augmentation de l'appétit et des fringales</li>
+    <li>Baisse des performances cognitives</li>
+  </ul>
+  <h3>Les règles d'or du sommeil</h3>
+  <p><strong>1. Horaires fixes.</strong> Couche-toi et lève-toi à la même heure, même le week-end. Ton cerveau a besoin de routine.</p>
+  <p><strong>2. Pas d'écrans 1 heure avant le coucher.</strong> La lumière bleue bloque la mélatonine, l'hormone du sommeil. Mets ton téléphone en mode nuit ou, mieux, éloigne-le.</p>
+  <p><strong>3. Chambre fraîche et sombre.</strong> 18-19 degrés. Obscurité totale. Si tu as des LED, cache-les.</p>
+  <p><strong>4. Pas de caféine après 14h.</strong> La caféine met 6 à 8 heures à être éliminée à 50%.</p>
+  <p><strong>5. Pas d'alcool avant de dormir.</strong> L'alcool empêche le sommeil profond. Tu peux t'endormir, mais tu ne récupères pas.</p>
+  <p><strong>6. Une routine du soir.</strong> 30 minutes avant le coucher : étirements, lecture, méditation, tout sauf les écrans.</p>
+  <h3>La récupération entre les séances</h3>
+  <p>Tes muscles ne se renforcent pas pendant l'entraînement mais après, pendant la récupération.</p>
+  <p><strong>Signes que tu as besoin de plus de récupération :</strong></p>
+  <ul>
+    <li>Fatigue persistante</li>
+    <li>Performances en baisse</li>
+    <li>Douleurs articulaires</li>
+    <li>Irritabilité</li>
+    <li>Difficulté à dormir</li>
+    <li>Baisse de motivation</li>
+  </ul>
+  <p><strong>Stratégies de récupération :</strong></p>
+  <ul>
+    <li>Jours de repos actif (marche légère, étirements)</li>
+    <li>Une semaine de décharge toutes les 4 à 8 semaines (réduis le volume de 50%)</li>
+    <li>Hydratation et nutrition post-entraînement</li>
+    <li>Étirements et mobilité</li>
+    <li>Massage ou auto-massage (foam roller, balle de massage)</li>
+  </ul>
+  <div class="exercise">
+    <h4>Auditer et améliorer ton sommeil</h4>
+    <p><strong>-</strong> Pendant une semaine, note l'heure à laquelle tu te couches et l'heure à laquelle tu te lèves. Quelle est ta moyenne d'heures de sommeil ?</p>
+    <p><strong>-</strong> Identifie 3 habitudes qui nuisent à ton sommeil (écran le soir, caféine après 14h, horaires irréguliers, etc.).</p>
+    <p><strong>-</strong> Choisis UN changement à mettre en place cette semaine (ex : pas d'écran 30 min avant le coucher).</p>
+    <p><strong>-</strong> À la fin de la semaine, note si tu te sens mieux reposé. Ajoute un deuxième changement si le premier est acquis.</p>
+  </div>
+</div>
+<div class="content page-break" id="module-9--la-sante-mentale-et-le-lien-corps-esprit">
+  <div class="module-header">
+    <div class="module-number">Module 9</div>
+    <h2>La santé mentale et le lien corps-esprit</h2>
+  </div>
+  <p>Pourquoi un corps sain a besoin d'un esprit sain</p>
+  <h3>Le stress : l'ennemi invisible</h3>
+  <p>Le stress chronique est l'un des plus grands obstacles à ta santé physique. Il augmente le cortisol, ce qui favorise le stockage des graisses, la dégradation musculaire, et perturbe le sommeil.</p>
+  <p><strong>Les signes d'un stress chronique :</strong></p>
+  <ul>
+    <li>Fatigue malgré un sommeil normal</li>
+    <li>Irritabilité</li>
+    <li>Douleurs musculaires inexpliquées</li>
+    <li>Troubles digestifs</li>
+    <li>Baisse de libido</li>
+    <li>Difficulté à se concentrer</li>
+  </ul>
+  <p><strong>Comment gérer le stress :</strong></p>
+  <p><strong>Respiration.</strong> 5 minutes de respiration profonde par jour (4 secondes inspire, 6 secondes expire). Ça active le système parasympathique (repos et digestion).</p>
+  <p><strong>Mouvement.</strong> Le sport est le meilleur anti-stress naturel. Une séance de cardio modéré ou de musculation régule le cortisol.</p>
+  <p><strong>Nature.</strong> 20 minutes dehors chaque jour. La lumière naturelle et la verdure réduisent le stress mieux qu'aucun médicament.</p>
+  <p><strong>Écriture.</strong> Pose sur papier ce qui te stresse. Le simple fait de l'écrire réduit son emprise.</p>
+  <p><strong>Pause numérique.</strong> Une heure sans téléphone par jour. Pas de notifications, pas de réseaux sociaux. Juste toi.</p>
+  <h3>La cohérence avant la performance</h3>
+  <p>L'erreur la plus commune en santé : tout donner pendant 2 semaines, puis tout arrêter pendant 2 mois.</p>
+  <p><strong>La cohérence bat l'intensité.</strong> Faire 80% de ton programme à 100% de tes capacités pendant 12 mois vaut mieux que faire 100% de ton programme à 200% pendant 2 semaines.</p>
+  <p><strong>Comment être cohérent :</strong></p>
+  <ul>
+    <li>Commence par des objectifs ridicules. Trop faciles. 5 minutes de marche, pas 30. 1 pompe, pas 20.</li>
+    <li>Une fois que l'habitude est ancrée, augmente progressivement.</li>
+    <li>Rattrape, ne remets pas à zéro. Si tu rates un jour, reprends le lendemain. Pas "lundi prochain".</li>
+  </ul>
+  <h3>Le dialogue intérieur et la santé</h3>
+  <p>Ce que tu te dis influence directement tes comportements.</p>
+  <ul>
+    <li>"Je n'ai pas le temps" → "Ce n'est pas une priorité pour moi en ce moment"</li>
+    <li>"Je suis nul en sport" → "Je débute et je vais progresser"</li>
+    <li>"C'est trop dur" → "C'est inconfortable, et c'est normal quand on change"</li>
+  </ul>
+  <p>Les mots que tu utilises façonnent ta réalité. Change tes mots, change ton comportement.</p>
+  <div class="exercise">
+    <h4>Mettre en place une routine anti-stress</h4>
+    <p><strong>-</strong> Choisis une technique de gestion du stress dans la liste ci-dessus. Une seule.</p>
+    <p><strong>-</strong> Planifie-la dans ta journée. Pas "je vais le faire". "Je le ferai à 12h15 pendant 5 minutes."</p>
+    <p><strong>-</strong> Pendant une semaine, note ton niveau de stress chaque soir (1 à 10) avant et après ta pratique.</p>
+    <p><strong>-</strong> Après une semaine, ajoute une autre technique si tu le souhaites.</p>
+  </div>
+</div>
+<div class="content page-break" id="module-10--la-coherence-construire-des-habitudes-durables">
+  <div class="module-header">
+    <div class="module-number">Module 10</div>
+    <h2>La cohérence : construire des habitudes durables</h2>
+  </div>
+  <p>Comment faire en sorte que ça tienne sur la durée</p>
+  <h3>La science des habitudes</h3>
+  <p>Une habitude est un comportement automatique déclenché par un contexte. Tu n'as pas besoin de motivation pour faire tes lacets. Tu les fais automatiquement.</p>
+  <p>L'objectif est de rendre la santé aussi automatique que tes lacets.</p>
+  <p><strong>Le cycle de l'habitude :</strong></p>
+  <ol>
+    <li><strong>Déclencheur</strong> : quelque chose qui initie le comportement</li>
+    <li><strong>Routine</strong> : le comportement lui-même</li>
+    <li><strong>Récompense</strong> : ce que tu obtiens du comportement</li>
+  </ol>
+  <h3>La règle des 2 minutes</h3>
+  <p>Pour créer une nouvelle habitude, réduis-la à une version qui prend moins de 2 minutes.</p>
+  <ul>
+    <li>"Aller à la salle" → "Mettre mes affaires de sport dans mon sac"</li>
+    <li>"Courir 30 minutes" → "Mettre mes chaussures de course"</li>
+    <li>"Manger sainement" → "Manger un fruit"</li>
+  </ul>
+  <p>Une fois que la version 2 minutes est devenue automatique, tu peux l'étendre facilement.</p>
+  <h3>L'empilement d'habitudes</h3>
+  <p>Attache une nouvelle habitude à une habitude existante.</p>
+  <ul>
+    <li>"Après m'être brossé les dents le soir, je fais 5 minutes d'étirements"</li>
+    <li>"Après avoir bu mon café du matin, je prépare mes repas pour la journée"</li>
+    <li>"Après avoir fini mon travail, je vais marcher 20 minutes"</li>
+  </ul>
+  <h3>Les objectifs SMART pour la santé</h3>
+  <p><strong>S</strong>pécifique : "Je veux perdre du poids" → "Je veux perdre 5 kg en 3 mois"</p>
+  <p><strong>M</strong>esurable : "Je veux être plus fort" → "Je veux augmenter mon squat de 20 kg"</p>
+  <p><strong>A</strong>tteignable : "Je veux devenir athlète olympique" → "Je veux faire 3 séances de sport par semaine"</p>
+  <p><strong>R</strong>éaliste : "Je veux tout changer en 1 semaine" → "Je veux changer une habitude par mois"</p>
+  <p><strong>T</strong>emporel : "Je veux être en forme" → "Je veux pouvoir courir 5 km en 30 minutes d'ici 3 mois"</p>
+  <h3>Les 3 pièges de la cohérence</h3>
+  <p><strong>Piège 1 : Le tout ou rien.</strong> Tu rates un jour et tu abandonnes tout. Solution : une journée ratée n'est pas une semaine ratée. Reprends le lendemain.</p>
+  <p><strong>Piège 2 : La comparaison.</strong> Tu compares tes débuts aux résultats des autres. Solution : compare-toi à toi-même il y a un mois. C'est la seule comparaison qui compte.</p>
+  <p><strong>Piège 3 : L'attente du moment parfait.</strong> "Je commencerai lundi / le mois prochain / après les fêtes." Solution : commence maintenant. Pas demain. Pas dans 5 minutes. Maintenant.</p>
+  <div class="exercise">
+    <h4>Construire ton système d'habitudes</h4>
+    <p><strong>-</strong> Choisis 3 habitudes santé que tu veux mettre en place (ex : boire plus d'eau, marcher 20 min, dormir 8h).</p>
+    <p><strong>-</strong> Pour chaque habitude : quel est le déclencheur ? (Après X, je fais Y.)</p>
+    <p><strong>-</strong> Réduis chaque habitude à une version 2 minutes. Qu'est-ce que ça donne ?</p>
+    <p><strong>-</strong> Écris ta nouvelle routine : "Après [déclencheur], je [habitude 2 minutes]."</p>
+  </div>
+</div>
+<!-- conclusion moved to end -->
+<div class="content page-break" id="bonus--plans-daction-et-ressources">
+  <div class="bonus-header">
+    <h2>Bonus — Plans d'action et ressources</h2>
+    <p>Ressources complémentaires</p>
+  </div>
+  <p>Tout ce qu'il te faut pour passer à l'action immédiatement</p>
+</div>
+<div class="content page-break" id="plan-daction-30-jours-le-démarrage">
+  <h2>Plan d'action 30 jours — Le démarrage</h2>
+  <h3>Semaine 1 : Prendre les mesures</h3>
+  <ul>
+    <li>Pèse-toi et prends tes mensurations</li>
+    <li>Note ce que tu manges pendant 3 jours</li>
+    <li>Identifie 3 changements alimentaires simples</li>
+    <li>Marche 15 minutes par jour</li>
+  </ul>
+  <h3>Semaine 2 : La nutrition</h3>
+  <ul>
+    <li>Mets en place 1 changement alimentaire</li>
+    <li>Calcule tes calories et protéines approximatives</li>
+    <li>Bois 2 litres d'eau par jour</li>
+    <li>Ajoute une portion de légumes à chaque repas</li>
+  </ul>
+  <h3>Semaine 3 : L'activité physique</h3>
+  <ul>
+    <li>Ajoute 2 séances de marche de 20 minutes</li>
+    <li>Ajoute 1 séance de musculation (full body débutant)</li>
+    <li>Suis le plan de sommeil : coucher à heure fixe</li>
+  </ul>
+  <h3>Semaine 4 : L'intégration</h3>
+  <ul>
+    <li>3 séances de sport par semaine</li>
+    <li>80% d'alimentation saine</li>
+    <li>Routine de sommeil établie</li>
+    <li>Évalue tes progrès et ajuste</li>
+  </ul>
+</div>
+<div class="content page-break" id="plan-daction-90-jours-la-transformation">
+  <h2>Plan d'action 90 jours — La transformation</h2>
+  <h3>Mois 1 : Les fondations</h3>
+  <ul>
+    <li>Nutrition : calorie et protéines tracking 5 jours sur 7</li>
+    <li>Cardio : 3 séances de LISS par semaine (30 min)</li>
+    <li>Musculation : 2 séances full body par semaine</li>
+    <li>Sommeil : coucher avant 23h</li>
+  </ul>
+  <h3>Mois 2 : La construction</h3>
+  <ul>
+    <li>Nutrition : meal prep mis en place</li>
+    <li>Cardio : 2 LISS + 1 HIIT par semaine</li>
+    <li>Musculation : 3 séances par semaine (Upper/Lower ou PPL)</li>
+    <li>Suppléments : whey, créatine, vitamine D</li>
+  </ul>
+  <h3>Mois 3 : L'optimisation</h3>
+  <ul>
+    <li>Nutrition : ajuste selon les résultats (plus ou moins de calories)</li>
+    <li>Cardio : 3 séances dont 1 HIIT</li>
+    <li>Musculation : programme intermédiaire ou avancé</li>
+    <li>Évaluation : mesures, photos, performance</li>
+  </ul>
+</div>
+<div class="content page-break" id="les-10-commandements-de-la-santé-physique">
+  <h2>Les 10 commandements de la santé physique</h2>
+  <ol>
+    <li>Tu mangeras des protéines à chaque repas</li>
+    <li>Tu boiras de l'eau avant toute autre boisson</li>
+    <li>Tu marcheras au moins 20 minutes par jour</li>
+    <li>Tu feras du cardio 3 fois par semaine</li>
+    <li>Tu feras de la musculation 3 fois par semaine</li>
+    <li>Tu dormiras 7 à 9 heures par nuit</li>
+    <li>Tu géreras ton stress avant qu'il ne te gère</li>
+    <li>Tu te compareras à toi-même d'hier, pas aux autres</li>
+    <li>Tu commenceras petit plutôt que de ne pas commencer</li>
+    <li>Tu seras cohérent plutôt que parfait</li>
+  </ol>
+</div>
+<div class="content page-break" id="routine-quotidienne-idéale">
+  <h2>Routine quotidienne idéale</h2>
+  <p><strong>Matin :</strong></p>
+  <ul>
+    <li>7h : Réveil + verre d'eau</li>
+    <li>7h15 : 10 min d'étirements ou mobilité</li>
+    <li>7h30 : Petit-déjeuner protéiné</li>
+    <li>8h : Douche</li>
+  </ul>
+  <p><strong>Journée :</strong></p>
+  <ul>
+    <li>Au moins 2L d'eau</li>
+    <li>Repas équilibrés (protéines + légumes + féculents complets)</li>
+    <li>Pause de 5 min toutes les 2h (étirements, marche)</li>
+  </ul>
+  <p><strong>Soir selon le jour :</strong></p>
+  <ul>
+    <li>Lundi : Musculation (séance complète 45-60 min)</li>
+    <li>Mardi : Cardio LISS (marche ou vélo 30-40 min)</li>
+    <li>Mercredi : Musculation (séance complète 45-60 min)</li>
+    <li>Jeudi : Repos ou marche légère</li>
+    <li>Vendredi : Musculation (séance complète 45-60 min)</li>
+    <li>Samedi : Cardio HIIT (20 min) ou activité outdoor</li>
+    <li>Dimanche : Repos ou marche</li>
+  </ul>
+  <p><strong>Soir :</strong></p>
+  <ul>
+    <li>21h : Fin des écrans</li>
+    <li>21h30 : Routine du soir (lecture, étirements, respiration)</li>
+    <li>22h : Coucher</li>
+  </ul>
+</div>
+<div class="content page-break" id="suivi-de-progression-template">
+  <h2>Suivi de progression (template)</h2>
+  <table>
+    <thead>
+      <tr><th>Semaine</th><th>Poids</th><th>Tour de taille</th><th>Charge squat</th><th>Charge développé</th><th>Cardio (temps)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>2</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>3</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>...</td><td></td><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <hr>
+  <p><strong>Ta santé est le seul investissement qui te suit toute ta vie. Commence maintenant.</strong></p>
+  <p>Créé par <strong>Simon</strong> — <strong>@aurabusinessfr</strong></p>
+</div>
+<div class="content page-break" id="faq--les-10-questions-les-plus-frequentes-sur-la-sante-et-le-fitness">
+  <h2>FAQ — Les 10 questions les plus fréquentes sur la santé et le fitness</h2>
+
+  <h3>1. Faut-il compter les calories ou manger intuitif ?</h3>
+  <p>Les deux ont leur place, mais tout dépend de ton objectif et de ton expérience. Si tu débutes ou que tu as des objectifs précis (perdre du poids, prendre du muscle sec), compter tes calories pendant 2-3 semaines est un excellent moyen de <strong>prendre conscience</strong> de ce que tu manges vraiment. La majorité des gens sous-estiment leurs calories de 30 à 50 %.</p>
+  <p>Après cette phase de prise de conscience, tu peux passer en alimentation intuitive : tu connais les portions, tu sais à quoi ressemblent 100 g de riz ou 30 g de protéines. Tu n'as plus besoin de l'appli. <strong>La meilleure approche :</strong> compte 2-3 semaines pour calibrer, puis passe en intuitif avec des check-ins réguliers (1 semaine de tracking tous les 2-3 mois pour vérifier que tu ne dévies pas).</p>
+
+  <h3>2. Combien de temps pour voir des résultats ?</h3>
+  <p>Fixons des attentes réalistes :</p>
+  <ul>
+    <li><strong>Semaine 1-2 :</strong> Tu ne vois rien physiquement. Mais tu te sens plus énergique, tu dors mieux, tu as moins de fringales. Le vrai changement commence dans ta tête.</li>
+    <li><strong>Semaine 3-4 :</strong> Premier changement visible. Moins de ballonnements, les vêtements commencent à aller légèrement mieux.</li>
+    <li><strong>Mois 2 :</strong> Changement visible par toi dans le miroir. Perte de poids ou prise de muscle commence à se voir.</li>
+    <li><strong>Mois 3 :</strong> Les autres commencent à faire des remarques. « T'as perdu du poids ? T'as l'air en forme ! »</li>
+    <li><strong>Mois 6 :</strong> Transformation claire. Les photos avant/après parlent d'elles-mêmes.</li>
+  </ul>
+  <p><strong>Rappel :</strong> La graisse ne se perd pas en une nuit. Tu ne l'as pas prise en une semaine, tu ne la perdras pas en une semaine. La patience est une compétence.</p>
+
+  <h3>3. Faut-il prendre des compléments ?</h3>
+  <p>Les compléments sont des <strong>compléments</strong>, pas des substituts. Si ton alimentation est mauvaise, aucun complément ne la sauvera. Voici ce qui vaut vraiment le coup :</p>
+  <ul>
+    <li><strong>Whey protéine :</strong> Utile si tu as du mal à atteindre tes protéines (la majorité des gens). Pratique, rapide, efficace.</li>
+    <li><strong>Créatine :</strong> Le supplément le plus étudié au monde. 5 g/jour, sans danger, améliore force et récupération.</li>
+    <li><strong>Vitamine D :</strong> 80 % de la population est carencée. 2000-4000 UI/jour en hiver.</li>
+    <li><strong>Oméga-3 :</strong> Anti-inflammatoire, bon pour le cœur, le cerveau, les articulations.</li>
+    <li><strong>Magnésium :</strong> Aide le sommeil et la récupération. Prends-le le soir.</li>
+  </ul>
+  <p>Tout le reste (BCAA, brûleurs de graisse, testostérone boosters, etc.) est de l'argent gaspillé pour 99 % des gens.</p>
+
+  <h3>4. Peut-on perdre du gras localement ?</h3>
+  <p>Non. La <strong>perte de graisse localisée</strong> est un mythe. Tu ne peux pas décider où ton corps puise son énergie. Faire 500 abdos par jour ne fera pas fondre le ventre.</p>
+  <p>La perte de graisse se fait de façon globale, selon ta génétique. Certains perdent du ventre en premier, d'autres du visage, d'autres des cuisses. <strong>Ce que tu contrôles :</strong> le déficit calorique et la constance. Où tu perds en premier, c'est ta génétique.</p>
+  <p><strong>Ce qui marche pour un ventre plat :</strong> déficit calorique progressif, pas de sucre ajouté, sommeil de qualité, gestion du stress (le cortisol stocke la graisse abdominale), et oui, renforcer les abdos pour que quand la graisse part, le muscle apparaisse.</p>
+
+  <h3>5. À jeun ou après manger pour le cardio ?</h3>
+  <p>Mythe : « Le cardio à jeun brûle plus de graisse. » La vérité : la différence est négligeable sur une journée complète. Ce qui compte, c'est le <strong>déficit calorique total sur la semaine</strong>, pas si tu as mangé ou non avant ta séance.</p>
+  <p><strong>Cardio à jeun :</strong> Peut être utile si tu le supportes bien. Certains se sentent plus légers, d'autres manquent d'énergie et réduisent leur intensité, ce qui annule le bénéfice potentiel.</p>
+  <p><strong>Cardi après manger :</strong> Plus d'énergie = meilleure performance = plus de calories brûlées. Attends 1h30-2h après un repas complet, ou 30-45 min après un en-cas léger.</p>
+  <p><strong>Recommandation :</strong> Fais ton cardio quand tu te sens le plus fort. Si c'est le matin à jeun et que tu te sens bien, vas-y. Si tu préfères l'après-midi après avoir mangé, c'est parfait aussi. La constance bat tous les détails.</p>
+
+  <h3>6. Faut-il s'entraîner tous les jours ?</h3>
+  <p>Non. La récupération est aussi importante que l'entraînement. Tes muscles ne se construisent pas pendant la séance, mais <strong>après</strong>, pendant le repos et le sommeil.</p>
+  <ul>
+    <li><strong>Débutant :</strong> 3 séances de sport par semaine suffisent pour progresser.</li>
+    <li><strong>Intermédiaire :</strong> 4 séances par semaine.</li>
+    <li><strong>Avancé :</strong> 5-6 séances, mais avec des jours de récupération active (marche, étirements).</li>
+  </ul>
+  <p><strong>Ce que tu PEUX faire tous les jours :</strong> marcher 20-30 minutes, t'étirer 5-10 minutes, faire de la mobilité. Mais l'entraînement intense (musculation, HIIT) nécessite des jours de repos.</p>
+  <p>Signes que tu t'entraînes trop : fatigue persistante, baisse de performance, irritabilité, douleurs articulaires, troubles du sommeil. Si tu as un de ces signes, prends une semaine de repos complet ou réduis ton volume de 50 %.</p>
+
+  <h3>7. Quelle est la meilleure heure pour s'entraîner ?</h3>
+  <p>La <strong>meilleure heure</strong> est celle à laquelle tu peux être <strong>cohérent</strong>. Point.</p>
+  <p>Science : tes performances physiques sont légèrement meilleures en fin d'après-midi (16h-18h) car ta température corporelle est plus haute, tes articulations plus lubrifiées, ton système nerveux plus éveillé. Mais la différence est minime comparée à l'impact de sauter une séance parce que tu n'arrives pas à te motiver à 6h du matin.</p>
+  <p><strong>Entraînement matin :</strong> + de cohérence (la journée n'a pas encore déraillé). Met ton réveil 30 min plus tôt, prépare tes affaires la veille.</p>
+  <p><strong>Entraînement midi :</strong> Idéal si tu as une salle près du travail ou du domicile. Coupe ta journée, rebooste ton énergie.</p>
+  <p><strong>Entraînement soir :</strong> Performance maximale. Attention à ne pas finir trop tard (pas de sport intense après 21h, ça peut perturber le sommeil).</p>
+
+  <h3>8. Comment savoir si je progresse ?</h3>
+  <p>Le poids sur la balance n'est qu'un indicateur parmi d'autres, et pas le plus fiable. Voici de <strong>vrais marqueurs de progression :</strong></p>
+  <ul>
+    <li><strong>Force :</strong> Est-ce que tu soulèves plus lourd ou fais plus de répétitions qu'il y a un mois ? C'est le meilleur indicateur de progrès en musculation.</li>
+    <li><strong>Endurance :</strong> Est-ce que tu cours plus longtemps, plus vite, ou que tu récupères mieux ?</li>
+    <li><strong>Mensurations :</strong> Tour de taille, tour de cuisse, tour de bras. Plus fiable que la balance car le muscle pèse plus lourd que la graisse.</li>
+    <li><strong>Photos :</strong> Prends une photo dans les mêmes conditions (même heure, même éclairage, mêmes vêtements) toutes les 2-4 semaines. Le miroir ment, la photo pas.</li>
+    <li><strong>Comment tu te sens :</strong> Plus d'énergie ? Meilleur sommeil ? Moins de stress ? Meilleure concentration ? C'est ça le vrai progrès.</li>
+    <li><strong>Comment tes vêtements tombent :</strong> Un jean qui serrait moins, une ceinture qui doit être resserrée d'un cran. C'est concret.</li>
+  </ul>
+
+  <h3>9. Que faire si je stagne ?</h3>
+  <p>La stagnation est normale. Tout le monde stagne. Le corps s'adapte et a besoin d'être <strong>surpris</strong> pour continuer à progresser. Voici comment la casser :</p>
+  <p><strong>En perte de poids :</strong></p>
+  <ul>
+    <li>Vérifie que tu es vraiment en déficit. Les portions ont-elles augmenté sans que tu t'en rendes compte ?</li>
+    <li>Réajuste tes calories (tu pèses moins → tu as besoin de moins de calories).</li>
+    <li>Ajoute 2000-3000 pas par jour.</li>
+    <li>Augmente l'intensité de tes séances.</li>
+    <li>Fais une semaine de « maintien » (mange à maintenance) pour reset le métabolisme, puis reprends le déficit.</li>
+  </ul>
+  <p><strong>En prise de muscle :</strong></p>
+  <ul>
+    <li>Ajoute des calories (+200 par jour). Peut-être que tu n'es plus en surplus.</li>
+    <li>Change tes exercices ou leur ordre.</li>
+    <li>Augmente le volume (séries) ou l'intensité (charge).</li>
+    <li>Vérifie ton sommeil et ta récupération.</li>
+    <li>Fais une semaine de décharge (50 % du volume).</li>
+  </ul>
+  <p><strong>Règle d'or :</strong> Si tu stagnes depuis 3-4 semaines, change UNE variable. Pas tout. Identifie ce qui bloque et ajuste en conséquence.</p>
+
+  <h3>10. Faut-il un coach ou peut-on faire seul ?</h3>
+  <p>Les deux options marchent, tout dépend de <strong>ton budget et de tes besoins</strong>.</p>
+  <p><strong>Seul (avec ce guide et les ressources en ligne) :</strong> Parfait si tu es autonome, que tu aimes apprendre par toi-même, et que tu as le temps de faire tes propres recherches. Internet regorge d'informations gratuites de qualité. Le risque : trop d'infos tue l'info, tu passes plus de temps à chercher qu'à faire.</p>
+  <p><strong>Avec un coach :</strong> Utile si :</p>
+  <ul>
+    <li>Tu n'arrives pas à être cohérent seul (accountability)</li>
+    <li>Tu veux gagner du temps (le coach fait les programmes et ajuste)</li>
+    <li>Tu as des objectifs spécifiques (compétition, préparation physique)</li>
+    <li>Tu ne sais pas par où commencer et tu es paralysé</li>
+  </ul>
+  <p><strong>Budget :</strong> Un coach en ligne coûte 100-300 €/mois. Un coach en salle 40-80 €/séance. Si tu peux te le permettre, c'est un investissement rentable. Sinon, ce livre + YouTube + une appli de tracking suffisent largement pour les 6-12 premiers mois.</p>
+  <p><strong>Mon conseil :</strong> Commence seul avec ce guide pendant 3 mois. Si tu progresses et que tu es cohérent, continue seul. Si tu stagnes ou que tu manques de motivation, prends un coach ne serait-ce que 1-2 mois pour te remettre sur les rails.</p>
+</div>
+
+<div class="content page-break" id="les-10-idees-recues-sur-la-nutrition-et-lentrainement">
+  <h2>Les 10 idées reçues sur la nutrition et l'entraînement</h2>
+
+  <h3>1. « Les œufs sont mauvais pour le cholestérol »</h3>
+  <p>FAUX. Cette idée vient d'une étude des années 60 qui a été largement démentie depuis. Les œufs contiennent du cholestérol alimentaire, mais celui-ci a très peu d'impact sur ton cholestérol sanguin. C'est le <strong>gras saturé et les glucides raffinés</strong> qui augmentent vraiment le mauvais cholestérol.</p>
+  <p>Les œufs sont au contraire l'un des aliments les plus nutritifs : protéines complètes, vitamines A, D, E, B12, choline (essentielle pour le cerveau). Tu peux manger 2 à 4 œufs par jour sans aucun problème. Les athlètes et bodybuilders en mangent souvent 6 à 8 par jour sans impact négatif sur leur santé cardiovasculaire.</p>
+
+  <h3>2. « Le gras rend gros »</h3>
+  <p>FAUX. Les lipides sont essentiels à ton organisme : production d'hormones (testostérone, œstrogènes), absorption des vitamines liposolubles (A, D, E, K), santé du cerveau (60 % de ton cerveau est composé de graisses).</p>
+  <p>Ce qui fait grossir, c'est <strong>l'excès de calories</strong>, pas le gras en lui-même. 1 g de lipides = 9 calories (vs 4 pour les protéines et glucides), donc les aliments gras sont plus caloriques, mais ils sont aussi plus satiétogènes. Manger du bon gras (avocat, huile d'olive, noix, poisson gras) t'aide à te sentir rassasié et à stabiliser ta glycémie.</p>
+  <p><strong>Ne diabolise pas le gras.</strong> Vise 0.8-1 g par kg de poids de corps minimum. Si tu es une femme, ne descends jamais sous 40-50 g de lipides par jour — ta santé hormonale en dépend.</p>
+
+  <h3>3. « Il faut boire 3 L d'eau par jour »</h3>
+  <p>VRAI... mais ça dépend. La recommandation « 2-3 litres par jour » inclut <strong>l'eau contenue dans les aliments</strong> (soupe, fruits, légumes, etc.). Tes besoins exacts dépendent de ton poids, de ton activité, de la température extérieure, et de ta transpiration.</p>
+  <p><strong>Méthode simple :</strong> urine claire = bien hydraté. Urine foncée = bois plus. Vise 30-40 ml par kg de poids de corps. Pour une personne de 70 kg : 2.1 à 2.8 L, aliments inclus.</p>
+  <p><strong>Astuce :</strong> Bois un grand verre d'eau au réveil. Emporte une gourde de 1 L partout et remplis-la 2 fois par jour. Évite de boire 1 L d'un coup — ton corps ne peut pas absorber plus de 500-700 ml par heure, le reste part dans les urines.</p>
+
+  <h3>4. « Les squats sont mauvais pour les genoux »</h3>
+  <p>FAUX — si tu les fais correctement. Un squat bien exécuté est l'un des meilleurs exercices pour renforcer les genoux, les quadriceps et les fessiers. Le problème vient des <strong>mauvaises techniques</strong> : genoux qui partent vers l'intérieur (valgus), dos rond, poids trop lourd trop vite.</p>
+  <p><strong>Règles pour des squats sans douleur :</strong></p>
+  <ul>
+    <li>Genoux alignés avec les orteils (pousse les genoux vers l'extérieur pendant tout le mouvement)</li>
+    <li>Descends au moins à 90° (ou à la profondeur où tu peux garder le dos droit)</li>
+    <li>Garde le poids sur les talons, pas sur les orteils</li>
+    <li>Ne verrouille pas les genoux en haut du mouvement</li>
+    <li>Échauffe-toi avant : 5-10 min de mobilité chevilles et hanches</li>
+  </ul>
+  <p>Si tes genoux te font mal en squat, consulte un kiné. 9 fois sur 10, le problème est ailleurs (faiblesse des fessiers, chevilles raides, technique incorrecte).</p>
+
+  <h3>5. « Les glucides le soir font grossir »</h3>
+  <p>FAUX. Le corps ne stocke pas les glucides différemment selon l'heure de la journée. Ce qui compte, c'est <strong>le total calorique sur 24 h</strong>, pas quand tu manges tes glucides.</p>
+  <p>En réalité, manger des glucides le soir peut être bénéfique : ils favorisent la production de sérotonine (précurseur de la mélatonine) et améliorent la qualité du sommeil. Les athlètes consomment souvent leurs glucides le soir pour optimiser la récupération nocturne.</p>
+  <p><strong>Quand éviter les glucides le soir :</strong> si tu as des problèmes de reflux ou si tu vas te coucher immédiatement après manger (attends au moins 2 heures avant de dormir). Mais le mythe « pas de glucides après 18 h » est une ineptie.</p>
+
+  <h3>6. « Plus tu transpires, plus tu brûles »</h3>
+  <p>FAUX. La transpiration est un mécanisme de <strong>régulation de la température corporelle</strong>, pas un indicateur de dépense calorique. Transpirer beaucoup ne signifie pas que tu as brûlé plus de calories.</p>
+  <p>Tu peux brûler 500 calories en faisant du vélo sans presque transpirer (climatisation, ventilation), et seulement 200 calories en faisant du hot yoga en transpirant comme une fontaine. La sueur, c'est de l'eau et des électrolytes perdus, pas de la graisse fondue.</p>
+  <p><strong>Vrais indicateurs de dépense :</strong> fréquence cardiaque, distance parcourue, poids soulevé, durée de l'effort. Pas la sueur sur ton front.</p>
+
+  <h3>7. « Les abdos font perdre du ventre »</h3>
+  <p>FAUX. C'est l'idée reçue la plus tenace et la plus dommageable. Faire des abdos renforce les muscles abdominaux, mais ça ne fait pas <strong>fondre la couche de graisse</strong> qui les recouvre. Tu peux avoir des abdos en acier invisibles sous 2 cm de graisse.</p>
+  <p>Pour voir tes abdos :</p>
+  <ul>
+    <li>Perds de la graisse corporelle via un déficit calorique (nutrition avant tout)</li>
+    <li>Fais du sport complet (pas que des abdos — le corps brûle la graisse partout)</li>
+    <li>Dors assez et gère ton stress (cortisol + graisse abdominale = pire ennemie)</li>
+    <li>Quand tu seras à 12-15 % de graisse corporelle (homme) ou 18-22 % (femme), tes abdos commenceront à apparaître — si tu les as travaillés</li>
+  </ul>
+  <p>Continue de faire des abdos pour renforcer ton core (posture, prévention des blessures), mais ne compte pas sur eux pour perdre du ventre.</p>
+
+  <h3>8. « Les femmes ne doivent pas soulever lourd »</h3>
+  <p>FAUX, et c'est l'une des idées les plus limitantes pour les femmes. Soulever lourd ne rendra pas une femme « massive » ou « masculine » — les femmes ont 10 à 20 fois moins de testostérone que les hommes, ce qui rend la prise de masse spectaculaire extrêmement difficile.</p>
+  <p><strong>Bénéfices de la musculation lourde pour les femmes :</strong></p>
+  <ul>
+    <li>Os plus denses (prévention de l'ostéoporose)</li>
+    <li>Métabolisme plus élevé (le muscle brûle des calories au repos)</li>
+    <li>Meilleure silhouette : plus ferme, plus tonique, plus galbée</li>
+    <li>Meilleure santé hormonale et mentale</li>
+    <li>Moins de blessures au quotidien</li>
+  </ul>
+  <p><strong>Message aux femmes :</strong> ne faites pas que du cardio et des séries interminables de 50 répétitions avec 2 kg. Entraînez-vous en force. Faites des squats, des soulevés de terre, des pompes, des tractions. Votre corps vous remerciera et vous aurez la meilleure version de vous-même.</p>
+
+  <h3>9. « Les étirements avant le sport empêchent les blessures »</h3>
+  <p>FAUX, si on parle d'étirements <strong>statiques</strong> (tenir une position 30 secondes). De nombreuses études montrent que les étirements statiques avant l'effort peuvent <strong>réduire les performances</strong> (force, puissance, vitesse) sans diminuer significativement le risque de blessure.</p>
+  <p><strong>Ce qui fonctionne vraiment :</strong></p>
+  <ul>
+    <li><strong>Échauffement dynamique</strong> avant l'effort : montées de genoux, talons-fesses, rotations de bras, fentes dynamiques, jumping jacks. Ça augmente la température corporelle, lubrifie les articulations, prépare le système nerveux.</li>
+    <li><strong>Étirements statiques</strong> APRÈS l'effort ou lors d'une séance dédiée (yoga, mobilité). C'est là qu'ils améliorent la flexibilité et accélèrent la récupération.</li>
+  </ul>
+
+  <h3>10. « Le sport seul suffit à perdre du poids »</h3>
+  <p>FAUX — et c'est l'erreur qui décourage le plus de monde. Le sport brûle des calories, mais :</p>
+  <ul>
+    <li>30 minutes de course à pied brûlent environ 300 calories — l'équivalent d'un croissant et d'un café au lait.</li>
+    <li>Le sport augmente l'appétit (tu manges souvent plus après sans t'en rendre compte).</li>
+    <li>Le corps compense : tu bouges moins le reste de la journée après une séance intense (NEAT réduit).</li>
+  </ul>
+  <p><strong>La vérité :</strong> la perte de poids se fait à 70-80 % dans la cuisine et 20-30 % dans la salle de sport. Le sport est ESSENTIEL pour la santé, le maintien musculaire, le bien-être mental, mais il ne compensera jamais une mauvaise alimentation.</p>
+  <p>Tu ne peux pas « brûler » un repas de 1500 calories avec une séance de 30 minutes. <strong>Combine les deux :</strong> nutrition pour le déficit calorique + sport pour la santé et le maintien musculaire. C'est la combinaison gagnante.</p>
+</div>
+
+<div class="content page-break" id="guide-des-complements-alimentaires">
+  <h2>Guide des compléments alimentaires</h2>
+
+  <p>Le marché des compléments alimentaires est une industrie de plusieurs milliards d'euros pleine d'arnaques et de promesses vides. Voici la vérité — ce qui marche, ce qui ne marche pas, et comment les utiliser.</p>
+
+  <h3>Les compléments qui valent vraiment le coup</h3>
+
+  <h4>Whey protéine (ou protéine végétale)</h4>
+  <p><strong>Quoi :</strong> Poudre de protéines issue du lait (whey = petit-lait) ou de sources végétales (pois, riz, soja).</p>
+  <p><strong>Pourquoi :</strong> Atteindre 1.6-2.2 g de protéines par kg de poids de corps chaque jour est difficile uniquement avec la nourriture solide. Un shaker de whey (25-30 g de protéines) te permet d'atteindre tes objectifs facilement.</p>
+  <p><strong>Dosage :</strong> 1 à 2 shakers par jour selon tes besoins (25-50 g de protéines).</p>
+  <p><strong>Quand :</strong> Dans les 2 h après l'entraînement (pour la récupération) ou en collation en milieu de matinée/d'après-midi.</p>
+  <p><strong>Efficacité :</strong> ★★★★★. Indispensable si tu as du mal à manger assez de protéines. Choisis une whey isolate (moins de lactose, plus pure). Prix : 30-60 €/kg.</p>
+
+  <h4>Créatine monohydrate</h4>
+  <p><strong>Quoi :</strong> Un composé naturellement présent dans les muscles (viande rouge, poisson) qui aide à produire de l'ATP (énergie) pendant les efforts explosifs.</p>
+  <p><strong>Pourquoi :</strong> C'est LE supplément le plus étudié au monde (des centaines d'études, décennies de recherche). Il améliore la force, la puissance, la récupération, et a même des bénéfices cognitifs.</p>
+  <p><strong>Dosage :</strong> 3-5 g par jour. Pas besoin de phase de charge (prends 5 g/jour dès le début).</p>
+  <p><strong>Quand :</strong> N'importe quand dans la journée, avec ou sans nourriture. La constance compte plus que le timing.</p>
+  <p><strong>Effets secondaires :</strong> Aucun à dose normale. Mythe : « ça abîme les reins » — FAUX (sauf si tu as déjà une maladie rénale). Mythe : « ça fait gonfler comme un ballon » — FAUX (tu peux retenir un peu d'eau intramusculaire, ce qui donne un aspect plus « plein », pas un ballonnement digestif).</p>
+  <p><strong>Efficacité :</strong> ★★★★★. Le meilleur rapport qualité-prix de tous les suppléments. 10-20 € pour 3 mois. Incontournable.</p>
+
+  <h4>Oméga-3 (Huile de poisson)</h4>
+  <p><strong>Quoi :</strong> Acides gras essentiels EPA et DHA. Essentiels = ton corps ne peut pas les produire, tu dois les apporter par l'alimentation.</p>
+  <p><strong>Pourquoi :</strong> Anti-inflammatoire puissant. Bénéfique pour le cœur, le cerveau, les articulations, la peau, la santé mentale. La majorité des gens ont un ratio oméga-6/oméga-3 déséquilibré (trop d'omega-6 dans l'alimentation moderne).</p>
+  <p><strong>Dosage :</strong> 1-2 g d'EPA + DHA combinés par jour. Vérifie l'étiquette : la plupart des capsules à « 1000 mg » ne contiennent que 200-300 mg d'EPA+DHA. Choisis une marque avec au moins 500 mg d'EPA+DHA par capsule.</p>
+  <p><strong>Quand :</strong> Avec un repas contenant du gras (pour l'absorption).</p>
+  <p><strong>Efficacité :</strong> ★★★★☆. Utile si tu ne manges pas 2-3 portions de poisson gras par semaine (saumon, maquereau, sardines). 15-30 €/mois.</p>
+
+  <h4>Vitamine D</h4>
+  <p><strong>Quoi :</strong> Hormone/vitamine produite par la peau sous l'effet du soleil.</p>
+  <p><strong>Pourquoi :</strong> Carence chronique chez 80 % de la population (sédentarité intérieure, climat, crème solaire). Essentielle pour l'immunité, l'humeur, la santé osseuse, la testostérone.</p>
+  <p><strong>Dosage :</strong> 2000-4000 UI par jour en hiver, 1000-2000 UI/jour en été si tu es peu exposé au soleil. La dose optimale dépend de ton taux sanguin — fais une prise de sang pour savoir où tu en es.</p>
+  <p><strong>Quand :</strong> Avec un repas contenant du gras (vitamine liposoluble). De préférence le matin (certaines personnes rapportent des troubles du sommeil si prise le soir).</p>
+  <p><strong>Efficacité :</strong> ★★★★☆. Quasi obligatoire si tu vis dans un pays avec peu de soleil (France, Canada, Nord de l'Europe). 5-10 €/mois.</p>
+
+  <h4>Magnésium</h4>
+  <p><strong>Quoi :</strong> Minéral essentiel impliqué dans +300 réactions enzymatiques (sommeil, récupération, fonction musculaire, nerveuse).</p>
+  <p><strong>Pourquoi :</strong> Le stress, le sport, et une alimentation transformée épuisent tes réserves de magnésium. La carence se manifeste par des crampes, de l'anxiété, des troubles du sommeil, de la fatigue.</p>
+  <p><strong>Dosage :</strong> 200-400 mg/jour. Privilégie le <strong>bisglycinate de magnésium</strong> (meilleure absorption, moins d'effets laxatifs que le citrate ou l'oxyde).</p>
+  <p><strong>Quand :</strong> Le soir, 30-60 min avant le coucher. Le magnésium aide à la relaxation et à l'endormissement.</p>
+  <p><strong>Efficacité :</strong> ★★★★☆. Excellent si tu es stressé, sportif, ou que tu as du mal à dormir. 10-20 €/mois.</p>
+
+  <h4>Zinc</h4>
+  <p><strong>Quoi :</strong> Minéral essentiel pour l'immunité, la testostérone, la réparation tissulaire, la santé de la peau.</p>
+  <p><strong>Dosage :</strong> 15-30 mg/jour. Prends-le avec de la nourriture (peut nauser à jeun).</p>
+  <p><strong>Efficacité :</strong> ★★★☆☆. Utile si tu es carencé (les sportifs et végétaliens sont à risque). 5-10 €/mois.</p>
+
+  <h4>Caséine</h4>
+  <p><strong>Quoi :</strong> Protéine du lait à digestion lente (6-8 h vs 1-2 h pour la whey).</p>
+  <p><strong>Pourquoi :</strong> Fournit un flux continu d'acides aminés, idéal avant le coucher ou entre les repas longs.</p>
+  <p><strong>Dosage :</strong> 25-40 g avant le coucher.</p>
+  <p><strong>Efficacité :</strong> ★★★☆☆. Utile mais pas indispensable — si tu manges assez de protéines dans la journée, la caséine n'apporte pas de bénéfice supplémentaire significatif. 30-50 €/kg.</p>
+
+  <h4>Caféine (avant entraînement)</h4>
+  <p><strong>Quoi :</strong> Stimulant du système nerveux central. Améliore la concentration, réduit la perception de l'effort.</p>
+  <p><strong>Dosage :</strong> 200-400 mg (une tasse de café = ~100 mg). Prends-la 30-45 min avant l'entraînement.</p>
+  <p><strong>Attention :</strong> Ne prends pas de caféine après 14h (perturbe le sommeil). Fais des « pauses caféine » (1 semaine sans toutes les 8-12 semaines) pour maintenir la sensibilité.</p>
+  <p><strong>Efficacité :</strong> ★★★★☆. Un café ou un pré-workout sans caféine avant la séance peut vraiment améliorer la performance. Gratuit si tu bois déjà du café.</p>
+
+  <h3>Les compléments qui sont une perte d'argent</h3>
+
+  <p><strong>BCAA (acides aminés ramifiés) :</strong> 90 % des gens n'en ont pas besoin. Si tu manges assez de protéines (whey, viande, œufs), tu obtiens déjà tous les BCAA nécessaires. Les BCAA seuls (sans les autres acides aminés essentiels) sont inférieurs à une whey protéine complète. Prix : 20-40 €/mois pour un produit inutile.</p>
+  <p><strong>Brûleurs de graisse :</strong> Tous les « fat burners » sont soit inefficaces, soit dangereux (éphédrine, DNP, clenbutérol). Les versions légales (caféine, thé vert, L-carnitine) ont un effet négligeable. Le seul brûleur de graisse qui marche : le déficit calorique.</p>
+  <p><strong>Testostérone boosters :</strong> Tribulus, ZMA (zinc-magnésium-vitamine B6), D-aspartic acid. Aucune étude sérieuse ne montre d'augmentation significative de la testostérone chez les hommes en bonne santé. Le ZMA peut aider le sommeil (grâce au magnésium), pas la testostérone.</p>
+  <p><strong>Collagène :</strong> Cher et peu efficace. Ton corps décompose le collagène en acides aminés comme n'importe quelle autre protéine. Mange des protéines et de la vitamine C, c'est plus efficace et moins cher.</p>
+  <p><strong>Glutamine :</strong> Prétendue amélioration de la récupération et de l'immunité. Pas de preuves solides. Ton corps produit déjà de la glutamine en quantité suffisante.</p>
+
+  <h3>Tableau récapitulatif</h3>
+  <table>
+    <thead>
+      <tr><th>Supplément</th><th>Utilité</th><th>Dosage</th><th>Quand</th><th>Prix</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Whey protéine</td><td>★★★★★</td><td>25-50 g/jour</td><td>Post-workout ou collation</td><td>30-60 €/kg</td></tr>
+      <tr><td>Créatine</td><td>★★★★★</td><td>3-5 g/jour</td><td>N'importe quand</td><td>10-20 €/3 mois</td></tr>
+      <tr><td>Oméga-3</td><td>★★★★☆</td><td>1-2 g EPA+DHA</td><td>Avec un repas</td><td>15-30 €/mois</td></tr>
+      <tr><td>Vitamine D</td><td>★★★★☆</td><td>2000-4000 UI</td><td>Le matin, avec gras</td><td>5-10 €/mois</td></tr>
+      <tr><td>Magnésium</td><td>★★★★☆</td><td>200-400 mg</td><td>Le soir</td><td>10-20 €/mois</td></tr>
+      <tr><td>Zinc</td><td>★★★☆☆</td><td>15-30 mg</td><td>Avec nourriture</td><td>5-10 €/mois</td></tr>
+      <tr><td>Caféine</td><td>★★★★☆</td><td>200-400 mg</td><td>30-45 min avant sport</td><td>Gratuit (café)</td></tr>
+      <tr><td>Caséine</td><td>★★★☆☆</td><td>25-40 g</td><td>Avant le coucher</td><td>30-50 €/kg</td></tr>
+      <tr><td>BCAA</td><td>★☆☆☆☆</td><td>—</td><td>—</td><td>À éviter</td></tr>
+      <tr><td>Brûleurs de graisse</td><td>★☆☆☆☆</td><td>—</td><td>—</td><td>À éviter</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Règle d'or :</strong> Si tu devais n'en choisir que deux, prends de la <strong>créatine</strong> (le plus étudié) et de la <strong>whey</strong> (le plus pratique). Si tu as un budget plus large, ajoute vitamine D et magnésium. Tout le reste est secondaire.</p>
+</div>
+
+<div class="content page-break" id="10-recettes-saines-et-rapides-moins-de-15-minutes">
+  <h2>10 recettes saines et rapides (moins de 15 minutes)</h2>
+  <p>Toutes ces recettes se préparent en moins de 15 minutes, avec des ingrédients simples qu'on trouve dans n'importe quel supermarché. Pas de matériel exotique — juste une poêle, une casserole, et un couteau.</p>
+
+  <h3>Petits-déjeuners (× 2)</h3>
+
+  <h4>1. Omelette avocat-feta (5 min)</h4>
+  <p><strong>Ingrédients :</strong> 3 œufs, ½ avocat, 30 g de feta, sel, poivre, une pincée de piment (optionnel).</p>
+  <p><strong>Étapes :</strong> Bats les œufs dans un bol avec sel et poivre. Fais chauffer une poêle avec un filet d'huile d'olive. Verse les œufs et laisse cuire à feu moyen pendant 2-3 min. Émiette la feta sur l'omelette, ajoute l'avocat coupé en tranches. Plie et sers.</p>
+  <p><strong>Nutrition :</strong> ~400 kcal, 25 g de protéines, 30 g de lipides, 5 g de glucides. Parfait pour tenir jusqu'au déjeuner sans fringale.</p>
+
+  <h4>2. Porridge protéiné aux fruits (7 min)</h4>
+  <p><strong>Ingrédients :</strong> 50 g de flocons d'avoine, 200 ml de lait (végétal ou vache), 1 mesure de whey protéine (vanille ou nature), 100 g de fruits frais (banane, myrtilles, fraises), 1 cuillère à soupe de beurre de cacahuète (optionnel).</p>
+  <p><strong>Étapes :</strong> Fais chauffer le lait dans une casserole. Ajoute les flocons d'avoine et laisse cuire 3-5 min à feu doux en remuant. Hors du feu, ajoute la whey et mélange bien. Verse dans un bol, ajoute les fruits coupés et le beurre de cacahuète.</p>
+  <p><strong>Variante :</strong> Prépare la veille un overnight oats (avoine + lait + whey au frigo toute la nuit). 1 min de préparation le matin.</p>
+  <p><strong>Nutrition :</strong> ~450 kcal, 35 g de protéines, 55 g de glucides, 12 g de lipides.</p>
+
+  <h3>Déjeuners (× 3)</h3>
+
+  <h4>3. Bowl de poulet avocat (10 min)</h4>
+  <p><strong>Ingrédients :</strong> 1 boîte de thon ou 150 g de poulet cuit (restes), 1 avocat, 100 g de riz cuit (ou quinoa), ½ concombre, 1 tomate, jus d'½ citron, huile d'olive, sel, poivre.</p>
+  <p><strong>Étapes :</strong> Dans un bol, dispose le riz cuit. Ajoute le thon émietté (ou le poulet coupé en dés). Coupe l'avocat, le concombre et la tomate en dés. Ajoute au bol. Arrose d'huile d'olive et de jus de citron. Sale, poivre, mélange et c'est prêt.</p>
+  <p><strong>Nutrition :</strong> ~500 kcal, 35 g de protéines, 40 g de glucides, 20 g de lipides.</p>
+
+  <h4>4. Pâtes complètes aux crevettes et courgettes (12 min)</h4>
+  <p><strong>Ingrédients :</strong> 100 g de pâtes complètes, 150 g de crevettes décortiquées, 1 courgette, 2 gousses d'ail, huile d'olive, jus d'½ citron, sel, poivre, persil (optionnel).</p>
+  <p><strong>Étapes :</strong> Fais cuire les pâtes selon les instructions (généralement 8-10 min). Pendant ce temps, coupe la courgette en demi-rondelles. Fais chauffer l'huile dans une poêle, ajoute l'ail émincé, puis les courgettes (3 min). Ajoute les crevettes et fais cuire 2 min de chaque côté. Égoutte les pâtes et ajoute-les dans la poêle. Ajoute le jus de citron, mélange et sers avec du persil.</p>
+  <p><strong>Nutrition :</strong> ~480 kcal, 35 g de protéines, 50 g de glucides, 14 g de lipides.</p>
+
+  <h4>5. Salade de lentilles, feta et légumes (8 min)</h4>
+  <p><strong>Ingrédients :</strong> 1 boîte de lentilles vertes (égouttées), 50 g de feta, 1 poivron rouge, 1 tomate, ½ oignon rouge, 2 cuillères à soupe d'huile d'olive, 1 cuillère à soupe de vinaigre balsamique, sel, poivre.</p>
+  <p><strong>Étapes :</strong> Rince les lentilles. Coupe le poivron, la tomate et l'oignon en petits dés. Émiette la feta. Mélange tout dans un saladier. Prépare la vinaigrette (huile, vinaigre, sel, poivre) et verse sur la salade. Mélange et sers.</p>
+  <p><strong>Astuce :</strong> Ajoute des œufs durs ou du poulet pour plus de protéines.</p>
+  <p><strong>Nutrition :</strong> ~420 kcal, 22 g de protéines, 40 g de glucides, 18 g de lipides.</p>
+
+  <h3>Dîners (× 3)</h3>
+
+  <h4>6. Saumon poêlé, riz et épinards (12 min)</h4>
+  <p><strong>Ingrédients :</strong> 1 pavé de saumon (150-200 g), 100 g de riz cuit (ou 50 g cru), 100 g d'épinards frais, 1 gousse d'ail, huile d'olive, jus de citron, sel, poivre.</p>
+  <p><strong>Étapes :</strong> Si tu n'as pas de riz déjà cuit, lance-le en premier (10 min de cuisson). Pendant ce temps, fais chauffer l'huile dans une poêle à feu moyen-vif. Dépose le saumon côté peau 4 min, retourne et cuis 3 min. Ajoute les épinards avec l'ail émincé dans la même poêle les 2 dernières minutes. Sers le saumon sur le riz avec les épinards et un filet de citron.</p>
+  <p><strong>Nutrition :</strong> ~550 kcal, 40 g de protéines, 40 g de glucides, 22 g de lipides, riche en oméga-3.</p>
+
+  <h4>7. Stir-fry de bœuf aux légumes (10 min)</h4>
+  <p><strong>Ingrédients :</strong> 150 g de bœuf (émincé ou en lanières), 1 poivron, 1 carotte, 100 g de brocolis, 2 cuillères à soupe de sauce soja (salée), 1 cuillère à soupe d'huile de sésame, 1 gousse d'ail, 1 cm de gingembre.</p>
+  <p><strong>Étapes :</strong> Coupe les légumes en fines lamelles. Fais chauffer l'huile dans un wok ou une grande poêle à feu vif. Saisis le bœuf 1-2 min (il doit colorer sans cuire complètement), retire-le. Dans la même poêle, fais sauter l'ail et le gingembre 30 secondes, puis ajoute les légumes (3-4 min en remuant). Remets le bœuf, ajoute la sauce soja, mélange 1 min et sers.</p>
+  <p><strong>Option :</strong> Accompagne de riz ou de nouilles de konjac (faible en calories).</p>
+  <p><strong>Nutrition :</strong> ~400 kcal, 35 g de protéines, 15 g de glucides, 22 g de lipides.</p>
+
+  <h4>8. Oeufs brouillés protéinés sur toast complet (7 min)</h4>
+  <p><strong>Ingrédients :</strong> 4 œufs, 2 tranches de pain complet, 50 g de fromage blanc (ou cottage cheese), ½ avocat, sel, poivre, ciboulette (optionnel).</p>
+  <p><strong>Étapes :</strong> Toaste le pain. Bats les œufs avec le fromage blanc (ça les rend plus crémeux et ajoute des protéines). Fais chauffer une poêle à feu moyen, verse les œufs et remue constamment avec une spatule pendant 2-3 min jusqu'à consistance crémeuse. Écrase l'avocat sur les toasts, dépose les œufs brouillés dessus, sale, poivre et ciboulette.</p>
+  <p><strong>Nutrition :</strong> ~450 kcal, 32 g de protéines, 30 g de glucides, 22 g de lipides.</p>
+
+  <h3>Snacks (× 2)</h3>
+
+  <h4>9. Yaourt grec aux fruits et amandes (3 min)</h4>
+  <p><strong>Ingrédients :</strong> 200 g de yaourt grec (0 % ou entier selon tes calories), 100 g de fruits rouges (surgelés ou frais), 15 g d'amandes, 1 cuillère à café de miel ou sirop d'érable (optionnel).</p>
+  <p><strong>Étapes :</strong> Verse le yaourt dans un bol. Ajoute les fruits, les amandes concassées, et un filet de miel si tu veux du sucré. Mélange et déguste.</p>
+  <p><strong>Variante salée :</strong> Yaourt grec + concombre râpé + ail + menthe = tzatziki, à manger avec des bâtonnets de légumes.</p>
+  <p><strong>Nutrition :</strong> ~300 kcal, 20 g de protéines, 25 g de glucides, 12 g de lipides.</p>
+
+  <h4>10. Houmous rapide aux légumes (5 min)</h4>
+  <p><strong>Ingrédients :</strong> 1 boîte de pois chiches (égouttés), 1 cuillère à soupe de tahini (purée de sésame — optionnel mais meilleur), 1 gousse d'ail, jus d'½ citron, 1 cuillère à soupe d'huile d'olive, sel, cumin (optionnel), bâtonnets de légumes (carotte, concombre, poivron, céleri).</p>
+  <p><strong>Étapes :</strong> Mixe les pois chiches, l'ail, le tahini, le jus de citron, l'huile d'olive et les épices jusqu'à obtenir une texture lisse. Ajoute un peu d'eau si trop épais. Sers dans un bol avec les bâtonnets de légumes.</p>
+  <p><strong>Astuce :</strong> Prépare-le pour 3 jours, il se conserve parfaitement au frigo.</p>
+  <p><strong>Nutrition :</strong> ~350 kcal pour la portion complète, 15 g de protéines, 30 g de glucides, 18 g de lipides.</p>
+</div>
+
+<div class="content page-break" id="plan-de-progression-6-mois">
+  <h2>Plan de progression 6 mois</h2>
+  <p>Voici un plan complet sur 6 mois, divisé en 3 phases de 2 mois. Chaque phase a des objectifs spécifiques en nutrition, entraînement, sommeil et santé mentale. L'idée n'est pas de tout changer d'un coup, mais de <strong>construire couche par couche</strong>.</p>
+
+  <h3>Phase 1 : Mois 1-2 — Les fondations</h3>
+  <p><strong>Objectif :</strong> Créer les habitudes de base. Pas de performance, pas de perfection. Juste la constance.</p>
+
+  <h4>Nutrition</h4>
+  <ul>
+    <li>Objectif principal : Calculer et stabiliser tes calories. Pas de restriction drastique, juste de la <strong>prise de conscience</strong>.</li>
+    <li>Tracke tes repas avec une appli (MyFitnessPal ou Cronometer) pendant les 2 premières semaines pour comprendre où tu en es.</li>
+    <li>Mois 1 : Vise 80 % d'aliments non transformés. Ajoute des protéines à chaque repas. Bois 2 L d'eau par jour.</li>
+    <li>Mois 2 : Meal prep 1x par semaine. Ajoute une portion de légumes à chaque repas. Réduis le sucre ajouté de 50 %.</li>
+    <li><strong>Calories cibles (estimation) :</strong> Perte de poids = poids × 24 × 0.85. Maintien = poids × 24 × 1. Prise de masse = poids × 24 × 1.15. Ajuste selon tes résultats après 2-3 semaines.</li>
+    <li><strong>Protéines :</strong> 1.6 g/kg/jour. Non négociable.</li>
+  </ul>
+
+  <h4>Entraînement</h4>
+  <ul>
+    <li>Cardio : 2-3 séances de LISS par semaine (marche rapide 20-30 min). Pas de HIIT le premier mois.</li>
+    <li>Musculation : 2-3 séances de full body par semaine (programme débutant — module 7).</li>
+    <li>Mobilité : 5 min d'étirements ou de mobilité au réveil ou avant le coucher.</li>
+    <li><strong>Règle :</strong> Si tu rates une séance, ne la double pas le lendemain. Continue ton planning normal.</li>
+  </ul>
+
+  <h4>Sommeil</h4>
+  <ul>
+    <li>Objectif : 7 h minimum par nuit.</li>
+    <li>Heure de coucher fixe (même le week-end à 1h près).</li>
+    <li>Pas d'écrans 30 min avant le coucher.</li>
+    <li>Pas de caféine après 14h.</li>
+  </ul>
+
+  <h4>Santé mentale</h4>
+  <ul>
+    <li>5 min de respiration profonde par jour (4-7-8 : inspire 4s, bloque 7s, expire 8s).</li>
+    <li>10 min dehors par jour (marche, exposition au soleil).</li>
+    <li>Journaling : écris 3 choses pour lesquelles tu es reconnaissant chaque soir.</li>
+    <li><strong>Arrêt clé :</strong> Finis ce mois avec « Je suis quelqu'un qui prend soin de sa santé » comme identité, pas « J'essaie de me mettre au sport ».</li>
+  </ul>
+
+  <div class="callout-dark">
+    <p><strong>Checklist fin de phase 1 (mois 2) :</strong></p>
+    <ul>
+      <li>Tu as une idée claire de tes calories et protéines quotidiennes</li>
+      <li>Tu fais 3 séances de sport par semaine depuis 4 semaines consécutives</li>
+      <li>Tu dors en moyenne 7 h par nuit</li>
+      <li>Tu bois 2 L d'eau par jour</li>
+      <li>Tu as perdu 2-4 kg (si perte de poids) OU tes charges ont augmenté (si prise de masse)</li>
+    </ul>
+  </div>
+
+  <h3>Phase 2 : Mois 3-4 — La consolidation</h3>
+  <p><strong>Objectif :</strong> Intensifier progressivement. Ajouter de la structure et de la variété.</p>
+
+  <h4>Nutrition</h4>
+  <ul>
+    <li>Tu peux arrêter le tracking quotidien si tu as une bonne conscience des portions. Fais une semaine de tracking par mois pour vérifier.</li>
+    <li>Mois 3 : Meal prep solidifié (tu prepares 4-5 repas par semaine à l'avance). Ajoute des oméga-3 (poisson gras 2x/semaine ou supplément).</li>
+    <li>Mois 4 : Si perte de poids, réajuste les calories à la baisse (tu pèses moins → besoin réduit). Si prise de masse, augmente de 100-200 cal/jour si la progression stagne.</li>
+    <li><strong>Suppléments :</strong> Ajoute créatine (5 g/jour) et vitamine D si ce n'est pas déjà fait.</li>
+    <li>Gère les écarts : 1-2 repas « plaisir » par semaine, pas plus. Pas de culpabilité — le plaisir fait partie du plan.</li>
+  </ul>
+
+  <h4>Entraînement</h4>
+  <ul>
+    <li>Cardio : 3 séances par semaine (2 LISS + 1 HIIT). Le HIIT : 15-20 min, 30s effort / 30s repos, 8-10 cycles.</li>
+    <li>Musculation : 3-4 séances par semaine. Passe en programme upper/lower (module 7) ou PPL si tu te sens prêt.</li>
+    <li>Surcharge progressive : augmente la charge ou les répétitions chaque semaine. Note tes performances.</li>
+    <li>Ajoute une semaine de décharge (50 % du volume) à la fin du mois 4.</li>
+  </ul>
+
+  <h4>Sommeil</h4>
+  <ul>
+    <li>Objectif : 7 h 30 - 8 h par nuit.</li>
+    <li>Routine du soir solide (30 min sans écran + lecture ou méditation).</li>
+    <li>Température de la chambre : 18-19°C. Obscurité totale (masque de sommeil si besoin).</li>
+  </ul>
+
+  <h4>Santé mentale</h4>
+  <ul>
+    <li>10-15 min de méditation ou respiration profonde par jour.</li>
+    <li>20 min dehors par jour dont au moins 10 min au soleil si possible.</li>
+    <li>Journaling : ajoute un « win de la journée » (une petite victoire).</li>
+    <li>Défi : 1 journée sans réseaux sociaux par semaine.</li>
+  </ul>
+
+  <div class="callout-dark">
+    <p><strong>Checklist fin de phase 2 (mois 4) :</strong></p>
+    <ul>
+      <li>Tu tiens 4 séances de sport par semaine depuis 4 semaines consécutives</li>
+      <li>La meal prep est devenue une habitude automatique</li>
+      <li>Tu as augmenté tes charges de 15-25 % depuis le début</li>
+      <li>Tu dors 7h30-8h par nuit</li>
+      <li>Tu commences à voir des changements visibles dans le miroir ou sur les photos</li>
+      <li>Perte de poids cumulée : 4-8 kg (ou gain de force significatif en prise de masse)</li>
+    </ul>
+  </div>
+
+  <h3>Phase 3 : Mois 5-6 — L'optimisation</h3>
+  <p><strong>Objectif :</strong> Peaufiner, repousser tes limites, et rendre le tout durable pour la vie.</p>
+
+  <h4>Nutrition</h4>
+  <ul>
+    <li>Nutrition intuitive maîtrisée. Tu n'as plus besoin de compter, tu « sais » ce que ton corps demande.</li>
+    <li>Mois 5 : Expérimente avec le jeûne intermittent (16/8) si ça t'intéresse — pas une obligation, juste un outil.</li>
+    <li>Mois 6 : Évalue tes macros précisément. Ajuste selon tes objectifs : plus de glucides si performance, plus de lipides si satiété.</li>
+    <li>Micro-nutrition : Vérifie tes apports en fer, zinc, magnésium, oméga-3. Ajoute un supplément si carence avérée.</li>
+    <li>Relation saine avec la nourriture : 90 % alimentation saine, 10 % plaisir. Sans culpabilité. Jamais.</li>
+  </ul>
+
+  <h4>Entraînement</h4>
+  <ul>
+    <li>Cardio : 3-4 séances par semaine (2 LISS, 1-2 HIIT). Essaie de nouvelles activités (natation, corde à sauter, course à pied, randonnée).</li>
+    <li>Musculation : 4-5 séances par semaine. Programme avancé (PPL ou split personnalisé).</li>
+    <li>Techniques avancées : Drop sets, supersets, rest-pause, tempo training. Ajoute 1-2 techniques par mois sans te brûler.</li>
+    <li>Semaine de décharge toutes les 6-8 semaines.</li>
+    <li>Test tes 1RM (répétition maximale) sur tes mouvements principaux — squat, développé couché, soulevé de terre. Compare au début du programme.</li>
+  </ul>
+
+  <h4>Sommeil</h4>
+  <ul>
+    <li>Objectif : 8 h par nuit, horaires stables.</li>
+    <li>Pas de caféine après 12h.</li>
+    <li>Pas d'alcool (ou exceptionnellement).</li>
+    <li>Environnement de sommeil optimisé : chambre fraîche, noire, silencieuse.</li>
+  </ul>
+
+  <h4>Santé mentale</h4>
+  <ul>
+    <li>15-20 min de méditation ou respiration par jour. Tu peux essayer des séances guidées (Headspace, Petit Bambou).</li>
+    <li>30 min dehors par jour. Même sous la pluie.</li>
+    <li>Journaling : focus sur les objectifs et la gratitude. Écris aussi ce qui bloque.</li>
+    <li>Check-in mensuel : Comment je me sens sur une échelle de 1-10 ? Qu'est-ce qui pourrait aller mieux ?</li>
+  </ul>
+
+  <h3>Bilan final à 6 mois</h3>
+  <table>
+    <thead>
+      <tr><th>Métrique</th><th>Résultat attendu (perte de poids)</th><th>Résultat attendu (prise de masse)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Perte / gain de poids</td><td>-5 à -12 kg</td><td>+3 à +6 kg</td></tr>
+      <tr><td>Tour de taille</td><td>-5 à -10 cm</td><td>Stable ou léger +</td></tr>
+      <tr><td>Force (squat)</td><td>+20 à +40 kg</td><td>+30 à +50 kg</td></tr>
+      <tr><td>Force (développé couché)</td><td>+10 à +20 kg</td><td>+15 à +30 kg</td></tr>
+      <tr><td>Endurance cardio</td><td>× 2 capacité</td><td>× 1.5 capacité</td></tr>
+      <tr><td>Énergie quotidienne</td><td>Bien meilleure</td><td>Bien meilleure</td></tr>
+      <tr><td>Qualité du sommeil</td><td>Améliorée</td><td>Améliorée</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Les clés pour durer au-delà de 6 mois</h3>
+  <ul>
+    <li><strong>Varie tes activités :</strong> Alterne les sports pour éviter la lassitude. Ajoute un sport d'extérieur, un sport en groupe, un sport individuel.</li>
+    <li><strong>Fixe de nouveaux objectifs :</strong> Après 6 mois, tu as atteint tes premiers objectifs. Il t'en faut de nouveaux. Course à pied (10 km, semi-marathon), traction (10, 20), souplesse (grand écart ?), nouvelle discipline sportive.</li>
+    <li><strong>Crée un environnement qui te porte :</strong> Entoure-toi de personnes qui partagent tes valeurs santé. Rejoins une communauté, un club, un groupe Strava.</li>
+    <li><strong>Accepte les fluctuations :</strong> Tu vas avoir des mois meilleurs que d'autres. Des périodes avec moins de sport, plus d'écarts. Ce n'est pas un échec. C'est la vie. L'important est de toujours revenir à tes fondamentaux.</li>
+    <li><strong>Rappelle-toi pourquoi tu as commencé :</strong> Relis ton « pourquoi » du module 1. Regarde tes photos avant/après. Mesure tes progrès, pas seulement physiques — en énergie, en confiance, en bien-être.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Un dernier mot :</strong> Dans 6 mois, tu auras le même âge. La seule question est : est-ce que tu auras le même corps, la même santé, la même énergie ? Le temps passe que tu agisses ou que tu attends. Autant faire en sorte que les 6 prochains mois comptent.</p>
+  </div>
+</div>
+
+<div class="content page-break" id="guide-des-blessures-et-prevention">
+  <div class="module-header">
+    <div class="module-number">Module 11</div>
+    <h2>Guide des blessures et prévention</h2>
+  </div>
+  <p>Comment s'entraîner sans se blesser — et quoi faire quand ça arrive</p>
+
+  <h3>Les blessures les plus fréquentes chez les débutants</h3>
+  <p>Quand on commence le sport, le corps n'est pas habitué aux contraintes. Les blessures les plus courantes sont :</p>
+  <ul>
+    <li><strong>Lombalgie (mal de dos) :</strong> Mauvaise technique au soulevé de terre ou au squat, dos rond sous charge. Prévention : gainage, technique irréprochable, ne pas prendre trop lourd.</li>
+    <li><strong>Tendinite du genou :</strong> Surcharge trop rapide en course à pied ou en squat. Prévention : progression progressive, renforcement des quadriceps et ischio-jambiers.</li>
+    <li><strong>Épaule douloureuse :</strong> Mauvais angle au développé couché, déficit de mobilité. Prévention : échauffement des rotateurs de l'épaule, amplitude contrôlée.</li>
+    <li><strong>Foulure de cheville :</strong> Course sur terrain irrégulier, chaussures inadaptées. Prévention : renforcement proprioceptif, bonnes chaussures.</li>
+    <li><strong>Courbatures excessives :</strong> Pas une vraie blessure, mais signe que tu es allé trop vite. Prévention : progression graduelle, récupération active.</li>
+  </ul>
+
+  <h3>Reconnaître la douleur normale vs la blessure</h3>
+  <table>
+    <thead>
+      <tr><th>Douleur normale (entraînement)</th><th>Douleur blessure (alerte)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Sensation de brûlure dans le muscle</td><td>Douleur vive et soudaine</td></tr>
+      <tr><td>Disparaît au repos</td><td>Continue même au repos</td></tr>
+      <tr><td>S'atténue après échauffement</td><td>S'aggrave avec l'effort</td></tr>
+      <tr><td>Courbatures différées (24-48h après)</td><td>Douleur immédiate pendant l'exercice</td></tr>
+      <tr><td>Sensation de fatigue musculaire</td><td>Sensation de déchirure, craquement</td></tr>
+      <tr><td>Amélioration progressive sur 3 jours</td><td>Empire de jour en jour</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <p><strong>Règle d'or :</strong> Si une douleur est vive, soudaine, ou qu'elle persiste plus de 72h sans amélioration, consulte un professionnel de santé. Ne « force pas à travers la douleur » — c'est le meilleur moyen de transformer une blessure mineure en problème chronique.</p>
+  </div>
+
+  <h3>Échauffement : le protocole complet</h3>
+  <p>L'échauffement n'est pas optionnel. Il prépare ton système nerveux, augmente la température musculaire, lubrifie les articulations et réduit le risque de blessure de 50 %.</p>
+
+  <div class="exercise">
+    <h4>Échauffement général 5 minutes (tous les jours)</h4>
+    <p><strong>1. Montées de genoux (30 secondes) :</strong> Sur place, monte les genoux à hauteur de hanche en gardant le dos droit.</p>
+    <p><strong>2. Talons-fessiers (30 secondes) :</strong> Ramène tes talons vers tes fessiers en alternant les jambes.</p>
+    <p><strong>3. Rotations de bras (30 secondes) :</strong> Grands cercles avant puis arrière, bras tendus.</p>
+    <p><strong>4. Rotations du torse (30 secondes) :</strong> Pieds écartés largeur des épaules, tourne le buste à gauche puis à droite, bras relâchés.</p>
+    <p><strong>5. Fentes dynamiques avant (30 secondes par jambe) :</strong> Fente avant en gardant le genou arrière qui frôle le sol. Alterne les jambes en sautant.</p>
+    <p><strong>6. Jumping jacks (30 secondes) :</strong> Bras et jambes s'ouvrent et se ferment en rythme.</p>
+    <p><strong>7. Cercles de chevilles et poignets (30 secondes) :</strong> 10 cercles dans chaque sens.</p>
+    <p><strong>Total : 5 minutes.</strong> Tu n'as aucune excuse pour sauter ça.</p>
+  </div>
+
+  <h4>Échauffement spécifique haut du corps (avant musculation)</h4>
+  <ul>
+    <li>Rotateurs externes épaule (élastique ou poids léger) : 2 x 15 répétitions</li>
+    <li>Élévations latérales légères : 2 x 15</li>
+    <li>Pompes inclinées lentes : 2 x 10</li>
+    <li>Cercles de nuque : 10 dans chaque sens</li>
+  </ul>
+
+  <h4>Échauffement spécifique bas du corps (avant musculation ou course)</h4>
+  <ul>
+    <li>Squats au poids du corps : 2 x 15</li>
+    <li>Leg swings (avant/arrière et latéral) : 10 par jambe</li>
+    <li>Pont fessier au poids du corps : 2 x 12</li>
+    <li>Marche en levant les genoux (high knees) : 30 secondes</li>
+  </ul>
+
+  <h3>Retour au calme : le cool-down (5 minutes)</h3>
+  <p>Le cool-down aide à redescendre la fréquence cardiaque, évacuer les déchets métaboliques et améliorer la récupération.</p>
+
+  <div class="exercise">
+    <h4>Cool-down 5 minutes (après chaque séance)</h4>
+    <p><strong>1. Étirement quadriceps (30 secondes par jambe) :</strong> Debout, attrape ta cheville et ramène le talon vers la fesse.</p>
+    <p><strong>2. Étirement ischio-jambiers (30 secondes par jambe) :</strong> Jambe tendue devant, penche le buste vers l'avant, dos droit.</p>
+    <p><strong>3. Étirement pectoraux (30 secondes) :</strong> Bras en T, appuie-toi contre un mur et ouvre la poitrine.</p>
+    <p><strong>4. Étirement dos (30 secondes) :</strong> À genoux, pose les fesses sur les talons, tends les bras vers l'avant (position enfant).</p>
+    <p><strong>5. Étirement triceps/épaules (30 secondes par bras) :</strong> Bras au-dessus de la tête, plie le coude et attrape-le avec l'autre main.</p>
+    <p><strong>6. Respiration profonde (1 minute) :</strong> Inspire 4 secondes, bloque 4 secondes, expire 6 secondes. Ralentis progressivement.</p>
+  </div>
+
+  <h3>Que faire quand tu es blessé</h3>
+  <p><strong>Phase aiguë (48-72h) :</strong></p>
+  <ul>
+    <li>Repos relatif — ne sollicite pas la zone blessée</li>
+    <li>Glace 15-20 minutes toutes les 2-3 heures</li>
+    <li>Compression et surélévation si possible</li>
+    <li>Consulte un médecin ou kiné si la douleur est forte</li>
+  </ul>
+  <p><strong>Phase de récupération active (après 72h) :</strong></p>
+  <ul>
+    <li>Maintiens l'activité sur les parties non blessées — si tu t'es blessé au haut du corps, entraîne les jambes</li>
+    <li>Mobilité douce sur la zone blessée (sans forcer)</li>
+    <li>Marche légère pour maintenir la circulation</li>
+    <li>Étirements très progressifs (pas de douleur)</li>
+  </ul>
+  <p><strong>Quand consulter un professionnel :</strong></p>
+  <ul>
+    <li>Douleur qui persiste plus d'une semaine</li>
+    <li>Impossibilité de poser le pied ou d'utiliser le membre</li>
+    <li>Gonflement important ou ecchymose étendue</li>
+    <li>Douleur qui réveille la nuit</li>
+    <li>Perte de force ou de mobilité persistante</li>
+  </ul>
+
+  <div class="callout-success">
+    <p><strong>Principe clé :</strong> Mieux vaut 1 semaine de repos que 3 mois d'arrêt. Une blessure négligée devient une blessure chronique. Écoute ton corps — il te parle, c'est à toi d'écouter.</p>
+  </div>
+</div>
+
+<div class="content page-break" id="programme-de-mobilite-et-etirements">
+  <div class="module-header">
+    <div class="module-number">Module 12</div>
+    <h2>Programme de mobilité et étirements — 15 minutes par jour</h2>
+  </div>
+  <p>La mobilité est le chaînon manquant de la plupart des programmes fitness</p>
+
+  <h3>Pourquoi la mobilité change tout</h3>
+  <p>La mobilité, ce n'est pas juste « être souple ». C'est ta capacité à bouger librement, sans douleur, dans toute ton amplitude articulaire. C'est ce qui sépare quelqu'un qui « fait du sport » de quelqu'un qui bouge bien.</p>
+  <ul>
+    <li><strong>Prévention des blessures :</strong> Des articulations mobiles absorbent mieux les chocs et répartissent les forces. La majorité des blessures arrivent quand une articulation manque d'amplitude et qu'une autre compense.</li>
+    <li><strong>Meilleurs mouvements :</strong> Un squat profond demande des chevilles mobiles, des hanches mobiles, un dos mobile. Si l'une de ces articulations est raide, ton squat sera mauvais.</li>
+    <li><strong>Récupération accélérée :</strong> Les étirements post-entraînement aident à évacuer les déchets métaboliques et réduire les courbatures.</li>
+    <li><strong>Qualité de vie :</strong> Attacher ses chaussures, se retourner dans son lit, porter ses courses — tout ça devient plus facile quand tu es mobile.</li>
+  </ul>
+
+  <h3>Les 10 étirements essentiels pour débutants</h3>
+  <table>
+    <thead>
+      <tr><th>Exercice</th><th>Zone ciblée</th><th>Temps</th><th>Quand</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1. Position de l'enfant (yoga)</td><td>Dos, épaules</td><td>30-60 s</td><td>Avant/après</td></tr>
+      <tr><td>2. Étirement quadriceps debout</td><td>Cuisses avant</td><td>30 s par jambe</td><td>Après sport</td></tr>
+      <tr><td>3. Étirement ischio-jambiers assis</td><td>Arrière des cuisses</td><td>30 s par jambe</td><td>Après sport</td></tr>
+      <tr><td>4. Papillon (assis, plantes de pieds ensemble)</td><td>Hanches, aine</td><td>30-60 s</td><td>Matin/soir</td></tr>
+      <tr><td>5. Étirement du cou</td><td>Nuque, trapèzes</td><td>20 s par côté</td><td>Bureau, matin</td></tr>
+      <tr><td>6. Rotation du torse assis</td><td>Colonne, obliques</td><td>30 s par côté</td><td>Matin/soir</td></tr>
+      <tr><td>7. Étirement des pectoraux au mur</td><td>Poitrine, épaules</td><td>30 s par bras</td><td>Après sport/bureau</td></tr>
+      <tr><td>8. Flexion avant (toucher les orteils)</td><td>Chaîne postérieure</td><td>30-60 s</td><td>Après sport</td></tr>
+      <tr><td>9. Étirement des adducteurs (fente latérale)</td><td>Intérieur des cuisses</td><td>30 s par côté</td><td>Après sport</td></tr>
+      <tr><td>10. Couché, torsion du bas du corps</td><td>Bas du dos, fessiers</td><td>30 s par côté</td><td>Soir</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Routine quotidienne de mobilité</h3>
+
+  <div class="exercise">
+    <h4>Matin — 5 minutes d'activation</h4>
+    <p><strong>1. Réveil articulaire (1 min) :</strong> Cercles de tête, épaules, poignets, taille, chevilles. 10 cercles chaque sens.</p>
+    <p><strong>2. Cat-cow (1 min) :</strong> À quatre pattes, alterne dos rond et dos creux en respirant profondément.</p>
+    <p><strong>3. Flexion avant + roulé vers le haut (1 min) :</strong> Penche-toi lentement vers l'avant, déroule vertèbre par vertèbre en remontant.</p>
+    <p><strong>4. Squat profond tenu (1 min) :</strong> Tiens-toi accroupi, talons au sol, coudes entre les genoux. Respire.</p>
+    <p><strong>5. Fente avec rotation (1 min) :</strong> Fente avant, main opposée au sol, tourne le buste vers le ciel. 30 s par côté.</p>
+  </div>
+
+  <div class="exercise">
+    <h4>Soir — 10 minutes d'étirements profonds</h4>
+    <p><strong>1. Position de l'enfant (1 min) :</strong> Respire profondément, relâche tout le dos.</p>
+    <p><strong>2. Papillon couché (2 min) :</strong> Allongé, plantes de pieds ensemble, laisse les genoux s'ouvrir. Mains sur le ventre, respire.</p>
+    <p><strong>3. Torsion du bas du corps (1 min par côté) :</strong> Allongé, genou droit croisé par-dessus la gauche, regard à droite. Maintiens 1 min, change de côté.</p>
+    <p><strong>4. Jambes contre le mur (2 min) :</strong> Allongé, fesses contre le mur, jambes tendues vers le haut. Parfait pour la circulation et le dos.</p>
+    <p><strong>5. Étirement complet du corps (1 min) :</strong> Allongé, bras tendus au-dessus de la tête, pointe les orteils. Étire-toi dans les deux directions.</p>
+    <p><strong>6. Respiration 4-7-8 (3 min) :</strong> Inspire 4 secondes, retiens 7 secondes, expire 8 secondes. Calme le système nerveux pour le sommeil.</p>
+  </div>
+
+  <h3>Mobilité spécifique par activité</h3>
+  <p><strong>Pour les coureurs :</strong></p>
+  <ul>
+    <li>Mobilité chevilles (cercles, alphabet) : 2 min avant chaque course</li>
+    <li>Étirement des mollets : 30 s par jambe après chaque course</li>
+    <li>Rouleau de massage pour les mollets et quadriceps : 5 min après les courses longues</li>
+  </ul>
+  <p><strong>Pour les pratiquants de musculation :</strong></p>
+  <ul>
+    <li>Mobilité des hanches (papillon, squat tenu) : 3 min avant la séance</li>
+    <li>Mobilité des épaules (rotateurs, ouverture pectorale) : 3 min avant le haut du corps</li>
+    <li>Mobilité thoracique (rouleau mousse, extension dos) : 2 min avant squat ou développé</li>
+  </ul>
+  <p><strong>Pour les travailleurs de bureau :</strong></p>
+  <ul>
+    <li>Étirement des trapèzes et cou : 2 min toutes les 2 heures</li>
+    <li>Ouverture de poitrine (bras en T contre le mur) : 1 min plusieurs fois par jour</li>
+    <li>Rotation du torse assis : 30 s par côté, à faire sur ta chaise</li>
+    <li>Levé-toi toutes les 45-60 minutes — marche 2 min, bouge les hanches</li>
+  </ul>
+
+  <h3>Programme mobilité hebdomadaire</h3>
+  <table>
+    <thead>
+      <tr><th>Jour</th><th>Matin (5 min)</th><th>Soir (10 min)</th><th>Focus</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Lundi</td><td>Activation générale</td><td>Étirements bas du corps</td><td>Hanches, jambes</td></tr>
+      <tr><td>Mardi</td><td>Réveil articulaire</td><td>Étirements haut du corps</td><td>Épaules, dos</td></tr>
+      <tr><td>Mercredi</td><td>Cat-cow + squat tenu</td><td>Yoga doux (postures tenues)</td><td>Colonne, souplesse</td></tr>
+      <tr><td>Jeudi</td><td>Activation générale</td><td>Étirements complets</td><td>Corps entier</td></tr>
+      <tr><td>Vendredi</td><td>Réveil articulaire</td><td>Étirements avec rouleau</td><td>Récupération</td></tr>
+      <tr><td>Samedi</td><td>Séquence yoga 10 min</td><td>Étirements longs (15-20 min)</td><td>Flexibilité profonde</td></tr>
+      <tr><td>Dimanche</td><td>Respiration + squat tenu</td><td>Repos ou marche</td><td>Relâchement</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout-success">
+    <p><strong>À retenir :</strong> 15 minutes par jour de mobilité transforment la façon dont tu bouges. C'est 1 % de ta journée pour 100 % de bénéfices sur ta qualité de vie. Ne saute jamais cette routine.</p>
+  </div>
+</div>
+
+<div class="content page-break" id="nutrition-par-objectif">
+  <div class="module-header">
+    <div class="module-number">Module 13</div>
+    <h2>Nutrition par objectif — Prise de masse, perte de gras, maintien</h2>
+  </div>
+  <p>Adapter ta nutrition à ton objectif précis pour des résultats optimaux</p>
+
+  <h3>1. Prise de masse — Construire du muscle</h3>
+  <p>L'objectif est d'être en <strong>surplus calorique modéré</strong> : manger plus que tu ne dépenses pour donner à ton corps l'énergie nécessaire à la construction musculaire.</p>
+
+  <h4>Calories et macros</h4>
+  <table>
+    <thead>
+      <tr><th>Métrique</th><th>Valeur</th><th>Exemple (70 kg)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Calories</td><td>Poids × 32-36</td><td>~2500 kcal/jour</td></tr>
+      <tr><td>Protéines</td><td>1.8-2.2 g/kg</td><td>140-150 g</td></tr>
+      <tr><td>Glucides</td><td>4-6 g/kg</td><td>300-350 g</td></tr>
+      <tr><td>Lipides</td><td>0.8-1 g/kg</td><td>60-70 g</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Exemple de journée alimentaire (2500 kcal)</h4>
+  <p><strong>Petit-déjeuner (7h30) — 600 kcal :</strong></p>
+  <ul>
+    <li>4 œufs brouillés (2 œufs entiers + 2 blancs)</li>
+    <li>80 g de flocons d'avoine</li>
+    <li>1 banane</li>
+    <li>30 g d'amandes</li>
+  </ul>
+  <p><strong>Déjeuner (12h30) — 750 kcal :</strong></p>
+  <ul>
+    <li>200 g de poulet cuit</li>
+    <li>200 g de riz complet (cuit)</li>
+    <li>150 g de brocolis</li>
+    <li>1 cuillère à soupe d'huile d'olive</li>
+  </ul>
+  <p><strong>Collation pré-entraînement (16h) — 350 kcal :</strong></p>
+  <ul>
+    <li>1 shaker de whey (30 g de protéines)</li>
+    <li>1 pomme</li>
+    <li>20 g de beurre de cacahuète</li>
+  </ul>
+  <p><strong>Dîner (20h) — 800 kcal :</strong></p>
+  <ul>
+    <li>200 g de saumon</li>
+    <li>200 g de patates douces</li>
+    <li>100 g de légumes verts</li>
+    <li>1 avocat</li>
+    <li>1 cuillère à soupe d'huile d'olive</li>
+  </ul>
+
+  <h4>Aliments à privilégier</h4>
+  <p>Riz complet, patates douces, avoine, pâtes complètes, poulet, bœuf maigre, œufs, poisson gras, laitages, beurre de cacahuète, avocat, huile d'olive, fruits secs.</p>
+  <h4>Aliments à limiter</h4>
+  <p>Sucres rapides industriels, fritures, alcool, plats transformés — ils apportent des calories vides sans les nutriments nécessaires à la construction musculaire.</p>
+
+  <div class="callout">
+    <p><strong>Conseil prise de masse :</strong> Vise un gain de poids de 0.5-1 kg par mois. Si tu prends plus, tu accumules trop de gras. Si tu ne prends pas, ajoute 200-300 kcal/jour.</p>
+  </div>
+
+  <h3>2. Perte de gras — Sécher efficacement</h3>
+  <p>L'objectif est un <strong>déficit calorique modéré</strong> : manger moins que tu ne dépenses, tout en maintenant un maximum de muscle.</p>
+
+  <h4>Calories et macros</h4>
+  <table>
+    <thead>
+      <tr><th>Métrique</th><th>Valeur</th><th>Exemple (70 kg)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Calories</td><td>Poids × 22-26</td><td>~1800 kcal/jour</td></tr>
+      <tr><td>Protéines</td><td>2.0-2.4 g/kg</td><td>150-170 g</td></tr>
+      <tr><td>Glucides</td><td>2-3 g/kg</td><td>150-200 g</td></tr>
+      <tr><td>Lipides</td><td>0.6-0.8 g/kg</td><td>45-55 g</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Exemple de journée alimentaire (1800 kcal)</h4>
+  <p><strong>Petit-déjeuner (7h30) — 400 kcal :</strong></p>
+  <ul>
+    <li>3 œufs brouillés</li>
+    <li>50 g de flocons d'avoine</li>
+    <li>100 g de baies (myrtilles, framboises)</li>
+    <li>1 café sans sucre</li>
+  </ul>
+  <p><strong>Déjeuner (12h30) — 550 kcal :</strong></p>
+  <ul>
+    <li>150 g de poulet ou de dinde</li>
+    <li>150 g de légumes verts</li>
+    <li>120 g de riz complet (cuit)</li>
+    <li>1 cuillère à café d'huile d'olive</li>
+  </ul>
+  <p><strong>Collation (16h) — 200 kcal :</strong></p>
+  <ul>
+    <li>1 shaker de whey (25 g de protéines)</li>
+    <li>1 pomme</li>
+  </ul>
+  <p><strong>Dîner (19h30) — 650 kcal :</strong></p>
+  <ul>
+    <li>180 g de poisson blanc (cabillaud, lieu)</li>
+    <li>200 g de légumes rôtis (courgettes, poivrons)</li>
+    <li>100 g de quinoa (cuit)</li>
+    <li>½ avocat</li>
+    <li>Jus de citron et épices</li>
+  </ul>
+
+  <h4>Aliments à privilégier</h4>
+  <p>Légumes verts à volonté, protéines maigres (poulet, blanc de dinde, poisson blanc, œufs), légumineuses, baies, flocons d'avoine, quinoa, fromage blanc 0 %.</p>
+  <h4>Aliments à limiter</h4>
+  <p>Sucres ajoutés, boissons sucrées, alcool, plats transformés, huiles industrielles, fruits secs (très caloriques), pain blanc, pâtes raffinées.</p>
+
+  <div class="callout">
+    <p><strong>Conseil perte de gras :</strong> Vise 0.5-1 % de ton poids corporel par semaine. Ne descends jamais sous 1500 kcal (homme) ou 1200 kcal (femme) sans suivi médical. La perte de poids trop rapide fait perdre du muscle.</p>
+  </div>
+
+  <h3>3. Maintien et recomposition — Le meilleur des deux mondes</h3>
+  <p>La <strong>recomposition corporelle</strong> consiste à perdre du gras et gagner du muscle simultanément. C'est plus lent que les approches spécifiques mais plus durable.</p>
+
+  <h4>Calories et macros</h4>
+  <table>
+    <thead>
+      <tr><th>Métrique</th><th>Valeur</th><th>Exemple (70 kg)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Calories</td><td>Poids × 28-32</td><td>~2100 kcal/jour</td></tr>
+      <tr><td>Protéines</td><td>2.0-2.4 g/kg</td><td>150-170 g</td></tr>
+      <tr><td>Glucides</td><td>3-4 g/kg</td><td>220-280 g</td></tr>
+      <tr><td>Lipides</td><td>0.7-0.9 g/kg</td><td>50-60 g</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Exemple de journée alimentaire (2100 kcal)</h4>
+  <p><strong>Petit-déjeuner (7h30) — 450 kcal :</strong></p>
+  <ul>
+    <li>200 g de yaourt grec 2 %</li>
+    <li>60 g de granola sans sucre</li>
+    <li>100 g de fruits frais</li>
+    <li>15 g d'amandes</li>
+  </ul>
+  <p><strong>Déjeuner (12h30) — 600 kcal :</strong></p>
+  <ul>
+    <li>150 g de poulet ou de tofu</li>
+    <li>150 g de riz complet (cuit)</li>
+    <li>150 g de légumes variés</li>
+    <li>1 cuillère à soupe d'huile d'olive</li>
+  </ul>
+  <p><strong>Collation (16h) — 250 kcal :</strong></p>
+  <ul>
+    <li>1 œuf dur</li>
+    <li>1 pomme</li>
+    <li>15 g de noix</li>
+  </ul>
+  <p><strong>Dîner (20h) — 800 kcal :</strong></p>
+  <ul>
+    <li>200 g de poisson ou viande maigre</li>
+    <li>200 g de légumes rôtis</li>
+    <li>100 g de patates douces ou quinoa</li>
+    <li>½ avocat</li>
+    <li>Assaisonnement : huile d'olive, citron, herbes</li>
+  </ul>
+
+  <h4>Aliments à privilégier</h4>
+  <p>Tous les aliments non transformés avec un focus sur les protéines et les légumes. Les glucides sont modérés selon ton niveau d'activité. Priorise la qualité avant tout.</p>
+  <h4>Aliments à limiter</h4>
+  <p>Comme pour la perte de gras, mais avec plus de flexibilité. L'approche 80/20 s'applique parfaitement ici : 80 % nutritif, 20 % plaisir.</p>
+
+  <div class="callout-success">
+    <p><strong>Règle d'or :</strong> Peu importe ton objectif, la constance sur le long terme bat la perfection sur le court terme. Choisis l'approche que tu peux tenir pendant 6 mois, pas celle qui te promet des résultats en 2 semaines.</p>
+  </div>
+</div>
+
+<div class="content page-break" id="cycle-feminin-et-entrainement">
+  <div class="module-header">
+    <div class="module-number">Module 14</div>
+    <h2>Cycle féminin et entraînement — Adapter son sport à son cycle</h2>
+  </div>
+  <p>Comprendre et utiliser ton cycle pour optimiser tes performances et ta récupération</p>
+
+  <h3>Pourquoi adapter son entraînement à son cycle</h3>
+  <p>Le cycle menstruel n'est pas un handicap — c'est un superpouvoir quand tu sais comment l'utiliser. Tes hormones (œstrogènes, progestérone) fluctuent tout au long du cycle, et ces fluctuations affectent directement ton énergie, ta force, ta récupération et ta motivation.</p>
+  <p>Au lieu de lutter contre ces variations, tu peux <strong>travailler avec</strong> pour optimiser tes entraînements et ta nutrition.</p>
+
+  <h3>Les 4 phases du cycle</h3>
+  <table>
+    <thead>
+      <tr><th>Phase</th><th>Jours (cycle 28j)</th><th>Hormones</th><th>Ce qui se passe</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Menstruelle</td><td>Jours 1-5</td><td>Œstrogènes et progestérone au plus bas</td><td>Énergie basse, récupération ralentie, sensibilité à la douleur accrue</td></tr>
+      <tr><td>Folliculaire</td><td>Jours 6-13</td><td>Œstrogènes augmentent progressivement</td><td>Énergie qui remonte, meilleure récupération, force et endurance en hausse</td></tr>
+      <tr><td>Ovulation</td><td>Jours 14-16</td><td>Pic d'œstrogènes, testostérone en hausse</td><td>Force maximale, meilleure coordination, énergie au top</td></tr>
+      <tr><td>Lutéale</td><td>Jours 17-28</td><td>Progestérone élevée, baisse d'œstrogènes</td><td>Récupération ralentie, température corporelle + élevée, rétention d'eau, fatigue</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Entraînement par phase</h3>
+  <table>
+    <thead>
+      <tr><th>Phase</th><th>Musculation</th><th>Cardio</th><th>Mobilité</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Menstruelle</strong></td><td>Léger à modéré. Technique et mobilité. Réduis les charges de 20-30 %.</td><td>LISS : marche, vélo tranquille, yoga. Pas de HIIT.</td><td>Étirements doux, respiration. Priorité récupération.</td></tr>
+      <tr><td><strong>Folliculaire</strong></td><td>Monte en charge progressivement. Profite de l'énergie qui revient.</td><td>Augmente l'intensité. Bon moment pour commencer le HIIT.</td><td>Mobilisation dynamique, préparation aux charges lourdes.</td></tr>
+      <tr><td><strong>Ovulation</strong></td><td>Charges maximales. C'est TON moment pour les PR (records personnels).</td><td>HIIT intense, sprints, compétition. Exploite ce pic.</td><td>Descente en température douce post-entraînement.</td></tr>
+      <tr><td><strong>Lutéale</strong></td><td>Réduis progressivement les charges en fin de phase. Focus sur le volume modéré.</td><td>Redescends en LISS. Écoute ta fatigue — elle est réelle.</td><td>Étirements longs, rouleau de massage, récupération active.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Nutrition par phase</h3>
+  <p><strong>Phase menstruelle :</strong></p>
+  <ul>
+    <li>Augmente le fer (viande rouge, légumineuses, épinards) — les pertes sanguines épuisent tes réserves</li>
+    <li>Zinc et magnésium pour la récupération</li>
+    <li>Hydratation renforcée (eau + électrolytes)</li>
+  </ul>
+  <p><strong>Phase folliculaire :</strong></p>
+  <ul>
+    <li>Bonne sensibilité à l'insuline → les glucides sont bien utilisés</li>
+    <li>Profite pour charger en glucides complexes autour des entraînements</li>
+    <li>Protéines stables à chaque repas</li>
+  </ul>
+  <p><strong>Phase d'ovulation :</strong></p>
+  <ul>
+    <li>Calories légèrement plus élevées pour soutenir les performances maximales</li>
+    <li>Glucides pré-entraînement pour la puissance</li>
+    <li>Oméga-3 pour gérer l'inflammation (liée aux pics hormonaux)</li>
+  </ul>
+  <p><strong>Phase lutéale :</strong></p>
+  <ul>
+    <li>Sensibilité à l'insuline réduite → privilégie les glucides à index glycémique bas</li>
+    <li>Augmente le magnésium (réduit les crampes et l'irritabilité)</li>
+    <li>Calcium et vitamine D pour atténuer les symptômes prémenstruels</li>
+    <li>Plus de lipides pour soutenir la production de progestérone</li>
+    <li>Réduis le sel (rétention d'eau) et la caféine (anxiété)</li>
+  </ul>
+
+  <h3>Comment suivre ton cycle</h3>
+  <ul>
+    <li><strong>Application mobile :</strong> Clue, Flo, ou MyFitness (tracking hormonal intégré). Note ton énergie (1-10), ta motivation, ta force perçue chaque jour.</li>
+    <li><strong>Sur papier :</strong> Un simple tableau avec la date, le jour du cycle, et une note sur comment tu te sens.</li>
+    <li><strong>Observe les patterns :</strong> Après 2-3 cycles, tu verras émerger des tendances claires. Utilise-les pour planifier tes séances à l'avance.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Message important :</strong> Si tu prends une contraception hormonale (pilule, stérilet hormonal, implant), ton cycle est artificiellement régulé. Tu n'auras pas les mêmes fluctuations hormonales. Dans ce cas, concentre-toi sur l'écoute de ton énergie quotidienne plutôt que sur les phases théoriques.</p>
+  </div>
+
+  <div class="callout-success">
+    <p><strong>À retenir :</strong> Ton cycle n'est pas un obstacle, c'est un indicateur. Apprends à lire ses signaux et tu pourras t'entraîner plus intelligemment, pas plus durement. La phase folliculaire et l'ovulation sont tes fenêtres de performance maximale ; la phase lutéale et les règles sont tes fenêtres de récupération et de travail technique.</p>
+  </div>
+</div>
+
+<div class="content page-break" id="guide-avance-du-sommeil">
+  <div class="module-header">
+    <div class="module-number">Module 15</div>
+    <h2>Guide avancé du sommeil — Optimiser sa récupération</h2>
+  </div>
+  <p>Aller au-delà des bases pour un sommeil qui te transforme vraiment</p>
+
+  <h3>Comprendre tes cycles de sommeil</h3>
+  <p>Ton sommeil n'est pas un bloc uniforme. Il est composé de cycles d'environ 90 minutes qui alternent entre différentes phases :</p>
+  <ul>
+    <li><strong>Sommeil léger (50-60 % de la nuit) :</strong> Pont entre l'éveil et le sommeil profond. Facile à interrompre. C'est là que tu passes la plupart de ta nuit.</li>
+    <li><strong>Sommeil profond (15-25 %) :</strong> La phase de récupération physique. C'est ici que l'hormone de croissance est sécrétée, que les muscles se réparent, que le système immunitaire se recharge. Plus tu t'entraînes dur, plus tu as besoin de sommeil profond.</li>
+    <li><strong>Sommeil paradoxal / REM (20-25 %) :</strong> La phase de récupération mentale. Le cerveau traite les émotions, consolide la mémoire, créé des connexions. Essentiel pour l'apprentissage et la santé mentale.</li>
+  </ul>
+  <p>Un adulte a besoin de 4 à 6 cycles complets par nuit (6 à 9 heures). Se réveiller à la fin d'un cycle est plus facile qu'en plein milieu d'un cycle profond.</p>
+
+  <div class="callout-dark">
+    <p><strong>Astuce :</strong> Utilise une alarme intelligente (Sleep Cycle, Alarmy) qui te réveille pendant le sommeil léger, pas en plein sommeil profond. Tu te réveilleras plus frais même avec 30 minutes de moins.</p>
+  </div>
+
+  <h3>Optimiser ton rythme circadien</h3>
+  <p>Ton rythme circadien est l'horloge interne de 24h qui régule sommeil, hormones, température corporelle et digestion. Le respecter est le plus puissant levier pour un sommeil de qualité.</p>
+  <ul>
+    <li><strong>Exposition à la lumière du matin :</strong> 10-15 minutes de soleil dans les 30 minutes suivant le réveil. Ça ancre ton rythme circadien pour les 24h à venir.</li>
+    <li><strong>Lumière tamisée le soir :</strong> Baisse l'intensité lumineuse 1-2h avant le coucher. Pas de plafonnier — utilise des lampes d'appoint.</li>
+    <li><strong>Horaires réguliers :</strong> Coucher et lever à la même heure ± 30 minutes, 7 jours sur 7. La régularité est plus importante que la durée totale.</li>
+    <li><strong>Repas à heures fixes :</strong> Manger à des horaires réguliers ancre aussi le rythme circadien. Évite de manger 2-3h avant le coucher.</li>
+  </ul>
+
+  <h3>Checklist hygiène de sommeil (20+ items)</h3>
+  <div class="checklist">
+    <div class="checklist-item"><input type="checkbox"> Chambre à 18-19°C</div>
+    <div class="checklist-item"><input type="checkbox"> Obscurité totale (masque de sommeil si besoin)</div>
+    <div class="checklist-item"><input type="checkbox"> Silence ou bruit blanc</div>
+    <div class="checklist-item"><input type="checkbox"> Pas de LED visibles (chargeurs, box, détecteurs)</div>
+    <div class="checklist-item"><input type="checkbox"> Literie confortable (oreiller adapté, matelas fermeté correcte)</div>
+    <div class="checklist-item"><input type="checkbox"> Pas d'écrans 60 min avant le coucher</div>
+    <div class="checklist-item"><input type="checkbox"> Mode nuit/night shift activé si écran inévitable</div>
+    <div class="checklist-item"><input type="checkbox"> Pas de caféine après 12h-14h</div>
+    <div class="checklist-item"><input type="checkbox"> Dernier repas 2-3h avant le coucher</div>
+    <div class="checklist-item"><input type="checkbox"> Pas d'alcool (ou max 1 verre, 4h avant le coucher)</div>
+    <div class="checklist-item"><input type="checkbox"> Pas d'exercice intense 2h avant le coucher</div>
+    <div class="checklist-item"><input type="checkbox"> Routine du soir cohérente (même ordre chaque soir)</div>
+    <div class="checklist-item"><input type="checkbox"> Pas d'eau 1h avant (évite les réveils pipi)</div>
+    <div class="checklist-item"><input type="checkbox"> Pas de sieste après 15h, max 30 min</div>
+    <div class="checklist-item"><input type="checkbox"> Exposition au soleil le matin</div>
+    <div class="checklist-item"><input type="checkbox"> Literie aérée et propre (draps changés toutes les semaines)</div>
+    <div class="checklist-item"><input type="checkbox"> Pas de disputes ou conversations stressantes le soir</div>
+    <div class="checklist-item"><input type="checkbox"> Pas de travail dans la chambre (le cerveau doit associer chambre = sommeil)</div>
+    <div class="checklist-item"><input type="checkbox"> Réveil graduel (simulateur d'aube ou lumière progressive)</div>
+    <div class="checklist-item"><input type="checkbox"> Suppléments possibles : magnésium, glycine, L-théanine</div>
+  </div>
+
+  <h3>Aliments qui aident le sommeil — et ceux qui le nuisent</h3>
+  <table>
+    <thead>
+      <tr><th>Favorisent le sommeil</th><th>Perturbent le sommeil</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Banane (magnésium, potassium, tryptophane)</td><td>Caféine (café, thé fort, soda caféiné)</td></tr>
+      <tr><td>Amandes et noix (mélatonine, magnésium)</td><td>Alcool (fragmente le sommeil profond)</td></tr>
+      <tr><td>Produits laitiers (calcium, tryptophane)</td><td>Repas gras ou épicés (reflux, digestion lente)</td></tr>
+      <tr><td>Poisson gras (oméga-3, vitamine D)</td><td>Sucre raffiné (pics glycémiques nocturnes)</td></tr>
+      <tr><td>Thé à la camomille, verveine, tilleul</td><td>Thé vert (contient de la théine)</td></tr>
+      <tr><td>Kiwi (sérotonine, antioxydants)</td><td>Chocolat noir (caféine, théobromine)</td></tr>
+      <tr><td>Riz blanc (index glycémique élevé favorise l'endormissement)</td><td>Boissons énergisantes (caféine + sucre)</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Gestion de la lumière bleue</h3>
+  <p>La lumière bleue (écrans, LED, ampoules fluocompactes) bloque la production de mélatonine en trompant ton cerveau : « il fait jour, reste éveillé ». Voici comment la gérer :</p>
+  <ul>
+    <li><strong>Filtres logiciels :</strong> Active le mode nuit sur tous tes appareils (Windows : « lumière nocturne », Mac : « Night Shift », iPhone : « Night Shift », Android : « filtre lumière bleue »). Programme-les pour s'activer automatiquement au coucher du soleil.</li>
+    <li><strong>Lunettes anti-lumière bleue :</strong> Porte des lunettes bloquant la lumière bleue 1-2h avant le coucher. Les modèles oranges/bloquants sont plus efficaces que les simples filtres.</li>
+    <li><strong>Ampoules :</strong> Remplace les ampoules LED blanches (5000K+) par des ampoules chaudes (2700K) dans les pièces où tu passes la soirée.</li>
+    <li><strong>Écrans :</strong> Baisse la luminosité au minimum le soir. Mieux : lis un livre papier ou une liseuse sans rétroéclairage.</li>
+  </ul>
+
+  <h3>Créer une routine de descente (wind-down)</h3>
+  <p>Ton cerveau a besoin d'un signal pour passer du mode « actif » au mode « repos ». Sans routine, tu passes de l'écran au lit en 2 minutes — impossible pour le cerveau de faire la transition.</p>
+
+  <div class="exercise">
+    <h4>Routine wind-down complète (60 min avant le coucher)</h4>
+    <p><strong>T-60 min : Dernière connexion</strong></p>
+    <ul>
+      <li>Dernière vérification des emails, réseaux sociaux, actualités</li>
+      <li>Active le mode « Ne pas déranger » sur le téléphone</li>
+      <li>Éteins la télévision</li>
+    </ul>
+    <p><strong>T-50 min : Rangement léger</strong></p>
+    <ul>
+      <li>Range ta chambre (un environnement en désordre crée du stress mental)</li>
+      <li>Prépare tes affaires pour le lendemain (vêtements, sac, eau)</li>
+      <li>Baisse le chauffage ou ouvre la fenêtre pour rafraîchir la pièce</li>
+    </ul>
+    <p><strong>T-40 min : Douche ou bain chaud</strong></p>
+    <ul>
+      <li>Eau chaude 5-10 min. Le refroidissement du corps après la douche signale au cerveau de produire de la mélatonine.</li>
+      <li>Ajoute du magnésium en huile ou des sels d'Epsom dans le bain</li>
+    </ul>
+    <p><strong>T-25 min : Soin et détente</strong></p>
+    <ul>
+      <li>Routine de soin (brosse les dents, lave le visage, crème hydratante)</li>
+      <li>Mets des vêtements confortables et amples</li>
+      <li>Tamise les lumières (lampe de chevet uniquement)</li>
+    </ul>
+    <p><strong>T-15 min : Lecture ou méditation</strong></p>
+    <ul>
+      <li>Lis 10-15 pages d'un livre papier (pas d'écran). Pas de thriller ou de contenu stressant.</li>
+      <li>Ou : méditation guidée (5-10 min via appli) ou respiration profonde</li>
+      <li>Ou : journaling (écris ce qui préoccupe pour le libérer de ta tête)</li>
+    </ul>
+    <p><strong>T-2 min : Derniers gestes</strong></p>
+    <ul>
+      <li>Vérifie que la chambre est fraîche et noire</li>
+      <li>Téléphone en mode avion ou dans une autre pièce</li>
+      <li>Respire profondément 3 fois : 4s inspire, 7s bloque, 8s expire</li>
+    </ul>
+    <p><strong>Au lit :</strong> Si tu ne dors pas après 20 minutes, lève-toi. Va dans une autre pièce, lis dans la pénombre 10-15 min, puis réessaie. Ne reste pas au lit à t'inquiéter de ne pas dormir.</p>
+  </div>
+
+  <h3>Suivi de sommeil — quoi et comment mesurer</h3>
+  <p>Le suivi de sommeil peut être utile, à condition de l'utiliser correctement.</p>
+  <p><strong>Ce qu'il faut suivre :</strong></p>
+  <ul>
+    <li><strong>Durée totale :</strong> Combien d'heures passes-tu réellement endormi (pas au lit éveillé) ?</li>
+    <li><strong>Heure de coucher et lever :</strong> La régularité est un meilleur indicateur que la durée</li>
+    <li><strong>Qualité perçue :</strong> Note de 1 à 10 au réveil : comment te sens-tu ?</li>
+    <li><strong>Réveils nocturnes :</strong> Combien de fois te réveilles-tu et combien de temps pour te rendormir ?</li>
+  </ul>
+  <p><strong>Outils recommandés :</strong></p>
+  <ul>
+    <li>Montre connectée (Garmin, Fitbit, Apple Watch, Whoop, Oura Ring) — bon pour les tendances, pas pour les valeurs absolues</li>
+    <li>Application smartphone avec détection de mouvement (Sleep Cycle, Sleep as Android)</li>
+    <li>Carnet papier : note juste heure de coucher, heure de lever, qualité perçue</li>
+  </ul>
+  <p><strong>Ce qu'il ne faut PAS faire :</strong></p>
+  <ul>
+    <li>Paniquer si une nuit est mauvaise — une mauvaise nuit n'est rien. C'est la tendance sur 2 semaines qui compte.</li>
+    <li>Regarder son score de sommeil au réveil avant de se lever — ça crée de l'anxiété</li>
+    <li>Comparer ses données à celles des autres — les besoins varient</li>
+  </ul>
+
+  <h3>Gérer les problèmes de sommeil courants</h3>
+  <p><strong>Difficulté d'endormissement (plus de 30 min) :</strong></p>
+  <ul>
+    <li>Vérifie ta routine wind-down — as-tu vraiment fait la transition ?</li>
+    <li>Température de la chambre trop élevée ? Vise 18-19°C</li>
+    <li>Essaie la technique 4-7-8 : inspire 4s, retiens 7s, expire 8s. 4 cycles.</li>
+    <li>Si ça persiste, consulte — l'insomnie chronique se traite (thérapie CBT-i).</li>
+  </ul>
+  <p><strong>Réveils nocturnes fréquents :</strong></p>
+  <ul>
+    <li>Pas d'alcool le soir (c'est la cause #1 des réveils en milieu de nuit)</li>
+    <li>Glycémie : un en-cas protéiné avant le coucher (fromage blanc, whey caséine) peut stabiliser le sommeil</li>
+    <li>Apuée du sommeil ? Ronflements forts + fatigue malgré 7-8h de sommeil → fais un test</li>
+  </ul>
+  <p><strong>Réveil trop tôt sans pouvoir se rendormir :</strong></p>
+  <ul>
+    <li>Exposition à la lumière du matin pour re-ancre ton rythme circadien</li>
+    <li>Vérifie que ta chambre est vraiment noire (le moindre rayon de lumière à 5h du matin peut te réveiller)</li>
+    <li>Stress anticipatoire : écris tes inquiétudes dans un carnet avant le coucher</li>
+  </ul>
+  <p><strong>Après une nuit trop courte :</strong></p>
+  <ul>
+    <li>Ne te force pas à dormir plus le lendemain — garde un horaire normal</li>
+    <li>Sieste flash de 20 min max (pas plus, tu tomberais en sommeil profond)</li>
+    <li>Exposition maximale à la lumière naturelle</li>
+    <li>Avance l'heure du coucher de 30-60 min le soir suivant</li>
+    <li>Pas de caféine après 14h pour ne pas aggraver le problème</li>
+  </ul>
+
+  <div class="callout-success">
+    <p><strong>En résumé :</strong> Le sommeil est l'investissement le plus sous-estimé en fitness. Tu peux avoir la meilleure nutrition et le meilleur programme d'entraînement du monde — sans sommeil de qualité, tu perds 50 % de leurs bénéfices. Priorise ton sommeil comme tu priorises tes séances de sport.</p>
+  </div>
+</div>
+
+<div class="content page-break conclusion" id="conclusion--ta-transformation-commence-maintenant">
+  <h2>Conclusion — Ta transformation commence maintenant</h2>
+  <p>Tu as toutes les clés. La nutrition, le cardio, la musculation, le sommeil, la gestion du stress, les habitudes.</p>
+  <p>Maintenant, il ne te reste qu'à agir.</p>
+  <p><strong>Les 10 principes à retenir :</strong></p>
+  <ol>
+    <li><strong>Ta santé est ton actif le plus précieux</strong> — investis dedans chaque jour</li>
+    <li><strong>La nutrition est le pilier principal</strong> — 80% des résultats viennent de l'assiette</li>
+    <li><strong>Les calories sont la base</strong> : déficit pour perdre, surplus pour prendre</li>
+    <li><strong>Les protéines sont essentielles</strong> : 1.6 à 2.2g par kg de poids de corps</li>
+    <li><strong>Cardio et musculation sont complémentaires</strong> — ne sacrifie pas l'un pour l'autre</li>
+    <li><strong>La technique d'abord, la charge ensuite</strong></li>
+    <li><strong>Le sommeil est ton arme secrète</strong> — 7 à 9 heures, pas négociable</li>
+    <li><strong>Le stress chronique est ton ennemi</strong> — gère-le activement</li>
+    <li><strong>La cohérence bat l'intensité</strong> — 80% longtemps &gt; 100% pendant 2 semaines</li>
+    <li><strong>Commence maintenant.</strong> Pas demain. Pas lundi. Maintenant.</li>
+  </ol>
+  <hr>
+  <p>Créé par <strong>Simon</strong> — <strong>@aurabusinessfr</strong></p>
+  <p>© 2026 AuraBusiness</p>
+</div>
+
+<section style="background:#0e0e10;padding:50px 20px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif">
+  <div style="max-width:600px;margin:0 auto">
+    <div style="background:linear-gradient(135deg,#00b89415,#00b89405);border:2px solid #00b89425;border-radius:16px;padding:32px 24px;margin-bottom:30px">
+      <span style="font-size:36px;display:block;margin-bottom:8px">📧</span>
+      <h3 style="color:#fff;font-size:20px;margin:0 0 6px;font-weight:700">Reçois les prochains guides gratuitement</h3>
+      <p style="color:#999;font-size:14px;margin:0 0 18px;line-height:1.5">Une astuce business par semaine + les nouveaux guides en exclusivité. Rejoins les 500+ abonnés.</p>
+      <form action="#" method="POST" style="display:flex;flex-direction:column;gap:10px;max-width:400px;margin:0 auto">
+        <input type="text" placeholder="Ton prénom" required style="padding:12px 16px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:14px;outline:none;font-family:inherit">
+        <input type="email" placeholder="Ton email" required style="padding:12px 16px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:14px;outline:none;font-family:inherit">
+        <button type="submit" style="padding:14px 24px;border-radius:10px;border:none;background:linear-gradient(135deg,#00b894,#00b894cc);color:#fff;font-size:16px;font-weight:700;cursor:pointer;font-family:inherit;transition:all .3s">👉 Recevoir les prochains guides</button>
+      </form>
+      <p style="color:#666;font-size:11px;margin:10px 0 0">🔒 Pas de spam. Désinscription en 1 clic. Tes données sont protégées.</p>
+    </div>
+
+    <div style="margin-bottom:30px">
+      <h4 style="color:#fff;font-size:16px;margin:0 0 16px;font-weight:600">📢 Tu as aimé ce guide ?</h4>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <a href="#" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:#ddd;text-decoration:none;font-size:13px;font-weight:500;transition:all .3s">📸 Instagram</a>
+        <a href="#" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:#ddd;text-decoration:none;font-size:13px;font-weight:500;transition:all .3s">🎵 TikTok</a>
+        <a href="#" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:#ddd;text-decoration:none;font-size:13px;font-weight:500;transition:all .3s">🐦 Twitter/X</a>
+        <a href="#" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:#ddd;text-decoration:none;font-size:13px;font-weight:500;transition:all .3s">▶️ YouTube</a>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;font-size:13px">
+      <span style="color:#aaa">⭐ Laisse un avis → <a href="#" style="color:#00b894;text-decoration:none;font-weight:600">Écrire un avis</a></span>
+      <span style="color:#555">|</span>
+      <span style="color:#aaa">🔗 Partage le guide → <a href="#" style="color:#00b894;text-decoration:none;font-weight:600">Copier le lien</a></span>
+    </div>
+
+    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.06);margin:30px 0 16px">
+    <p style="color:#555;font-size:12px">Créé par <strong style="color:#888">Simon — @aurabusinessfr</strong></p>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'IA MODE D'EMPLOI — Utiliser l'intelligence artificielle comme un pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, sans-serif; color: #111; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    .badge { display: inline-block; font-size: 13px; font-weight: 600; color: #e94560; background: rgba(233,69,96,0.1); padding: 6px 14px; border-radius: 100px; }
+
+    /* HERO */
+    .hero { background: linear-gradient(135deg, #e94560 0%, #c73652 50%, #8b1a30 100%); color: #fff; padding: 60px 0 70px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.06) 0%, transparent 60%); }
+    .hero * { position: relative; z-index: 1; }
+    .hero-author { display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 14px; font-weight: 500; opacity: 0.9; margin-bottom: 24px; }
+    .hero-author-avatar { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; border: 2px solid rgba(255,255,255,0.3); }
+    .hero h1 { font-size: 34px; line-height: 1.2; font-weight: 900; margin-bottom: 16px; letter-spacing: -0.5px; }
+    .hero h1 span { display: block; }
+    .hero-tagline { font-size: 18px; font-weight: 500; opacity: 0.9; margin-bottom: 28px; }
+    .hero-social { display: inline-flex; align-items: center; gap: 16px; background: rgba(255,255,255,0.12); backdrop-filter: blur(8px); padding: 12px 24px; border-radius: 100px; font-size: 14px; font-weight: 500; }
+    .hero-social-stars { color: #ffd700; letter-spacing: 2px; }
+    .btn { display: inline-block; background: #fff; color: #e94560; font-weight: 700; font-size: 18px; padding: 16px 40px; border-radius: 12px; transition: all 0.2s; border: none; cursor: pointer; font-family: inherit; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.15); }
+    .btn-cta { background: #fff; color: #e94560; }
+    .btn-cta-dark { background: #111; color: #fff; padding: 18px 48px; font-size: 20px; }
+    .btn-cta-dark:hover { background: #222; }
+    .btn-cta-red { background: #e94560; color: #fff; padding: 18px 48px; font-size: 20px; }
+    .btn-cta-red:hover { background: #d63d56; }
+
+    /* SECTIONS */
+    section { padding: 64px 0; }
+    .section-label { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #e94560; margin-bottom: 12px; }
+    h2 { font-size: 28px; font-weight: 800; line-height: 1.25; margin-bottom: 20px; letter-spacing: -0.3px; }
+    h2 span { color: #e94560; }
+    .section-sub { font-size: 16px; color: #555; margin-bottom: 36px; }
+
+    /* PROBLEM */
+    .problem { background: #fafafa; }
+    .pain-grid { display: flex; flex-direction: column; gap: 16px; }
+    .pain-card { background: #fff; border-radius: 16px; padding: 24px; display: flex; align-items: flex-start; gap: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border-left: 4px solid #e94560; }
+    .pain-card-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+    .pain-card h4 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .pain-card p { font-size: 14px; color: #666; }
+
+    /* SOLUTION */
+    .solution-cover { background: linear-gradient(135deg, #e94560, #8b1a30); border-radius: 20px; padding: 40px 32px; text-align: center; color: #fff; margin-bottom: 32px; }
+    .solution-cover h3 { font-size: 24px; font-weight: 800; margin-bottom: 12px; }
+    .solution-cover p { opacity: 0.9; font-size: 15px; }
+    .check-list { list-style: none; }
+    .check-list li { padding: 12px 0; border-bottom: 1px solid #eee; display: flex; gap: 12px; font-size: 15px; }
+    .check-list li:last-child { border-bottom: none; }
+    .check-list li span { flex-shrink: 0; }
+
+    /* WHAT'S INSIDE */
+    .inside { background: #fafafa; }
+    .modules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .module-card { background: #fff; border-radius: 14px; padding: 20px; text-align: center; border: 1px solid #f0f0f0; transition: all 0.2s; }
+    .module-card:hover { border-color: #e94560; }
+    .module-card-icon { font-size: 32px; margin-bottom: 8px; }
+    .module-card h4 { font-size: 14px; font-weight: 700; }
+    .module-card p { font-size: 12px; color: #888; margin-top: 4px; }
+
+    /* BENEFITS */
+    .benefits-grid { display: flex; flex-direction: column; gap: 16px; }
+    .benefit-card { display: flex; gap: 16px; align-items: flex-start; padding: 20px; background: #fff; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border: 1px solid #f5f5f5; }
+    .benefit-card-icon { font-size: 32px; flex-shrink: 0; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: rgba(233,69,96,0.08); border-radius: 12px; }
+    .benefit-card h4 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .benefit-card p { font-size: 14px; color: #666; }
+
+    /* FREE ACCESS */
+    .free-access { background: linear-gradient(135deg, #e94560 0%, #8b1a30 100%); color: #fff; text-align: center; }
+    .free-access h2 { color: #fff; }
+    .free-access .section-label { color: rgba(255,255,255,0.7); }
+    .free-options { display: flex; flex-direction: column; gap: 20px; max-width: 480px; margin: 0 auto; }
+    .free-option { background: #fff; border-radius: 20px; padding: 28px 24px; text-align: left; color: #111; border: 1px solid rgba(255,255,255,0.15); }
+    .free-option.premium { background: #fff; border: 2px solid #e94560; position: relative; }
+    .free-option.premium::before { content: '⭐ Populaire'; position: absolute; top: -12px; right: 20px; background: #e94560; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 14px; border-radius: 100px; }
+    .free-option h4 { font-size: 18px; font-weight: 700; margin-bottom: 6px; color: #111; }
+    .free-option p { font-size: 14px; color: #555; margin-bottom: 16px; }
+    .free-option .btn { width: 100%; text-align: center; font-size: 16px; padding: 14px 32px; }
+    .free-form { display: flex; flex-direction: column; gap: 10px; }
+    .free-form input { padding: 14px 16px; border: 1px solid #ddd; border-radius: 10px; font-size: 15px; font-family: inherit; outline: none; transition: border-color 0.2s; }
+    .free-form input:focus { border-color: #e94560; }
+    .privacy-note { font-size: 12px; color: #999; margin-top: 12px; text-align: center; }
+    .social-share-links { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .social-share-link { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; border-radius: 10px; font-size: 14px; font-weight: 600; border: 1px solid #eee; transition: all 0.2s; cursor: pointer; }
+    .social-share-link:hover { transform: translateY(-1px); }
+    .social-share-link.twitter:hover { background: #e8f5fd; border-color: #1da1f2; color: #1da1f2; }
+    .social-share-link.insta:hover { background: #fce4ec; border-color: #e1306c; color: #e1306c; }
+    .social-share-link.tiktok:hover { background: #f0f0f0; border-color: #000; color: #000; }
+    .social-share-link.whatsapp:hover { background: #e8f5e9; border-color: #25d366; color: #25d366; }
+
+    /* TESTIMONIALS */
+    .testimonials-grid { display: flex; flex-direction: column; gap: 20px; }
+    .testimonial-card { background: #fff; border-radius: 16px; padding: 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border: 1px solid #f0f0f0; }
+    .testimonial-stars { color: #ffd700; font-size: 16px; letter-spacing: 1px; margin-bottom: 12px; }
+    .testimonial-text { font-size: 15px; color: #333; margin-bottom: 16px; line-height: 1.7; font-style: italic; }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .testimonial-init { width: 40px; height: 40px; border-radius: 50%; background: #e94560; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; flex-shrink: 0; }
+    .testimonial-name { font-weight: 700; font-size: 14px; }
+    .testimonial-detail { font-size: 13px; color: #888; }
+
+    /* FAQ */
+    .faq { background: #fafafa; }
+    .faq-list { display: flex; flex-direction: column; gap: 12px; }
+    .faq-item { background: #fff; border-radius: 14px; overflow: hidden; }
+    .faq-q { padding: 18px 20px; font-weight: 600; font-size: 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; }
+    .faq-q::after { content: '+'; font-size: 20px; color: #e94560; font-weight: 700; flex-shrink: 0; }
+    .faq-item.active .faq-q::after { content: '−'; }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; padding: 0 20px; font-size: 14px; color: #555; line-height: 1.7; }
+    .faq-item.active .faq-a { max-height: 300px; padding: 0 20px 18px; }
+
+    /* COMMUNITY */
+    .community { background: #fff; text-align: center; }
+    .community-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+    .community-card { background: #fafafa; border-radius: 16px; padding: 28px 20px; text-align: center; border: 1px solid #f0f0f0; }
+    .community-card h4 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .community-card p { font-size: 14px; color: #888; margin-bottom: 16px; }
+    .community-card .btn { font-size: 14px; padding: 10px 24px; }
+    .community-mini-form { display: flex; gap: 8px; max-width: 320px; margin: 0 auto; }
+    .community-mini-form input { flex: 1; padding: 12px 14px; border: 1px solid #ddd; border-radius: 10px; font-size: 14px; font-family: inherit; outline: none; }
+    .community-mini-form input:focus { border-color: #e94560; }
+    .community-mini-form .btn { padding: 12px 20px; font-size: 14px; white-space: nowrap; }
+
+    /* FINAL CTA */
+    .cta-final { text-align: center; padding: 72px 0; }
+    .cta-final h2 { font-size: 32px; }
+    .cta-final .section-sub { margin-bottom: 28px; }
+    .cta-guarantee { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 14px; color: #555; margin-top: 16px; }
+
+    /* FOOTER */
+    footer { text-align: center; padding: 32px 0; border-top: 1px solid #eee; font-size: 13px; color: #999; }
+    footer a { color: #e94560; font-weight: 600; }
+    .footer-social { display: flex; justify-content: center; gap: 20px; margin-top: 10px; font-size: 14px; }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 26px; }
+      .hero-tagline { font-size: 16px; }
+      .modules-grid { grid-template-columns: 1fr; }
+      .btn-cta-dark, .btn-cta-red { font-size: 17px; padding: 16px 32px; width: 100%; }
+      h2 { font-size: 24px; }
+      .solution-cover { padding: 28px 20px; }
+      .social-share-links { grid-template-columns: 1fr; }
+      .community-grid { grid-template-columns: 1fr; }
+      .community-mini-form { flex-direction: column; }
+    }
+  
+.follow-overlay{max-width:460px;margin:0 auto;padding:24px 16px}
+.follow-header{text-align:center;margin-bottom:22px}
+.follow-header .lock-icon{font-size:42px;margin-bottom:6px}
+.follow-header h3{font-size:clamp(17px,3.5vw,22px);font-weight:800;color:#fff;margin:0 0 6px}
+.follow-header p{font-size:13px;color:#999;margin:0;line-height:1.4}
+.follow-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.follow-link{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:600;transition:all .2s;color:#ddd}
+.follow-link.ig{background:rgba(225,48,108,0.1);border:1px solid rgba(225,48,108,0.2)}
+.follow-link.ig:hover{background:rgba(225,48,108,0.2);border-color:rgba(225,48,108,0.35)}
+.follow-link.tt{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08)}
+.follow-link.tt:hover{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.15)}
+.follow-link.yt{background:rgba(255,0,0,0.08);border:1px solid rgba(255,0,0,0.2)}
+.follow-link.yt:hover{background:rgba(255,0,0,0.15);border-color:rgba(255,0,0,0.35)}
+
+#pseudoInput:focus{border-color:#e94560!important}
+#pseudoInput::placeholder{color:#555}
+.unlock-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px 24px;border-radius:12px;border:none;background:#e94560;color:#fff;font-size:15px;font-weight:700;cursor:pointer;transition:all .3s;font-family:inherit}
+.unlock-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px #e9456040}
+.unlock-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+.gate-content{display:none}
+.gate-content.unlocked{display:block}
+.follow-note{font-size:12px;color:#555;text-align:center;margin-top:14px}
+#verifyError{color:#e94560;font-size:13px;display:none;text-align:center;margin:10px 0}
+
+/* FOLLOW ROW */
+/* FOLLOW GATE */
+</style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-author">
+        <div class="hero-author-avatar">S</div>
+        Simon — @aurabusinessfr
+      </div>
+      <h1>
+        L'IA MODE D'EMPLOI
+        <span>Utiliser l'intelligence artificielle comme un pro</span>
+      </h1>
+      <p class="hero-tagline">Maîtrise l'IA en 2026 — même si tu n'y connais rien.</p>
+      <p style="color:rgba(255,255,255,0.85); font-size:15px; font-weight:500; margin-bottom:20px;">100% gratuit · Accès immédiat · Sans inscription</p>
+      <div style="margin-top:32px; margin-bottom:36px;">
+        <a href="#free-access" class="btn btn-cta">Télécharger gratuitement →</a>
+      </div>
+      <div class="hero-social">
+        <span>👥 Déjà 2 000+ utilisateurs formés</span>
+        <span class="hero-social-stars">★★★★★</span>
+        <span>4.8/5</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem" id="problem">
+    <div class="container">
+      <div class="section-label">Pourquoi agir maintenant</div>
+      <h2>L'IA change tout. <span>Et tu le sais.</span></h2>
+      <p class="section-sub">Le monde du travail se transforme à une vitesse folle. Ceux qui maîtrisent l'IA prennent une longueur d'avance. Les autres… restent derrière.</p>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="pain-card-icon">😰</div>
+          <div>
+            <h4>Tu ne sais pas par où commencer</h4>
+            <p>ChatGPT, Claude, Midjourney… Trop d'outils, pas assez de temps. Tu te noies dans les informations contradictoires.</p>
+          </div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-card-icon">😨</div>
+          <div>
+            <h4>Tu as peur d'être remplacé</h4>
+            <p>L'IA progresse plus vite que prévu. Sans les bonnes compétences, ton poste pourrait devenir obsolète d'ici 2-3 ans.</p>
+          </div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-card-icon">😤</div>
+          <div>
+            <h4>Tu utilises l'IA à 10% de son potentiel</h4>
+            <p>Tu poses une question par-ci par-là, mais tu passes à côté de 90% de ce que l'IA peut vraiment faire pour toi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section id="solution">
+    <div class="container">
+      <div class="section-label">La solution</div>
+      <h2>Le guide le plus complet pour <span>maîtriser l'IA en 2026</span></h2>
+      <p class="section-sub">Des bases fondamentales aux workflows avancés, ce livre numérique te donne tout ce qu'il faut pour passer de débutant à expert.</p>
+      <div class="solution-cover">
+        <h3>📘 L'IA MODE D'EMPLOI</h3>
+        <p>200+ pages · 50+ templates de prompts · 8 modules · Bonus exclusifs</p>
+      </div>
+      <ul class="check-list">
+        <li><span>✅</span> Zéro jargon technique — expliqué clairement, même pour les non-initiés</li>
+        <li><span>✅</span> 100% pratique — des exemples concrets, pas de théorie inutile</li>
+        <li><span>✅</span> Mis à jour pour 2026 — couvre les dernières versions de tous les outils</li>
+        <li><span>✅</span> Utilisable immédiatement — applique les techniques dès ta première lecture</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WHAT'S INSIDE -->
+  <section class="inside" id="inside">
+    <div class="container">
+      <div class="section-label">Au programme</div>
+      <h2>Ce que tu vas <span>apprendre</span></h2>
+      <p class="section-sub">8 modules complets pour maîtriser l'IA de A à Z</p>
+      <div class="modules-grid">
+        <div class="module-card">
+          <div class="module-card-icon">🌐</div>
+          <h4>Panorama des IA</h4>
+          <p>ChatGPT, Claude, Gemini, Midjourney — lequel choisir ?</p>
+        </div>
+        <div class="module-card">
+          <div class="module-card-icon">💬</div>
+          <h4>Claude & ChatGPT</h4>
+          <p>Maîtrise les deux assistants les plus puissants du marché</p>
+        </div>
+        <div class="module-card">
+          <div class="module-card-icon">🎯</div>
+          <h4>L'art du prompt</h4>
+          <p>50+ templates prêts à l'emploi pour tout faire</p>
+        </div>
+        <div class="module-card">
+          <div class="module-card-icon">💼</div>
+          <h4>IA pour le business</h4>
+          <p>Marketing, ventes, prospection automatisée</p>
+        </div>
+        <div class="module-card">
+          <div class="module-card-icon">💻</div>
+          <h4>Programmation sans code</h4>
+          <p>Crée des apps et sites web sans écrire une ligne</p>
+        </div>
+        <div class="module-card">
+          <div class="module-card-icon">⚡</div>
+          <h4>Automatisations</h4>
+          <p>Des workflows IA qui travaillent pour toi 24h/24</p>
+        </div>
+        <div class="module-card">
+          <div class="module-card-icon">📋</div>
+          <h4>50 prompts avancés</h4>
+          <p>Des prompts prêts à l'emploi pour des résultats pro</p>
+        </div>
+        <div class="module-card">
+          <div class="module-card-icon">📖</div>
+          <h4>Glossaire complet</h4>
+          <p>Tous les termes techniques décryptés simplement</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section id="benefits">
+    <div class="container">
+      <div class="section-label">Les bénéfices</div>
+      <h2>Ce que l'IA va <span>changer pour toi</span></h2>
+      <p class="section-sub">Des résultats concrets, mesurables, dès les premiers jours</p>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-card-icon">🤖</div>
+          <div>
+            <h4>Gagner 10h/semaine avec l'IA</h4>
+            <p>Automatise les tâches répétitives et libère-toi du temps pour l'essentiel.</p>
+          </div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card-icon">📝</div>
+          <div>
+            <h4>Créer du contenu viral en minutes</h4>
+            <p>Posts LinkedIn, articles de blog, newsletters — l'IA rédige pour toi.</p>
+          </div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card-icon">💼</div>
+          <div>
+            <h4>Automatiser ton business</h4>
+            <p>Emails, relances, factures, CRM — ton entreprise tourne en pilote automatique.</p>
+          </div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card-icon">💻</div>
+          <div>
+            <h4>Coder sans savoir coder</h4>
+            <p>Crée des sites web, des apps et des outils sans compétences techniques.</p>
+          </div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card-icon">🔍</div>
+          <div>
+            <h4>Analyser des données comme un pro</h4>
+            <p>Rapports, tableaux, insights — transforme tes données en décisions.</p>
+          </div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card-icon">🚀</div>
+          <div>
+            <h4>Garder une longueur d'avance</h4>
+            <p>Pendant que les autres hésitent, toi tu construis ton avantage compétitif.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="problem" id="testimonials">
+    <div class="container">
+      <div class="section-label">Témoignages</div>
+      <h2>Ils ont transformé leur vie <span>grâce à l'IA</span></h2>
+      <p class="section-sub">Rejoins les 2 000+ utilisateurs qui maîtrisent l'IA dès aujourd'hui</p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"J'ai automatisé toute ma prospection avec l'IA grâce à ce guide. Je gagne 15h par semaine et j'ai doublé mon chiffre d'affaires en 2 mois."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-init">T</div>
+            <div>
+              <div class="testimonial-name">Thomas, 21 ans</div>
+              <div class="testimonial-detail">Entrepreneur — France</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Je n'avais jamais touché à l'IA avant ce livre. Aujourd'hui je crée des sites web, j'automatise mes emails et je gagne un temps fou. Tout est expliqué simplement."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-init">S</div>
+            <div>
+              <div class="testimonial-name">Sarah, 34 ans</div>
+              <div class="testimonial-detail">Coach en ligne — Belgique</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Les templates de prompts valent à eux seuls le prix du livre. J'utilise l'IA pour rédiger mes newsletters, analyser mes données et même coder des scripts. Un vrai game changer."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-init">M</div>
+            <div>
+              <div class="testimonial-name">Mehdi, 28 ans</div>
+              <div class="testimonial-detail">Freelance Marketing — Maroc</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREE ACCESS -->
+  <section class="free-access" id="free-access">
+<div class="free-access-inner" style="max-width:600px;margin:0 auto">
+  <!-- FOLLOW GATE -->
+                          <div id="followGate" class="follow-overlay">
+    <div class="follow-header">
+      <div class="lock-icon">🔒</div>
+      <h3>Suis @aurabusinessfr pour débloquer ton guide</h3>
+      <p>Suis sur ces réseaux puis entre ton pseudo :</p>
+    </div>
+    <div class="follow-links">
+      <a href="https://instagram.com/aurabusinessfr" target="_blank" rel="noopener" class="follow-link ig">📸 Instagram</a>
+      <a href="https://tiktok.com/@aurabusinessfr" target="_blank" rel="noopener" class="follow-link tt">🎵 TikTok</a>
+      <a href="https://youtube.com/@aurabusinessfr" target="_blank" rel="noopener" class="follow-link yt">▶️ YouTube</a>
+    </div>
+    <div style="margin:14px 0 2px;width:100%">
+      <input type="text" id="pseudoInput" placeholder="Ton pseudo (ex: tonpseudo)" style="width:100%;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.03);color:#fff;font-size:14px;outline:none;font-family:inherit;transition:border-color .2s;box-sizing:border-box">
+    </div>
+    <div id="verifyError">Entre ton pseudo (3 caractères min).</div>
+    <button id="unlockBtn" class="unlock-btn">🔓 Vérifier et débloquer mon guide</button>
+    <p class="follow-note">J'utilise les pseudos pour vérifier manuellement. Pas de spam.</p>
+  </div>
+  <!-- GATED CONTENT -->
+  <div id="gateContent" class="gate-content">
+    <div style="text-align:center;margin-bottom:20px">
+      <span style="font-size:14px;display:inline-block;background:#e9456015;color:#e94560;border:1px solid #e9456030;border-radius:50px;padding:4px 14px;font-weight:600;font-size:12px">✅ ACCÈS DÉBLOQUÉ</span>
+    </div>
+<div class="container">
+      <div class="section-label">100% gratuit</div>
+      <h2>3 façons d'obtenir ton guide <span style="color:#fff;">gratuitement</span></h2>
+      <p class="section-sub" style="color:rgba(255,255,255,0.8);">Choisis celle qui te correspond le mieux. Le guide est le même dans les 3 cas.</p>
+      <div class="free-options">
+        <div class="free-option premium">
+          <h4>📧 Option 1 — Newsletter</h4>
+          <p>Reçois le guide gratuit + des ressources exclusives chaque semaine dans ta boîte mail.</p>
+          <form class="free-form" data-netlify="true">
+        <input type="hidden" name="form-name" value="email-capture" />
+            <input type="text" placeholder="Prénom" required>
+            <input type="email" placeholder="Email" required>
+            <button type="submit" class="btn btn-cta-red">👉 Télécharger mon guide gratuit</button>
+          </form>
+          <p class="privacy-note">🔒 Aucun spam. 1 email/semaine max. Désabonnement en 1 clic. Tes données ne sont jamais revendues.</p>
+        </div>
+        <div class="free-option">
+          <h4>📢 Option 2 — Partage social</h4>
+          <p>Partage le guide avec ton réseau et obtiens ton accès immédiatement.</p>
+          <div class="social-share-links">
+            <a href="#" class="social-share-link twitter" target="_blank">🐦 Twitter / X</a>
+            <a href="#" class="social-share-link insta" target="_blank">📸 Instagram</a>
+            <a href="#" class="social-share-link tiktok" target="_blank">🎵 TikTok</a>
+            <a href="#" class="social-share-link whatsapp" target="_blank">💬 WhatsApp</a>
+          </div>
+        </div>
+        <div class="free-option">
+          <h4>⭐ Option 3 — Avis</h4>
+          <p>Laisse un avis sur le guide et débloque le pack bonus exclusif (50 prompts + templates).</p>
+          <a href="#" class="btn btn-cta-dark">⭐ Laisser un avis et débloquer le bonus</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-label">FAQ</div>
+      <h2>Tes questions, <span>nos réponses</span></h2>
+      <p class="section-sub">Tout ce que tu dois savoir avant de télécharger le guide</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">C'est vraiment gratuit ?</div>
+          <div class="faq-a">Oui, 100% gratuit. Tu peux télécharger le guide sans dépenser un centime, en échange d'un petit geste (inscription à la newsletter, partage social, ou avis). Aucune carte bancaire demandée, jamais.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Que faites-vous de mon email ?</div>
+          <div class="faq-a">Ton email est utilisé uniquement pour t'envoyer le guide et éventuellement ma newsletter hebdomadaire (si tu choisis l'option 1). Jamais revendu, jamais spammé. Tu peux te désinscrire à tout moment, en 1 clic.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Puis-je partager le guide ?</div>
+          <div class="faq-a">Bien sûr ! Si tu trouves le guide utile, partage-le avec tes amis, collègues ou sur tes réseaux sociaux. Plus on est nombreux à maîtriser l'IA, mieux c'est.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Le guide est-il mis à jour régulièrement ?</div>
+          <div class="faq-a">Oui ! Le guide est actualisé en continu pour suivre les évolutions rapides de l'IA. Tu reçois toutes les mises à jour gratuitement, à vie.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Quels outils d'IA sont couverts ?</div>
+          <div class="faq-a">ChatGPT, Claude, Gemini, Midjourney, DALL·E, Perplexity, GitHub Copilot, et bien d'autres. Le guide couvre tous les outils majeurs du marché en 2026.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Le guide est dans quel format ?</div>
+          <div class="faq-a">PDF téléchargeable, lisible sur tous les appareils (ordinateur, tablette, téléphone). Tu peux aussi le lire directement en ligne.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section class="community" id="community">
+    <div class="container">
+      <div class="section-label">Rejoins la communauté</div>
+      <h2>Des centaines de personnes <span>maîtrisent déjà l'IA</span></h2>
+      <p class="section-sub">Rejoins-les sur les réseaux et dans la newsletter pour ne rien rater.</p>
+      <div class="community-grid">
+        <div class="community-card">
+          <h4>🐦 Twitter / X</h4>
+          <p>@aurabusinessfr</p>
+          <a href="#" class="btn btn-cta">Suivre →</a>
+        </div>
+        <div class="community-card">
+          <h4>📸 Instagram</h4>
+          <p>@aurabusinessfr</p>
+          <a href="#" class="btn btn-cta">Suivre →</a>
+        </div>
+        <div class="community-card">
+          <h4>💬 Newsletter</h4>
+          <p>Astuces IA chaque semaine</p>
+          <form class="community-mini-form" data-netlify="true">
+        <input type="hidden" name="form-name" value="email-capture" />
+            <input type="email" placeholder="ton@email.com">
+            <button type="submit" class="btn btn-cta-red">S'abonner</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-final" id="buy">
+    <div class="container">
+      <h2>Prêt à <span>maîtriser l'IA</span> en 2026 ?</h2>
+      <p class="section-sub">L'IA est le plus gros avantage compétitif de notre génération. Rejoins les 2 000+ utilisateurs qui ont déjà fait le pas.</p>
+      <a href="#free-access" class="btn btn-cta-red">Télécharger gratuitement →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>© 2026 <a href="#">Simon — @aurabusinessfr</a>. Tous droits réservés.</p>
+      <p style="margin-top:4px;">L'IA MODE D'EMPLOI — Utiliser l'intelligence artificielle comme un pro</p>
+      <div class="footer-social">
+        <a href="#">🐦 Twitter/X</a>
+        <a href="#">📸 Instagram</a>
+        <a href="#">🎵 TikTok</a>
+        <a href="#">💼 LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+
+<script>
+
+document.addEventListener('DOMContentLoaded',function(){
+  var g=document.getElementById('followGate'),c=document.getElementById('gateContent'),b=document.getElementById('unlockBtn'),e=document.getElementById('verifyError'),i=document.getElementById('pseudoInput');
+  if(!g||!c||!b||!i)return;
+  if(localStorage.getItem('u_'+window.location.pathname)){g.style.display='none';c.classList.add('unlocked');return;}
+
+  b.addEventListener('click',function(){
+    if(!i.value.trim()||i.value.trim().length<3){e.style.display='block';return;}
+    e.style.display='none';b.disabled=true;b.textContent='🔄 Vérification...';
+    fetch('/api/verify-follow',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:i.value.trim()})})
+    .then(function(r){return r.json()}).then(function(d){
+      if(d.verified){localStorage.setItem('u_'+window.location.pathname,'true');g.style.display='none';c.classList.add('unlocked');}
+      else{b.disabled=false;b.textContent='🔓 Vérifier et débloquer mon guide';e.textContent=d.message||'Vérification échouée.';e.style.display='block';}
+    }).catch(function(){b.disabled=false;b.textContent='🔓 Vérifier et débloquer mon guide';e.textContent='Erreur réseau.';e.style.display='block';});
+  });
+});
+</script>
+</body>
+</html>

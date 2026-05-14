@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ADDICTIONS — Le guide complet pour t'en libérer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:#f8fafc;color:#111;line-height:1.6;-webkit-font-smoothing:antialiased}
+    :root{--blue:#1565c0;--blue-dark:#0d47a1;--blue-light:#e3f2fd;--blue-gradient:linear-gradient(135deg,#1565c0 0%,#0d47a1 100%);--blue-soft:linear-gradient(180deg,#e3f2fd 0%,#f8fafc 100%);--gold:#f59e0b;--gray-50:#f8fafc;--gray-100:#f1f5f9;--gray-200:#e2e8f0;--gray-300:#cbd5e1;--gray-400:#94a3b8;--gray-500:#64748b;--gray-600:#475569;--gray-700:#334155;--gray-800:#1e293b;--gray-900:#0f172a;--radius:16px;--radius-sm:10px;--shadow:0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.06);--shadow-lg:0 10px 25px rgba(0,0,0,.1);--shadow-xl:0 20px 50px rgba(21,101,192,.15)}
+    .container{max-width:680px;margin:0 auto;padding:0 20px}
+    .container-wide{max-width:720px;margin:0 auto;padding:0 20px}
+    img{max-width:100%;height:auto;display:block}
+    a{text-decoration:none;color:inherit}
+
+    /* Hero */
+    .hero{background:var(--blue-gradient);color:#fff;padding:60px 0 50px;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 70% 30%,rgba(255,255,255,.08) 0%,transparent 60%);pointer-events:none}
+    .hero-profile{width:88px;height:88px;border-radius:50%;background:rgba(255,255,255,.2);margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:40px;border:3px solid rgba(255,255,255,.5);backdrop-filter:blur(4px)}
+    .hero-name{font-size:13px;font-weight:500;opacity:.9;margin-bottom:4px}
+    .hero-handle{font-size:12px;opacity:.65;margin-bottom:20px}
+    .hero h1{font-size:clamp(28px,5vw,42px);font-weight:900;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px}
+    .hero h1 span{display:block;font-size:clamp(16px,2.5vw,20px);font-weight:500;opacity:.85;margin-top:8px;letter-spacing:0}
+    .hero-social{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border-radius:100px;padding:10px 22px;margin-bottom:20px;font-size:14px;font-weight:600;border:1px solid rgba(255,255,255,.15)}
+    .hero-social .star{color:#fbbf24}
+    .hero-cta{margin-top:24px}
+    .hero-cta .btn{background:#fff;color:var(--blue-dark);font-weight:800;padding:14px 48px;border-radius:100px;font-size:16px;display:inline-block;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 15px rgba(0,0,0,.2)}
+    .hero-cta .btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,0,0,.25)}
+
+    /* Sections */
+    section{padding:60px 0}
+    section.section-alt{background:var(--blue-soft)}
+    .section-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--blue);margin-bottom:8px}
+    h2{font-size:clamp(24px,4vw,32px);font-weight:800;line-height:1.25;margin-bottom:12px;letter-spacing:-.3px}
+    h2 .highlight{color:var(--blue)}
+    .subtitle{font-size:16px;color:var(--gray-500);line-height:1.6;margin-bottom:32px}
+
+    /* Problem */
+    .problem-grid{display:flex;flex-direction:column;gap:12px}
+    .problem-card{background:#fff;border-radius:var(--radius-sm);padding:18px 20px;box-shadow:var(--shadow);display:flex;align-items:center;gap:14px;border-left:4px solid #ef4444;font-weight:600;font-size:15px;color:var(--gray-800)}
+
+    /* Solution */
+    .solution-box{background:#fff;border-radius:var(--radius);padding:32px 28px;box-shadow:var(--shadow-lg);border:1px solid var(--gray-200)}
+    .solution-box p{font-size:15px;color:var(--gray-600);line-height:1.7}
+
+    /* Inside modules */
+    .module-grid{display:flex;flex-direction:column;gap:10px}
+    .module-item{background:#fff;border-radius:var(--radius-sm);padding:16px 20px;box-shadow:var(--shadow);display:flex;align-items:center;gap:14px;border-left:4px solid var(--blue)}
+    .module-item .num{width:30px;height:30px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .module-item .text{flex:1}
+    .module-item .text strong{display:block;font-size:14px;color:var(--gray-800)}
+    .module-item .text span{font-size:13px;color:var(--gray-500)}
+
+    /* Benefits */
+    .benefits-grid{display:flex;flex-direction:column;gap:12px}
+    .benefit-card{background:#fff;border-radius:var(--radius-sm);padding:18px 20px;box-shadow:var(--shadow);display:flex;align-items:center;gap:14px;border-left:4px solid var(--blue)}
+    .benefit-card .emoji{font-size:24px;flex-shrink:0;width:36px;text-align:center}
+    .benefit-card .text{font-weight:600;font-size:14px;color:var(--gray-800)}
+
+    /* Free Access Cards */
+    .free-card{border-radius:var(--radius);padding:32px 28px;box-shadow:var(--shadow-lg);margin-bottom:20px}
+    .free-card-white{background:#fff;border:1px solid var(--gray-200)}
+    .free-card-premium{background:var(--blue-gradient);position:relative;overflow:hidden}
+    .free-card-premium::before{content:'';position:absolute;top:-60%;right:-30%;width:300px;height:300px;border-radius:50%;background:rgba(255,255,255,.06);pointer-events:none}
+    .free-card h3{font-size:18px;font-weight:700;margin-bottom:4px}
+    .free-form{display:flex;flex-direction:column;gap:12px}
+    .free-form input{padding:14px 16px;border-radius:var(--radius-sm);border:2px solid var(--gray-200);font-size:15px;font-family:inherit;outline:none;transition:border-color .2s}
+    .free-form input:focus{border-color:var(--blue)}
+    .free-form button{background:var(--blue-gradient);color:#fff;font-weight:700;padding:16px 24px;border-radius:var(--radius-sm);font-size:16px;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
+    .free-form button:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,0,0,.15)}
+    .free-share-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .free-share-btn{background:var(--gray-100);border-radius:var(--radius-sm);padding:14px;text-align:center;font-weight:600;font-size:14px;color:var(--gray-700);transition:background .2s,transform .2s;cursor:pointer}
+    .free-share-btn:hover{background:var(--blue-light);transform:translateY(-1px)}
+    .free-bonus-list{list-style:none;text-align:left}
+    .free-bonus-list li{font-size:14px;padding:6px 0;display:flex;align-items:center;gap:10px;color:#fff;opacity:.9}
+
+    /* Community Cards */
+    .community-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+    .community-card{background:#fff;border-radius:var(--radius-sm);padding:18px;text-align:center;box-shadow:var(--shadow);transition:transform .2s;cursor:pointer}
+    .community-card:hover{transform:translateY(-2px)}
+    .community-card .emoji{font-size:28px;margin-bottom:6px}
+    .community-card .name{font-size:13px;font-weight:700;color:var(--gray-800)}
+    .community-card .handle{font-size:12px;color:var(--blue)}
+    .community-newsletter{background:var(--blue-gradient);border-radius:var(--radius);padding:28px;color:#fff;text-align:center}
+    .community-newsletter h3{font-size:18px;font-weight:700;margin-bottom:12px}
+    .community-newsletter p{font-size:14px;opacity:.9;margin-bottom:16px}
+    .community-newsletter input{padding:12px 16px;border-radius:var(--radius-sm);border:2px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;font-size:14px;font-family:inherit;outline:none;width:100%}
+    .community-newsletter input::placeholder{color:rgba(255,255,255,.6)}
+    .community-newsletter button{background:#fff;color:var(--blue-dark);font-weight:700;padding:12px 24px;border-radius:var(--radius-sm);font-size:15px;border:none;cursor:pointer;transition:transform .2s}
+    .community-newsletter button:hover{transform:translateY(-2px)}
+
+    /* Testimonials */
+    .testi-grid{display:flex;flex-direction:column;gap:14px}
+    .testi-card{background:#fff;border-radius:var(--radius);padding:22px 24px;box-shadow:var(--shadow);border:1px solid var(--gray-100)}
+    .testi-header{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+    .testi-avatar{width:40px;height:40px;border-radius:50%;background:var(--blue-light);color:var(--blue);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .testi-name{font-weight:700;font-size:14px;color:var(--gray-800)}
+    .testi-title{font-size:12px;color:var(--gray-400)}
+    .testi-stars{color:var(--gold);font-size:12px;margin-bottom:6px}
+    .testi-text{font-size:14px;color:var(--gray-600);line-height:1.6;font-style:italic}
+
+    /* FAQ */
+    .faq-item{border-bottom:1px solid var(--gray-200);padding:18px 0}
+    .faq-item:last-child{border-bottom:none}
+    .faq-q{font-weight:700;font-size:15px;color:var(--gray-800);display:flex;align-items:center;gap:10px;cursor:pointer}
+    .faq-q::before{content:'\2714';color:var(--blue);font-size:13px}
+    .faq-a{font-size:14px;color:var(--gray-500);margin-top:8px;padding-left:26px;line-height:1.7}
+
+    /* CTA */
+    .cta-section{background:var(--blue-gradient);color:#fff;text-align:center;position:relative;overflow:hidden}
+    .cta-section::before{content:'';position:absolute;top:-50%;right:-40%;width:400px;height:400px;border-radius:50%;background:rgba(255,255,255,.05);pointer-events:none}
+    .cta-section h2{font-size:clamp(26px,4.5vw,36px)}
+    .cta-section .btn-primary{background:#fff;color:var(--blue-dark);font-weight:800;padding:16px 56px;border-radius:100px;font-size:17px;display:inline-block;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 20px rgba(0,0,0,.25);border:none;cursor:pointer}
+    .cta-section .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.3)}
+    .cta-guarantee{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:16px;font-size:13px;opacity:.85}
+
+    /* Footer */
+    footer{text-align:center;padding:28px 20px;font-size:13px;color:var(--gray-400);background:#fff;border-top:1px solid var(--gray-100)}
+
+    /* Responsive */
+    @media(min-width:600px){
+      .problem-grid,.module-grid,.benefits-grid,.testi-grid{gap:14px}
+      .free-card{padding:36px 32px}
+      .community-grid{grid-template-columns:repeat(4,1fr)}
+      .free-share-grid{gap:12px}
+    }
+
+    /* Stars repeating */
+    .stars-47{color:var(--gold);font-size:13px;letter-spacing:2px}
+
+    /* Spacer */
+    .mt-8{margin-top:8px}
+    .mt-16{margin-top:16px}
+    .mt-24{margin-top:24px}
+    .mb-8{margin-bottom:8px}
+    .mb-16{margin-bottom:16px}
+    .mb-24{margin-bottom:24px}
+  
+.follow-overlay{max-width:460px;margin:0 auto;padding:24px 16px}
+.follow-header{text-align:center;margin-bottom:22px}
+.follow-header .lock-icon{font-size:42px;margin-bottom:6px}
+.follow-header h3{font-size:clamp(17px,3.5vw,22px);font-weight:800;color:#fff;margin:0 0 6px}
+.follow-header p{font-size:13px;color:#999;margin:0;line-height:1.4}
+.follow-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.follow-link{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:600;transition:all .2s;color:#ddd}
+.follow-link.ig{background:rgba(225,48,108,0.1);border:1px solid rgba(225,48,108,0.2)}
+.follow-link.ig:hover{background:rgba(225,48,108,0.2);border-color:rgba(225,48,108,0.35)}
+.follow-link.tt{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08)}
+.follow-link.tt:hover{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.15)}
+.follow-link.yt{background:rgba(255,0,0,0.08);border:1px solid rgba(255,0,0,0.2)}
+.follow-link.yt:hover{background:rgba(255,0,0,0.15);border-color:rgba(255,0,0,0.35)}
+
+#pseudoInput:focus{border-color:#1565c0!important}
+#pseudoInput::placeholder{color:#555}
+.unlock-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px 24px;border-radius:12px;border:none;background:#1565c0;color:#fff;font-size:15px;font-weight:700;cursor:pointer;transition:all .3s;font-family:inherit}
+.unlock-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px #1565c040}
+.unlock-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+.gate-content{display:none}
+.gate-content.unlocked{display:block}
+.follow-note{font-size:12px;color:#555;text-align:center;margin-top:14px}
+#verifyError{color:#1565c0;font-size:13px;display:none;text-align:center;margin:10px 0}
+
+/* FOLLOW ROW */
+/* FOLLOW GATE */
+</style>
+</head>
+<body>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-profile">👤</div>
+      <div class="hero-name">Simon</div>
+      <div class="hero-handle">@aurabusinessfr</div>
+      <h1>
+        ADDICTIONS<br />
+        <span>Le guide complet pour t'en libérer</span>
+      </h1>
+      <div class="hero-social">
+        <span class="star">⭐</span> 4.7/5 &middot; Déjà lu par 1 200+ personnes
+      </div>
+      <p style="font-size:15px;opacity:.85;max-width:520px;margin:0 auto 24px;line-height:1.7;">
+        100% gratuit &middot; Accès immédiat &middot; Sans inscription
+      </p>
+      <div class="hero-cta">
+        <a href="#free-access" class="btn">Télécharger gratuitement →</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== PROBLEM ===== -->
+  <section id="problem">
+    <div class="container">
+      <div class="section-label">Pourquoi tu es ici</div>
+      <h2>Tu as essayé d'arrêter.<br />Plusieurs fois.</h2>
+      <p class="subtitle">Et pourtant, tu sais que tu mérites mieux. Tu n'es pas faible. Tu es juste mal équipé. Jusqu'à maintenant.</p>
+      <div class="problem-grid">
+        <div class="problem-card">
+          🔄 Le craving revient toujours plus fort
+        </div>
+        <div class="problem-card">
+          🫂 Tu te sens seul(e) dans ce combat
+        </div>
+        <div class="problem-card">
+          😟 Tu as peur de ne jamais y arriver
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOLUTION ===== -->
+  <section class="section-alt" id="solution">
+    <div class="container">
+      <div class="section-label">La solution</div>
+      <h2>La méthode scientifique et humaine <span class="highlight">pour t'en sortir</span></h2>
+      <div class="solution-box">
+        <p>
+          Ce n'est pas un livre moralisateur. C'est un guide pratique, bienveillant et basé sur la science, qui t'accompagne pas à pas vers la libération. Pas de jugement. Que des solutions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT'S INSIDE ===== -->
+  <section id="inside">
+    <div class="container">
+      <div class="section-label">Au programme</div>
+      <h2>Ce que tu vas découvrir <span class="highlight">à l'intérieur</span></h2>
+      <p class="subtitle">6 modules progressifs pour t'emmener de la dépendance à la liberté</p>
+      <div class="module-grid">
+        <div class="module-item">
+          <div class="num">1</div>
+          <div class="text">
+            <strong>Comprendre ton addiction</strong>
+            <span>Les mécanismes neurologiques qui piègent ton cerveau — et comment les désamorcer.</span>
+          </div>
+        </div>
+        <div class="module-item">
+          <div class="num">2</div>
+          <div class="text">
+            <strong>Les clés du sevrage</strong>
+            <span>Une méthode progressive pour réduire puis arrêter, sans souffrance inutile.</span>
+          </div>
+        </div>
+        <div class="module-item">
+          <div class="num">3</div>
+          <div class="text">
+            <strong>Remplacer sans souffrir</strong>
+            <span>Comment construire des habitudes alternatives qui comblent le vide laissé par l'addiction.</span>
+          </div>
+        </div>
+        <div class="module-item">
+          <div class="num">4</div>
+          <div class="text">
+            <strong>Gérer les rechutes</strong>
+            <span>Transformer chaque rechute en apprentissage, pas en échec. Le plan pour rebondir immédiatement.</span>
+          </div>
+        </div>
+        <div class="module-item">
+          <div class="num">5</div>
+          <div class="text">
+            <strong>La santé physique et mentale</strong>
+            <span>Réparer ton corps et ton esprit : sommeil, alimentation, sport et gestion des émotions.</span>
+          </div>
+        </div>
+        <div class="module-item">
+          <div class="num">6</div>
+          <div class="text">
+            <strong>Plan d'action 90 jours</strong>
+            <span>Un calendrier jour par jour pour ne jamais dévier. Ta feuille de route vers la liberté.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFITS ===== -->
+  <section class="section-alt" id="benefits">
+    <div class="container">
+      <div class="section-label">Pourquoi ce guide</div>
+      <h2>Ce que tu vas gagner <span class="highlight">concrètement</span></h2>
+      <p class="subtitle">Plus qu'un ebook : un véritable kit de survie pour reprendre le contrôle</p>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="emoji">🧠</div>
+          <div class="text">Comprendre POURQUOI tu es tombé dedans</div>
+        </div>
+        <div class="benefit-card">
+          <div class="emoji">🔥</div>
+          <div class="text">Arrêter sans souffrir (méthode progressive)</div>
+        </div>
+        <div class="benefit-card">
+          <div class="emoji">💪</div>
+          <div class="text">Remplacer par des habitudes positives</div>
+        </div>
+        <div class="benefit-card">
+          <div class="emoji">🛡️</div>
+          <div class="text">Construire un environnement qui t'aide</div>
+        </div>
+        <div class="benefit-card">
+          <div class="emoji">📈</div>
+          <div class="text">Suivre ta progression jour après jour</div>
+        </div>
+        <div class="benefit-card">
+          <div class="emoji">✨</div>
+          <div class="text">Retrouver ta liberté et ta confiance</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FREE ACCESS ===== -->
+  <section id="free-access">
+<div class="free-access-inner" style="max-width:600px;margin:0 auto">
+  <!-- FOLLOW GATE -->
+                          <div id="followGate" class="follow-overlay">
+    <div class="follow-header">
+      <div class="lock-icon">🔒</div>
+      <h3>Suis @aurabusinessfr pour débloquer ton guide</h3>
+      <p>Suis sur ces réseaux puis entre ton pseudo :</p>
+    </div>
+    <div class="follow-links">
+      <a href="https://instagram.com/aurabusinessfr" target="_blank" rel="noopener" class="follow-link ig">📸 Instagram</a>
+      <a href="https://tiktok.com/@aurabusinessfr" target="_blank" rel="noopener" class="follow-link tt">🎵 TikTok</a>
+      <a href="https://youtube.com/@aurabusinessfr" target="_blank" rel="noopener" class="follow-link yt">▶️ YouTube</a>
+    </div>
+    <div style="margin:14px 0 2px;width:100%">
+      <input type="text" id="pseudoInput" placeholder="Ton pseudo (ex: tonpseudo)" style="width:100%;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.03);color:#fff;font-size:14px;outline:none;font-family:inherit;transition:border-color .2s;box-sizing:border-box">
+    </div>
+    <div id="verifyError">Entre ton pseudo (3 caractères min).</div>
+    <button id="unlockBtn" class="unlock-btn">🔓 Vérifier et débloquer mon guide</button>
+    <p class="follow-note">J'utilise les pseudos pour vérifier manuellement. Pas de spam.</p>
+  </div>
+  <!-- GATED CONTENT -->
+  <div id="gateContent" class="gate-content">
+    <div style="text-align:center;margin-bottom:20px">
+      <span style="font-size:14px;display:inline-block;background:#1565c015;color:#1565c0;border:1px solid #1565c030;border-radius:50px;padding:4px 14px;font-weight:600;font-size:12px">✅ ACCÈS DÉBLOQUÉ</span>
+    </div>
+<div class="container">
+      <div class="section-label">Accès gratuit</div>
+      <h2>3 façons d'obtenir ton guide <span class="highlight">gratuitement</span></h2>
+      <p class="subtitle">Choisis l'option qui te correspond le mieux — aucune carte bancaire demandée.</p>
+
+      <div class="free-card free-card-white">
+        <div style="font-size:24px;margin-bottom:12px;">📧</div>
+        <h3>Option 1 — Newsletter</h3>
+        <p style="font-size:14px;color:var(--gray-500);margin-bottom:20px;">Reçois le guide directement dans ta boîte mail, + des conseils chaque semaine pour rester libre.</p>
+        <form class="free-form" data-netlify="true">
+        <input type="hidden" name="form-name" value="email-capture" />
+          <input type="text" placeholder="Prénom" />
+          <input type="email" placeholder="Email" />
+          <button type="submit">👉 Télécharger mon guide gratuit</button>
+        </form>
+        <p style="font-size:12px;color:var(--gray-400);margin-top:12px;text-align:center;">🔒 Tes données restent confidentielles. 1 email par semaine max, désabonnement en 1 clic.</p>
+      </div>
+
+      <div class="free-card free-card-white">
+        <div style="font-size:24px;margin-bottom:12px;">📢</div>
+        <h3>Option 2 — Partage social</h3>
+        <p style="font-size:14px;color:var(--gray-500);margin-bottom:20px;">Partage ce guide avec quelqu'un qui en a besoin et obtiens ton accès immédiat.</p>
+        <div class="free-share-grid">
+          <div class="free-share-btn">🐦 Twitter</div>
+          <div class="free-share-btn">📸 Instagram</div>
+          <div class="free-share-btn">🎵 TikTok</div>
+          <div class="free-share-btn">💬 WhatsApp</div>
+        </div>
+      </div>
+
+      <div class="free-card free-card-premium">
+        <div style="position:relative;z-index:1;">
+          <div style="font-size:24px;margin-bottom:12px;">⭐</div>
+          <h3 style="color:#fff;">Option 3 — Avis</h3>
+          <p style="font-size:14px;opacity:.85;margin-bottom:16px;color:#fff;">Laisse un avis et reçois le pack bonus en cadeau.</p>
+          <ul class="free-bonus-list">
+            <li>📓 Journal de bord 90 jours (PDF)</li>
+            <li>🎧 10 audios de méditation guidée (MP3)</li>
+            <li>💬 Accès au groupe privé Telegram</li>
+          </ul>
+          <div style="margin-top:16px;">
+            <a href="#" style="display:inline-block;background:#fff;color:var(--blue-dark);font-weight:800;padding:14px 36px;border-radius:100px;font-size:15px;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 15px rgba(0,0,0,.2);">✍️ Je laisse mon avis</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section-alt" id="testimonials">
+    <div class="container">
+      <div class="section-label">Ils s'en sont libérés</div>
+      <h2>Ceux qui ont suivi la méthode <span class="highlight">témoignent</span></h2>
+      <p class="subtitle">Des vrais résultats, des vraies personnes.</p>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-header">
+            <div class="testi-avatar">H</div>
+            <div>
+              <div class="testi-name">Hugo, 22 ans</div>
+            </div>
+          </div>
+          <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+          <div class="testi-text">
+            "J'ai arrêté les écrans après 4 ans d'addiction. Ce guide m'a sauvé la vie. Littéralement. Je recomplète à tous ceux qui se sentent prisonniers."
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-header">
+            <div class="testi-avatar">L</div>
+            <div>
+              <div class="testi-name">Léa, 28 ans</div>
+            </div>
+          </div>
+          <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+          <div class="testi-text">
+            "Je pensais que je ne pourrais jamais arrêter le sucre. La méthode progressive est incroyable. 3 mois sans rechute, je me sens légère comme jamais."
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-header">
+            <div class="testi-avatar">M</div>
+            <div>
+              <div class="testi-name">Mehdi, 31 ans</div>
+            </div>
+          </div>
+          <div class="testi-stars">⭐⭐⭐⭐</div>
+          <div class="testi-text">
+            "J'ai arrêté la cigarette après 10 ans. J'avais tout essayé. Ce guide m'a donné les outils et surtout la mentalité pour enfin y arriver. Merci Simon."
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REJOINS LA COMMUNAUTÉ ===== -->
+  <section id="community">
+    <div class="container">
+      <div class="section-label">La communauté</div>
+      <h2>Rejoins la <span class="highlight">communauté</span></h2>
+      <p class="subtitle">Des milliers de personnes qui se libèrent ensemble. Suis-nous sur les réseaux.</p>
+
+      <div class="community-grid">
+        <a href="#" class="community-card" style="text-decoration:none;">
+          <div class="emoji">📸</div>
+          <div class="name">Instagram</div>
+          <div class="handle">@aurabusinessfr</div>
+        </a>
+        <a href="#" class="community-card" style="text-decoration:none;">
+          <div class="emoji">🎵</div>
+          <div class="name">TikTok</div>
+          <div class="handle">@aurabusinessfr</div>
+        </a>
+        <a href="#" class="community-card" style="text-decoration:none;">
+          <div class="emoji">🐦</div>
+          <div class="handle">@aurabusinessfr</div>
+        </a>
+        <a href="#" class="community-card" style="text-decoration:none;">
+          <div class="emoji">▶️</div>
+          <div class="name">YouTube</div>
+          <div class="handle">@aurabusinessfr</div>
+        </a>
+      </div>
+
+      <div class="community-newsletter">
+        <h3>📬 La newsletter qui change des vies</h3>
+        <p>Chaque semaine, un conseil, une histoire, une astuce — directement dans ta boîte mail.</p>
+        <form style="display:flex;flex-direction:column;gap:10px;" data-netlify="true">
+        <input type="hidden" name="form-name" value="email-capture" />
+          <input type="email" placeholder="Ton email" />
+          <button type="submit">👉 Je rejoins la communauté</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section-alt" id="faq">
+    <div class="container-wide">
+      <div class="section-label">Questions fréquentes</div>
+      <h2>On répond à tes <span class="highlight">questions</span></h2>
+      <p class="subtitle">Tout ce que tu dois savoir avant de commencer.</p>
+      <div>
+        <div class="faq-item">
+          <div class="faq-q">Est-ce que ça marche pour toutes les addictions ?</div>
+          <div class="faq-a">Oui. La méthode est universelle : elle s'applique aux addictions aux substances (tabac, alcool, sucre) comme aux comportementales (écrans, jeux, shopping). Les mécanismes neurologiques sont les mêmes. Les stratégies sont adaptées à chaque cas.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">J'ai déjà essayé d'arrêter, pourquoi ça marcherait cette fois ?</div>
+          <div class="faq-a">Parce que ce guide attaque la racine du problème. La plupart des méthodes se concentrent sur la volonté. Nous, on travaille sur la compréhension du cerveau, le remplacement des habitudes, et la gestion des déclencheurs. C'est une approche globale que tu n'as probablement jamais essayée.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Faut-il un suivi médical en plus ?</div>
+          <div class="faq-a">Ce guide est un complément, pas un substitut. Si ton addiction est sévère ou dangereuse (alcool, drogues dures), consulte un médecin avant d'arrêter. Le guide t'aidera à faire le travail de fond en parallèle.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Combien de temps dure le sevrage ?</div>
+          <div class="faq-a">Le plan d'action est conçu sur 90 jours. Mais les premiers résultats apparaissent souvent dès la première semaine. Chaque parcours est unique : l'important est la progression, pas la perfection.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">C'est vraiment gratuit ?</div>
+          <div class="faq-a">Oui, 100% gratuit. Pas de carte bancaire, pas d'abonnement caché, pas d'essai gratuit qui se transforme en paiement. Tu choisis simplement comment tu veux obtenir ton accès : par email, par partage, ou par un avis. C'est tout.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Que faites-vous de mon email ?</div>
+          <div class="faq-a">Rien de louche. Tu recevras le guide par email, puis une newsletter hebdomadaire (1 email par semaine max) avec des conseils pour t'aider dans ton processus. Tu peux te désabonner à tout moment en 1 clic. Tes données ne sont jamais revendues.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Puis-je partager ce guide ?</div>
+          <div class="faq-a">Oui, et c'est même encouragé ! Si ce guide peut aider quelqu'un autour de toi, partage-le sans hésiter. Plus on est nombreux à se libérer, plus c'est facile. La seule chose qu'on demande : ne le modifie pas et garde les crédits.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Le livre est disponible en format ebook ?</div>
+          <div class="faq-a">Oui. Tu reçois un PDF lisible sur tout appareil (téléphone, tablette, ordinateur, liseuse). Tu peux aussi imprimer le guide si tu préfères le format papier.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="cta-section" id="cta">
+    <div class="container">
+      <h2>Prêt à reprendre le contrôle ?</h2>
+      <p style="font-size:16px;opacity:.85;max-width:480px;margin:12px auto 0;line-height:1.7;">
+        Télécharge ton guide gratuitement et rejoins des milliers de personnes qui se libèrent chaque jour.<br />
+        Ensemble, on va y arriver.
+      </p>
+      <div style="margin-top:24px;">
+        <a href="#free-access" class="btn-primary">📥 Télécharger gratuitement</a>
+      </div>
+      <div class="cta-guarantee">
+        <span>🎯</span> 100% gratuit &middot; Sans inscription &middot; Accès immédiat
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div>Simon &mdash; @aurabusinessfr</div>
+    <div style="margin-top:6px;font-size:12px;">
+      📸 @aurabusinessfr &middot; 🎵 @aurabusinessfr &middot; 🐦 @aurabusinessfr &middot; ▶️ @aurabusinessfr
+    </div>
+    <div style="margin-top:6px;font-size:12px;">ADDICTIONS &mdash; Le guide complet pour t'en libérer &copy; 2025</div>
+  </footer>
+
+<script>
+
+document.addEventListener('DOMContentLoaded',function(){
+  var g=document.getElementById('followGate'),c=document.getElementById('gateContent'),b=document.getElementById('unlockBtn'),e=document.getElementById('verifyError'),i=document.getElementById('pseudoInput');
+  if(!g||!c||!b||!i)return;
+  if(localStorage.getItem('u_'+window.location.pathname)){g.style.display='none';c.classList.add('unlocked');return;}
+
+  b.addEventListener('click',function(){
+    if(!i.value.trim()||i.value.trim().length<3){e.style.display='block';return;}
+    e.style.display='none';b.disabled=true;b.textContent='🔄 Vérification...';
+    fetch('/api/verify-follow',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:i.value.trim()})})
+    .then(function(r){return r.json()}).then(function(d){
+      if(d.verified){localStorage.setItem('u_'+window.location.pathname,'true');g.style.display='none';c.classList.add('unlocked');}
+      else{b.disabled=false;b.textContent='🔓 Vérifier et débloquer mon guide';e.textContent=d.message||'Vérification échouée.';e.style.display='block';}
+    }).catch(function(){b.disabled=false;b.textContent='🔓 Vérifier et débloquer mon guide';e.textContent='Erreur réseau.';e.style.display='block';});
+  });
+});
+</script>
+</body>
+</html>

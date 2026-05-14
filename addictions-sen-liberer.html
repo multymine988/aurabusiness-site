@@ -1,0 +1,2696 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADDICTIONS Le guide complet pour t'en libérer</title>
+<style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap');
+
+  :root {
+    --primary: #0d1b2a;
+    --accent: #1565c0;
+    --accent2: #0d47a1;
+    --gold: #f0a500;
+    --light: #f8f9fa;
+    --gray: #6c757d;
+    --text: #212529;
+    --text-light: #495057;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--text);
+    line-height: 1.7;
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .cover {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #0d1b2a 0%, #1b2838 50%, #0d47a1 100%);
+    color: #fff;
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 70%, rgba(21,101,192,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(240,165,0,0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .cover-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.15;
+    max-width: 700px;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover h1 span { color: var(--accent); }
+
+  .cover-subtitle {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.8);
+    max-width: 600px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-author {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.6);
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-author strong {
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  .cover-line {
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    margin: 30px auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .content {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 30px 40px;
+  }
+
+  .toc {
+    padding: 30px 40px;
+    max-width: 740px;
+    margin: 0 auto;
+  }
+
+  .toc h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+
+  .toc-line {
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    margin-bottom: 40px;
+  }
+
+  .toc-list {
+    list-style: none;
+  }
+
+  .toc-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+
+  .toc-list a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    width: 100%;
+    transition: color 0.2s;
+  }
+
+  .toc-list a:hover {
+    color: var(--accent);
+  }
+
+  .toc-number {
+    font-weight: 800;
+    color: var(--accent);
+    font-size: 1.1rem;
+    min-width: 30px;
+  }
+
+  .toc-title {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--primary);
+  }
+
+  .module-header {
+    padding-top: 10px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 16px;
+  }
+
+  .module-number {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .module-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--primary);
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .module-tagline {
+    font-size: 1.05rem;
+    color: var(--gray);
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--primary);
+    margin: 32px 0 14px;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.45rem;
+    color: var(--primary);
+    margin: 32px 0 14px;
+    line-height: 1.3;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent2);
+    margin: 24px 0 10px;
+  }
+
+  p {
+    margin-bottom: 14px;
+    color: var(--text-light);
+    font-size: 0.98rem;
+  }
+
+  strong { color: var(--text); font-weight: 600; }
+
+  blockquote {
+    border-left: 4px solid var(--accent);
+    background: #eaf0ff;
+    padding: 18px 22px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+    color: var(--text-light);
+  }
+
+  .callout {
+    background: linear-gradient(135deg, #fff9e6 0%, #fff3cc 100%);
+    border-left: 4px solid var(--gold);
+    padding: 18px 22px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .callout-dark {
+    background: #d4e2ff;
+    border-left: 4px solid var(--accent);
+    padding: 18px 22px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .callout-success {
+    background: linear-gradient(135deg, #f0fff4 0%, #e6ffe6 100%);
+    border-left: 4px solid #28a745;
+    padding: 18px 22px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.88rem;
+  }
+
+  thead th {
+    background: var(--primary);
+    color: #fff;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.82rem;
+    letter-spacing: 0.5px;
+  }
+
+  thead th:first-child { border-radius: 8px 0 0 0; }
+  thead th:last-child { border-radius: 0 8px 0 0; }
+
+  tbody td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: top;
+  }
+
+  tbody tr:nth-child(even) { background: #f8f9fa; }
+
+  hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    margin: 30px 0;
+  }
+
+  hr.concl-divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    width: 60px;
+    margin: 20px auto;
+  }
+
+  .notes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0;
+  }
+
+  .notes-card {
+    background: var(--light);
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 18px;
+    text-align: center;
+  }
+
+  .notes-card .label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--gray);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .notes-card .value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  .notes-card .note {
+    font-size: 0.82rem;
+    color: var(--gray);
+    margin-top: 4px;
+  }
+
+  .intro-quote {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-light);
+    padding: 30px 20px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    position: relative;
+  }
+
+  .intro-quote::before {
+    content: '\201C';
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: var(--accent);
+    opacity: 0.3;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+  }
+
+  .bonus-header {
+    background: linear-gradient(135deg, var(--gold) 0%, #e09400 100%);
+    color: #fff;
+    padding: 26px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 30px 0 24px;
+  }
+
+  .bonus-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 4px;
+  }
+
+  .bonus-header p {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.95rem;
+  }
+
+  .exercise {
+    background: linear-gradient(135deg, #0d1b2a 0%, #1b2838 100%);
+    color: #fff;
+    padding: 26px;
+    border-radius: 12px;
+    margin: 30px 0;
+  }
+
+  .exercise h4 {
+    color: var(--gold);
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .exercise p, .exercise li {
+    color: rgba(255,255,255,0.85);
+  }
+
+  .exercise strong { color: #fff; }
+
+  .checklist {
+    background: var(--light);
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 20px 0;
+  }
+
+  .checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e9ecef;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    transition: color 0.2s;
+  }
+
+  .checklist-item:last-child { border-bottom: none; }
+
+  .checklist-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .checklist-item:has(input:checked) {
+    color: var(--gray);
+    text-decoration: line-through;
+  }
+
+  .conclusion {
+    text-align: center;
+    padding: 35px 40px;
+    background: #1a1a2e;
+    color: #fff;
+    margin-top: 40px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .conclusion h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+
+  .conclusion h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.45rem;
+    margin: 32px 0 14px;
+    line-height: 1.3;
+  }
+
+  .conclusion p {
+    color: rgba(255,255,255,0.85);
+    max-width: 600px;
+    margin: 0 auto 12px;
+    font-size: 0.95rem;
+  }
+
+  .conclusion li {
+    color: rgba(255,255,255,0.85);
+  }
+
+  .conclusion strong { color: var(--gold); }
+
+  ul, ol {
+    margin: 14px 0;
+    padding-left: 24px;
+  }
+
+  li {
+    margin-bottom: 6px;
+    color: var(--text-light);
+    font-size: 0.98rem;
+  }
+
+  li strong { color: var(--text); }
+
+  pre, code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.86rem;
+  }
+
+  pre {
+    background: var(--primary);
+    color: #e9ecef;
+    padding: 18px 22px;
+    border-radius: 8px;
+    margin: 20px 0;
+    overflow-x: auto;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  code {
+    background: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.86rem;
+    color: var(--accent);
+  }
+
+  pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+  }
+
+  /* ===== PRINT STYLES — Optimized for Perfect PDF ===== */
+  @page {
+    size: A4;
+    margin: 18mm 15mm;
+  }
+
+  @page :first {
+    margin: 0;
+  }
+
+  .content.page-break {
+    page-break-before: always;
+    page-break-inside: avoid;
+  }
+
+  .module-header {
+    page-break-inside: avoid;
+  }
+
+  .exercise,
+  .callout,
+  .callout-dark,
+  .callout-success,
+  blockquote,
+  table,
+  pre,
+  .checklist {
+    page-break-inside: avoid;
+  }
+
+  .conclusion {
+    page-break-before: always;
+    min-height: 100vh;
+  }
+
+  .bonus-header {
+    page-break-before: always;
+    page-break-inside: avoid;
+  }
+
+
+  @media print {
+    body {
+      font-size: 11pt;
+      line-height: 1.6;
+      color: #000;
+      background: #fff;
+    }
+
+    .cover {
+      height: 100vh;
+      page-break-after: always;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .cover::before,
+    .intro-quote::before {
+      display: none !important;
+    }
+
+    .toc {
+      page-break-after: always;
+    }
+
+    .content {
+      padding: 0;
+      max-width: 100%;
+    }
+
+    h2, h3, h4 {
+      page-break-after: avoid;
+    }
+
+    p, li {
+      orphans: 3;
+      widows: 3;
+    }
+
+    .exercise,
+    .callout,
+    .callout-dark,
+    .callout-success,
+    blockquote,
+    table,
+    pre,
+    .checklist {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .conclusion {
+      margin-top: 0;
+      padding: 60px 40px;
+      page-break-inside: avoid;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .bonus-header {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    thead th {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .exercise {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .conclusion * {
+      color: #fff !important;
+    }
+    .conclusion strong {
+      color: var(--gold) !important;
+    }
+    .bonus-header * {
+      color: #fff !important;
+    }
+    .bonus-header h2, .bonus-header strong {
+      color: #fff !important;
+    }
+    .conclusion hr {
+      border-color: rgba(255,255,255,0.2) !important;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .cover {
+      height: auto;
+      min-height: 100dvh;
+      padding: 40px 24px;
+    }
+
+    .cover h1 {
+      font-size: 2.2rem;
+    }
+
+    .cover-subtitle {
+      font-size: 1rem;
+    }
+
+    .cover-badge {
+      font-size: 0.75rem;
+      padding: 6px 16px;
+      margin-bottom: 24px;
+    }
+
+    .content {
+      padding: 20px 16px;
+      max-width: 100%;
+    }
+
+    .toc {
+      padding: 20px 16px;
+    }
+
+    .toc h2 {
+      font-size: 1.8rem;
+    }
+
+    .module-header h2 {
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+    }
+
+    h4 {
+      font-size: 1rem;
+    }
+
+    p, li {
+      font-size: 0.92rem;
+    }
+
+    .exercise,
+    .callout,
+    .callout-dark,
+    .callout-success,
+    blockquote,
+    .checklist {
+      padding: 16px;
+      margin: 16px 0;
+    }
+
+    .bonus-header {
+      padding: 20px 16px;
+    }
+
+    .bonus-header h2 {
+      font-size: 1.4rem;
+    }
+
+    .conclusion {
+      padding: 40px 20px;
+    }
+
+    .conclusion h2 {
+      font-size: 1.5rem;
+    }
+
+    .intro-quote {
+      font-size: 1rem;
+      padding: 20px 16px;
+    }
+
+    table {
+      font-size: 0.8rem;
+    }
+
+    thead th,
+    tbody td {
+      padding: 8px 10px;
+    }
+
+    pre {
+      font-size: 0.78rem;
+      padding: 14px 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cover h1 {
+      font-size: 1.7rem;
+    }
+
+    .cover {
+      padding: 30px 16px;
+      min-height: 100dvh;
+    }
+
+    .cover-badge {
+      font-size: 0.7rem;
+      padding: 5px 14px;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      padding: 16px 12px;
+    }
+
+    .toc {
+      padding: 16px 12px;
+    }
+
+    .module-header h2 {
+      font-size: 1.3rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+    }
+
+    .exercise,
+    .callout,
+    .callout-dark,
+    .callout-success,
+    blockquote {
+      padding: 14px;
+      margin: 12px 0;
+    }
+
+    .conclusion {
+      padding: 30px 16px;
+    }
+
+    .checklist {
+      padding: 14px;
+    }
+
+    .checklist-item {
+      font-size: 0.85rem;
+      gap: 8px;
+    }
+
+    table {
+      font-size: 0.72rem;
+    }
+
+    thead th,
+    tbody td {
+      padding: 6px 8px;
+    }
+  }
+
+
+  .content {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  @media (max-width: 768px) {
+    .cover {
+      height: auto;
+      min-height: 100dvh;
+      padding: 40px 24px;
+    }
+
+    .cover h1 {
+      font-size: 2.2rem;
+    }
+
+    .cover-subtitle {
+      font-size: 1rem;
+    }
+
+    .cover-badge {
+      font-size: 0.75rem;
+      padding: 6px 16px;
+      margin-bottom: 24px;
+    }
+
+    .content {
+      padding: 20px 16px;
+      max-width: 100%;
+    }
+
+    .toc {
+      padding: 20px 16px;
+    }
+
+    .toc h2 {
+      font-size: 1.8rem;
+    }
+
+    .module-header h2 {
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+    }
+
+    h4 {
+      font-size: 1rem;
+    }
+
+    p, li {
+      font-size: 0.92rem;
+    }
+
+    .exercise,
+    .callout,
+    .callout-dark,
+    .callout-success,
+    blockquote,
+    .checklist {
+      padding: 16px;
+      margin: 16px 0;
+    }
+
+    .bonus-header {
+      padding: 20px 16px;
+    }
+
+    .bonus-header h2 {
+      font-size: 1.4rem;
+    }
+
+    .conclusion {
+      padding: 40px 20px;
+    }
+
+    .conclusion h2 {
+      font-size: 1.5rem;
+    }
+
+    .intro-quote {
+      font-size: 1rem;
+      padding: 20px 16px;
+    }
+
+    table {
+      font-size: 0.8rem;
+    }
+
+    thead th,
+    tbody td {
+      padding: 8px 10px;
+    }
+
+    pre {
+      font-size: 0.78rem;
+      padding: 14px 16px;
+    }
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .callout-dark p, .callout-dark li, .callout-dark { color: var(--text); }
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+<div class="cover">
+  <div class="cover-badge">Guide Dependances</div>
+  <h1>ADDICTIONS Le guide complet pour t'en libérer</h1>
+  <div class="cover-line"></div>
+  <p class="cover-subtitle">Drogue, alcool, réseaux sociaux, porno, jeux — comprendre, agir, guerir</p>
+  <p class="cover-author">Cree par <strong>Simon</strong> — <strong>@aurabusinessfr</strong></p>
+</div>
+<div class="toc">
+  <h2>Table des matières</h2>
+  <div class="toc-line"></div>
+  <ul class="toc-list">
+    <li><a href="#avant-propos"><span class="toc-number">◆</span><span class="toc-title">Avant-Propos</span></a></li>
+    <li><a href="#module-1--ce-quest-vraiment-une-addiction"><span class="toc-number">1</span><span class="toc-title">Module 1 — Ce qu'est vraiment une addiction</span></a></li>
+    <li><a href="#module-2--pourquoi-tu-es-tombe-la-dedans"><span class="toc-number">2</span><span class="toc-title">Module 2 — Pourquoi tu es tombe la-dedans</span></a></li>
+    <li><a href="#module-3--les-addictions-une-par-une"><span class="toc-number">3</span><span class="toc-title">Module 3 — Les addictions une par une</span></a></li>
+    <li><a href="#module-4--le-sevrage-les-premieres-48h-a-30-jours"><span class="toc-number">4</span><span class="toc-title">Module 4 — Le sevrage : les premieres 48h a 30 jours</span></a></li>
+    <li><a href="#module-5--remplacer-pas-juste-arreter"><span class="toc-number">5</span><span class="toc-title">Module 5 — Remplacer, pas juste arreter</span></a></li>
+    <li><a href="#module-6--la-rechute-la-préparer-la-gerer-en-sortir"><span class="toc-number">6</span><span class="toc-title">Module 6 — La rechute : la préparer, la gerer, en sortir</span></a></li>
+    <li><a href="#module-7--ton-environnement-et-ton-entourage"><span class="toc-number">7</span><span class="toc-title">Module 7 — Ton environnement et ton entourage</span></a></li>
+    <li><a href="#module-8--le-travail-psychologique-profond"><span class="toc-number">8</span><span class="toc-title">Module 8 — Le travail psychologique profond</span></a></li>
+    <li><a href="#module-9--la-sante-physique-pendant-la-recuperation"><span class="toc-number">9</span><span class="toc-title">Module 9 — La sante physique pendant la recuperation</span></a></li>
+    <li><a href="#module-10--plan-daction-90-jours"><span class="toc-number">10</span><span class="toc-title">Module 10 — Plan d'action 90 jours</span></a></li>
+    <li><a href="#conclusion--tu-es-plus-fort-que-ton-addiction"><span class="toc-number">◆</span><span class="toc-title">Conclusion — Tu es plus fort que ton addiction</span></a></li>
+    <li><a href="#bonus--ressources-outils-et-suivi"><span class="toc-number">◆</span><span class="toc-title">Bonus — Ressources, outils et suivi</span></a></li>
+  </ul>
+</div>
+<div class="content page-break" id="avant-propos">
+  <h2>Avant-propos</h2>
+  <h3>Pourquoi ce livre existe</h3>
+  <p>Tu tiens ce guide parce que quelque chose en toi veut changer. Peut-être que tu as essaye d'arreter seul, plusieurs fois. Peut-être que tu as reussi quelques jours, quelques semaines, avant de replonger. Peut-être que tu es en train de toucher le fond. Ou peut-être que tu veux juste comprendre ce qui t'arrive.</p>
+  <p>Peu importe ou tu es sur le chemin. Le simple fait que tu sois ici, a lire ces lignes, est un acte de courage.</p>
+  <p>Ce livre n'est pas un jugement. Ce n'est pas un sermon moral sur "le bien et le mal". Ce n'est pas un parent decu qui te dit "arrete ca". L'addiction n'est pas un defaut de caractere, ce n'est pas une faiblesse morale, et ce n'est pas ta faute.</p>
+  <p><strong>L'addiction est un problème. Et les problèmes ont des solutions.</strong></p>
+  <h3>Comment utiliser ce livre</h3>
+  <p>Chaque module est conçu pour être lu et applique dans l'ordre. Ne saute pas d'étape. Le processus de guerison suit un chemin, et chaque module construit sur le precedent.</p>
+  <p>Tu trouveras dans chaque module :</p>
+  <ul>
+    <li>Les concepts essentiels pour comprendre</li>
+    <li>Des outils concrets a appliquer</li>
+    <li>Un exercice pratique</li>
+  </ul>
+  <p>Les exercices ne sont pas optionnels. C'est en les faisant que tu transformes ta comprehension en changement réel.</p>
+  <h3>Une vérité avant de commencer</h3>
+  <p><strong>La guerison n'est pas lineaire.</strong> Tu vas progresser, puis reculer, puis progresser encore. Ce n'est pas un échec. C'est le processus. La rechute fait partie du voyage, pas la fin du voyage.</p>
+  <p>Si tu as déjà essaye d'arreter et que tu as rechute, tu n'as pas echoue. Tu as appris ce qui ne marchait pas. Maintenant tu sais une chose de plus sur toi-meme et sur ton addiction.</p>
+  <p><strong>La seule vraie defaite, c'est d'arreter d'essayer.</strong></p>
+</div>
+<div class="content page-break" id="module-1--ce-quest-vraiment-une-addiction">
+  <div class="module-header">
+    <div class="module-number">Module 1</div>
+    <h2>Ce qu'est vraiment une addiction</h2>
+  </div>
+  <p>Comprendre ce qui se passe dans ton cerveau, sans culpabilite</p>
+  <h3>La science du cerveau addictif</h3>
+  <p>Ton cerveau est cable pour survivre. Pour t'y aider, il utilise un système de recompense qui libere de la dopamine a chaque fois que tu fais quelque chose de benefique : manger, boire, avoir des relations sociales, te reproduire.</p>
+  <p>La dopamine, c'est la molecule du "encore". Elle ne te donne pas le plaisir, elle te donne l'envie. C'est elle qui te pousse a repeter les comportements qui sont bons pour ta survie.</p>
+  <p><strong>Le problème :</strong> les substances et comportements addictifs (drogue, alcool, porno, réseaux sociaux) detournent ce système. Ils liberent 2 a 10 fois plus de dopamine que les recompenses naturelles. Et ils le font instantanement, sans effort.</p>
+  <p>Ton cerveau n'est pas "casse". Il fait exactement ce pour quoi il est conçu : te pousser vers ce qui libere le plus de dopamine. Le problème, c'est que ce qui libere le plus de dopamine aujourd'hui n'est plus bon pour toi.</p>
+  <h3>Le cycle de l'addiction</h3>
+  <p>L'addiction suit un cycle en 4 phases :</p>
+  <p><strong>1. Le declencheur.</strong> Une situation, une emotion, une personne, un lieu qui active l'envie. Le stress, l'ennui, la solitude, la joie meme.</p>
+  <p><strong>2. La craving (l'envie intense).</strong> Ton cerveau te bombarde de signaux : "tu as besoin de ca". C'est une sensation physique et emotionnelle qui peut être très intense.</p>
+  <p><strong>3. La consommation.</strong> Tu passes a l'acte. Sur le moment, ça soulage. Le cerveau recoit sa dose de dopamine. Tu te sens bien... pendant quelques minutes ou quelques heures.</p>
+  <p><strong>4. La honte et le regret.</strong> Après la consommation vient la descente. La culpabilite. Les promesses de ne plus recommencer. Mais le cycle est déjà pret a recommencer au prochain declencheur.</p>
+  <p>Ce n'est pas toi qui es faible. C'est le cycle qui est fort. Mais la bonne nouvelle, c'est que quand tu comprends le cycle, tu peux commencer a le deconstruire.</p>
+  <h3>Mythes sur l'addiction</h3>
+  <p><strong>Mythe 1 : "Il faut avoir de la volonté."</strong> La volonté est une ressource limitee. Personne n'arrete une addiction par la seule force de la volonté. Tu as besoin de stratégies, de soutien, et de changements concrets.</p>
+  <p><strong>Mythe 2 : "Tu arretes quand tu veux vraiment."</strong> Si c'était vrai, personne ne serait addict. Les gens veulent arreter, ils essayent, ils echouent. Ce n'est pas un manque de desir, c'est un manque d'outils.</p>
+  <p><strong>Mythe 3 : "L'addiction, c'est pour les faibles."</strong> L'addiction touche tous les profils. Des medecins, des athletes, des dirigeants, des artistes. Elle n'a rien a voir avec la force de caractere.</p>
+  <p><strong>Mythe 4 : "Une fois addict, toujours addict."</strong> La guerison est possible. Des millions de personnes s'en sont sorties. Toi aussi tu peux.</p>
+  <div class="exercise">
+    <h4>Identifier ton cycle</h4>
+    <p><strong>-</strong> Prends 10 minutes pour écrire sur ton addiction. Quel est le declencheur le plus frequent ? (emotion, moment de la journee, situation sociale, stress, ennui)</p>
+    <p><strong>-</strong> A quoi ressemble la craving pour toi ? Ou la sens-tu dans ton corps ? (tension dans la poitrine, pensee obsessionnelle, agitation)</p>
+    <p><strong>-</strong> Que ressens-tu juste après la consommation ? Et 1 heure après ? Et le lendemain ?</p>
+    <p><strong>-</strong> Quel est le mythe sur l'addiction auquel tu croyais jusqu'a aujourd'hui ?</p>
+  </div>
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">Le cycle</div>
+      <div class="value">Declencheur → Craving → Conso → Honte</div>
+      <div class="note">Comprendre le cycle, c'est commencer a le deconstruire</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Dopamine</div>
+      <div class="value">2 a 10x plus forte</div>
+      <div class="note">Les substances detournent le système de recompense naturel</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Vérité</div>
+      <div class="value">Ce n'est pas ta faute</div>
+      <div class="note">L'addiction n'est pas une faiblesse morale mais un problème qui a des solutions</div>
+    </div>
+  </div>
+</div>
+<div class="content page-break" id="module-2--pourquoi-tu-es-tombe-la-dedans">
+  <div class="module-header">
+    <div class="module-number">Module 2</div>
+    <h2>Pourquoi tu es tombe la-dedans</h2>
+  </div>
+  <p>Les causes profondes de l'addiction</p>
+  <h3>L'addiction n'est jamais le problème principal</h3>
+  <p>Voici une vérité difficile mais liberatrice : <strong>l'addiction est un symptome, pas la cause.</strong> Personne ne devient addict par hasard. L'addiction est presque toujours une réponse a quelque chose de plus profond.</p>
+  <p>Les causes racines les plus frequentes :</p>
+  <p><strong>La douleur emotionnelle.</strong> Un traumatisme passe, une perte, une enfance difficile, une blessure non guerie. La substance ou le comportement addictif est une forme d'automedication.</p>
+  <p><strong>Le vide existentiel.</strong> Pas de direction, pas de sens, pas de projet. L'addiction comble le vide temporairement.</p>
+  <p><strong>Le stress chronique.</strong> Un travail ou une vie qui te dépasse. L'addiction devient l'exutoire, la soupape de decompression.</p>
+  <p><strong>L'isolement social.</strong> Pas de connexions authentiques. L'addiction remplace les relations humaines.</p>
+  <p><strong>Le manque de competences emotionnelles.</strong> Tu n'as pas appris a gerer tes emotions autrement. L'addiction est ta seule stratégie de regulation.</p>
+  <h3>Automedication : la vérité qui derange</h3>
+  <p>Regarde ton addiction honnetement. Qu'est-ce qu'elle t'apporte ?</p>
+  <ul>
+    <li>Tu fumes pour te calmer ?</li>
+    <li>Tu bois pour oublier ?</li>
+    <li>Tu scrolles pour ne pas penser ?</li>
+    <li>Tu regardes du porno pour te sentir moins seul ?</li>
+  </ul>
+  <p>Ton addiction n'est pas ton ennemi. C'est une tentative maladroite de ton cerveau de resoudre un problème. Le problème, c'est que la solution est devenue pire que le problème initial.</p>
+  <p><strong>Tu n'as pas besoin d'arreter ton addiction. Tu as besoin d'apprendre d'autres facons de répondre a ce que ton addiction essaie de soigner.</strong></p>
+  <h3>Les declencheurs : les connaître pour les desamorcer</h3>
+  <p>Un declencheur est tout ce qui active l'envie de consommer. Il existe plusieurs categories :</p>
+  <p><strong>Declencheurs externes :</strong> personnes, lieux, objets, moments de la journee, réseaux sociaux, publicites, musique.</p>
+  <p><strong>Declencheurs internes :</strong> stress, ennui, tristesse, colere, excitation, fatigue, solitude, vide.</p>
+  <p><strong>Le piege :</strong> la plupart des declencheurs sont inconscients. Tu ne sais pas pourquoi l'envie arrive. Elle est juste la. Mais chaque craving a un declencheur. Ton travail est de les identifier.</p>
+  <div class="exercise">
+    <h4>Identifier tes causes racines</h4>
+    <p><strong>-</strong> Si tu retirais ton addiction de ta vie, quel vide laisserait-elle ? Honnetement, qu'est-ce qu'elle t'apporte ?</p>
+    <p><strong>-</strong> Qu'est-ce qui s'est passe dans ta vie avant que l'addiction ne commence ? Y a-t-il un événement, une periode, une douleur qui coincide ?</p>
+    <p><strong>-</strong> Quelles emotions es-tu le plus susceptible d'éviter ? La colere, la tristesse, la solitude, l'ennui ?</p>
+    <p><strong>-</strong> Si ton addiction était un message, que dirait-elle ?</p>
+  </div>
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">Symptome</div>
+      <div class="value">Pas la cause</div>
+      <div class="note">L'addiction cache presque toujours une douleur plus profonde</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Automedication</div>
+      <div class="value">Une solution trompeuse</div>
+      <div class="note">La substance soigne temporairement mais empire le problème</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Declencheurs</div>
+      <div class="value">Les connaître pour les desamorcer</div>
+      <div class="note">Externes (personnes, lieux) et internes (emotions, fatigue)</div>
+    </div>
+  </div>
+</div>
+<div class="content page-break" id="module-3--les-addictions-une-par-une">
+  <div class="module-header">
+    <div class="module-number">Module 3</div>
+    <h2>Les addictions une par une</h2>
+  </div>
+  <p>Chaque addiction a ses specificites. Les connaître, c'est mieux les combattre.</p>
+  <h3>L'alcool</h3>
+  <p>L'alcool est l'addiction legale la plus destructrice. Elle est dangereuse parce qu'elle est socialement acceptee, voire encouragee.</p>
+  <p><strong>Particularites :</strong> Le sevrage physique peut être dangereux (delirium tremens). L'alcool touche tous les organes. L'aspect social rend l'abstinence difficile (aperos, soirees, afterwork).</p>
+  <p><strong>Signes d'alerte :</strong> Boire seul, boire pour fonctionner, blackouts, mensonges sur la quantité, incapacite de s'arreter après un verre.</p>
+  <p><strong>Le piege :</strong> "Je ne suis pas alcoolique, je bois juste pour me detendre."</p>
+  <h3>Le cannabis</h3>
+  <p>Contrairement a l'idee recue, le cannabis cree une dependance psychologique forte, et physique chez les gros consommateurs.</p>
+  <p><strong>Particularites :</strong> La dependance est insidieuse. Pas de "gueule de bois" sociale, mais une perte progressive de motivation, de mémoire, de qualité de sommeil. Le syndrome amotivationnel est réel.</p>
+  <p><strong>Signes d'alerte :</strong> Fumer seul, fumer quotidiennement, difficulté a profiter d'activités sans être stone, irritabilite quand tu ne fumes pas.</p>
+  <p><strong>Le piege :</strong> "C'est juste une plante, ce n'est pas dangereux."</p>
+  <h3>La cocaine et les stimulants</h3>
+  <p>La cocaine cree une dependance psychologique extremement rapide. C'est l'addiction du "tout, tout de suite".</p>
+  <p><strong>Particularites :</strong> La descente (comedown) est brutale et deprimante, ce qui pousse a reconsommer pour ne pas la ressentir. Le craving est intense. Risque cardiaque eleve.</p>
+  <p><strong>Signes d'alerte :</strong> Consommation en soiree devenue systematique, budget qui derape, mensonges, frequentation de cercles qui consomment.</p>
+  <p><strong>Le piege :</strong> "Je maîtrise, je n'en prends que le week-end."</p>
+  <h3>Les réseaux sociaux et le téléphone</h3>
+  <p>L'addiction aux écrans est la plus banalee, mais elle n'est pas moins réelle. Elle vole ton temps, ton attention, ta capacité a te concentrer.</p>
+  <p><strong>Particularites :</strong> Pas de sevrage physique, mais une dependance psychologique puissante basee sur la dopamine looping. Les notifications sont conçues pour être addictives.</p>
+  <p><strong>Signes d'alerte :</strong> 5+ heures par jour sur ton téléphone, scrolls infinis, difficulté a rester sans appareil, reveil/téléphone, coucher/téléphone.</p>
+  <p><strong>Le piege :</strong> "Tout le monde fait ca."</p>
+  <h3>La pornographie</h3>
+  <p>L'addiction au porno est l'une des plus cachees, donc l'une des plus dangereuses. La honte qui l'entoure empeche d'en parler et de demander de l'aide.</p>
+  <p><strong>Particularites :</strong> Desensibilisation progressive (besoin de contenu plus extreme pour la meme stimulation), dysfonction sexuelle (difficulté a avoir des relations réelles), honte intense qui alimente le cycle.</p>
+  <p><strong>Signes d'alerte :</strong> Consommation quotidienne ou quasi quotidienne, difficulté a avoir des relations sexuelles réelles, escalade vers du contenu de plus en plus extreme.</p>
+  <p><strong>Le piege :</strong> "Ca ne fait de mal a personne."</p>
+  <h3>Les jeux d'argent et les jeux vidéo</h3>
+  <p>Les jeux d'argent exploitent le "presque gagner" pour maintenir l'espoir. Les jeux vidéo exploitent les mecanismes de progression et de recompense variable.</p>
+  <p><strong>Jeux d'argent :</strong> La recherche de la grosse perte, les dettes, les mensonges financiers. Taux de suicide eleve parmi les joueurs pathologiques.</p>
+  <p><strong>Jeux vidéo :</strong> Perte de controle du temps, negligence des responsabilites, isolement social, troubles du sommeil.</p>
+  <div class="exercise">
+    <h4>Diagnostiquer ton addiction</h4>
+    <p><strong>-</strong> Quelle est ton addiction principale ? Si tu en as plusieurs, choisis celle qui a le plus d'impact negatif sur ta vie.</p>
+    <p><strong>-</strong> A quelle frequence consommes-tu ? (nombre de fois par jour/semaine, quantité, durée)</p>
+    <p><strong>-</strong> Qu'est-ce que tu perds a cause de cette addiction ? (temps, argent, relations, sante, estime de soi)</p>
+    <p><strong>-</strong> As-tu déjà essaye d'arreter ? Qu'est-ce qui s'est passe ?</p>
+  </div>
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">Alcool &amp; Cannabis</div>
+      <div class="value">Socialement acceptees</div>
+      <div class="note">D'autant plus dangereuses qu'elles sont banales et encouragees</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Cocaine &amp; Écrans</div>
+      <div class="value">Dependances psychologiques puissantes</div>
+      <div class="note">L'une brule le budget, l'autre vole le temps et l'attention</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Porno &amp; Jeux</div>
+      <div class="value">La honte et l'escalade</div>
+      <div class="note">Addictions cachees qui s'aggravent avec le temps</div>
+    </div>
+  </div>
+</div>
+<div class="content page-break" id="module-4--le-sevrage-les-premieres-48h-a-30-jours">
+  <div class="module-header">
+    <div class="module-number">Module 4</div>
+    <h2>Le sevrage : les premieres 48h a 30 jours</h2>
+  </div>
+  <p>Comment traverser la periode la plus difficile</p>
+  <h3>Le processus de sevrage physique et psychologique</h3>
+  <p>Quand tu arretes, ton cerveau et ton corps doivent se readapter a fonctionner sans la substance ou le comportement. C'est inconfortable. C'est normal.</p>
+  <p><strong>Phase 1 : Les premieres 24-72 heures.</strong> La plus dure. Craving intense, irritabilite, anxiete, insomnie. Le cerveau crie pour sa dose. Chaque heure est une victoire.</p>
+  <p><strong>Phase 2 : La première semaine.</strong> Le craving diminue en intensite mais reste présent par vagues. Le corps commence a se reequilibrer. L'énergie peut être très basse.</p>
+  <p><strong>Phase 3 : Les semaines 2 a 4.</strong> Les symptomes physiques diminuent. Apparaissent l'ennui, le vide, la question : "et maintenant je fais quoi ?" C'est la que la plupart des rechutes surviennent.</p>
+  <h3>Stratégies pour tenir les 48 premieres heures</h3>
+  <p><strong>Elimine l'accès.</strong> Supprime l'application. Jette la substance. Desinstalle le compte. Bloque le site. Ne compte pas sur ta volonté, rends l'accès impossible ou très difficile.</p>
+  <p><strong>Prépare-toi au craving.</strong> Le craving arrive par vagues de 10 a 30 minutes. Quand il frappe, ne lutte pas. Observe-le. Dis-lui : "Je te vois, tu passes, tu repars." Occupe-toi les mains et le cerveau pendant que la vague passe.</p>
+  <p><strong>Utilise la regle des 10 minutes.</strong> Quand l'envie est trop forte, dis-toi : "Je ne craque pas maintenant. Je peux craquer dans 10 minutes." Puis occupe-toi. Dans 10 minutes, refais la meme promesse.</p>
+  <p><strong>Hydrate-toi.</strong> L'eau aide ton corps a eliminer les toxines et a se reequilibrer.</p>
+  <p><strong>Previens quelqu'un.</strong> Dire a une personne de confiance "j'arrete, aujourd'hui est mon jour 1" cree une responsabilite qui peut faire la différence.</p>
+  <h3>Les symptomes de sevrage courants</h3>
+  <ul>
+    <li><strong>Insomnie ou sommeil agite</strong> — normal, le cerveau se reajuste</li>
+    <li><strong>Irritabilite</strong> — normal, tu perds ta bequille emotionnelle</li>
+    <li><strong>Reves intenses</strong> — frequents dans le sevrage du cannabis et de l'alcool</li>
+    <li><strong>Fatigue</strong> — ton corps a besoin d'énergie pour se reparer</li>
+    <li><strong>Anxiete</strong> — la bequille emotionnelle n'est plus la</li>
+    <li><strong>Depression temporaire</strong> — le cerveau a épuise sa dopamine</li>
+  </ul>
+  <p><strong>Ces symptomes sont temporaires.</strong> Ils ne durent pas. Chaque jour sans consommer est un jour de plus vers la guerison.</p>
+  <h3>Quand demander une aide medicale</h3>
+  <p>Pour certaines addictions (alcool, benzodiazepines, opiaces), le sevrage peut être medicalement dangereux. Consulte un medecin si :</p>
+  <ul>
+    <li>Tu bois plus d'un litre de vin ou equivalent par jour</li>
+    <li>Tu as déjà fait des crises d'epilepsie</li>
+    <li>Tu as des antecedents de delirium tremens</li>
+    <li>Tu es dependant aux medicaments psychotropes</li>
+  </ul>
+  <p>Ne joue pas avec ca. Un sevrage medicalise peut sauver ta vie.</p>
+  <div class="exercise">
+    <h4>Préparer ton sevrage</h4>
+    <p><strong>-</strong> Choisis une date dans les 7 prochains jours. Ce sera ton Jour 1. Pourquoi cette date ? Note-la.</p>
+    <p><strong>-</strong> Qu'est-ce que tu peux eliminer des maintenant pour rendre l'accès plus difficile ?</p>
+    <p><strong>-</strong> Qui vas-tu prevenir de ton arret ? Écris leur nom et ce que tu vas leur dire.</p>
+    <p><strong>-</strong> Que feras-tu quand le craving frappera ? Prépare 3 actions concrètes (marcher, appeler quelqu'un, écrire, etc.).</p>
+    <p><strong>-</strong> Si le sevrage est trop dur, vers qui peux-tu te tourner ?</p>
+  </div>
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">Phase 1 (0-72h)</div>
+      <div class="value">La plus dure</div>
+      <div class="note">Craving intense, chaque heure est une victoire a célébrer</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Phase 2-3 (semaine 2-4)</div>
+      <div class="value">L'ennui arrive</div>
+      <div class="note">C'est le moment le plus risque pour la rechute</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Stratégies</div>
+      <div class="value">Eliminer, préparer, prévenir</div>
+      <div class="note">Regle des 10 min, hydratation, preveni quelqu'un</div>
+    </div>
+  </div>
+</div>
+<div class="content page-break" id="module-5--remplacer-pas-juste-arreter">
+  <div class="module-header">
+    <div class="module-number">Module 5</div>
+    <h2>Remplacer, pas juste arreter</h2>
+  </div>
+  <p>Pourquoi l'abstinence seule ne marche pas, et quoi faire a la place</p>
+  <h3>Le piege de l'abstinence seule</h3>
+  <p>Arreter sans remplacer, c'est créer un vide. Et la nature a horreur du vide. Si tu arretes ton addiction sans mettre autre chose a la place, tu vas inevitablement :</p>
+  <ul>
+    <li>Retomber dans l'ancienne addiction</li>
+    <li>En trouver une nouvelle (passer de l'alcool au sucre, du porno aux jeux vidéo)</li>
+    <li>Sombrer dans une dépression</li>
+  </ul>
+  <p><strong>L'abstinence est le début, pas la fin.</strong> Le vrai travail, c'est de construire une vie qui n'a pas besoin de l'addiction pour être supportable.</p>
+  <h3>Construire des habitudes de remplacement</h3>
+  <p>Pour chaque besoin que l'addiction comblait, il faut trouver une alternative saine :</p>
+  <p><strong>Si l'addiction comblait l'ennui :</strong> trouve une passion, un projet, un hobby qui te captive vraiment. Apprends un instrument, lance un projet, fais du sport.</p>
+  <p><strong>Si l'addiction gerait le stress :</strong> apprends la respiration, la meditation, la course a pied. Le sport est le meilleur regulateur de stress connu.</p>
+  <p><strong>Si l'addiction comblait la solitude :</strong> reconstruis des connexions. Rejoins un club, une association, un groupe de parole. La qualité de tes relations determine ta sante mentale.</p>
+  <p><strong>Si l'addiction était une recompense :</strong> trouve des recompenses saines. Un bon repas, une balade dans la nature, un bain chaud, un livre.</p>
+  <p><strong>Si l'addiction était une evasion :</strong> apprends a être présent avec toi-meme. La meditation, l'écriture, la therapie.</p>
+  <h3>Le pouvoir des micro-habitudes</h3>
+  <p>Ne change pas tout d'un coup. Commence par une micro-habitude :</p>
+  <ul>
+    <li>2 minutes de respiration par jour</li>
+    <li>5 minutes de marche après le reveil</li>
+    <li>1 page de livre avant le coucher</li>
+    <li>10 pompes quand le craving arrive</li>
+  </ul>
+  <p>La micro-habitude cree la confiance. La confiance cree le momentum. Le momentum cree la transformation.</p>
+  <div class="exercise">
+    <h4>Créer ton plan de remplacement</h4>
+    <p><strong>-</strong> Qu'est-ce que ton addiction t'apportait ? Calme ? Evasion ? Recompense ? Excitation ?</p>
+    <p><strong>-</strong> Pour chaque besoin identifie, quelle alternative saine peux-tu mettre en place ?</p>
+    <p><strong>-</strong> Choisis UNE micro-habitude que tu vas faire chaque jour cette semaine. La plus petite possible.</p>
+    <p><strong>-</strong> Quand et ou vas-tu faire cette micro-habitude ? Sois précis.</p>
+  </div>
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">Abstinence seule</div>
+      <div class="value">Ne suffit pas</div>
+      <div class="note">Créer un vide qui sera comble par une autre addiction</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Alternatives saines</div>
+      <div class="value">Un remplacement pour chaque besoin</div>
+      <div class="note">Sport, passions, connexions, repos, présence</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Micro-habitudes</div>
+      <div class="value">Commence minuscule</div>
+      <div class="note">2 min par jour suffisent pour créer le momentum</div>
+    </div>
+  </div>
+</div>
+<div class="content page-break" id="module-6--la-rechute-la-préparer-la-gerer-en-sortir">
+  <div class="module-header">
+    <div class="module-number">Module 6</div>
+    <h2>La rechute : la préparer, la gerer, en sortir</h2>
+  </div>
+  <p>Parce que la rechute fait partie du chemin</p>
+  <h3>Rechute vs échec : la différence qui change tout</h3>
+  <p>Une rechute est un retour temporaire a la consommation après une periode d'abstinence.</p>
+  <p>Un échec, c'est d'abandonner completement après une rechute.</p>
+  <p><strong>La rechute n'est pas une fatalite, mais elle est frequente.</strong> 40 a 60% des personnes en remission d'addiction rechutent au moins une fois. Ce n'est pas une statistique pour te decourager. C'est une statistique pour te dire : si ca t'arrive, tu n'es pas seul et tu n'as pas echoue.</p>
+  <p>Une rechute ne t'efface pas tout le chemin parcouru. Les 30 jours d'abstinence que tu as faits ne disparaissent pas parce que tu as craque un soir. Ils sont toujours la. Tu as juste besoin de recommencer.</p>
+  <h3>Le plan anti-rechute</h3>
+  <p><strong>Avant la rechute (prevention) :</strong></p>
+  <ul>
+    <li>Identifie tes situations a risque : soirees, stress intense, solitude, conflits</li>
+    <li>Prépare une réponse pour chaque situation : "Si X arrive, je fais Y"</li>
+    <li>Maintiens tes habitudes de remplacement (Module 5)</li>
+    <li>Continue le travail psychologique (Module 8)</li>
+    <li>Reste connecte a tes soutiens (Module 7)</li>
+  </ul>
+  <p><strong>Pendant la rechute (limiter les degats) :</strong></p>
+  <ul>
+    <li>Si tu craques, ne transforme pas un ecart en chute complete</li>
+    <li>"J'ai fume un joint" n'est pas "je fume tous les jours maintenant"</li>
+    <li>La regle : un ecart ne devient pas une rechute si tu reprends tout de suite</li>
+  </ul>
+  <p><strong>Après la rechute (rebondir) :</strong></p>
+  <ul>
+    <li>Ne culpabilise pas. La culpabilite alimente la rechute.</li>
+    <li>Analyse froidement : qu'est-ce qui a declenche ca ?</li>
+    <li>Apprends : qu'est-ce que tu vas faire differemment la prochaine fois ?</li>
+    <li>Recommence le jour meme. Pas demain, pas lundi. Maintenant.</li>
+  </ul>
+  <h3>La fenetre de vulnerabilite</h3>
+  <p>Les rechutes les plus frequentes surviennent dans ces moments :</p>
+  <ul>
+    <li>Les 30 premiers jours (le craving est encore fort)</li>
+    <li>Entre 3 et 6 mois (la motivation initiale s'est epuisee)</li>
+    <li>Après un succès (tu penses être gueri, tu relaches la vigilance)</li>
+    <li>Après un échec ou une deception (tu veux te reconforter)</li>
+    <li>Dans les moments de transition (demenagement, rupture, nouveau travail)</li>
+  </ul>
+  <div class="exercise">
+    <h4>Préparer ta réponse a la rechute</h4>
+    <p><strong>-</strong> Quelles sont tes 3 situations les plus a risque ? Sois honnete avec toi-meme.</p>
+    <p><strong>-</strong> Pour chaque situation, écris une phrase précise : "Si [situation], alors je [action]."</p>
+    <p><strong>-</strong> Imagine que tu viens de craquer. Que vas-tu te dire ? Écris la phrase que tu vas utiliser pour ne pas transformer la rechute en échec.</p>
+    <p><strong>-</strong> Si tu rechutes aujourd'hui, vers qui peux-tu te tourner dans l'heure qui suit ?</p>
+  </div>
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">Rechute ≠ Échec</div>
+      <div class="value">40-60% rechutent</div>
+      <div class="note">La rechute est frequente, l'abandon est le vrai échec</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Plan anti-rechute</div>
+      <div class="value">Prevention + Limitation + Rebond</div>
+      <div class="note">Prépare tes réponses avant que la crise n'arrive</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Fenetre de vulnerabilite</div>
+      <div class="value">30j, 3-6 mois, succès, échec</div>
+      <div class="note">Les moments cles ou la vigilance est cruciale</div>
+    </div>
+  </div>
+</div>
+<div class="content page-break" id="module-7--ton-environnement-et-ton-entourage">
+  <div class="module-header">
+    <div class="module-number">Module 7</div>
+    <h2>Ton environnement et ton entourage</h2>
+  </div>
+  <p>Créer un monde qui soutient ta guerison</p>
+  <h3>Les personnes qui t'entourent</h3>
+  <p>Ton environnement social est un facteur determinant dans ta capacité a arreter. Certaines personnes t'aideront, d'autres te tireront vers le bas.</p>
+  <p><strong>Les relations toxiques :</strong> les amis qui consomment, qui minimisent ton problème, qui te poussent a "faire sauter ta bonne resolution". Ce ne sont pas tes allies. Tu n'as pas a les couper definitivement, mais tu dois poser des limites claires.</p>
+  <p><strong>Les relations neutres :</strong> celles qui ne t'aident pas mais ne te nuisent pas. Tu peux les garder, mais ne compte pas sur elles pour ton soutien.</p>
+  <p><strong>Les relations positives :</strong> les personnes qui croient en toi, qui t'ecoutent sans jugement, qui sont pretes a te soutenir. Cultive ces relations.</p>
+  <h3>Poser des limites</h3>
+  <p>Apprends a dire non. Pas de maniere agressive, mais ferme.</p>
+  <ul>
+    <li>"Je ne bois plus en ce moment."</li>
+    <li>"Je ne peux pas venir si tu consommes."</li>
+    <li>"Je te demande de ne pas m'en proposer."</li>
+  </ul>
+  <p>Tu n'as pas a te justifier. Tu n'as pas a expliquer. Un non clair et calme suffit.</p>
+  <p>Les personnes qui te respectent accepteront sans insister. Celles qui insistent te montrent qui elles sont vraiment.</p>
+  <h3>Créer un environnement physique sain</h3>
+  <p>Ton environnement physique influence directement tes comportements.</p>
+  <ul>
+    <li><strong>Range ou jette</strong> ce qui te rappelle l'addiction</li>
+    <li><strong>Bloque</strong> les sites, desinstalle les applications, supprime les contacts</li>
+    <li><strong>Reorganise</strong> ton espace : ton salon, ta chambre, ton bureau</li>
+    <li><strong>Ajoute</strong> des elements qui soutiennent tes nouvelles habitudes : un tapis de yoga visible, un livre sur la table de nuit, de l'eau a portee de main</li>
+  </ul>
+  <h3>Les groupes de parole : pourquoi ça marche</h3>
+  <p>Les groupes de parole (Alcooliques Anonymes, Narcotiques Anonymes, etc.) sont l'un des outils les plus efficaces contre l'addiction. Pourquoi ?</p>
+  <ul>
+    <li>Tu n'es plus seul. Des centaines de milliers de personnes vivent exactement la meme chose.</li>
+    <li>Tu n'as pas a expliquer. Tout le monde comprend sans que tu aies a justifier.</li>
+    <li>Tu as un modele. Voir des gens qui s'en sont sortis te montre que c'est possible.</li>
+    <li>Tu as une responsabilite. Quand tu sais que quelqu'un t'attend a la réunion, tu y vas meme quand tu n'as pas envie.</li>
+  </ul>
+  <div class="exercise">
+    <h4>Nettoyer ton environnement</h4>
+    <p><strong>-</strong> Qui dans ton entourage est un declencheur ? Que peux-tu faire pour poser des limites avec cette personne ?</p>
+    <p><strong>-</strong> Quels objets, applications, lieux sont associes a ton addiction ? Que vas-tu en faire ?</p>
+    <p><strong>-</strong> Y a-t-il un groupe de parole pres de chez toi ? Ou une communauté en ligne ? Trouve-en un aujourd'hui.</p>
+    <p><strong>-</strong> A qui peux-tu confier "je suis en train d'arreter, je peux t'appeler si ça va mal" ?</p>
+  </div>
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">Relations</div>
+      <div class="value">Toxiques, neutres, positives</div>
+      <div class="note">Identifie qui t'aide et qui te nuit, pose des limites claires</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Environnement</div>
+      <div class="value">Range, bloque, reorganise</div>
+      <div class="note">L'environnement est plus fort que la volonté</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Groupes de parole</div>
+      <div class="value">La force du collectif</div>
+      <div class="note">AA, NA, communautés en ligne : tu n'es pas seul</div>
+    </div>
+  </div>
+</div>
+<div class="content page-break" id="module-8--le-travail-psychologique-profond">
+  <div class="module-header">
+    <div class="module-number">Module 8</div>
+    <h2>Le travail psychologique profond</h2>
+  </div>
+  <p>Soigner les causes, pas seulement les symptomes</p>
+  <h3>Pourquoi la volonté ne suffit pas</h3>
+  <p>Si la volonté suffisait, tu aurais déjà arrete. Le problème n'est pas que tu ne veux pas assez. Le problème, c'est que les causes profondes de l'addiction sont encore la.</p>
+  <p>Tant que tu n'auras pas traite ce qui se cache derriere l'addiction, elle trouvera toujours un moyen de revenir. Parfois sous une autre forme : tu arretes l'alcool, tu commences a manger de maniere compulsive. Tu arretes le porno, tu passes 6h par jour sur TikTok.</p>
+  <p><strong>Le vrai travail n'est pas d'arreter. Le vrai travail est de guerir ce qui cause le besoin d'arreter.</strong></p>
+  <h3>Les therapies qui marchent</h3>
+  <p><strong>Therapie cognitivo-comportementale (TCC) :</strong> La plus etudiee pour les addictions. Elle t'apprend a identifier les pensees automatiques qui menent a la consommation et a les remplacer.</p>
+  <p><strong>EMDR :</strong> Efficace si l'addiction est liee a un traumatisme. Elle aide a traiter les souvenirs traumatiques qui alimentent l'automedication.</p>
+  <p><strong>Therapie d'acceptation et d'engagement (ACT) :</strong> Elle t'apprend a accepter les pensees et emotions difficiles sans y reagir par la consommation.</p>
+  <p><strong>Therapie motivationnelle :</strong> Parfaite si tu es encore ambivalent sur l'arret. Elle t'aide a clarifier tes motivations profondes.</p>
+  <h3>L'écriture comme outil therapeutique</h3>
+  <p>L'écriture est l'un des outils les plus puissants et les plus sous-estimes. Elle permet de :</p>
+  <ul>
+    <li>Mettre de l'ordre dans tes pensees</li>
+    <li>Identifier les schemas que tu ne vois pas dans ta tete</li>
+    <li>Créer une distance avec tes emotions</li>
+    <li>Suivre ta progression dans le temps</li>
+  </ul>
+  <p><strong>Methode simple :</strong> écris 10 minutes par jour, sans te relire, sans jugement. Laisse la plume courir. Tu seras surpris de ce qui sort.</p>
+  <h3>La pleine conscience (mindfulness)</h3>
+  <p>La pleine conscience t'apprend une competence cruciale : <strong>observer l'envie sans y reagir.</strong></p>
+  <p>Le craving n'est pas une obligation d'agir. C'est une sensation. Et comme toutes les sensations, elle apparaît, atteint un pic, puis disparait.</p>
+  <p>La meditation de pleine conscience t'apprend a rester présent avec l'inconfort sans chercher a le fuir. Et c'est exactement ce dont tu as besoin pour traverser le craving.</p>
+  <div class="exercise">
+    <h4>Commencer le travail profond</h4>
+    <p><strong>-</strong> Y a-t-il un événement ou une periode dans ta vie qui a coincide avec le début de ton addiction ? Si oui, peux-tu en parler ? (a toi-meme, dans un journal, a un professionnel)</p>
+    <p><strong>-</strong> Essaie cette meditation simple : assieds-toi, ferme les yeux, inspire 4 secondes, expire 4 secondes. Pendant 5 minutes. Observe les pensees qui viennent sans les juger. Note ce que tu as ressenti.</p>
+    <p><strong>-</strong> Écris 10 minutes aujourd'hui sur le sujet : "Qu'est-ce que je veux vraiment dans ma vie, au-dela de l'addiction ?"</p>
+    <p><strong>-</strong> Si tu devais consulter un professionnel, quel type de therapie te semblerait le plus adapte ?</p>
+  </div>
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">Causes profondes</div>
+      <div class="value">Guerir les racines</div>
+      <div class="note">L'addiction revient si les causes ne sont pas traitees</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Therapies</div>
+      <div class="value">TCC, EMDR, ACT</div>
+      <div class="note">Chaque approche a ses forces selon ton profil</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Pleine conscience</div>
+      <div class="value">Observer sans reagir</div>
+      <div class="note">Le craving est temporaire, chaque vague finit par passer</div>
+    </div>
+  </div>
+</div>
+<div class="content page-break" id="module-9--la-sante-physique-pendant-la-recuperation">
+  <div class="module-header">
+    <div class="module-number">Module 9</div>
+    <h2>La sante physique pendant la recuperation</h2>
+  </div>
+  <p>Reparer ton corps pour renforcer ton mental</p>
+  <h3>Pourquoi la sante physique est cruciale</h3>
+  <p>L'addiction abîme le corps. Et un corps abîme, c'est un mental affaibli. La recuperation physique et la recuperation psychologique sont liees.</p>
+  <p>Quand tu soignes ton corps, tu envoies un message puissant a ton cerveau : "je prends soin de moi maintenant." Ce message change tout.</p>
+  <h3>La nutrition pendant le sevrage</h3>
+  <p>Ton corps a besoin de nutriments specifiques pour se reparer :</p>
+  <ul>
+    <li><strong>Proteines :</strong> pour reconstruire les tissus et equilibrer la chimie du cerveau. Viande, poisson, oeufs, legumineuses.</li>
+    <li><strong>Omega-3 :</strong> anti-inflammatoire, bon pour le cerveau. Poissons gras, noix, huile de lin.</li>
+    <li><strong>Magnesium :</strong> aide a lutter contre l'anxiete et les crampes. Legumes verts, noix, chocolat noir.</li>
+    <li><strong>Vitamines B :</strong> essentielles pour le système nerveux. Cereales completes, legumes verts, oeufs.</li>
+    <li><strong>Hydratation :</strong> 2 a 3 litres d'eau par jour pour aider l'elimination des toxines.</li>
+  </ul>
+  <p><strong>Evite :</strong> le sucre raffine (qui cree des pics de dopamine semblables a l'addiction), la cafeine en excès (qui augmente l'anxiete), l'alcool evidemment.</p>
+  <h3>Le sport comme outil de guerison</h3>
+  <p>Le sport est l'antidote naturel le plus puissant contre l'addiction. Pourquoi ?</p>
+  <ul>
+    <li>Il libere des endorphines et de la dopamine de maniere saine</li>
+    <li>Il reduit le stress et l'anxiete</li>
+    <li>Il ameliore le sommeil</li>
+    <li>Il reconstruit l'estime de soi</li>
+    <li>Il occupe le temps et l'esprit</li>
+    <li>Il cree une identité positive (je suis quelqu'un qui fait du sport)</li>
+  </ul>
+  <p><strong>Par quoi commencer :</strong></p>
+  <ul>
+    <li>Marche rapide 20 minutes par jour (accessible a tous)</li>
+    <li>Course a pied (excellent pour la gestion emotionnelle)</li>
+    <li>Musculation (reconstruit la force physique et mentale)</li>
+    <li>Yoga (ideal pour la connexion corps-esprit)</li>
+    <li>Tout ce qui te fait bouger et que tu peux faire régulièrement</li>
+  </ul>
+  <h3>Le sommeil : ton meilleur allie</h3>
+  <p>Pendant le sevrage, le sommeil est souvent perturbe. C'est normal. Mais c'est aussi le moment ou ton cerveau a le plus besoin de recuperer.</p>
+  <p><strong>Regles d'or :</strong></p>
+  <ul>
+    <li>Coucher et lever a heures fixes</li>
+    <li>Pas d'écrans 1h avant le coucher</li>
+    <li>Chambre fraiche (18-19 degres C) et sombre</li>
+    <li>Pas d'alcool ni de cafeine après 14h</li>
+    <li>Une routine du soir : lecture, etirements, écriture</li>
+  </ul>
+  <div class="exercise">
+    <h4>Prendre soin de ton corps</h4>
+    <p><strong>-</strong> Qu'est-ce que ton addiction a fait a ton corps ? Sois honnete. (qualité du sommeil, poids, énergie, digestion, douleurs)</p>
+    <p><strong>-</strong> Quel est le changement physique le plus simple que tu peux faire cette semaine ? (boire plus d'eau, marcher 10 min, un legumes a chaque repas)</p>
+    <p><strong>-</strong> Quel sport ou activité physique pourrais-tu commencer ? A quelle frequence ?</p>
+    <p><strong>-</strong> Ou en es-tu de ton sommeil ? Quelle est la regle d'or que tu pourrais appliquer des ce soir ?</p>
+  </div>
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">Nutrition</div>
+      <div class="value">Proteines, Omega-3, Magnesium, Vit B</div>
+      <div class="note">Ton corps a besoin de nutriments specifiques pour se reparer</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Sport</div>
+      <div class="value">L'antidote naturel</div>
+      <div class="note">Endorphines, dopamine saine, stress reduit, estime renforcee</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Sommeil</div>
+      <div class="value">Le meilleur allie</div>
+      <div class="note">Regles d'or : horaires fixes, pas d'écrans, chambre fraiche</div>
+    </div>
+  </div>
+</div>
+<div class="content page-break" id="module-10--plan-daction-90-jours">
+  <div class="module-header">
+    <div class="module-number">Module 10</div>
+    <h2>Plan d'action 90 jours</h2>
+  </div>
+  <p>Semaine après semaine, reconstruire ta vie</p>
+  <h3>Mois 1 : Les fondations (Jours 1-30)</h3>
+  <p>L'objectif du premier mois est de survivre. Pas de transformer ta vie, pas de devenir une autre personne. Juste arreter et tenir.</p>
+  <p><strong>Semaine 1 :</strong></p>
+  <ul>
+    <li>Jour 1 aujourd'hui. Previens une personne de confiance.</li>
+    <li>Elimine tout accès a l'addiction (substance, apps, comptes).</li>
+    <li>Bois 2 litres d'eau par jour.</li>
+    <li>Marche 15 minutes par jour.</li>
+    <li>Écris 5 minutes chaque soir sur ta journee.</li>
+  </ul>
+  <p><strong>Semaine 2 :</strong></p>
+  <ul>
+    <li>Ajoute 10 minutes d'activité physique par jour.</li>
+    <li>Identifie 3 declencheurs et prépare une réponse pour chacun.</li>
+    <li>Evite les situations a risque.</li>
+    <li>Appelle ou vois une personne de confiance cette semaine.</li>
+  </ul>
+  <p><strong>Semaine 3 :</strong></p>
+  <ul>
+    <li>Ajoute une micro-habitude de remplacement (meditation, lecture, stretching).</li>
+    <li>Commence a chercher un groupe de parole ou un therapeute.</li>
+    <li>Note chaque craving dans un carnet : quand, ou, intensite.</li>
+  </ul>
+  <p><strong>Semaine 4 :</strong></p>
+  <ul>
+    <li>Fais le bilan des 30 jours. Qu'est-ce qui a marche ? Qu'est-ce qui a ete difficile ?</li>
+    <li>Qu'as-tu appris sur toi-meme ?</li>
+    <li>Prépare le mois 2.</li>
+  </ul>
+  <h3>Mois 2 : La reconstruction (Jours 31-60)</h3>
+  <p>L'objectif est de commencer a remplacer et a reconstruire.</p>
+  <p><strong>Objectifs :</strong></p>
+  <ul>
+    <li>3 seances de sport par semaine.</li>
+    <li>Routine de sommeil etablie (coucher avant 23h).</li>
+    <li>Un groupe de parole ou une therapie commencee.</li>
+    <li>10 minutes d'écriture par jour, 5 jours sur 7.</li>
+    <li>Une nouvelle activité ou passion exploree (instrument, projet, benevolat).</li>
+  </ul>
+  <p><strong>Semaines 5-6 :</strong> Mets en place la routine sportive. Commence doucement, ne te blesse pas.</p>
+  <p><strong>Semaines 7-8 :</strong> Approfondis le travail psychologique. Continue l'écriture. Commence a explorer ce qui te donne un sens.</p>
+  <h3>Mois 3 : L'expansion (Jours 61-90)</h3>
+  <p>L'objectif est de consolider et d'elargir.</p>
+  <p><strong>Objectifs :</strong></p>
+  <ul>
+    <li>Tes nouvelles habitudes sont devenues automatiques.</li>
+    <li>Tu as identifie et commence a travailler sur les causes profondes.</li>
+    <li>Tu as reconstruit ou commence a reconstruire des relations saines.</li>
+    <li>Tu te projettes dans l'avenir.</li>
+  </ul>
+  <p><strong>Semaines 9-10 :</strong> Fais le point. Ou en es-tu par rapport a tes objectifs ?</p>
+  <p><strong>Semaines 11-12 :</strong> Prépare la suite. Comment vas-tu maintenir ton abstinence après ces 90 jours ?</p>
+  <p><strong>A la fin des 90 jours :</strong></p>
+  <ul>
+    <li>Célèbre ta progression. 90 jours, c'est énorme.</li>
+    <li>Ne relâche pas la vigilance. L'addiction peut revenir.</li>
+    <li>Continue tout ce qui marche.</li>
+    <li>Ajuste ce qui ne marche pas.</li>
+  </ul>
+  <div class="exercise">
+    <h4>Écrire ton engagement</h4>
+    <p><strong>-</strong> Écris ta promesse envers toi-meme. "A partir d'aujourd'hui, je m'engage a..." Sois précis. Date, signature.</p>
+    <p><strong>-</strong> Quels sont tes 3 objectifs principaux pour les 90 prochains jours ?</p>
+    <p><strong>-</strong> Qui est ton "filet de sécurité" — la personne que tu appelles si tout s'effondre ?</p>
+    <p><strong>-</strong> Comment celebreras-tu tes 30 jours ? Tes 60 jours ? Tes 90 jours ?</p>
+  </div>
+  <h3>A retenir</h3>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="label">Mois 1 (J1-30)</div>
+      <div class="value">Survivre</div>
+      <div class="note">Arreter, tenir, eliminer l'accès, prevenir quelqu'un</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Mois 2 (J31-60)</div>
+      <div class="value">Reconstruire</div>
+      <div class="note">Sport, sommeil, groupe de parole, écriture, nouvelles passions</div>
+    </div>
+    <div class="notes-card">
+      <div class="label">Mois 3 (J61-90)</div>
+      <div class="value">Consolider</div>
+      <div class="note">Habitudes automatiques, causes profondes, relations saines</div>
+    </div>
+   </div>
+</div>
+<div class="content page-break">
+  <h2>FAQ — Les 10 questions les plus frequentes sur l'addiction</h2>
+  <div class="callout-dark">
+    <p><strong>Important :</strong> Ces reponses sont basees sur l'experience de milliers de personnes en retablissement et sur la recherche scientifique. Chaque parcours est unique, mais ces verites generales peuvent t'aider.</p>
+  </div>
+  
+  <h3>1. Est-ce que je suis vraiment accro ?</h3>
+  <p>C'est la question que tout le monde se pose. Et la reponse est simple : si tu te poses cette question, il y a de fortes chances que le probleme existe deja. Pose-toi plutot ces questions :</p>
+  <ul>
+    <li>As-tu deja essaye d'arreter et echoue ?</li>
+    <li>Consommes-tu plus que ce que tu voulais au depart ?</li>
+    <li>Est-ce que ça prend du temps a tes activites importantes ?</li>
+    <li>As-tu menti a ton entourage sur ta consommation ?</li>
+    <li>Te sens-tu coupable ou honteux apres ?</li>
+    <li>Continuerais-tu meme si ça nuit a ta sante ou tes relations ?</li>
+  </ul>
+  <p>Si tu reponds "oui" a 2 ou plus de ces questions, tu es probablement dans une dynamique d'addiction. Ce n'est pas un jugement. C'est un diagnostic. Et un diagnostic, c'est la premiere etape vers la solution.</p>
+  
+  <div class="callout">
+    <p><strong>Le point cle :</strong> Tu n'as pas besoin d'attendre d'etre "au fond du trou" pour decider d'arreter. Plus tot tu agis, plus facile ce sera.</p>
+  </div>
+  
+  <h3>2. Combien de temps dure le sevrage ?</h3>
+  <p>La reponse depend de ce qu'on appelle "sevrage" :</p>
+  <p><strong>Le sevrage physique :</strong> Pour les substances (alcool, drogues, tabac), les symptomes physiques les plus intenses durent de 3 a 7 jours. Apres ça, le corps commence a se reequilibrer. Pour les addictions comportementales (ecrans, porno, jeux), il n'y a pas de sevrage physique proprement dit — mais le manque psychologique est reel.</p>
+  <p><strong>Le sevrage psychologique :</strong> C'est la partie la plus longue. Le craving peut revenir pendant des mois, voire des annees. Mais il devient de moins en moins intense et de moins en moins frequent.</p>
+  <p>Voici une timeline realiste :</p>
+  <ul>
+    <li><strong>Jours 1-7 :</strong> Le plus dur. Craving intense, emotions a vif.</li>
+    <li><strong>Semaines 2-4 :</strong> Le corps se reequilibre, mais l'ennui et le vide arrivent.</li>
+    <li><strong>Mois 2-3 :</strong> Les habitudes commencent a changer. Le craving est plus faible mais toujours present.</li>
+    <li><strong>Mois 6 :</strong> La plupart des gens disent "je ne pense plus a ça tous les jours".</li>
+    <li><strong>Apres 1 an :</strong> L'addiction n'est plus le centre de ta vie. Mais la vigilance reste necessaire.</li>
+  </ul>
+  
+  <div class="callout-success">
+    <p><strong>Bonne nouvelle :</strong> Chaque jour sans consommer rend le suivant un peu plus facile. Le momentum est reel.</p>
+  <h3>3. Est-ce normal de rechuter ?</h3>
+  <p><strong>Oui. Tres normal.</strong> Les statistiques disent que 40 a 60% des personnes en retablissement rechutent au moins une fois. Ce n'est pas une regle — certains arretent du premier coup — mais c'est frequent.</p>
+  <p>La question n'est pas "est-ce que je vais rechuter ?" mais plutot :</p>
+  <ul>
+    <li>"Comment puis-je rendre la rechute moins probable ?"</li>
+    <li>"Si je rechute, comment vais-je reagir ?"</li>
+    <li>"Comment transformer une rechute en apprentissage ?"</li>
+  </ul>
+  <p>Ce qui est dangereux, ce n'est pas la rechute elle-meme. C'est ce qui vient apres : la culpabilite qui te fait dire "j'ai echoue, autant continuer" et qui transforme un ecart d'un jour en rechute de 6 mois.</p>
+  <p><strong>La regle d'or :</strong> Si tu craques, reprends le jour meme. Pas demain. Pas lundi. Maintenant. Un ecart ne devient une rechute que si tu le laisses devenir une habitude a nouveau.</p>
+  
+  <h3>4. Puis-je guerir seul ou faut-il un professionnel ?</h3>
+  <p>La reponse : <strong>ça depend.</strong></p>
+  <p><strong>Tu peux probablement aller seul si :</strong></p>
+  <ul>
+    <li>Ton addiction est recente (moins d'un an)</li>
+    <li>La consommation n'est pas quotidienne</li>
+    <li>Tu n'as pas de symptomes de sevrage physique importants</li>
+    <li>Tu as un bon soutien social</li>
+    <li>Tu es tres motive et organise</li>
+  </ul>
+  <p><strong>Tu devrais serieusement envisager de l'aide si :</strong></p>
+  <ul>
+    <li>Tu as deja essaye plusieurs fois d'arreter seul et echoue</li>
+    <li>L'addiction dure depuis des annees</li>
+    <li>Tu as des symptomes de sevrage physiques inquietants</li>
+    <li>Il y a un traumatisme ou une depression associee</li>
+    <li>Ton entourage te pousse a consulter</li>
+  </ul>
+  <div class="callout">
+    <p><strong>Important :</strong> Demander de l'aide n'est pas un aveu d'echec. C'est un acte d'intelligence. Les gens qui reussissent a long terme sont ceux qui savent s'entourer.</p>
+  </div>
+  
+  <h3>5. Comment gerer les cravings quand ils arrivent ?</h3>
+  <p>Le craving (l'envie intense) est l'ennemi numero un du retablissement. Mais tu peux apprendre a le gerer. Voici les techniques qui marchent le mieux.</p>
+  
+  <p><strong>Technique #1 : La regle des 10 minutes + distraction</strong></p>
+  <p>Le craving arrive par vagues qui durent en moyenne 10 a 30 minutes. Si tu peux tenir sans ceder pendant ce temps, la vague passe. Quand l'envie arrive :</p>
+  <ul>
+    <li>Regarde l'heure et note-la mentalement</li>
+    <li>Dis-toi : "Je peux ceder, mais pas avant dans 10 minutes"</li>
+    <li>Pendant ces 10 minutes, fais quelque chose qui occupe ton corps et ton esprit : marche vite, fais des pompes, appelle quelqu'un, bois un grand verre d'eau, prends une douche froide</li>
+  </ul>
+  
+  <p><strong>Technique #2 : Le surf sur l'envie (urge surfing)</strong></p>
+  <p>Au lieu de lutter contre l'envie, observe-la comme si tu etais un spectateur exterieur :</p>
+  <ul>
+    <li>Ou est-ce que je la sens dans mon corps ? (poitrine serree, gorge nouee, mains moites)</li>
+    <li>Quelle est son intensite de 1 a 10 ?</li>
+    <li>Est-ce qu'elle monte ou descend ?</li>
+  </ul>
+  <p>Quand tu observes l'envie sans y reagir, elle perd sa puissance. C'est comme regarder une vague de loin : tu vois qu'elle arrive, tu vois qu'elle monte, tu vois qu'elle redescend — sans te noyer dedans.</p>
+  
+  <p><strong>Technique #3 : Le rappel des consequences</strong></p>
+  <p>Quand le craving arrive, ton cerveau ne se souvient que du plaisir immediat. Il oublie completement la douleur et la honte qui viennent apres. Ton travail est de rappeler ces consequences :</p>
+  <ul>
+    <li>Si je cede maintenant, comment je me sentirai dans 1 heure ?</li>
+    <li>Comment je me sentirai demain matin ?</li>
+    <li>Qu'est-ce que je perds si je craque ?</li>
+  </ul>
+  
+  <div class="callout-success">
+    <p><strong>Le secret :</strong> Plus tu utilises ces techniques, plus elles deviennent automatiques. Au bout de quelques semaines, tu reagiras au craving sans meme y penser.</p>
+  </div>
+  
+  <h3>6. Que faire si mon entourage consomme ?</h3>
+  <p>C'est l'une des situations les plus difficiles. Ton ami qui propose un verre, ton conjoint qui fume dans la maison, tes collegues qui font l'apero tous les vendredis...</p>
+  <p>Voici ce qui marche :</p>
+  
+  <p><strong>Etape 1 : Decide de tes limites AVANT d'etre en situation</strong></p>
+  <p>Ne te demande pas "qu'est-ce que je vais dire ?" sur le moment. Prepare tes reponses a l'avance :</p>
+  <ul>
+    <li>"Je ne bois plus en ce moment, je prends un soda."</li>
+    <li>"Je prefere ne pas, merci."</li>
+    <li>"J'ai decide d'arreter pour un moment, ça me fait du bien."</li>
+  </ul>
+  <p>Tu n'as pas a te justifier. Un "non" ferme mais poli suffit. Les gens qui te respectent accepteront sans insister. Ceux qui insistent te montrent qui ils sont vraiment.</p>
+  
+  <p><strong>Etape 2 : Evalue tes relations</strong></p>
+  <p>Toutes les personnes qui consomment autour de toi ne sont pas dangereuses. Tu peux les classer en 3 categories :</p>
+  <ul>
+    <li><strong>Les soutiens :</strong> Ils respectent ta decision. Garde-les pres de toi.</li>
+    <li><strong>Les neutres :</strong> Ils consomment mais ne te poussent pas. Tu peux les voir, mais dans des contextes ou la consommation n'est pas au centre.</li>
+    <li><strong>Les toxiques :</strong> Ils minimisent ton probleme, ils te poussent a consommer. Ceux-la, tu dois les eviter pendant un moment.</li>
+  </ul>
+</div>
+<div class="content page-break">
+  <h2>Les 10 erreurs les plus frequentes dans le sevrage</h2>
+  <div class="callout-dark">
+    <p><strong>Pourquoi ce chapitre est important :</strong> La plupart des echecs ne viennent pas d'un manque de volonte. Ils viennent d'erreurs evitables que tout le monde fait. Connaitre ces erreurs, c'est deja avoir fait la moitie du chemin pour ne pas les commettre.</p>
+  </div>
+  
+  <h3>Erreur #1 : "Je vais utiliser ma volonte pour arreter"</h3>
+  <p><strong>Le probleme :</strong> C'est l'erreur la plus classique et la plus couteuse. Tu te dis : "Cette fois, je suis motive. Je vais tenir bon. Ma volonte sera plus forte."</p>
+  <p>Mais la volonte est une ressource limitee. Elle est forte le matin quand tu es repose. Elle est faible le soir quand tu es fatigue, stresse, ou qu'une emotion negative arrive.</p>
+  <p>Un seul moment de faiblesse, et c'est fini. Tu as tout mise sur une seule carte.</p>
+  
+  <p><strong>La solution :</strong> Construis un systeme qui ne depend pas de la volonte.</p>
+  <ul>
+    <li><strong>Elimine l'acces</strong> — Ne compte pas sur ta volonte pour resister a la tentation. Rends la tentation impossible ou tres difficile.</li>
+    <li><strong>Change ton environnement</strong> — Evite les lieux, les personnes, les contextes qui te rappellent l'addiction.</li>
+    <li><strong>Ajoute de la friction</strong> — Mets des obstacles entre toi et l'addiction : un mot de passe complique, un ami a prevenir, un trajet plus long pour acheter.</li>
+  </ul>
+  
+  <div class="callout-success">
+    <p><strong>La regle d'or :</strong> Ton environnement est plus fort que ta volonte. Construis un environnement qui te pousse a faire le bon choix, pas un environnement ou tu dois constamment resister.</p>
+  </div>
+  
+  <h3>Erreur #2 : Ne pas preparer le craving</h3>
+  <p><strong>Le probleme :</strong> Tu arretes. Tu es motive. Tu te dis "je vais tenir". Et puis le craving arrive — brutal, intense, inattendu. Et tu n'as aucune idee de quoi faire.</p>
+  <p>Dans ce moment de panique, le chemin le plus facile est de ceder. Ton cerveau te dit "juste cette fois" et tu capitules.</p>
+  
+  <p><strong>La solution :</strong> Prepare TES strategies anti-craving — avant que le besoin n'arrive.</p>
+  <p>Ecris-les quelque part que tu peux consulter rapidement (notes de telephone, papier dans ta poche) :</p>
+  
+  <h4>Ma strategie quand le craving arrive :</h4>
+  <div class="checklist">
+    <div class="checklist-item">
+      <input type="checkbox"> 1. Je note l'heure et je me dis : "ça dure 10 minutes"
+    </div>
+    <div class="checklist-item">
+      <input type="checkbox"> 2. Je bois un grand verre d'eau (ou deux)
+    </div>
+    <div class="checklist-item">
+      <input type="checkbox"> 3. Je sors marcher 5 minutes ou je fais 20 pompes
+    </div>
+    <div class="checklist-item">
+      <input type="checkbox"> 4. Je lis ma liste des raisons pour lesquelles j'arrete
+    </div>
+    <div class="checklist-item">
+      <input type="checkbox"> 5. Si c'est trop fort, j'appelle mon contact de soutien
+    </div>
+  </div>
+  
+  <h3>Erreur #3 : "Je vais arreter 'demain'"</h3>
+  <p><strong>Le probleme :</strong> "Lundi prochain", "apres les vacances", "apres l'anniversaire de Pierre", "le 1er du mois"...</p>
+  <p>Tu fixes une date dans le futur pour commencer. Pendant ce temps, tu continues a consommer "parce que de toute facon j'arrete bientot".</p>
+  <p>Ce delai te permet de :</p>
+  <ul>
+    <li>Continuer a consommer sans culpabilite</li>
+    <li>Eviter le moment difficile de l'arret</li>
+    <li>Te donner l'illusion que tu agis sans vraiment rien changer</li>
+  </ul>
+  <p>Et quand la date arrive ? Tu trouves une raison de la repousser. "En fait, cette semaine c'est complique. Je vais commencer la semaine prochaine."</p>
+  
+  <p><strong>La solution :</strong> Commence MAINTENANT. Ou au pire, aujourd'hui.</p>
+  <p>Il n'y a jamais de "moment parfait". Il y aura toujours un evenement, un stress, une occasion a venir.</p>
+  <p>Le meilleur moment pour commencer etait hier. Le deuxieme meilleur moment, c'est maintenant.</p>
+  
+  <div class="callout">
+    <p><strong>Exercice de verite :</strong> Si tu avais commence il y a 6 mois, ou en serais-tu aujourd'hui ? Tu aurais 6 mois d'abstinence derriere toi. Maintenant, demande-toi : ou seras-tu dans 6 mois si tu commences aujourd'hui ? Et ou seras-tu si tu continues a attendre ?</p>
+  </div>
+  
+  <h3>Erreur #4 : Ne rien mettre a la place (juste arreter)</h3>
+  <p><strong>Le probleme :</strong> Tu arretes ton addiction. Tu es fier de toi. Les premiers jours sont durs mais tu tiens. Et puis arrivent les semaines 2, 3, 4...</p>
+  <p>L'ennui arrive. Le vide. Tu te demandes : "Et maintenant je fais quoi de ma vie ?"</p>
+  <p>Ton addiction te prenait du temps, de l'energie, de l'attention. Elle comblait un vide. Maintenant ce vide est la, beant, et tu n'as rien pour le remplir.</p>
+  <p>C'est le moment le plus dangereux. C'est la que la plupart des rechutes surviennent. Pas dans les premiers jours de sevrage physique, mais dans les semaines qui suivent, quand l'ennui et le vide installent.</p>
+  
+  <p><strong>La solution :</strong> Avant d'arreter, commence a mettre en place des REMPLACEMENTS. Ne cree pas de vide.</p>
+  <p>Pose-toi ces questions :</p>
+  <ul>
+    <li>Qu'est-ce que mon addiction me donnait ? (calme, excitation, evasion, connexion, recompense)</li>
+    <li>Quelles activites saines pourraient me donner la meme chose ?</li>
+   </ul>
+  
+  <h3>Erreur #5 : Garder ça secret</h3>
+  <p><strong>Le probleme :</strong> Tu ne dis a personne que tu arretes. Tu penses :</p>
+  <ul>
+    <li>"Je n'ai pas besoin d'aide"</li>
+    <li>"Je ne veux pas deranger personne"</li>
+    <li>"Et si j'echoue, j'aurai l'air con"</li>
+    <li>"C'est mon probleme, je me debrouille seul"</li>
+  </ul>
+  <p>Mais garder ça secret est l'une des plus grosses erreurs que tu puisses faire. Pourquoi ?</p>
+  <ol>
+    <li><strong>Tu perds la responsabilite</strong> — Si personne ne sait, tu peux craquer sans personne pour te rappeler tes engagements.</li>
+    <li><strong>La honte grandit dans le secret</strong> — Plus tu caches ton combat, plus il prend de place dans ta tete.</li>
+    <li><strong>Tu refuses l'aide qui pourrait te sauver</strong> — Les gens autour de toi seraient peut-etre prets a t'aider. Mais ils ne peuvent pas si ils ne savent pas.</li>
+  </ol>
+  
+  <p><strong>La solution :</strong> Parle. A au moins UNE personne de confiance.</p>
+  <p>Cette personne sera ton :</p>
+  <ul>
+    <li><strong>Filet de securite</strong> — Quand le craving est trop fort, tu l'appelles.</li>
+    <li><strong>Rappel de tes motivations</strong> — Quand tu oublis pourquoi tu fais tout ça.</li>
+    <li><strong>Source de fierte</strong> — Quand tu reussis une semaine, un mois, tu veux quelqu'un a qui dire et qui sera fier de toi.</li>
+  </ul>
+  
+  <div class="callout">
+    <p><strong>Qui choisir ?</strong> Ce n'est pas forcement ton conjoint ou ta meilleure amie. Choisis quelqu'un qui ne te jugera pas, qui saura ecouter sans essayer de te "reparer" immediatement, qui est disponible quand tu auras besoin. Idealement : quelqu'un qui a deja traverse quelque chose de similaire (mais ce n'est pas obligatoire).</p>
+  </div>
+  
+  <h3>Erreur #6 : Croire que tu es "gueri" trop vite</h3>
+  <p><strong>Le probleme :</strong> Ça fait 2 semaines, 1 mois, peut-etre 3 mois que tu as arrete. Tu te sens bien. Beaucoup mieux qu'avant. Tu te dis : "Wow, j'ai reussi. Je ne suis plus addict. C'est fini !"</p>
+  <p>Et puis tu relaches la vigilance. Tu te dis :</p>
+  <ul>
+    <li>"Je peux aller a cette soiree ou tout le monde boit, ça ne me derange pas"</li>
+    <li>"Je peux reinstaller Instagram, je maitrise maintenant"</li>
+    <li>"Juste un verre, pour celebrer. Ça ne fera pas de mal"</li>
+  </ul>
+  <p>C'est exactement le genre de pensee qui precede la rechute.</p>
+  <p>L'addiction est patiente. Elle attend. Elle attend que tu sois fatigue, que tu sois stresse, que tu sois trop confiant. Et puis elle frappe.</p>
+  
+  <p><strong>La solution :</strong> Adopte une mentalite de "vigilance permanente".</p>
+  <p><strong>Phase 1 (0-3 mois) : VIGILANCE MAXIMALE</strong></p>
+  <ul>
+    <li>Evite toutes les situations a risque</li>
+    <li>Ne te teste pas ("est-ce que je resiste si... ?")</li>
+    <li>Maintiens toutes tes habitudes de protection</li>
+  </ul>
+  <p><strong>Phase 2 (3-12 mois) : VIGILANCE MODEREE</strong></p>
+  <ul>
+    <li>Tu peux commencer a t'exposer a certaines situations</li>
+    <li>Mais toujours avec un plan de secours</li>
+    <li>Et toujours en etant conscient de tes emotions</li>
+  </ul>
+  <p><strong>Phase 3 (apres 12 mois) : VIGILANCE LEGERE</strong></p>
+  <ul>
+    <li>Tu n'y penses plus tous les jours</li>
+    <li>Mais tu sais toujours ou sont tes points faibles</li>
+    <li>Tu ne fais pas de "tests" inutiles</li>
+  </ul>
+</div>
+<div class="content page-break">
+  <h2>Routine quotidienne anti-craving</h2>
+  <div class="callout-dark">
+    <p><strong>Pourquoi une routine ?</strong> Le craving frappe le plus souvent quand tu es fatigue, affame, stresse, seul, ou ennuyeux. Une routine bien concue minimise tous ces risques. Elle te cree une structure protectrice qui te porte tout au long de la journee.</p>
+  </div>
+  
+  <h3>Pourquoi cette routine fonctionne</h3>
+  <p>Les routines ne sont pas des contraintes. Elles sont des liberatrices. Quand tu as une routine claire :</p>
+  <ul>
+    <li>Tu n'as pas a decider "qu'est-ce que je fais maintenant ?" a chaque moment</li>
+    <li>Tu minimises les espaces vides ou l'ennui et le craving peuvent s'installer</li>
+    <li>Tu construis des habitudes qui finissent par fonctionner automatiquement</li>
+    <li>Tu prends soin de ton corps et de ton mental avant qu'ils ne demandent a l'etre</li>
+  </ul>
+  
+  <h3>Matin — De 7h a 10h : Poser les fondations de la journee</h3>
+  <p>Le matin est le moment le plus important. Comment tu commences ta journee determine comment elle se passera.</p>
+  
+  <h4>7h00 — Lever immediat (no snooze)</h4>
+  <p><strong>Ce que tu fais :</strong></p>
+  <ul>
+    <li>L'alarme sonne. Tu te leves immediatement.</li>
+    <li>Pas de "juste 5 minutes de plus". Le snooze est ton ennemi.</li>
+    <li>Tu bois un grand verre d'eau (tu as deshydrate pendant la nuit).</li>
+    <li>Tu ouvres les rideaux pour laisser entrer la lumiere naturelle.</li>
+  </ul>
+  <p><strong>Pourquoi :</strong> La lumiere du matin regle ton horloge biologique et ameliore ton humeur et ton sommeil pour la nuit suivante. La deshydratation augmente l'anxiete et le craving.</p>
+  
+  <h4>7h15 — 10 minutes de respiration / meditation</h4>
+  <p><strong>Ce que tu fais :</strong></p>
+  <ul>
+    <li>Assieds-toi sur une chaise, dos droit mais detendu.</li>
+    <li>Les yeux fermes ou mi-clos.</li>
+    <li>Inspire par le nez pendant 4 secondes.</li>
+    <li>Retiens 2 secondes.</li>
+    <li>Expire par la bouche pendant 6 secondes (plus long que l'inspiration).</li>
+    <li>Repete pendant 10 minutes.</li>
+  </ul>
+  <p><strong>Pourquoi :</strong> Cet exercice active le systeme nerveux parasympathique (le "repose et digere"). Il reduit ton niveau de stress de base. Plus tu le fais, plus ton niveau d'anxiete quotidien diminue.</p>
+  
+  <h4>7h30 — Ecrire tes 3 intentions + gratitude</h4>
+  <p><strong>Ce que tu fais :</strong></p>
+  <p>Prends un carnet et ecris, chaque matin :</p>
+  <p><strong>1. Trois bonnes raisons pour lesquelles j'arrete (mes "pourquoi")</strong></p>
+  <p>Exemples :</p>
+  <ul>
+    <li>"Je veux regarder mes enfants grandir et etre present pour eux"</li>
+    <li>"Je veux retrouver mon estime de moi et ne plus avoir honte"</li>
+    <li>"Je veux retrouver mon energie et ma capacite a me concentrer"</li>
+  </ul>
+  <p><strong>2. Trois choses pour lesquelles je suis reconnaissant aujourd'hui</strong></p>
+  <p>Exemples :</p>
+  <ul>
+    <li>"Avoir dormi 7 heures"</li>
+    <li>"Mon ami Thomas qui est la pour moi"</li>
+     <li>"4 jours d'abstinence derriere moi"</li>
+   </ul>
+</div>
+<div class="content page-break">
+  <h3>Apres-midi — Maintenir la stabilite</h3>
+  <p>L'apres-midi est plus risque que le matin. L'energie baisse. L'ennui peut arriver. La fatigue de la journee accumulee diminue ta volonte.</p>
+  
+  <h4>14h — Le moment le plus risque : gerer le coup de barre</h4>
+  <p>Entre 14h et 16h, c'est souvent la que le craving arrive. Fatigue, baisse d'energie, baisse de vigilance.</p>
+  <p><strong>Ta strategie preventive :</strong></p>
+  
+  <p><strong>Option 1 : Une micro-pause de 5 minutes</strong></p>
+  <ul>
+    <li>Leve-toi de ta chaise</li>
+    <li>Marches dans la piece ou dehors</li>
+    <li>Bois un verre d'eau</li>
+    <li>Etire-toi</li>
+    <li>Respire profondement 3 fois</li>
+  </ul>
+  
+  <p><strong>Option 2 : La "douche froide" (version light)</strong></p>
+  <p>Si tu es chez toi, passe tes poignets sous l'eau froide pendant 30 secondes. Ou eclabousse ton visage a l'eau froide. Ça te reveille instantanement et brise le cercle du craving.</p>
+  
+  <p><strong>Option 3 : Le "5-4-3-2-1" pour t'ancrer</strong></p>
+  <p>C'est un exercice de pleine conscience qui te ramene au present :</p>
+  <ul>
+    <li><strong>5 choses</strong> que tu peux VOIR autour de toi</li>
+    <li><strong>4 choses</strong> que tu peux TOUCHER</li>
+    <li><strong>3 choses</strong> que tu peux ENTENDRE</li>
+    <li><strong>2 choses</strong> que tu peux SENTIR (odeurs)</li>
+    <li><strong>1 chose</strong> que tu peux GOÛTER</li>
+  </ul>
+  
+  <h3>Soir — Proteger ton sommeil et eviter l'ennui</h3>
+  <p>La soiree est le moment le plus dangereux. Pourquoi ?</p>
+  <ul>
+    <li>La journee est finie, tu es fatigue</li>
+    <li>Tu as du temps libre — et le temps libre = espace pour le craving</li>
+    <li>Les ecrans sont omnipresents</li>
+    <li>Les emotions de la journee remontent a la surface</li>
+  </ul>
+  
+  <h4>20h-21h30 — Activite hors ecran</h4>
+  <p>C'est LE CRENEAU LE PLUS IMPORTANT de toute la routine. La plupart des gens s'ecrasent sur le canape et allument la TV ou scrollent sur leur telephone. Ne sois pas la plupart des gens.</p>
+  <p><strong>Choisis une activite qui te captive et qui ne necessite pas d'ecran :</strong></p>
+  <ul>
+    <li>Lire un livre VRAI (pas sur liseuse si tu peux)</li>
+    <li>Peindre, dessiner, colorier</li>
+    <li>Jouer d'un instrument de musique</li>
+    <li>Cuisiner quelque chose de complique</li>
+    <li>Faire du bricolage</li>
+    <li>Jouer a un jeu de societe avec quelqu'un</li>
+    <li>Ecrire dans ton journal</li>
+  </ul>
+  
+  <h4>21h30 — Bilan de la journee</h4>
+  <p>Prends 5 minutes pour ecrire dans ton carnet :</p>
+  <ul>
+    <li>Qu'est-ce qui s'est bien passe aujourd'hui ? (meme les petites victoires comptent)</li>
+    <li>Qu'est-ce qui a ete difficile ?</li>
+    <li>Qu'est-ce que j'apprends pour demain ?</li>
+    <li>Mon niveau de craving moyen aujourd'hui : /10</li>
+  </ul>
+  
+  <div class="callout-success">
+    <p><strong>La chose la plus importante a retenir :</strong> Aucune routine ne sera parfaite. Certains jours tu suivras tout ça a la lettre. D'autres jours tu n'en feras que la moitie. Ce n'est pas grave. Ce qui compte, c'est la constance sur le long terme.</p>
+  </div>
+</div>
+<div class="content page-break">
+</div>
+<div class="content page-break">
+  <h2>Plan d'action avance — Mois 2 et 3</h2>
+  <div class="callout-dark">
+    <p><strong>Important :</strong> Ce plan est la SUITE du plan 90 jours que tu as deja dans le module 10. Il suppose que tu as deja survecu au premier mois et que l'abstinence est devenue plus stable.</p>
+  </div>
+  
+  <h3>Pourquoi les mois 2 et 3 sont cruciaux</h3>
+  <p>Le premier mois est difficile — c'est le sevrage physique, le craving intense, le changement brutal d'habitudes.</p>
+  <p>Mais les mois 2 et 3 sont souvent le moment ou les rechutes arrivent. Pourquoi ?</p>
+  <ul>
+    <li>La motivation initiale diminue</li>
+    <li>Le sevrage physique est fini, tu te sens mieux → tu te crois "gueri" et relaches la vigilance</li>
+    <li>L'ennui et le vide arrivent ("maintenant je fais quoi ?")</li>
+    <li>Tu commences a oublier a quel point c'etait mauvais avant</li>
+    <li>La vie reprend son cours, et avec elle le stress, les emotions negatives</li>
+  </ul>
+  <p>Ce plan avance est conçu pour te proteger pendant cette periode vulnerable.</p>
+  
+  <h3>Mois 2 — Semaines 5 a 8 : Construire les nouvelles habitudes</h3>
+  <p>Objectif du mois 2 : Remplacer. Tu as cree un vide en arretant ton addiction. Maintenant tu dois le remplir par quelque chose de mieux.</p>
+  
+  <h4>Semaine 5 — La semaine du sport</h4>
+  <p><strong>Objectif :</strong> Faire du sport une habitude quotidienne, pas un effort ponctuel.</p>
+  
+  <p><strong>Ce que tu fais cette semaine :</strong></p>
+  <p><strong>1. Choisis TON activite</strong></p>
+  <table>
+    <thead>
+      <tr><th>Si tu es...</th><th>Essaye...</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Debutant, pas sportif</td><td>Marche rapide 30 min par jour</td></tr>
+      <tr><td>En colere ou stresse</td><td>Course a pied, boxe, musculation</td></tr>
+      <tr><td>Plus interesse par le mental</td><td>Yoga, tai-chi, natation</td></tr>
+      <tr><td>Social</td><td>Equipe, club, cours de groupe</td></tr>
+    </tbody>
+  </table>
+  
+  <p><strong>2. Cree une routine IMPARABLE</strong></p>
+  <p>La meilleure maniere de rendre une habitude automatique est de l'attacher a une habitude que tu as deja.</p>
+  <p>Exemples :</p>
+  <ul>
+    <li>"Juste apres le petit-dejeuner, je mets mes chaussures et je marche 30 min"</li>
+    <li>"Juste apres le travail, je vais a la salle de sport avant de rentrer"</li>
+  </ul>
+  <p><strong>La cle :</strong> Ce ne sera pas l'envie qui viendra en premier. Ce sera l'action. Fais-le meme si tu n'as pas envie. Les 5 premieres minutes sont toujours les plus dures.</p>
+  
+  <h4>Semaine 6 a 8 — Approfondis le travail psychologique</h4>
+  <p><strong>Ce que tu fais :</strong></p>
+  <ul>
+    <li>Continue ton ecriture quotidienne (10 minutes par jour)</li>
+    <li>Commence a explorer ce qui te donne un sens (nouvelle passion, projet, benevolat)</li>
+    <li>Si tu n'as pas encore commence a chercher un therapeute ou un groupe de parole, fais-le cette semaine</li>
+  </ul>
+  
+  <h3>Mois 3 — Semaines 9 a 12 : Consolidation et prevention a long terme</h3>
+  <p>Objectif du mois 3 : Construire les fondations pour les mois et annees a venir. Tu vas travailler sur les causes profondes, et creer un plan anti-rechute pour l'avenir.</p>
+  
+  <h4>Semaine 9 et 10 — Ton plan anti-rechute ecrit</h4>
+  <p><strong>Objectif :</strong> Creer un plan ecrit a consulter quand les choses deviennent difficiles. Parce que quand le craving arrive ou que tu es emotionnellement submerge, tu ne penses plus clairement.</p>
+  
+  <p><strong>Ecris ceci dans ton carnet :</strong></p>
+  
+  <p><strong>Section 1 : Mes signaux d'alerte</strong></p>
+  <p>Quels sont les signes que tu es en danger de rechuter ?</p>
+  <p>Exemples :</p>
+  <ul>
+    <li>Je ne dors plus bien depuis 2 nuits</li>
+    <li>Je suis tres stresse au travail</li>
+    <li>J'ai l'impression d'etre seul</li>
+    <li>Je me dis "je peux me permettre juste un peu"</li>
+    <li>Je commence a minimiser les risques</li>
+  </ul>
+  
+  <p><strong>Section 2 : Ma checklist anti-craving</strong></p>
+  <p>Ce que tu fais QUAND le craving arrive, dans l'ordre :</p>
+  <ol>
+    <li>Je bois un grand verre d'eau</li>
+    <li>Je note l'heure. Je me dis : "ça dure 10 minutes"</li>
+    <li>Je sors marcher 5 minutes ou je fais 20 pompes</li>
+    <li>Je lis ma liste des raisons pour lesquelles j'arrete</li>
+    <li>Je me demande : "Comment je me sentirai dans 1h si je craque ? Et demain matin ?"</li>
+    <li>Si c'est toujours trop fort : j'appelle mon contact de soutien</li>
+  </ol>
+  
+  <h4>Semaine 11 et 12 — Prepare la suite</h4>
+  <p><strong>Objectif :</strong> Te projeter apres les 90 jours. Qu'est-ce qui se passe ensuite ?</p>
+  
+  <p><strong>Ce que tu fais :</strong></p>
+  <ul>
+    <li>Fais le point : Ou en es-tu par rapport a tes objectifs ?</li>
+    <li>Qu'est-ce qui a marche ? Qu'est-ce qui n'a pas marche ?</li>
+    <li>Quelles habitues veux-tu garder ? Qu'est-ce que tu veux ajuster ?</li>
+    <li>Quels sont tes nouveaux objectifs pour les 3 mois suivants ?</li>
+  </ul>
+  
+  <div class="callout">
+    <p><strong>A la fin des 90 jours :</strong></p>
+    <p>Celebre ta progression. 90 jours, c'est enorme. Mais ne relache pas la vigilance. L'addiction peut revenir. Continue tout ce qui marche. Ajuste ce qui ne marche pas.</p>
+    <p>Tu as construit une nouvelle version de toi-meme. Une version plus forte, plus libre, plus consciente. Continue de cultiver cette version.</p>
+  </div>
+</div>
+
+<div class="content page-break" id="guide-nutritionnel-pour-la-recuperation">
+  <h2>Guide nutritionnel pour la r\u00e9cup\u00e9ration</h2>
+  <div class="callout-dark">
+    <p><strong>Pourquoi la nutrition est cruciale :</strong> L'addiction d\u00e9r\u00e8gle la chimie de ton cerveau. Les bons aliments acc\u00e9l\u00e8rent la r\u00e9paration des r\u00e9cepteurs de dopamine, stabilisent ton humeur et r\u00e9duisent le craving. Une mauvaise alimentation aggrave les sympt\u00f4mes de sevrage. Tu ne peux pas gu\u00e9rir un cerveau affam\u00e9.</p>
+  </div>
+
+  <h3>Comment la nourriture affecte ton cerveau addictif</h3>
+  <p>Ton cerveau a \u00e9t\u00e9 d\u00e9r\u00e9gl\u00e9 par des pics de dopamine artificiels. Pour gu\u00e9rir, il a besoin de nutriments sp\u00e9cifiques dans un ordre sp\u00e9cifique. Chaque repas est une occasion de r\u00e9\u00e9quilibrer ta chimie c\u00e9r\u00e9brale.</p>
+  <p>Le sucre raffin\u00e9 est ton pire ennemi en r\u00e9cup\u00e9ration. Il provoque les m\u00eames pics de dopamine que les drogues — moins intenses mais assez puissants pour entretenir le cycle du craving et rendre le sevrage plus difficile.</p>
+  <p><strong>Le principe fondamental :</strong> Stabiliser ta glyc\u00e9mie = stabiliser ton humeur = r\u00e9duire les cravings.</p>
+
+  <h3>La r\u00e8gle des 3 repas \u00e9quilibr\u00e9s</h3>
+  <p>Chaque repas doit contenir ces 3 \u00e9l\u00e9ments pour \u00e9viter les chutes de glyc\u00e9mie :</p>
+  <ul>
+    <li><strong>Prot\u00e9ines maigres</strong> (20-30g par repas) — stabilisent la glyc\u00e9mie, fournissent les acides amin\u00e9s n\u00e9cessaires \u00e0 la dopamine.</li>
+    <li><strong>Lipides de qualit\u00e9</strong> (avocat, huile d'olive, noix) — essentiels pour la my\u00e9line et la communication neuronale.</li>
+    <li><strong>Glucides complexes</strong> (l\u00e9gumes, l\u00e9gumineuses, patate douce) — lib\u00e9ration lente d'\u00e9nergie, pas de pic d'insuline.</li>
+  </ul>
+
+  <h3>Aliments qui boostent la r\u00e9cup\u00e9ration c\u00e9r\u00e9brale</h3>
+  <table>
+    <thead>
+      <tr><th>Nutriment</th><th>Pourquoi c'est important</th><th>O\u00f9 le trouver</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Tyrosine</strong></td><td>Pr\u00e9curseur direct de la dopamine — aide \u00e0 reconstituer les r\u00e9serves \u00e9puis\u00e9es</td><td>Oeufs, poulet, dinde, banane, avocat, produits laitiers</td></tr>
+      <tr><td><strong>Tryptophane</strong></td><td>Pr\u00e9curseur de la s\u00e9rotonine — r\u00e9gule l'humeur et le sommeil</td><td>Oeufs, fromage blanc, saumon, graines de courge, chocolat noir 85%</td></tr>
+      <tr><td><strong>Omega-3 (EPA/DHA)</strong></td><td>Anti-inflammatoire puissant — r\u00e9pare les neurones endommag\u00e9s</td><td>Poissons gras (saumon, maquereau, sardines), noix, graines de chia, huile de lin</td></tr>
+      <tr><td><strong>Magn\u00e9sium</strong></td><td>R\u00e9duit l'anxi\u00e9t\u00e9, les crampes musculaires et am\u00e9liore le sommeil</td><td>L\u00e9gumes verts fonc\u00e9s, amandes, noix de cajou, chocolat noir, banane</td></tr>
+      <tr><td><strong>Zinc</strong></td><td>Essential pour la neurotransmission — souvent d\u00e9ficitaire chez les personnes addictes</td><td>Hu\u00eetres (la meilleure source), boeuf, graines de courge, lentilles</td></tr>
+      <tr><td><strong>Vitamine D</strong></td><td>R\u00e9gule l'humeur et la dopamine — carence fr\u00e9quente dans l'addiction</td><td>Soleil 15-20 min/jour, poissons gras, oeufs, suppl\u00e9mentation (1000-2000 UI/jour)</td></tr>
+      <tr><td><strong>Vitamines B (B6, B9, B12)</strong></td><td>Essentielles pour la production de neurotransmetteurs</td><td>C\u00e9r\u00e9ales compl\u00e8tes, l\u00e9gumes verts, oeufs, levure nutritionnelle</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Aliments \u00e0 \u00e9viter pendant la r\u00e9cup\u00e9ration</h3>
+  <table>
+    <thead>
+      <tr><th>Aliment</th><th>Pourquoi l'\u00e9viter</th><th>Alternative</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Sucre raffin\u00e9</strong></td><td>Pic de dopamine puis chute brutale — entretient le cycle du craving</td><td>Fruits frais, dattes, chocolat noir 85%+</td></tr>
+      <tr><td><strong>Sodas et boissons sucr\u00e9es</strong></td><td>M\u00eame effet que le sucre + additifs qui d\u00e9r\u00e8glent le microbiote</td><td>Eau p\u00e9tillante + citron, tisanes, eau infus\u00e9e</td></tr>
+      <tr><td><strong>Farines blanches</strong></td><td>Conversion rapide en sucre, pic d'insuline, crash \u00e9nerg\u00e9tique</td><td>Pain complet, riz complet, quinoa, patate douce</td></tr>
+      <tr><td><strong>Alcool</strong></td><td>Toxique pour les neurones, aggrave l'anxi\u00e9t\u00e9, perturbe le sommeil</td><td>Kombucha, eau p\u00e9tillante, mocktails</td></tr>
+      <tr><td><strong>Exc\u00e8s de caf\u00e9ine</strong></td><td>Augmente l'anxi\u00e9t\u00e9, imite l'\u00e9tat de stress, perturbe le sommeil</td><td>1 caf\u00e9 max le matin, puis th\u00e9 vert ou chicor\u00e9e</td></tr>
+      <tr><td><strong>Aliments ultra-transform\u00e9s</strong></td><td>Additifs qui d\u00e9r\u00e8glent le microbiote intestinal (axe intestin-cerveau)</td><td>Aliments bruts, cuisine maison</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <p><strong>Attention au sucre cach\u00e9 :</strong> Les c\u00e9r\u00e9ales du petit-d\u00e9jeuner, les sauces industrielles, les yaourts aromatis\u00e9s et les plats pr\u00e9par\u00e9s contiennent des quantit\u00e9s \u00e9normes de sucre ajout\u00e9. Lis les \u00e9tiquettes. Si le sucre appara\u00eet dans les 3 premiers ingr\u00e9dients, ne l'ach\u00e8te pas.</p>
+  </div>
+
+  <h3>Suppl\u00e9ments qui aident la r\u00e9cup\u00e9ration</h3>
+  <p>Les suppl\u00e9ments ne remplacent pas une bonne alimentation, mais ils peuvent combler des carences fr\u00e9quentes. Consulte un m\u00e9decin avant de commencer.</p>
+  <table>
+    <thead>
+      <tr><th>Suppl\u00e9ment</th><th>Dose recommand\u00e9e</th><th>B\u00e9n\u00e9fice principal</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Magn\u00e9sium bisglycinate</strong></td><td>200-400 mg le soir</td><td>R\u00e9duit l'anxi\u00e9t\u00e9, am\u00e9liore le sommeil, diminue les crampes</td></tr>
+      <tr><td><strong>Omega-3 (EPA riche)</strong></td><td>2-3 g/jour</td><td>Anti-inflammatoire, r\u00e9pare les neurones, am\u00e9liore l'humeur</td></tr>
+      <tr><td><strong>Zinc picolinate</strong></td><td>15-30 mg/jour</td><td>R\u00e9gule la dopamine, soutient le syst\u00e8me immunitaire</td></tr>
+      <tr><td><strong>Vitamine D3 + K2</strong></td><td>2000-5000 UI/jour (hiver)</td><td>R\u00e9gule l'humeur, soutient l'immunit\u00e9</td></tr>
+      <tr><td><strong>Complexe B</strong></td><td>1 g\u00e9lule/jour</td><td>Essentiel pour la production de neurotransmetteurs</td></tr>
+      <tr><td><strong>ASHWAGANDHA</strong></td><td>300-600 mg/jour (3 mois max)</td><td>Adaptog\u00e8ne, r\u00e9duit le cortisol, diminue le stress</td></tr>
+      <tr><td><strong>L-Th\u00e9anine</strong></td><td>100-200 mg si besoin</td><td>Calme sans somnolence, id\u00e9al pour les cravings d'anxi\u00e9t\u00e9</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Planification des repas pour la stabilit\u00e9 de l'humeur</h3>
+  <p>Quand tu manges est aussi important que ce que tu manges. Une glyc\u00e9mie stable = moins de craving.</p>
+  <ul>
+    <li><strong>Petit-d\u00e9jeuner prot\u00e9in\u00e9 (7h-8h) :</strong> 3 oeufs + avocat + l\u00e9gumes verts OU smoothie prot\u00e9in\u00e9 (prot\u00e9ine whey, banane, \u00e9pinards, lait d'amande). \u00c9vite les c\u00e9r\u00e9ales sucr\u00e9es et les viennoiseries.</li>
+    <li><strong>D\u00e9jeuner \u00e9quilibr\u00e9 (12h-13h) :</strong> Prot\u00e9ine (poulet, poisson, tofu) + l\u00e9gumes verts + f\u00e9culents complets (quinoa, riz complet, patate douce).</li>
+    <li><strong>Collation (16h-17h si besoin) :</strong> Pomme + amandes OU yaourt grec + baies OU carottes + houmous.</li>
+    <li><strong>D\u00eener l\u00e9ger (19h-20h) :</strong> Soupe maison + prot\u00e9ine l\u00e9g\u00e8re (poisson, oeufs) + l\u00e9gumes verts.</li>
+  </ul>
+
+  <div class="checklist">
+    <div class="checklist-item"><input type="checkbox"> Bois 2 litres d'eau par jour (la soif est souvent confondue avec le craving)</div>
+    <div class="checklist-item"><input type="checkbox"> Mange toutes les 3-4 heures pour \u00e9viter les chutes de glyc\u00e9mie</div>
+    <div class="checklist-item"><input type="checkbox"> Ajoute des prot\u00e9ines \u00e0 chaque repas</div>
+    <div class="checklist-item"><input type="checkbox"> Remplace le caf\u00e9 de l'apr\u00e8s-midi par une tisane ou du th\u00e9 vert</div>
+    <div class="checklist-item"><input type="checkbox"> Supprime les sodas et les jus de fruits industriels</div>
+  </div>
+
+  <h3>Exemple de menu sur 3 jours</h3>
+  <table>
+    <thead>
+      <tr><th>Repas</th><th>Jour 1</th><th>Jour 2</th><th>Jour 3</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Petit-d\u00e9jeuner</strong></td><td>Omelette 3 oeufs + \u00e9pinards + 1 tranche pain complet</td><td>Smoothie prot\u00e9in\u00e9 (banane, whey, lait d'amande, \u00e9pinards)</td><td>Yaourt grec + noix + baies + 1 cuill\u00e8re graines de chia</td></tr>
+      <tr><td><strong>D\u00e9jeuner</strong></td><td>Filet de poulet + quinoa + brocolis vapeur + huile d'olive</td><td>Saumon grill\u00e9 + patate douce + haricots verts</td><td>Salade compos\u00e9e : lentilles, avocat, oeuf dur, thon, tomates</td></tr>
+      <tr><td><strong>Collation</strong></td><td>Pomme + 15 amandes</td><td>B\u00e2tonnets carotte + houmous</td><td>Carr\u00e9 chocolat noir 85% + th\u00e9 vert</td></tr>
+      <tr><td><strong>D\u00eener</strong></td><td>Soupe maison + 2 oeufs durs + salade verte</td><td>Poisson blanc + \u00e9pinards + champignons saut\u00e9s</td><td>Bowl v\u00e9g\u00e9tarien : riz complet, pois chiches, chou kale, tahini</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout-success">
+    <p><strong>Conseil pratique :</strong> Pr\u00e9pare tes repas \u00e0 l'avance (meal prep le dimanche). Quand le craving frappe, si tu as un repas sain pr\u00eat en 5 minutes, tu \u00e9vites la tentation de commander ou de grignoter n'importe quoi. La pr\u00e9paration est la cl\u00e9.</p>
+  </div>
+</div>
+
+<div class="content page-break" id="techniques-de-respiration-et-meditation-anti-craving">
+  <h2>Techniques de respiration et m\u00e9ditation anti-craving</h2>
+  <div class="callout-dark">
+    <p><strong>Pourquoi \u00e7a marche :</strong> Le craving est une temp\u00eate physiologique — ton coeur s'acc\u00e9l\u00e8re, ta respiration devient superficielle, ton corps se pr\u00e9pare \u00e0 agir. Les techniques de respiration activent le syst\u00e8me nerveux parasympathique (repos et digestion), ce qui calme la temp\u00eate en 30 \u00e0 90 secondes. Chaque technique ci-dessous a \u00e9t\u00e9 test\u00e9e cliniquement.</p>
+  </div>
+
+  <p>Voici 5 techniques sp\u00e9cifiques. Apprends-les toutes, puis choisis celles qui fonctionnent le mieux pour toi. Id\u00e9alement, pratique-les quand tu n'as pas de craving pour qu'elles deviennent automatiques quand le craving arrive.</p>
+
+  <h3>Technique #1 : La respiration 4-7-8 (le frein d'urgence)</h3>
+  <p><strong>Quand l'utiliser :</strong> Craving soudain et intense, crise d'angoisse, insomnie, moment de stress aigu.</p>
+
+  <h4>Instructions \u00e9tape par \u00e9tape</h4>
+  <ol>
+    <li>Assieds-toi confortablement, dos droit. Pose le bout de la langue contre le palais, derri\u00e8re les incisives.</li>
+    <li>Expire compl\u00e8tement par la bouche en faisant un son "souffl\u00e9".</li>
+    <li>Ferme la bouche. Inspire par le nez en comptant silencieusement jusqu'\u00e0 <strong>4</strong>.</li>
+    <li>Retiens ton souffle en comptant jusqu'\u00e0 <strong>7</strong>.</li>
+    <li>Expire compl\u00e8tement par la bouche en comptant jusqu'\u00e0 <strong>8</strong> (son souffl\u00e9).</li>
+    <li>R\u00e9p\u00e8te 4 fois (un cycle complet). Ne fais pas plus de 4 cycles au d\u00e9but.</li>
+  </ol>
+  <p><strong>Dur\u00e9e :</strong> 2-3 minutes. <strong>Pourquoi \u00e7a marche :</strong> L'expiration longue active le nerf vague, qui est le frein du syst\u00e8me nerveux sympathique (combat-fuite). C'est le bouton "calme-toi" le plus rapide du corps humain.</p>
+
+  <h3>Technique #2 : La respiration en carr\u00e9 (Box Breathing)</h3>
+  <p><strong>Quand l'utiliser :</strong> Craving mod\u00e9r\u00e9, besoin de recentrage, avant une situation \u00e0 risque (soir\u00e9e, rendez-vous stressant).</p>
+
+  <h4>Instructions \u00e9tape par \u00e9tape</h4>
+  <ol>
+    <li>Assieds-toi ou reste debout, dos droit. Visualise un carr\u00e9 dans ta t\u00eate.</li>
+    <li>Inspire par le nez en comptant jusqu'\u00e0 <strong>4</strong> (monte le c\u00f4t\u00e9 gauche du carr\u00e9).</li>
+    <li>Retiens ton souffle en comptant jusqu'\u00e0 <strong>4</strong> (traverse le haut du carr\u00e9).</li>
+    <li>Expire par la bouche en comptant jusqu'\u00e0 <strong>4</strong> (descend le c\u00f4t\u00e9 droit).</li>
+    <li>Retiens \u00e0 vide en comptant jusqu'\u00e0 <strong>4</strong> (traverse le bas du carr\u00e9).</li>
+    <li>R\u00e9p\u00e8te pendant 3-5 minutes.</li>
+  </ol>
+  <p><strong>Dur\u00e9e :</strong> 3-5 minutes. <strong>Pourquoi \u00e7a marche :</strong> La respiration en carr\u00e9 \u00e9quilibre les syst\u00e8mes sympathique et parasympathique. Les Navy Seals l'utilisent pour rester calmes sous le stress le plus extr\u00eame.</p>
+
+  <h3>Technique #3 : Le Body Scan (scan corporel)</h3>
+  <p><strong>Quand l'utiliser :</strong> Craving li\u00e9 \u00e0 une \u00e9motion (tristesse, col\u00e8re, anxi\u00e9t\u00e9), besoin de se reconnecter \u00e0 son corps, avant le coucher.</p>
+
+  <h4>Instructions \u00e9tape par \u00e9tape</h4>
+  <ol>
+    <li>Allonge-toi ou assieds-toi confortablement. Ferme les yeux.</li>
+    <li>Porte ton attention sur tes pieds. Sens leur poids, leur temp\u00e9rature, le contact avec le sol. 30 secondes.</li>
+    <li>Remonte lentement : chevilles, mollets, genoux, cuisses. Observe chaque zone sans jugement. 30 secondes par zone.</li>
+    <li>Continue vers le bassin, le ventre, le bas du dos. Note les tensions sans chercher \u00e0 les changer. 30 secondes.</li>
+    <li>Remonte vers le torse, le haut du dos, les \u00e9paules. C'est l\u00e0 que le stress s'accumule le plus. 30 secondes.</li>
+    <li>Continue vers les bras, les mains, le cou, le visage, le cuir chevelu. 30 secondes.</li>
+    <li>Prends 3 respirations profondes avant d'ouvrir les yeux.</li>
+  </ol>
+  <p><strong>Dur\u00e9e :</strong> 5-15 minutes. <strong>Pourquoi \u00e7a marche :</strong> Le craving est une d\u00e9connexion — ton cerveau est pris dans une boucle de pens\u00e9es. Le body scan te ram\u00e8ne dans ton corps, ce qui coupe la boucle mentale. Il t'apprend aussi \u00e0 distinguer les sensations physiques des \u00e9motions.</p>
+
+  <h3>Technique #4 : L'Urge Surfing (surfer sur l'envie) — M\u00e9thode RAIN</h3>
+  <p><strong>Quand l'utiliser :</strong> Craving mod\u00e9r\u00e9 \u00e0 fort, quand tu sens que tu vas craquer, pour les moments o\u00f9 la tentation est omnipr\u00e9sente.</p>
+  <p>Cette technique combine la pleine conscience avec l'acceptation. L'id\u00e9e n'est pas de combattre le craving mais de l'observer comme une vague qui passe.</p>
+
+  <h4>Le protocole RAIN en 4 \u00e9tapes</h4>
+  <table>
+    <thead>
+      <tr><th>\u00c9tape</th><th>Action</th><th>Ce que tu te dis</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>R</strong> Recognize</td><td>Reconna\u00ees que le craving est l\u00e0, sans le nier</td><td>"Ah, voil\u00e0 le craving. Je le reconnais."</td></tr>
+      <tr><td><strong>A</strong> Allow</td><td>Permets-lui d'\u00eatre pr\u00e9sent sans le juger</td><td>"Je n'ai pas \u00e0 le combattre. Il peut \u00eatre l\u00e0."</td></tr>
+      <tr><td><strong>I</strong> Investigate</td><td>Explore la sensation avec curiosit\u00e9</td><td>"O\u00f9 est-ce que je le sens dans mon corps ? Quelle est son intensit\u00e9 sur 10 ?"</td></tr>
+      <tr><td><strong>N</strong> Non-identify</td><td>L'envie n'est pas toi, c'est une sensation passag\u00e8re</td><td>"Je ne suis pas ce craving. C'est une vague qui va passer."</td></tr>
+    </tbody>
+  </table>
+
+  <ol>
+    <li><strong>R \u2014 Recognize :</strong> D\u00e8s que tu sens l'envie arriver, nomme-la mentalement. "Craving. Je te vois." Ne la juge pas, ne la combats pas. Reconnais simplement sa pr\u00e9sence.</li>
+    <li><strong>A \u2014 Allow :</strong> Au lieu de te dire "je ne devrais pas avoir envie", dis-toi "c'est normal d'avoir envie, mon cerveau est conditionn\u00e9." Laisse la sensation \u00eatre l\u00e0 sans essayer de la chasser.</li>
+    <li><strong>I \u2014 Investigate :</strong> Ferme les yeux et explore : o\u00f9 est cette sensation dans ton corps ? Est-ce une tension dans la poitrine ? Une boule dans la gorge ? Une chaleur dans le ventre ? Quelle est sa forme, sa couleur, son intensit\u00e9 ? Sois curieux, comme un scientifique.</li>
+    <li><strong>N \u2014 Non-identify :</strong> Rappelle-toi : "Ce n'est pas moi. C'est une sensation. Elle est arriv\u00e9e, elle va repartir." Tu n'es pas ton craving. Tu es celui ou celle qui observe le craving.</li>
+  </ol>
+  <p><strong>Dur\u00e9e :</strong> 3-10 minutes. <strong>Pourquoi \u00e7a marche :</strong> Combattre le craving le renforce (ce \u00e0 quoi tu r\u00e9sistes persiste). L'observer le dissout. La recherche montre que 5 minutes d'urge surfing r\u00e9duisent l'intensit\u00e9 du craving de 30 \u00e0 50%.</p>
+
+  <div class="callout-success">
+    <p><strong>Le paradoxe de l'urge surfing :</strong> Plus tu observes le craving sans essayer de le faire dispara\u00eetre, plus il dispara\u00eet vite. Plus tu luttes contre, plus il s'accroche. Essaye la prochaine fois que tu as envie de craquer. \u00c7a semble contre-intuitif, mais \u00e7a marche.</p>
+  </div>
+
+  <h3>Technique #5 : La respiration altern\u00e9e (Nadi Shodhana)</h3>
+  <p><strong>Quand l'utiliser :</strong> Craving li\u00e9 au stress ou \u00e0 l'anxi\u00e9t\u00e9, difficult\u00e9 \u00e0 se concentrer, agitation mentale, avant de dormir.</p>
+
+  <h4>Instructions \u00e9tape par \u00e9tape</h4>
+  <ol>
+    <li>Assieds-toi confortablement, colonne vert\u00e9brale droite. Prends 3 respirations normales.</li>
+    <li>Place le pouce droit sur ta narine droite pour la fermer.</li>
+    <li>Inspire lentement par la narine gauche en comptant jusqu'\u00e0 <strong>4</strong>.</li>
+    <li>Ferme les deux narines (pouce et annulaire) et retiens ton souffle en comptant jusqu'\u00e0 <strong>4</strong>.</li>
+    <li>Rel\u00e8ve le pouce (narine droite libre) et expire par la narine droite en comptant jusqu'\u00e0 <strong>6</strong> (expiration plus longue).</li>
+    <li>Inspire maintenant par la narine droite en comptant jusqu'\u00e0 <strong>4</strong>.</li>
+    <li>Ferme les deux narines et retiens en comptant jusqu'\u00e0 <strong>4</strong>.</li>
+    <li>Expire par la narine gauche en comptant jusqu'\u00e0 <strong>6</strong>.</li>
+    <li>\u00c7a = 1 cycle. Continue pendant 5-10 cycles.</li>
+  </ol>
+  <p><strong>Dur\u00e9e :</strong> 5-10 minutes. <strong>Pourquoi \u00e7a marche :</strong> Cette respiration \u00e9quilibre les deux h\u00e9misph\u00e8res c\u00e9r\u00e9braux et harmonise le syst\u00e8me nerveux. C'est l'une des techniques les plus puissantes du yoga pour calmer l'esprit agitatif.</p>
+
+  <h3>Protocole de crise : quand le craving est \u00e0 8/10 ou plus</h3>
+  <div class="exercise">
+    <h4>URGENCE CRAVING - PROTOCOLE IMM\u00c9DIAT</h4>
+    <p>Quand l'envie est si forte que tu sens que tu vas craquer dans les minutes qui viennent, suis ces \u00e9tapes dans l'ordre :</p>
+    <ol>
+      <li><strong>QUITTE LA SITUATION.</strong> Si tu es l\u00e0 o\u00f9 l'envie a commenc\u00e9, pars imm\u00e9diatement. Va dans une autre pi\u00e8ce, sors dehors, change d'environnement. Ne reste pas \u00e0 proximit\u00e9 de la tentation.</li>
+      <li><strong>RESPIRATION 4-7-8.</strong> Fais 4 cycles imm\u00e9diatement. \u00c7a prend 2 minutes et \u00e7a calme le syst\u00e8me nerveux en urgence.</li>
+      <li><strong>STIMULATION FROIDE.</strong> Passe tes poignets sous l'eau froide glac\u00e9e pendant 30 secondes OU prends une douche froide de 30 secondes. Le froid d\u00e9clenche le "r\u00e9flexe de plong\u00e9e" qui ralentit le coeur et change la chimie du cerveau.</li>
+      <li><strong>URGE SURFING RAIN.</strong> Fais le protocole RAIN complet. Assieds-toi et observe le craving pendant 5 minutes. Ne te l\u00e8ve pas avant que l'intensit\u00e9 ne redescende \u00e0 5/10 ou moins.</li>
+      <li><strong>CONTACTE TON FILET DE S\u00c9CURIT\u00c9.</strong> Si le craving est toujours \u00e0 7/10 ou plus apr\u00e8s les \u00e9tapes 1-4, appelle ou envoie un message \u00e0 ton contact de soutien. Ne reste pas seul.</li>
+    </ol>
+    <p><strong>Rappelle-toi :</strong> Un craving intense dure rarement plus de 30 minutes. Si tu peux tenir 30 minutes, tu gagnes \u00e0 tous les coups. Chaque craving que tu survis affaiblit le suivant.</p>
+  </div>
+
+  <div class="checklist">
+    <div class="checklist-item"><input type="checkbox"> Entra\u00eene-toi \u00e0 la respiration 4-7-8 matin et soir (m\u00eame sans craving)</div>
+    <div class="checklist-item"><input type="checkbox"> Programme un rappel t\u00e9l\u00e9phone \u00e0 14h pour 3 cycles de box breathing</div>
+    <div class="checklist-item"><input type="checkbox"> Copie le protocole de crise sur une note dans ton t\u00e9l\u00e9phone</div>
+    <div class="checklist-item"><input type="checkbox"> Essaye chaque technique au moins 3 fois avant de juger si elle marche pour toi</div>
+  </div>
+</div>
+
+<div class="content page-break" id="gestion-des-declencheurs-par-type-d-addiction">
+  <h2>Gestion des d\u00e9clencheurs par type d'addiction</h2>
+  <div class="callout-dark">
+    <p><strong>Pourquoi ce chapitre est important :</strong> Tous les d\u00e9clencheurs ne se valent pas. Un d\u00e9clencheur d'alcool (voir une bouteille) n'est pas le m\u00eame qu'un d\u00e9clencheur de porno (une notification). Chaque addiction a ses propres pi\u00e8ges. Ce chapitre te donne les strat\u00e9gies sp\u00e9cifiques pour les 5 addictions les plus courantes.</p>
+  </div>
+
+  <h3>Addiction #1 : \u00c9crans et r\u00e9seaux sociaux</h3>
+  <p>L'addiction aux \u00e9crans est la plus difficile \u00e0 \u00e9viter parce que les d\u00e9clencheurs sont partout : ton t\u00e9l\u00e9phone est dans ta poche, l'application est \u00e0 un clic, les notifications sont con\u00e7ues pour te faire revenir.</p>
+
+  <table>
+    <thead>
+      <tr><th>D\u00e9clencheur</th><th>Strat\u00e9gie de pr\u00e9vention</th><th>R\u00e9ponse alternative</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Ennui / temps mort</strong> (file d'attente, transport, pause)</td><td>Pr\u00e9vois une activit\u00e9 pour chaque temps mort : livre audio, podcast, carnet de notes</td><td>Sors le livre de ta poche, \u00e9cris 3 observations sur ton environnement, fais un exercice de respiration</td></tr>
+      <tr><td><strong>Notifications</strong></td><td>D\u00e9sactive TOUTES les notifications non essentielles. Passe en mode "Ne pas d\u00e9ranger" par d\u00e9faut.</td><td>R\u00e9ponds par cr\u00e9neaux : 5 min toutes les 2h. Pas de consultation en continu.</td></tr>
+      <tr><td><strong>Solitude / besoin de connexion</strong></td><td>Remplace les connexions virtuelles par des connexions r\u00e9elles. Planifie 1 appel ou 1 rencontre par jour.</td><td>Au lieu de scroller, envoie un message \u00e0 un ami, appelle tes parents, rejoins un cours ou un club</td></tr>
+      <tr><td><strong>FOMO (peur de manquer)</strong></td><td>Rappelle-toi que tu ne vois que les meilleurs moments des gens. Personne ne poste ses \u00e9checs.</td><td>D\u00e9sinstalle l'application. La vraie vie ne se passe pas sur \u00e9cran.</td></tr>
+      <tr><td><strong>R\u00e9veil / coucher (rituel t\u00e9l\u00e9phone)</strong></td><td>Charge ton t\u00e9l\u00e9phone dans une autre pi\u00e8ce. Utilise un vrai r\u00e9veil.</td><td>Le matin : verre d'eau + \u00e9tirements + \u00e9criture. Le soir : lecture + respiration.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Addiction #2 : Sucre et junk food</h3>
+  <p>L'addiction au sucre est physiologique et psychologique. Le sucre active les m\u00eames r\u00e9cepteurs de dopamine que la coca\u00efne (en moins intense mais assez pour cr\u00e9er une forte d\u00e9pendance).</p>
+
+  <table>
+    <thead>
+      <tr><th>D\u00e9clencheur</th><th>Strat\u00e9gie de pr\u00e9vention</th><th>R\u00e9ponse alternative</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Stress \u00e9motionnel</strong> (travail, conflit, frustration)</td><td>Identifie les moments de stress dans ta journ\u00e9e et pr\u00e9vois une pause respiratoire avant le pic de craving</td><td>5 min de respiration 4-7-8, puis tisane ou eau citronn\u00e9e. Le sucre ne r\u00e9sout pas le stress, il l'engourdit.</td></tr>
+      <tr><td><strong>\u00c9motions n\u00e9gatives</strong> (tristesse, col\u00e8re, solitude)</td><td>Cr\u00e9e une liste d'activit\u00e9s de confort non-alimentaires : bain chaud, musique, balade, appel.</td><td>\u00c9cris ce que tu ressens pendant 5 minutes. Puis bouge : 20 pompes, marche rapide, \u00e9tirements.</td></tr>
+      <tr><td><strong>Fatigue / baisse d'\u00e9nergie (14h-16h)</strong></td><td>D\u00e9jeuner prot\u00e9in\u00e9, pas de glucides raffin\u00e9s le midi. Collation pr\u00e9par\u00e9e \u00e0 l'avance.</td><td>Marche dehors 10 minutes + grand verre d'eau + poign\u00e9e d'amandes ou fruit frais</td></tr>
+      <tr><td><strong>Habitude sociale</strong> (g\u00e2teau au bureau, resto, soir\u00e9e)</td><td>Pr\u00e9viens ton entourage : "je fais une pause sucre". Prends tes propres collations.</td><td>"Non merci, je n'en prends pas." Insiste poliment mais fermement. Personne n'est oblig\u00e9 de manger ce qu'on lui propose.</td></tr>
+      <tr><td><strong>Pens\u00e9e "je le m\u00e9rite"</strong> (apr\u00e8s effort, bonne journ\u00e9e)</td><td>Recadre la r\u00e9compense : tu ne m\u00e9rites pas du sucre, tu m\u00e9rites du repos, une activit\u00e9 agr\u00e9able, du temps pour toi.</td><td>Choisis une r\u00e9compense non-alimentaire : massage, livre, bain, balade, sieste, film.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <p><strong>Le pi\u00e8ge du "sans sucre" :</strong> Les produits "sans sucre" ou "light" contiennent souvent des \u00e9dulcorants (aspartame, sucralose) qui entretiennent le craving sucr\u00e9 et perturbent le microbiote. Ne remplace pas le sucre par des \u00e9dulcorants. Remplace-le par une autre relation \u00e0 la nourriture.</p>
+  </div>
+
+  <h3>Addiction #3 : Pornographie</h3>
+  <p>L'addiction \u00e0 la pornographie est unique parce qu'elle combine une stimulation sexuelle puissante, un acc\u00e8s illimit\u00e9 et gratuit, et une honte profonde qui pousse au secret. Les d\u00e9clencheurs sont souvent des \u00e9tats internes plut\u00f4t que des stimuli externes.</p>
+
+  <table>
+    <thead>
+      <tr><th>D\u00e9clencheur</th><th>Strat\u00e9gie de pr\u00e9vention</th><th>R\u00e9ponse alternative</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Solitude / vide \u00e9motionnel</strong></td><td>Remplis ton agenda de soir\u00e9es. Ne laisse pas de "temps mort" le soir. Planifie des activit\u00e9s sociales.</td><td>Appelle quelqu'un, sors de chez toi, va dans un caf\u00e9, rejoins un cours. La solitude est le terreau le plus fertile pour cette addiction.</td></tr>
+      <tr><td><strong>Ennui / procrastination</strong></td><td>Installe un bloqueur de sites. Supprime tout acc\u00e8s quand l'envie n'est pas l\u00e0.</td><td>Fais 20 pompes, prends une douche froide, sors marcher 10 minutes. Le craving sexuel est r\u00e9orientable par l'effort physique.</td></tr>
+      <tr><td><strong>Insomnie / coucher tard</strong></td><td>Instaure un couvre-feu num\u00e9rique : pas d'\u00e9cran apr\u00e8s 21h. Charge le t\u00e9l\u00e9phone hors de la chambre.</td><td>Routine du soir : tisane, lecture (livre papier), respiration 4-7-8, body scan au lit.</td></tr>
+      <tr><td><strong>Stress / anxi\u00e9t\u00e9</strong></td><td>Apprends \u00e0 rep\u00e9rer les signes avant-coureurs du stress : \u00e9paules tendues, m\u00e2choire serr\u00e9e, respiration courte.</td><td>5 minutes de body scan, 3 minutes de respiration altern\u00e9e, \u00e9cris tes pens\u00e9es dans un carnet.</td></tr>
+      <tr><td><strong>Exposition accidentelle</strong> (image, film, r\u00e9seaux)</td><td>Active les filtres de contenu sensible. \u00c9vite les applis qui exposent du contenu suggestif.</td><td>D\u00e8s que tu vois quelque chose de d\u00e9clencheur, ferme l'oeil, tourne la t\u00eate, respire profond\u00e9ment et change d'activit\u00e9 imm\u00e9diatement.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Addiction #4 : Jeux vid\u00e9o</h3>
+  <p>L'addiction aux jeux vid\u00e9o est particuli\u00e8rement insidieuse parce qu'elle se cache derri\u00e8re l'id\u00e9e de "divertissement". Les jeux sont con\u00e7us par des psychologues pour maximiser le temps pass\u00e9 et la r\u00e9tention.</p>
+
+  <table>
+    <thead>
+      <tr><th>D\u00e9clencheur</th><th>Strat\u00e9gie de pr\u00e9vention</th><th>R\u00e9ponse alternative</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>\u00c9vitement de t\u00e2ches / procrastination</strong></td><td>Applique la r\u00e8gle des 2 minutes : si une t\u00e2che prend moins de 2 min, fais-la imm\u00e9diatement. Pour les grandes t\u00e2ches, commence par 5 min.</td><td>Fais la t\u00e2che que tu \u00e9vites pendant 5 minutes. Si apr\u00e8s 5 min tu veux arr\u00eater, arr\u00eate. Mais tu n'arr\u00eatras pas.</td></tr>
+      <tr><td><strong>Ennui / perte de sens</strong></td><td>Trouve un projet concret hors-\u00e9cran : apprendre un instrument, un projet manuel, \u00e9crire un livre, sport.</td><td>Consacre 30 min \u00e0 ton projet non-num\u00e9rique avant d'allumer la console. La plupart du temps, tu n'auras plus envie de jouer apr\u00e8s.</td></tr>
+      <tr><td><strong>Besoin de comp\u00e9tition / progression</strong></td><td>Transf\u00e8re ce besoin vers des activit\u00e9s r\u00e9elles : sport de comp\u00e9tition, art martial, \u00e9checs, escalade.</td><td>Les jeux vid\u00e9o te donnent l'illusion de progresser sans v\u00e9ritable progr\u00e8s. Les vrais progr\u00e8s sont dans ta vie r\u00e9elle.</td></tr>
+      <tr><td><strong>Fatigue mentale / surcharge</strong></td><td>Le jeu n'est pas du vrai repos. Il fatigue encore plus ton cerveau. Le vrai repos = pas de stimulation.</td><td>20 minutes de sieste, marche dans la nature, \u00e9couter de la musique sans rien faire d'autre.</td></tr>
+      <tr><td><strong>Pression sociale des co\u00e9quipiers</strong></td><td>Pr\u00e9viens tes co\u00e9quipiers que tu r\u00e9duis ou arr\u00eates. Supprime les groupes de jeu.</td><td>"Je fais une pause. Pr\u00e9venez-moi si vous faites des activit\u00e9s IRL."</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Addiction #5 : Tabac et vapotage</h3>
+  <p>L'addiction \u00e0 la nicotine est l'une des plus difficiles \u00e0 cause de la double d\u00e9pendance : chimique (la nicotine) et comportementale (le geste). La vapoteuse ajoute un probl\u00e8me suppl\u00e9mentaire : elle est utilisable partout, tout le temps.</p>
+
+  <table>
+    <thead>
+      <tr><th>D\u00e9clencheur</th><th>Strat\u00e9gie de pr\u00e9vention</th><th>R\u00e9ponse alternative</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Situations sociales</strong> (pause clope au travail, soir\u00e9es)</td><td>Change de routine sociale. Prends tes pauses avec des non-fumeurs. Dis "j'arr\u00eate" \u00e0 voix haute.</td><td>Pars en pause-caf\u00e9 avec les non-fumeurs. Si tu es seul, fais 5 min de marche ou des exercices de respiration.</td></tr>
+      <tr><td><strong>Habitude gestuelle</strong> (apr\u00e8s le caf\u00e9, en conduisant, en t\u00e9l\u00e9phonant)</td><td>Identifie tous les rituels associ\u00e9s \u00e0 la cigarette. Pour chacun, trouve un rituel de remplacement.</td><td>Apr\u00e8s le caf\u00e9 : bois un verre d'eau. En conduisant : chewing-gum. Au t\u00e9l\u00e9phone : marche de long en large.</td></tr>
+      <tr><td><strong>Stress / tension nerveuse</strong></td><td>Pr\u00e9vois 3 pauses de 5 minutes par jour pour la respiration profonde (m\u00eame sans craving).</td><td>Respiration 4-7-8, box breathing, 10 respirations abdominales profondes. La nicotine est un stimulant, pas un calmant.</td></tr>
+      <tr><td><strong>Apr\u00e8s le repas</strong></td><td>Cr\u00e9e un nouveau rituel post-repas imm\u00e9diat : \u00e9crire 2 choses pour lesquelles tu es reconnaissant, ou brosser tes dents.</td><td>Brosse-toi les dents imm\u00e9diatement apr\u00e8s le repas. Le go\u00fbt de menthe est incompatible avec la cigarette.</td></tr>
+      <tr><td><strong>Alcool</strong> (tr\u00e8s li\u00e9 au tabac)</td><td>\u00c9vite l'alcool pendant au moins les 3 premiers mois. Si tu ne peux pas, alterne boisson alcoolis\u00e9e / verre d'eau.</td><td>Si tu bois, ne fume pas. Les deux sont li\u00e9s neurologiquement — un seul verre peut d\u00e9clencher l'envie de fumer.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout-success">
+    <p><strong>La strat\u00e9gie universelle :</strong> Pour TOUTES les addictions, la m\u00eame r\u00e8gle s'applique. Les 3 premi\u00e8res secondes sont les plus critiques. Quand le d\u00e9clencheur frappe, tu as 3 secondes pour d\u00e9cider de ta r\u00e9ponse. Si tu passes ces 3 secondes sans agir automatiquement, tu as bris\u00e9 le cycle. Utilise ces 3 secondes pour respirer une fois profond\u00e9ment et te demander : "Quelle personne je veux \u00eatre dans ce moment?"</p>
+  </div>
+</div>
+
+<div class="content page-break" id="programme-de-renforcement-mental-30-exercices-quotidiens">
+  <h2>Programme de renforcement mental \u2014 30 exercices quotidiens</h2>
+  <div class="callout-dark">
+    <p><strong>Pourquoi 30 jours :</strong> Il faut environ 21 \u00e0 66 jours pour cr\u00e9er une nouvelle habitude. Ce programme est con\u00e7u pour te faire traverser les 30 premiers jours les plus difficiles avec un exercice mental par jour. Chaque exercice prend 5 \u00e0 15 minutes. Fais-le \u00e0 un moment calme de la journ\u00e9e, id\u00e9alement le matin au r\u00e9veil.</p>
+  </div>
+
+  <h3>Phase 1 \u2014 Jours 1 \u00e0 10 : La conscience (awareness)</h3>
+  <p>Avant de pouvoir changer, tu dois voir. Ces 10 premiers jours sont consacr\u00e9s \u00e0 d\u00e9velopper ta capacit\u00e9 \u00e0 observer tes sch\u00e9mas, tes \u00e9motions, tes d\u00e9clencheurs et tes r\u00e9actions automatiques. C'est la phase la plus importante. Ne la saute pas.</p>
+
+  <table>
+    <thead>
+      <tr><th>Jour</th><th>Exercice</th><th>Temps</th><th>B\u00e9n\u00e9fice</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>J1</strong></td><td><strong>Carte de ton addiction :</strong> Sur une feuille, dessine ton cycle d'addiction. \u00c9cris : d\u00e9clencheur \u2192 craving \u2192 action \u2192 cons\u00e9quence. Sois le plus pr\u00e9cis possible. Note l'intensit\u00e9 de chaque \u00e9tape.</td><td>15 min</td><td>Tu passes du flou au concret. L'addiction est plus facile \u00e0 combattre quand tu vois son fonctionnement.</td></tr>
+      <tr><td><strong>J2</strong></td><td><strong>Journal des d\u00e9clencheurs :</strong> Aujourd'hui, note chaque craving dans un carnet : heure, lieu, d\u00e9clencheur, intensit\u00e9 (1-10), ce que tu as fait. Sans jugement, juste les faits.</td><td>5 min \u00e0 chaque craving</td><td>Tu identifies tes patterns. Les d\u00e9clencheurs cach\u00e9s deviennent visibles.</td></tr>
+      <tr><td><strong>J3</strong></td><td><strong>Scan \u00e9motionnel :</strong> 3 fois aujourd'hui (matin, midi, soir), arr\u00eate-toi 2 minutes. Ferme les yeux. Demande-toi : "Qu'est-ce que je ressens en ce moment exactement ?" Nomme l'\u00e9motion (pas "stress\u00e9" mais "tendu", "inquiet", "frustr\u00e9").</td><td>2 min x 3</td><td>Tu d\u00e9veloppes ton vocabulaire \u00e9motionnel, premi\u00e8re \u00e9tape pour r\u00e9guler les \u00e9motions sans la substance.</td></tr>
+      <tr><td><strong>J4</strong></td><td><strong>Le prix de ton addiction :</strong> Calcule le co\u00fbt r\u00e9el de ton addiction sur 1 an (argent). Ajoute le temps (heures par jour x 365). Ajoute co\u00fbt social, co\u00fbt sant\u00e9. \u00c9cris le total. Laisse-le imprimer.</td><td>15 min</td><td>Le cerveau minimise les cons\u00e9quences. Ce calcul rend les chiffres concrets et brise l'illusion.</td></tr>
+      <tr><td><strong>J5</strong></td><td><strong>Dialogue avec l'addiction :</strong> \u00c9cris un dialogue. Toi : "Pourquoi es-tu dans ma vie ?" L'addiction r\u00e9pond. Continue l'\u00e9change. Laisse l'addiction parler. Ne censure pas.</td><td>10 min</td><td>Tu externalises l'addiction, ce qui te permet de la voir comme quelque chose de s\u00e9par\u00e9 de toi.</td></tr>
+      <tr><td><strong>J6</strong></td><td><strong>Lettre \u00e0 toi-m\u00eame :</strong> \u00c9cris une lettre \u00e0 toi-m\u00eame dans 1 an. D\u00e9cris qui tu es devenu, \u00e0 quoi ressemble ta vie sans l'addiction, ce que tu ressens. Sois pr\u00e9cis et \u00e9motionnel.</td><td>15 min</td><td>Tu cr\u00e9es une vision positive de l'avenir qui sert de boussole quand le chemin est dur.</td></tr>
+      <tr><td><strong>J7</strong></td><td><strong>Observation sans jugement :</strong> Assieds-toi 10 minutes. Observe tes pens\u00e9es comme des nuages qui passent dans le ciel. Quand tu es distrait (et tu le seras), ram\u00e8ne doucement l'attention sur ta respiration. Compte combien de fois ton esprit est parti.</td><td>10 min</td><td>Tu d\u00e9veloppes le muscle de l'attention, indispensable pour l'urge surfing.</td></tr>
+      <tr><td><strong>J8</strong></td><td><strong>Inventaire des ressources :</strong> \u00c9cris une liste de TOUT ce dont tu disposes pour t'en sortir : personnes (soutien), comp\u00e9tences (ce que tu sais bien faire), ressources (temps, argent, lieux), forces personnelles (qualit\u00e9s, valeurs).</td><td>10 min</td><td>Tu r\u00e9alises que tu as plus de ressources que tu ne le penses. L'impuissance recule.</td></tr>
+      <tr><td><strong>J9</strong></td><td><strong>La pire journ\u00e9e :</strong> \u00c9cris en d\u00e9tail \u00e0 quoi ressemble la pire journ\u00e9e possible de ton addiction. Que s'est-il pass\u00e9 ? Comment te sentais-tu ? Qu'as-tu perdu ?</td><td>10 min</td><td>Le contraste avec tes premiers jours d'abstinence renforce ta motivation. Tu vois ce que tu as quitt\u00e9.</td></tr>
+      <tr><td><strong>J10</strong></td><td><strong>Bilan phase 1 :</strong> Relis tout ce que tu as \u00e9crit depuis le jour 1. \u00c9cris 3 choses que tu as apprises sur toi-m\u00eame cette semaine.</td><td>15 min</td><td>Tu c\u00e9l\u00e8bres ton progr\u00e8s et tu consolides les apprentissages avant de passer \u00e0 la phase suivante.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Phase 2 \u2014 Jours 11 \u00e0 20 : Le recadrage (reframing)</h3>
+  <p>Les 10 prochains jours sont bas\u00e9s sur la th\u00e9rapie cognitivo-comportementale (TCC). L'id\u00e9e centrale : ce n'est pas la situation qui cause ton craving, c'est la pens\u00e9e que tu as sur cette situation. En changeant tes pens\u00e9es, tu changes tes r\u00e9actions.</p>
+
+  <table>
+    <thead>
+      <tr><th>Jour</th><th>Exercice</th><th>Temps</th><th>B\u00e9n\u00e9fice</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>J11</strong></td><td><strong>Pi\u00e9ger la pens\u00e9e automatique :</strong> Identifie 3 pens\u00e9es automatiques qui pr\u00e9c\u00e8dent le craving. Exemple : "Je m\u00e9rite une r\u00e9compense", "Un peu ne fera pas de mal". \u00c9cris-les. Puis \u00e9cris une pens\u00e9e alternative : "Je m\u00e9rite une vraie r\u00e9compense qui ne me fera pas de mal."</td><td>10 min</td><td>Tu brises le lien automatique pens\u00e9e-action en cr\u00e9ant une pens\u00e9e alternative pr\u00eate \u00e0 l'emploi.</td></tr>
+      <tr><td><strong>J12</strong></td><td><strong>Distinction craving / besoin :</strong> Aujourd'hui, chaque fois que le craving arrive, demande-toi : "Ai-je vraiment besoin de \u00e7a, ou est-ce que mon cerveau est entrain\u00e9 \u00e0 le vouloir ?" Le craving vient du manque, le besoin vient de la n\u00e9cessit\u00e9. \u00c0 99%, c'est un craving.</td><td>1 min par craving</td><td>Tu cr\u00e9es un espace entre le stimulus et la r\u00e9ponse, ce qui te permet de choisir consciemment.</td></tr>
+      <tr><td><strong>J13</strong></td><td><strong>Recadrage du craving :</strong> Au lieu de voir le craving comme un ennemi, vois-le comme un signal. "J'ai un craving = quelque chose en moi a besoin d'attention." Demande-toi : "Qu'est-ce que mon corps / mon c\u0153ur essaie de me dire ?"</td><td>5 min</td><td>Le craving perd son pouvoir de menace et devient une information utile.</td></tr>
+      <tr><td><strong>J14</strong></td><td><strong>Gratitude forc\u00e9e :</strong> \u00c9cris 5 choses pour lesquelles tu es reconnaissant AUJOURD'HUI. Pas de g\u00e9n\u00e9riques ("la vie"), des choses sp\u00e9cifiques : "le soleil ce matin", "le message de Julie", "avoir tenu 14 jours".</td><td>5 min</td><td>La gratitude est l'antidote le plus rapide contre le sentiment de manque qui alimente l'addiction.</td></tr>
+      <tr><td><strong>J15</strong></td><td><strong>La technique de la fl\u00e8che descendante :</strong> Prends le craving qui t'a le plus marqu\u00e9 cette semaine. Demande-toi : "Si je c\u00e8de, qu'est-ce que \u00e7a dit de moi ?" Puis : "Si c'est vrai, qu'est-ce que \u00e7a signifie ?" Continue jusqu'\u00e0 la croyance profonde. Souvent, c'est "je ne suis pas assez bien" ou "je n'y arriverai jamais".</td><td>10 min</td><td>Tu identifies la croyance limitante qui se cache derri\u00e8re l'addiction. Et les croyances limitantes peuvent \u00eatre chang\u00e9es.</td></tr>
+      <tr><td><strong>J16</strong></td><td><strong>Dialogue avec la partie addict :</strong> Il y a une partie de toi qui veut consommer. Au lieu de la ha\u00efr, dialogue avec elle. "Qu'est-ce que tu essaies de me prot\u00e9ger ?" L'addiction est souvent une tentative maladroite de protection.</td><td>10 min</td><td>Tu r\u00e9concilies la partie de toi qui lutte avec la partie qui veut consommer. La guerre int\u00e9rieure s'apaise.</td></tr>
+      <tr><td><strong>J17</strong></td><td><strong>Visualisation positive :</strong> Ferme les yeux. Visualise-toi dans 6 mois, libre. O\u00f9 vis-tu ? Comment passes-tu tes journ\u00e9es ? Quelles sont tes relations ? \u00c0 quoi ressemblent tes matins ? Sois le plus sensoriel possible (images, sons, odeurs).</td><td>10 min</td><td>La visualisation active les m\u00eames neurones que l'exp\u00e9rience r\u00e9elle. Ton cerveau commence \u00e0 se reprogrammer.</td></tr>
+      <tr><td><strong>J18</strong></td><td><strong>Recadrage de l'\u00e9chec :</strong> \u00c9cris une fois o\u00f9 tu as r\u00e9sist\u00e9 au craving cette semaine. F\u00e9licite-toi. Puis \u00e9cris : "Si j'avais c\u00e9d\u00e9, qu'aurais-je appris ?" Le but : voir chaque situation comme une opportunit\u00e9 d'apprentissage, pas de jugement.</td><td>5 min</td><td>Tu arr\u00eates le perfectionnisme paralysant. Tu d\u00e9veloppes une mentalit\u00e9 de croissance.</td></tr>
+      <tr><td><strong>J19</strong></td><td><strong>Les 3 versions de toi :</strong> \u00c9cris 3 paragraphes : "La personne que j'\u00e9tais avant" (pendant l'addiction), "La personne que je suis maintenant", "La personne que je deviens". Identifie une qualit\u00e9 de la version future que tu peux incarner d\u00e8s aujourd'hui.</td><td>15 min</td><td>Tu construis un r\u00e9cit de transformation qui renforce ta nouvelle identit\u00e9.</td></tr>
+      <tr><td><strong>J20</strong></td><td><strong>Bilan phase 2 :</strong> Relis les jours 11-20. Quelles croyances limitantes as-tu identifi\u00e9es ? Quelle pens\u00e9e alternative a \u00e9t\u00e9 la plus utile ? \u00c9cris ta phrase-cl\u00e9 des 10 prochains jours.</td><td>10 min</td><td>Tu mesures ton \u00e9volution et tu te pr\u00e9pares mentalement pour la phase d'action.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Phase 3 \u2014 Jours 21 \u00e0 30 : L'action et l'identit\u00e9 (commitment)</h3>
+  <p>Les 10 derniers jours sont consacr\u00e9s \u00e0 l'ancrage de ta nouvelle identit\u00e9. Ce n'est plus "j'arr\u00eate de consommer" — c'est "je suis une personne qui ne consomme pas". Ce changement d'identit\u00e9 est ce qui rend le changement permanent.</p>
+
+  <table>
+    <thead>
+      <tr><th>Jour</th><th>Exercice</th><th>Temps</th><th>B\u00e9n\u00e9fice</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>J21</strong></td><td><strong>D\u00e9claration d'identit\u00e9 :</strong> \u00c9cris une phrase qui commence par "Je suis quelqu'un qui..." Exemple : "Je suis quelqu'un qui prend soin de son corps et de son esprit." "Je suis quelqu'un qui respecte ses engagements." Lis-la \u00e0 voix haute devant un miroir.</td><td>5 min</td><td>Tu passes de l'action \u00e0 l'identit\u00e9. Les comportements suivent l'identit\u00e9, pas l'inverse.</td></tr>
+      <tr><td><strong>J22</strong></td><td><strong>L'engagement public :</strong>\u00c9cris un message \u00e0 3 personnes de confiance. Dis-leur : "Je suis en train de changer ma relation avec [addiction]. Voici ce que j'ai accompli en 22 jours [chiffres, progr\u00e8s]. Je t'\u00e9cris parce que ton soutien compte pour moi." Envoie-le.</td><td>10 min</td><td>L'engagement public cr\u00e9e une responsabilit\u00e9 puissante. Tu deviens comptable devant les autres.</td></tr>
+      <tr><td><strong>J23</strong></td><td><strong>Protocole de r\u00e9ponse au craving :</strong> \u00c9cris TON protocole personnel anti-craving. Pas celui du livre. LE TIEN. Qu'est-ce qui marche pour TOI ? Quelles techniques as-tu test\u00e9es cette semaine ? D\u00e9taille-le \u00e9tape par \u00e9tape. Mets-le dans ton t\u00e9l\u00e9phone et imprime-le pour le mettre chez toi.</td><td>15 min</td><td>Un protocole \u00e9crit est bien plus efficace qu'une strat\u00e9gie mentale. Quand le craving arrive, tu n'as pas \u00e0 r\u00e9fl\u00e9chir. Tu suis le plan.</td></tr>
+      <tr><td><strong>J24</strong></td><td><strong>Exposition contr\u00f4l\u00e9e :</strong> Choisis UNE situation \u00e0 risque de faible intensit\u00e9 (par exemple, passer devant un bar, ou ouvrir l'appli sans scroller). Reste 1 minute dans la situation. Observe ton craving. Puis pars. L'objectif est de prouver \u00e0 ton cerveau que tu peux survivre \u00e0 la tentation sans c\u00e9der.</td><td>5 min</td><td>L'\u00e9vitement total renforce la peur. L'exposition contr\u00f4l\u00e9e montre que le craving ne te contr\u00f4le pas.</td></tr>
+      <tr><td><strong>J25</strong></td><td><strong>Boussole des valeurs :</strong> Classe ces valeurs dans l'ordre d'importance pour toi : famille, sant\u00e9, libert\u00e9, cr\u00e9ativit\u00e9, amiti\u00e9, accomplissement, s\u00e9curit\u00e9, plaisir, spiritualit\u00e9, honn\u00eatet\u00e9. Puis demande-toi : "Mon addiction me rapproche-t-elle ou m'\u00e9loigne-t-elle de mon top 3 ?"</td><td>10 min</td><td>Tu clarifies ce qui compte vraiment pour toi. Les valeurs sont plus motivantes que les r\u00e8gles.</td></tr>
+      <tr><td><strong>J26</strong></td><td><strong>Engagement hebdomadaire :</strong> \u00c9cris ton engagement pour la semaine prochaine. Sois ultra-pr\u00e9cis : "Cette semaine, je vais [action] tous les jours \u00e0 [moment] dans [lieu]. Si [obstacle], alors [solution]." Signe-le.</td><td>10 min</td><td>L'intention de mise en oeuvre (quand/o\u00f9/comment) triple la probabilit\u00e9 de r\u00e9ussite d'une action.</td></tr>
+      <tr><td><strong>J27</strong></td><td><strong>Journal du guerrier :</strong> \u00c9cris sur le plus grand d\u00e9fi auquel tu as fait face cette semaine. Qu'as-tu fait pour le surmonter ? Qu'as-tu appris sur ta force int\u00e9rieure ? N'h\u00e9site pas \u00e0 reconna\u00eetre ton courage.</td><td>10 min</td><td>Tu construis une preuve de ta r\u00e9silience. Chaque d\u00e9fi surmont\u00e9 renforce ta confiance en toi.</td></tr>
+      <tr><td><strong>J28</strong></td><td><strong>Rituel de passage :</strong> \u00c9cris sur un papier ce que tu laisses derri\u00e8re toi (comportements, croyances, identit\u00e9 de l'addiction). Puis br\u00fble le papier (en toute s\u00e9curit\u00e9) OU enterre-le. Ensuite, \u00e9cris sur un nouveau papier ce que tu deviens et garde-le avec toi.</td><td>15 min</td><td>Un rituel symbolique ancre le changement dans le corps, pas seulement dans l'esprit. Il c\u00e9l\u00e8bre la fin d'un chapitre.</td></tr>
+      <tr><td><strong>J29</strong></td><td><strong>Vision Board \u00e9crite :</strong> \u00c9cris une page sur ta vie dans 1 an. En d\u00e9tail. O\u00f9 vis-tu ? Qui c\u00f4toies-tu ? Que fais-tu de tes journ\u00e9es ? Comment g\u00e8res-tu le stress ? Quels nouveaux plaisirs as-tu d\u00e9couverts ?</td><td>15 min</td><td>Tu t'ancre dans une vision positive de l'avenir. Sans cette vision, le cerveau revient par d\u00e9faut aux vieux sch\u00e9mas.</td></tr>
+      <tr><td><strong>J30</strong></td><td><strong>C\u00e9l\u00e9bration et engagement renouvel\u00e9 :</strong> F\u00e9licite-toi. 30 jours, c'est \u00e9norme. Relis tout ce que tu as \u00e9crit ce mois. \u00c9cris une lettre \u00e0 toi-m\u00eame pour le jour 90. Dis ce que tu veux avoir accompli, ce que tu veux ressentir. Puis relis ta d\u00e9claration d'identit\u00e9 du jour 21. Redis-la \u00e0 voix haute.</td><td>20 min</td><td>Tu c\u00e9l\u00e8bres le processus (pas seulement le r\u00e9sultat) et tu renouvelles ton engagement pour les 60 prochains jours.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout-success">
+    <p><strong>Apr\u00e8s ces 30 jours :</strong> F\u00e9licitations. Tu as une toute nouvelle relation avec toi-m\u00eame. Continue les exercices qui t'ont le plus aid\u00e9. Reviens \u00e0 ceux que tu as saut\u00e9s. Le vrai travail est fait, mais le maintien est un choix quotidien. N'oublie pas : la meilleure version de toi-m\u00eame n'est pas derri\u00e8re toi. Elle est devant toi.</p>
+  </div>
+
+  <div class="checklist">
+    <div class="checklist-item"><input type="checkbox"> J1-J10 compl\u00e9t\u00e9s (conscience des sch\u00e9mas)</div>
+    <div class="checklist-item"><input type="checkbox"> J11-J20 compl\u00e9t\u00e9s (recadrage des croyances)</div>
+    <div class="checklist-item"><input type="checkbox"> J21-J30 compl\u00e9t\u00e9s (ancrage de la nouvelle identit\u00e9)</div>
+    <div class="checklist-item"><input type="checkbox"> Mon protocole personnel anti-craving est \u00e9crit et accessible</div>
+    <div class="checklist-item"><input type="checkbox"> J'ai partag\u00e9 mon engagement avec au moins 3 personnes</div>
+  </div>
+</div>
+
+<div class="content page-break conclusion" id="conclusion--tu-es-plus-fort-que-ton-addiction">
+  <h2>Tu es plus fort que ton addiction</h2>
+  <hr>
+  <p>Tu as parcouru tout ce guide. Tu sais maintenant ce qu'est l'addiction, pourquoi tu es tombe dedans, comment arreter, comment remplacer, comment gerer les rechutes, comment reconstruire ta vie.</p>
+  <p>Le savoir, c'est le début. Mais le savoir sans l'action n'est que de la connaissance inutile.</p>
+  <p><strong>Le moment de vérité, c'est maintenant.</strong></p>
+  <p>Tu peux lire 100 livres sur l'addiction. Si tu ne passes pas a l'action, rien ne changera. Un seul pas concret vaut mieux qu'une bibliotheque d'intentions.</p>
+  <h3>Rappelle-toi ces 10 principes :</h3>
+  <ol>
+    <li><strong>L'addiction n'est pas une faiblesse morale</strong>, c'est un problème qui a des solutions.</li>
+    <li><strong>Comprendre ton cycle</strong>, c'est commencer a le deconstruire.</li>
+    <li><strong>L'addiction est un symptome.</strong> Soigne les causes, pas seulement les comportements.</li>
+    <li><strong>Arreter sans remplacer</strong>, c'est créer un vide qui sera comble par autre chose.</li>
+    <li><strong>La rechute n'est pas un échec.</strong> Abandonner après une rechute, si.</li>
+    <li><strong>Tu n'as pas a le faire seul.</strong> L'aide existe. Les groupes de parole existent. Les therapeutes existent.</li>
+    <li><strong>Ton corps a besoin d'être soigne.</strong> La sante physique soutient la sante mentale.</li>
+    <li><strong>L'environnement est plus fort que la volonté.</strong> Construis un monde qui t'aide.</li>
+    <li><strong>Le craving est temporaire.</strong> Chaque vague finit par passer.</li>
+    <li><strong>Tu es plus fort que ton addiction.</strong> Tu l'as prouve en arrivant jusqu'ici.</li>
+  </ol>
+  <hr>
+  <h3>Un dernier mot</h3>
+  <p>Il y a une personne qui t'a pousse a ouvrir ce livre. Une partie de toi qui sait que tu merites mieux, que tu peux t'en sortir, que ta meilleure vie t'attend de l'autre cote de l'addiction.</p>
+  <p>Cette personne a raison.</p>
+  <p>Tu merites une vie sans dependance. Tu merites de te reveiller le matin sans honte. Tu merites de regarder les gens dans les yeux. Tu merites de te sentir libre.</p>
+  <p><strong>Cette liberte est a ta portee. Le chemin est devant toi. Le premier pas t'appartient.</strong></p>
+  <p>Tu n'as pas a être parfait. Tu as juste a commencer.</p>
+</div>
+<div class="content page-break" id="bonus--ressources-outils-et-suivi">
+  <div class="bonus-header">
+    <h2>Bonus</h2>
+    <p>Ressources complémentaires</p>
+  </div>
+  <p>Ressources, outils et suivi — Tout ce dont tu as besoin pour continuer</p>
+  <h3>Ressources en France</h3>
+  <h4>Drogues et alcool</h4>
+  <ul>
+    <li><strong>Drogues Info Service :</strong> 0 800 23 13 13 (appel gratuit, 7j/7, 8h-2h)</li>
+    <li><strong>Alcool Info Service :</strong> 0 980 980 930</li>
+    <li><strong>Consultation jeunes consommateurs</strong> (gratuit, anonyme)</li>
+  </ul>
+  <h4>Sante mentale et soutien</h4>
+  <ul>
+    <li><strong>Fil Sante Jeunes :</strong> 0 800 235 236</li>
+    <li><strong>SOS Amitie :</strong> 09 72 39 40 50</li>
+    <li><strong>Psychiatrie et sante mentale :</strong> consulter ton medecin traitant pour une orientation</li>
+  </ul>
+  <h4>Groupes de parole</h4>
+  <ul>
+    <li><strong>Alcooliques Anonymes (AA) :</strong> présent dans toutes les villes</li>
+    <li><strong>Narcotiques Anonymes (NA) :</strong> pour toutes les addictions aux drogues</li>
+    <li><strong>12eme Étape :</strong> groupes chretiens</li>
+    <li><strong>En ligne :</strong> forums et groupes Facebook specialises</li>
+  </ul>
+  <h3>Livres recommandes</h3>
+  <ul>
+    <li><em>La Methode simple pour arreter de fumer</em> — Allen Carr</li>
+    <li><em>Arreter de boire</em> — Annie Grâce (methode basee sur la pleine conscience)</li>
+    <li><em>Ce que l'addiction nous apprend</em> — Johann Hari (comprendre les causes sociales)</li>
+    <li><em>Faire face aux dependances</em> — Dr Laurent Karila (guide pratique)</li>
+    <li><em>Le Piege du bonheur</em> — Russ Harris (therapie ACT)</li>
+    <li><em>In the Realm of Hungry Ghosts</em> — Dr Gabor Mate (la bible sur l'addiction et les traumatismes)</li>
+  </ul>
+  <h3>Applications utiles</h3>
+  <ul>
+    <li><strong>Sober Time :</strong> suivi de l'abstinence (jours sans, argent economise)</li>
+    <li><strong>I Am Sober :</strong> journal de bord communautaire</li>
+    <li><strong>Headspace :</strong> meditation guidee (excellente pour les debutants)</li>
+    <li><strong>Day One :</strong> journal intime numerique</li>
+    <li><strong>Forest :</strong> rester concentre, ne pas toucher son téléphone</li>
+  </ul>
+  <h3>Journal de suivi quotidien</h3>
+  <p>Utilise ce modele chaque soir pendant les 30 premiers jours :</p>
+  <p><strong>Date :</strong> [date]</p>
+  <p><strong>Jour d'abstinence :</strong> [N]</p>
+  <p><strong>1. Aujourd'hui, mon craving était :</strong> (entoure) 1-2-3-4-5-6-7-8-9-10</p>
+  <p><strong>2. Le craving est arrive :</strong> (heure et contexte)</p>
+  <p><strong>3. J'ai gere en :</strong> \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_</p>
+  <p><strong>4. Aujourd'hui, j'ai fait pour ma sante :</strong> \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_</p>
+  <p><strong>5. Aujourd'hui, j'ai ete fier/fiere de :</strong> \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_</p>
+  <p><strong>6. Demain, mon intention est :</strong> \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_</p>
+  <p><strong>7. Si besoin, mon filet de sécurité est :</strong> \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_</p>
+  <hr>
+  <p><strong>La personne que tu peux devenir est déjà en toi. Donne-lui une chance d'exister.</strong></p>
+</div>
+
+<section style="background:#0e0e10;padding:50px 20px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif">
+  <div style="max-width:600px;margin:0 auto">
+    <div style="background:linear-gradient(135deg,#1565c015,#1565c005);border:2px solid #1565c025;border-radius:16px;padding:32px 24px;margin-bottom:30px">
+      <span style="font-size:36px;display:block;margin-bottom:8px">📧</span>
+      <h3 style="color:#fff;font-size:20px;margin:0 0 6px;font-weight:700">Reçois les prochains guides gratuitement</h3>
+      <p style="color:#999;font-size:14px;margin:0 0 18px;line-height:1.5">Une astuce business par semaine + les nouveaux guides en exclusivité. Rejoins les 500+ abonnés.</p>
+      <form action="#" method="POST" style="display:flex;flex-direction:column;gap:10px;max-width:400px;margin:0 auto">
+        <input type="text" placeholder="Ton prénom" required style="padding:12px 16px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:14px;outline:none;font-family:inherit">
+        <input type="email" placeholder="Ton email" required style="padding:12px 16px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:14px;outline:none;font-family:inherit">
+        <button type="submit" style="padding:14px 24px;border-radius:10px;border:none;background:linear-gradient(135deg,#1565c0,#1565c0cc);color:#fff;font-size:16px;font-weight:700;cursor:pointer;font-family:inherit;transition:all .3s">👉 Recevoir les prochains guides</button>
+      </form>
+      <p style="color:#666;font-size:11px;margin:10px 0 0">🔒 Pas de spam. Désinscription en 1 clic. Tes données sont protégées.</p>
+    </div>
+
+    <div style="margin-bottom:30px">
+      <h4 style="color:#fff;font-size:16px;margin:0 0 16px;font-weight:600">📢 Tu as aimé ce guide ?</h4>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <a href="#" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:#ddd;text-decoration:none;font-size:13px;font-weight:500;transition:all .3s">📸 Instagram</a>
+        <a href="#" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:#ddd;text-decoration:none;font-size:13px;font-weight:500;transition:all .3s">🎵 TikTok</a>
+        <a href="#" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:#ddd;text-decoration:none;font-size:13px;font-weight:500;transition:all .3s">🐦 Twitter/X</a>
+        <a href="#" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:#ddd;text-decoration:none;font-size:13px;font-weight:500;transition:all .3s">▶️ YouTube</a>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;font-size:13px">
+      <span style="color:#aaa">⭐ Laisse un avis → <a href="#" style="color:#1565c0;text-decoration:none;font-weight:600">Écrire un avis</a></span>
+      <span style="color:#555">|</span>
+      <span style="color:#aaa">🔗 Partage le guide → <a href="#" style="color:#1565c0;text-decoration:none;font-weight:600">Copier le lien</a></span>
+    </div>
+
+    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.06);margin:30px 0 16px">
+    <p style="color:#555;font-size:12px">Créé par <strong style="color:#888">Simon — @aurabusinessfr</strong></p>
+  </div>
+</section>
+
+</body>
+</html>
