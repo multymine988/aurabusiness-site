@@ -802,7 +802,7 @@ document.addEventListener('DOMContentLoaded',function(){
   b.addEventListener('click',function(){
     if(!i.value.trim()||i.value.trim().length<3){e.style.display='block';return;}
     e.style.display='none';b.disabled=true;b.textContent='🔄 Vérification...';
-    fetch('/api/verify-follow',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:i.value.trim()})})
+    fetch('/api/verify-follow.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:i.value.trim()})})
     .then(function(r){return r.json()}).then(function(d){
       if(d.verified){localStorage.setItem('u_'+window.location.pathname,'true');g.style.display='none';c.classList.add('unlocked');}
       else{b.disabled=false;b.textContent='🔓 Vérifier et débloquer mon guide';e.textContent=d.message||'Vérification échouée.';e.style.display='block';}
