@@ -1,0 +1,10 @@
+# Désactive le JS challenge InfinityFree pour l'API
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=noscript:1]
+</IfModule>
+
+# Désactive le cache pour l'API
+<IfModule mod_headers.c>
+Header set Cache-Control "no-store, no-cache, must-revalidate"
+</IfModule>
