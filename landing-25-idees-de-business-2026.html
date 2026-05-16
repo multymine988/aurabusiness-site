@@ -337,25 +337,6 @@
     .mini-form input::placeholder { color: #6a5a85; }
     .mini-form .btn { padding: 12px 20px; font-size: 14px; }
 
-    /* ── TESTIMONIALS ── */
-    .testi-grid { display: flex; flex-direction: column; gap: 16px; }
-    .testi-card {
-      background: linear-gradient(135deg, #13111a, #1a1625);
-      border: 1px solid rgba(108,92,231,.1);
-      border-radius: 18px;
-      padding: 24px;
-    }
-    .testi-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
-    .testi-avatar {
-      width: 48px; height: 48px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 700; font-size: 16px; color: #fff;
-      flex-shrink: 0;
-    }
-    .testi-name { font-size: 14px; font-weight: 600; }
-    .testi-meta { font-size: 12px; color: #9a8ab5; }
-    .testi-text { font-size: 14px; color: #d0c8e0; line-height: 1.6; font-style: italic; }
-
     /* ── FAQ ── */
     .faq-item {
       border-bottom: 1px solid rgba(108,92,231,.1);
@@ -422,7 +403,6 @@
     @media (min-width: 640px) {
       .hero { padding: 80px 20px 100px; }
       .benefit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-      .testi-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
       .card-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
       section { padding: 90px 0; }
       .pricing-box { padding: 50px 40px; }
@@ -674,47 +654,6 @@
   </div>
 </div>
 </section>
-
-  <!-- ═══════════ TESTIMONIALS ═══════════ -->
-  <section id="temoignages" style="background: linear-gradient(180deg, transparent 0%, rgba(108,92,231,.04) 50%, transparent 100%);">
-    <div class="container">
-      <p class="section-label">🗣️ Ils ont déjà changé leur vie</p>
-      <h2 class="section-title">Ce que disent les lecteurs</h2>
-      <p class="section-desc">Des jeunes comme toi qui sont passés à l'action</p>
-      <div class="testi-grid">
-        <div class="testi-card">
-          <div class="testi-header">
-            <div class="testi-avatar" style="background: linear-gradient(135deg, #6c5ce7, #a855f7);">AL</div>
-            <div>
-              <div class="testi-name">Alexandre</div>
-              <div class="testi-meta">17 ans — Montage vidéo</div>
-            </div>
-          </div>
-          <p class="testi-text">« Grâce à ce guide, j'ai lancé mon service de montage vidéo et je gagne 400€/mois en parallèle du lycée. »</p>
-        </div>
-        <div class="testi-card">
-          <div class="testi-header">
-            <div class="testi-avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">MC</div>
-            <div>
-              <div class="testi-name">Mathilde</div>
-              <div class="testi-meta">19 ans — E-commerce</div>
-            </div>
-          </div>
-          <p class="testi-text">« J'avais peur de me lancer. Ce livre m'a donné un plan tellement clair que j'ai tout de suite su quoi faire. 650€ de chiffre au premier mois. »</p>
-        </div>
-        <div class="testi-card">
-          <div class="testi-header">
-            <div class="testi-avatar" style="background: linear-gradient(135deg, #10b981, #06b6d4);">YR</div>
-            <div>
-              <div class="testi-name">Yanis</div>
-              <div class="testi-meta">16 ans — SMMA</div>
-            </div>
-          </div>
-          <p class="testi-text">« À 16 ans j'ai lancé mon agence de marketing. 3 clients en 2 semaines grâce aux scripts de prospection du guide. »</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ═══════════ FAQ ═══════════ -->
   <section id="faq">
