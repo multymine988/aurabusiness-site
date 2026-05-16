@@ -6,7 +6,7 @@ if (!isset($_GET['p']) || $_GET['p'] !== $pass) {
   exit;
 }
 
-$file = __DIR__ . '/../subscribers.txt';
+$file = __DIR__ . '/api/subscribers.txt';
 $emails = file_exists($file) ? file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) : [];
 
 header('Content-Type: text/html; charset=utf-8');
