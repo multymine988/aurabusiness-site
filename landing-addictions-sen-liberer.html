@@ -348,14 +348,12 @@
       <div class="free-card free-card-white">
         <div style="font-size:24px;margin-bottom:12px;">📧</div>
         <h3>Newsletter</h3>
-        <p style="font-size:14px;color:var(--gray-500);margin-bottom:20px;">Reçois le guide directement dans ta boîte mail, + des conseils chaque semaine pour rester libre.</p>
-        <form class="free-form" data-netlify="true">
-        <input type="hidden" name="form-name" value="email-capture" />
-          <input type="text" placeholder="Prénom" />
-          <input type="email" placeholder="Email" />
+        <p style="font-size:14px;color:var(--gray-500);margin-bottom:20px;">Entre ton email et accède immédiatement à ton guide. Tu recevras aussi la newsletter.</p>
+        <form class="free-form" action="/api/subscribe.php" method="POST">
+        <input type="hidden" name="redirect" value="addictions-sen-liberer.html">
+          <input type="email" name="email" placeholder="Email" required>
           <button type="submit">👉 Télécharger mon guide gratuit</button>
         </form>
-        <p style="font-size:12px;color:var(--gray-400);margin-top:12px;text-align:center;">🔒 Tes données restent confidentielles. 1 email par semaine max, désabonnement en 1 clic.</p>
       </div>
 
 

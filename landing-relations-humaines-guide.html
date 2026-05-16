@@ -358,13 +358,12 @@ footer a:hover{color:#c2185b}
     <div class="mt-32" style="display:flex;flex-direction:column;gap:24px">
       <div class="option-card primary">
         <h3>📧 Reçois le guide + les prochains contenus exclusifs</h3>
-        <p>Entre ton email, je t'envoie le guide immédiatement. En plus, tu recevras mes prochains guides et contenus exclusifs.</p>
-        <form class="free-form" action="#" method="post" data-netlify="true">
-        <input type="hidden" name="form-name" value="email-capture" />
+        <p>Reçois le guide directement dans ta boîte mail.</p>
+        <form class="free-form" action="/api/subscribe.php" method="POST">
+          <input type="hidden" name="redirect" value="relations-humaines-guide.html">
           <input type="email" name="email" placeholder="Ton adresse email" required>
           <button type="submit" class="btn btn-primary">👉 Télécharger mon guide gratuit</button>
         </form>
-        <p class="privacy-note">🔒 Tes données sont protégées. Pas de spam, désinscription en 1 clic.</p>
       </div>
 
 

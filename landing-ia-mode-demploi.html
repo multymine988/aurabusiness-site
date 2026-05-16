@@ -441,14 +441,12 @@
       <div class="free-options">
         <div class="free-option premium">
           <h4>📧 Newsletter</h4>
-          <p>Reçois le guide gratuit + des ressources exclusives chaque semaine dans ta boîte mail.</p>
-          <form class="free-form" data-netlify="true">
-        <input type="hidden" name="form-name" value="email-capture" />
-            <input type="text" placeholder="Prénom" required>
-            <input type="email" placeholder="Email" required>
+          <p>Entre ton email et accède immédiatement à ton guide. Tu recevras aussi la newsletter.</p>
+          <form class="free-form" action="/api/subscribe.php" method="POST">
+        <input type="hidden" name="redirect" value="ia-mode-demploi.html">
+            <input type="email" name="email" placeholder="Email" required>
             <button type="submit" class="btn btn-cta-red">👉 Télécharger mon guide gratuit</button>
           </form>
-          <p class="privacy-note">🔒 Aucun spam. 1 email/semaine max. Désabonnement en 1 clic. Tes données ne sont jamais revendues.</p>
         </div>
 
       </div>

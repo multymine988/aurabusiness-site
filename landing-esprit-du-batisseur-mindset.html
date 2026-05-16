@@ -602,13 +602,11 @@
             <div class="free-option">
                 <h3>📧 Newsletter</h3>
                 <p>Inscris-toi à la newsletter et reçois le guide immédiatement dans ta boîte mail.</p>
-                <form class="free-form" data-netlify="true">
-        <input type="hidden" name="form-name" value="email-capture" />
-                    <input type="text" placeholder="Prénom" required>
-                    <input type="email" placeholder="Email" required>
+                <form class="free-form" action="/api/subscribe.php" method="POST">
+                    <input type="hidden" name="redirect" value="esprit-du-batisseur-mindset.html">
+                    <input type="email" name="email" placeholder="Email" required>
                     <button type="submit" class="btn-primary">👉 Télécharger mon guide gratuit</button>
                 </form>
-                <p class="privacy-note">🔒 Tes données sont protégées. Pas de spam, désinscription en 1 clic.</p>
             </div>
 
 

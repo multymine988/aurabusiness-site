@@ -268,12 +268,11 @@ hr{border:none;border-top:1px solid rgba(255,255,255,.04);margin:0}
 <div class="pricing-card">
 <h3 style="font-size:18px;font-weight:700;margin-bottom:12px;color:#e67e22">📧 Newsletter</h3>
 <p style="font-size:14px;color:#bbb;margin-bottom:16px">Reçois le guide gratuitement dans ta boîte mail, plus des conseils exclusifs chaque semaine.</p>
-<form style="display:flex;flex-direction:column;gap:10px" data-netlify="true">
-        <input type="hidden" name="form-name" value="email-capture" />
-<input type="email" placeholder="Ton adresse email" style="padding:12px 16px;border-radius:8px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:#fff;font-family:inherit;font-size:14px;outline:none">
-<button type="submit" class="btn" style="width:100%">👉 Télécharger mon guide gratuit</button>
+<form action="/api/subscribe.php" method="POST" style="display:flex;flex-direction:column;gap:10px">
+  <input type="hidden" name="redirect" value="reseaux-sociaux-percer.html">
+  <input type="email" name="email" placeholder="Ton adresse email" style="padding:12px 16px;border-radius:8px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:#fff;font-family:inherit;font-size:14px;outline:none" required>
+  <button type="submit" class="btn" style="width:100%">👉 Télécharger mon guide gratuit</button>
 </form>
-<p style="font-size:12px;color:#777;margin-top:10px">🔒 Tes données sont protégées. Pas de spam, désinscription à tout moment.</p>
 </div>
 
 

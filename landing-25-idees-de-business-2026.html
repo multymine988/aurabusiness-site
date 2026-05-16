@@ -656,16 +656,15 @@
           <div class="free-option">
             <div class="free-badge">📧 Recommandée</div>
             <h3><span class="emoji">📧</span> Newsletter</h3>
-            <p>Reçois le guide + les prochains contenus exclusifs directement dans ta boîte mail.</p>
-            <form action="#" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="email-capture" />
+            <p>Entre ton email et accède immédiatement à ton guide. Tu recevras aussi la newsletter.</p>
+            <form action="/api/subscribe.php" method="POST">
+        <input type="hidden" name="redirect" value="25-idees-de-business-2026.html">
               <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="ton@email.com" required>
               </div>
               <button type="submit" class="btn btn-green">👉 Télécharger mon guide gratuit</button>
             </form>
-            <div class="form-footer">🔒 Tes données sont protégées. Pas de spam, désinscription en 1 clic.</div>
           </div>
 
 

@@ -552,12 +552,11 @@ img { max-width: 100%; display: block; }
       <div class="access-icon">📧</div>
       <h3>S'abonner à la newsletter</h3>
       <p>Reçois chaque semaine les meilleurs conseils santé en exclusivité.</p>
-      <form class="access-form" action="#" onsubmit="return false;" data-netlify="true">
-        <input type="hidden" name="form-name" value="email-capture" />
-        <input type="text" placeholder="Prénom" required>
-        <input type="email" placeholder="Email" required>
-        <button type="submit" class="cta-btn">Télécharger →</button>
-      </form>
+      <form class="access-form" action="/api/subscribe.php" method="POST">
+          <input type="hidden" name="redirect" value="sante-physique-transformation.html">
+          <input type="email" name="email" class="input" placeholder="Ton email" required>
+          <button type="submit" class="cta-btn">Télécharger →</button>
+        </form>
     </div>
 
 
